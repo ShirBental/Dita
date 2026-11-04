@@ -1,0 +1,3395 @@
+{
+  "title" : "TASK-034 Stage 0: retrieval-only scoring",
+  "split" : "dev",
+  "regime" : "small",
+  "backend" : "in-memory",
+  "retrieval_only" : true,
+  "model" : "none",
+  "synthetic" : true,
+  "n_questions" : 35,
+  "not_a_value_result" : "Retrieval coverage on a small hand-authored dev set; says nothing about answer quality, cost or Dita's value. B-weak is a weak control, not real B.",
+  "arm_settings" : {
+    "t_ctx_chars" : 4000,
+    "k" : 8,
+    "candidate_depth_per_retriever" : 24,
+    "rrf_k" : 60.0,
+    "bm25_k1" : 1.2,
+    "bm25_b" : 0.75,
+    "b_neighbour_window" : 2,
+    "c_neighbour_window" : 0,
+    "c_today_graph_depth" : 2,
+    "history_access" : "FULL_GROUP_HISTORY",
+    "backend" : "in-memory",
+    "b_semantic_half" : "char-ngram-hashing (weak control)"
+  },
+  "arms_description" : {
+    "A-full" : "full visible transcript up to as_of",
+    "A-budget" : "newest visible messages within T_ctx",
+    "B-weak control" : "BM25 (LexicalRetriever) + char-n-gram hashing cosine, RRF (HybridRetriever), +/-2 neighbours, T_ctx. NOT real B: no multilingual embedder exists",
+    "C-today" : "Retrievers.build(RetrievalSettings.DEFAULTS): BM25 + graph expansion RRF, T_ctx",
+    "C-graph-off" : "C-today with graphEnabled=false (= LexicalRetriever), T_ctx",
+    "B-weak no-window (diag)" : "DIAGNOSTIC: B-weak retriever without the neighbour window",
+    "C-today +/-2 (diag)" : "DIAGNOSTIC: C-today retriever with B's +/-2 neighbour window"
+  },
+  "retrieval_latency_ms" : {
+    "A-full" : {
+      "n_samples" : 175,
+      "p50" : 0.016,
+      "p95" : 0.066,
+      "mean" : 0.025
+    },
+    "A-budget" : {
+      "n_samples" : 175,
+      "p50" : 0.028,
+      "p95" : 0.106,
+      "mean" : 0.043
+    },
+    "B-weak control" : {
+      "n_samples" : 175,
+      "p50" : 0.336,
+      "p95" : 0.808,
+      "mean" : 0.395
+    },
+    "C-today" : {
+      "n_samples" : 175,
+      "p50" : 0.283,
+      "p95" : 0.531,
+      "mean" : 0.311
+    },
+    "C-graph-off" : {
+      "n_samples" : 175,
+      "p50" : 0.144,
+      "p95" : 0.283,
+      "mean" : 0.157
+    },
+    "B-weak no-window (diag)" : {
+      "n_samples" : 175,
+      "p50" : 0.32,
+      "p95" : 0.545,
+      "mean" : 0.348
+    },
+    "C-today +/-2 (diag)" : {
+      "n_samples" : 175,
+      "p50" : 0.302,
+      "p95" : 0.665,
+      "mean" : 0.336
+    }
+  },
+  "index_build_ms" : {
+    "what" : "in-memory store replay to as_of: ingest + RuleLinkInferencer links + DeletionService deletions (corpus + decoy)",
+    "n_builds" : 5,
+    "n_samples" : 25,
+    "p50" : 7.499,
+    "p95" : 11.676,
+    "mean" : 8.035,
+    "max" : 11.703,
+    "per_corpus_as_of_p50" : {
+      "parents-b|2026-09-05T00:00:00Z" : 5.714,
+      "building-he|2026-09-06T00:00:00Z" : 11.483,
+      "building-he|2026-08-20T00:00:00Z" : 7.03,
+      "family-en|2026-08-10T00:00:00Z" : 7.87,
+      "club-mixed|2026-11-03T00:00:00Z" : 7.152
+    }
+  },
+  "timing_protocol" : "1 warm-up + 5 timed runs per (question, arm); per (corpus, as_of) for index build; wall clock, single JVM, System.nanoTime",
+  "runner_generated_at" : "2026-10-29T16:22:16.902126Z",
+  "scored_at" : "2026-10-29T16:22:17.107394Z",
+  "sealed_and_input_sha256_at_scoring" : {
+    "corpora/README.md" : "1db7ed8bea15c60f6477336cc39dd588ece0e91cffcc2038ac5a5867e75f3c73",
+    "corpora/building-he-decoy.jsonl" : "badad6bdf9e8969bfb14f345f8f8dc9a4622a1bad1ddbb2a6e3b71c7d7a32b5d",
+    "corpora/building-he.jsonl" : "68f37c253cf43e0034653bed789b6084ac75cc65a3c018dfc519ace4b5344f02",
+    "corpora/club-mixed-decoy.jsonl" : "dc609cb2e343a04779c5ff5a0aaa6c2a5b9957efb4823288d770cbe5b0e74ee2",
+    "corpora/club-mixed.jsonl" : "be682cc0927984f294f911094413fca65d096a91d85f64a5a629257cfae95283",
+    "corpora/family-en-decoy.jsonl" : "ee0b901f506e558ae7d5daee8184e24826613f77ac35527afc7751c49f462873",
+    "corpora/family-en.jsonl" : "ba2ec98fb7eea770f73926d6ca8fa749691b4612b24a1c2cd10f76aac480c938",
+    "corpora/parents-b-decoy.jsonl" : "39c5e0cf3fe7289478b549a49bc355324a31d79a0e3e2db1c7a4a14cb07e1ead",
+    "corpora/parents-b.jsonl" : "21e20ec529104123bb59cccf5a5d417341e93b75647e566c100e4e67bbef1a12",
+    "prompts/dev.jsonl" : "9eb49cc5be6b4d7784f025dc231948b4118e64954bda040333d825cf8bc0e4f3",
+    "sealed/gold/dev.jsonl" : "66dd94a0e99b419107de03eb1505e75f871323d488f976d9e9262e5a78d56c8b",
+    "sealed/test/README.md" : "02d90c8cc6431666055b83ce6face415e7809aa11232b6a5a20a8766c5581177"
+  },
+  "arms" : {
+    "A-full" : {
+      "arm" : "A-full",
+      "n_questions" : 35,
+      "n_with_gold_evidence" : 27,
+      "context_recall_mean" : 1.0,
+      "all_gold_within_budget_rate" : 1.0,
+      "all_gold_within_budget_count" : 27,
+      "forbidden_in_context_count" : 0,
+      "forbidden_in_context_items" : 0,
+      "injection_in_context_count" : 11,
+      "injection_in_context_items" : 11,
+      "n_with_superseded" : 5,
+      "superseded_in_context_items" : 4,
+      "superseded_without_successor_items" : 0,
+      "visibility_violations" : 0,
+      "dropped_non_visible_ids" : 0,
+      "context_messages_mean" : 35.17,
+      "context_chars_mean" : 6613.4,
+      "context_chars_p95" : 7860.0,
+      "context_chars_max" : 7860.0,
+      "context_tokens_est_mean_chars_div_4" : 1653.4,
+      "by_scenario" : {
+        "ambiguous_pronoun" : {
+          "n" : 3,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "as_of_temporal" : {
+          "n" : 1,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "conflicting" : {
+          "n" : 3,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "context_dependent_rec" : {
+          "n" : 3,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "correction" : {
+          "n" : 4,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "cross_language" : {
+          "n" : 9,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "deleted" : {
+          "n" : 1,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "forwarded_non_independent" : {
+          "n" : 1,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "injection" : {
+          "n" : 9,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "missing_reply_link" : {
+          "n" : 5,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "multi_hop_distant" : {
+          "n" : 2,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "offer_vs_confirmed" : {
+          "n" : 2,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "parallel_threads" : {
+          "n" : 3,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "plain_lookup" : {
+          "n" : 3,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "resumed_conversation" : {
+          "n" : 4,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "split_reconnect" : {
+          "n" : 2,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "spread_recommendations" : {
+          "n" : 2,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "superseded" : {
+          "n" : 3,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        }
+      },
+      "by_lang" : {
+        "en" : {
+          "n" : 11,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "he" : {
+          "n" : 10,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "mixed" : {
+          "n" : 6,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        }
+      },
+      "by_overlap_bucket" : {
+        "high" : {
+          "n" : 10,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "low" : {
+          "n" : 10,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "mid" : {
+          "n" : 7,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        }
+      },
+      "items" : [ {
+        "qid" : "B01",
+        "context_messages" : 25,
+        "context_chars" : 4911,
+        "overlap_bucket" : "mid",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "B02",
+        "context_messages" : 25,
+        "context_chars" : 4911,
+        "overlap_bucket" : "low",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "B03",
+        "context_messages" : 25,
+        "context_chars" : 4911,
+        "overlap_bucket" : "low",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "B04",
+        "context_messages" : 25,
+        "context_chars" : 4911,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "B05",
+        "context_messages" : 25,
+        "context_chars" : 4911,
+        "overlap_bucket" : "low",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "B06",
+        "context_messages" : 25,
+        "context_chars" : 4911,
+        "overlap_bucket" : "low",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "B07",
+        "context_messages" : 25,
+        "context_chars" : 4911,
+        "overlap_bucket" : "low",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "B08",
+        "context_messages" : 25,
+        "context_chars" : 4911,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "B09",
+        "context_messages" : 25,
+        "context_chars" : 4911,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "B10",
+        "context_messages" : 25,
+        "context_chars" : 4911,
+        "overlap_bucket" : "low",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "B11",
+        "context_messages" : 25,
+        "context_chars" : 4911,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "B12",
+        "context_messages" : 25,
+        "context_chars" : 4911,
+        "overlap_bucket" : "low",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "H01",
+        "context_messages" : 41,
+        "context_chars" : 7410,
+        "overlap_bucket" : "low",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ],
+        "injection_in_context" : 1
+      }, {
+        "qid" : "H02",
+        "context_messages" : 41,
+        "context_chars" : 7410,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ],
+        "injection_in_context" : 1
+      }, {
+        "qid" : "H03",
+        "context_messages" : 29,
+        "context_chars" : 5247,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ],
+        "injection_in_context" : 1
+      }, {
+        "qid" : "H04",
+        "context_messages" : 41,
+        "context_chars" : 7410,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ],
+        "injection_in_context" : 1
+      }, {
+        "qid" : "H05",
+        "context_messages" : 41,
+        "context_chars" : 7410,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "H06",
+        "context_messages" : 41,
+        "context_chars" : 7410,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "H07",
+        "context_messages" : 41,
+        "context_chars" : 7410,
+        "overlap_bucket" : "mid",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "H08",
+        "context_messages" : 41,
+        "context_chars" : 7410,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "H09",
+        "context_messages" : 41,
+        "context_chars" : 7410,
+        "overlap_bucket" : "none",
+        "injection_in_context" : 1
+      }, {
+        "qid" : "F01",
+        "context_messages" : 41,
+        "context_chars" : 7860,
+        "overlap_bucket" : "mid",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "F02",
+        "context_messages" : 41,
+        "context_chars" : 7860,
+        "overlap_bucket" : "mid",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ],
+        "injection_in_context" : 1
+      }, {
+        "qid" : "F03",
+        "context_messages" : 41,
+        "context_chars" : 7860,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ],
+        "injection_in_context" : 1
+      }, {
+        "qid" : "F04",
+        "context_messages" : 41,
+        "context_chars" : 7860,
+        "overlap_bucket" : "mid",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "F05",
+        "context_messages" : 41,
+        "context_chars" : 7860,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "F06",
+        "context_messages" : 41,
+        "context_chars" : 7860,
+        "overlap_bucket" : "mid",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "F07",
+        "context_messages" : 41,
+        "context_chars" : 7860,
+        "overlap_bucket" : "none",
+        "injection_in_context" : 1
+      }, {
+        "qid" : "M01",
+        "context_messages" : 41,
+        "context_chars" : 7570,
+        "overlap_bucket" : "low",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "M02",
+        "context_messages" : 41,
+        "context_chars" : 7570,
+        "overlap_bucket" : "mid",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "M03",
+        "context_messages" : 41,
+        "context_chars" : 7570,
+        "overlap_bucket" : "low",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ],
+        "injection_in_context" : 1
+      }, {
+        "qid" : "M04",
+        "context_messages" : 41,
+        "context_chars" : 7570,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ],
+        "injection_in_context" : 1
+      }, {
+        "qid" : "M05",
+        "context_messages" : 41,
+        "context_chars" : 7570,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ],
+        "injection_in_context" : 1
+      }, {
+        "qid" : "M06",
+        "context_messages" : 41,
+        "context_chars" : 7570,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "M07",
+        "context_messages" : 41,
+        "context_chars" : 7570,
+        "overlap_bucket" : "none"
+      } ]
+    },
+    "A-budget" : {
+      "arm" : "A-budget",
+      "n_questions" : 35,
+      "n_with_gold_evidence" : 27,
+      "context_recall_mean" : 0.5556,
+      "all_gold_within_budget_rate" : 0.4815,
+      "all_gold_within_budget_count" : 13,
+      "forbidden_in_context_count" : 0,
+      "forbidden_in_context_items" : 0,
+      "injection_in_context_count" : 8,
+      "injection_in_context_items" : 8,
+      "n_with_superseded" : 5,
+      "superseded_in_context_items" : 1,
+      "superseded_without_successor_items" : 0,
+      "visibility_violations" : 0,
+      "dropped_non_visible_ids" : 0,
+      "context_messages_mean" : 20.91,
+      "context_chars_mean" : 3904.0,
+      "context_chars_p95" : 3927.0,
+      "context_chars_max" : 3948.0,
+      "context_tokens_est_mean_chars_div_4" : 976.0,
+      "by_scenario" : {
+        "ambiguous_pronoun" : {
+          "n" : 3,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "as_of_temporal" : {
+          "n" : 1,
+          "recall" : 0.0,
+          "all_gold_rate" : 0.0
+        },
+        "conflicting" : {
+          "n" : 3,
+          "recall" : 0.1667,
+          "all_gold_rate" : 0.0
+        },
+        "context_dependent_rec" : {
+          "n" : 3,
+          "recall" : 0.3333,
+          "all_gold_rate" : 0.0
+        },
+        "correction" : {
+          "n" : 4,
+          "recall" : 0.75,
+          "all_gold_rate" : 0.75
+        },
+        "cross_language" : {
+          "n" : 9,
+          "recall" : 0.6111,
+          "all_gold_rate" : 0.4444
+        },
+        "deleted" : {
+          "n" : 1,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "forwarded_non_independent" : {
+          "n" : 1,
+          "recall" : 0.0,
+          "all_gold_rate" : 0.0
+        },
+        "injection" : {
+          "n" : 9,
+          "recall" : 0.6111,
+          "all_gold_rate" : 0.5556
+        },
+        "missing_reply_link" : {
+          "n" : 5,
+          "recall" : 0.9,
+          "all_gold_rate" : 0.8
+        },
+        "multi_hop_distant" : {
+          "n" : 2,
+          "recall" : 0.5,
+          "all_gold_rate" : 0.0
+        },
+        "offer_vs_confirmed" : {
+          "n" : 2,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "parallel_threads" : {
+          "n" : 3,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "plain_lookup" : {
+          "n" : 3,
+          "recall" : 0.3333,
+          "all_gold_rate" : 0.3333
+        },
+        "resumed_conversation" : {
+          "n" : 4,
+          "recall" : 0.875,
+          "all_gold_rate" : 0.75
+        },
+        "split_reconnect" : {
+          "n" : 2,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "spread_recommendations" : {
+          "n" : 2,
+          "recall" : 0.0,
+          "all_gold_rate" : 0.0
+        },
+        "superseded" : {
+          "n" : 3,
+          "recall" : 0.6667,
+          "all_gold_rate" : 0.6667
+        }
+      },
+      "by_lang" : {
+        "en" : {
+          "n" : 11,
+          "recall" : 0.6818,
+          "all_gold_rate" : 0.6364
+        },
+        "he" : {
+          "n" : 10,
+          "recall" : 0.5,
+          "all_gold_rate" : 0.4
+        },
+        "mixed" : {
+          "n" : 6,
+          "recall" : 0.4167,
+          "all_gold_rate" : 0.3333
+        }
+      },
+      "by_overlap_bucket" : {
+        "high" : {
+          "n" : 10,
+          "recall" : 0.65,
+          "all_gold_rate" : 0.6
+        },
+        "low" : {
+          "n" : 10,
+          "recall" : 0.65,
+          "all_gold_rate" : 0.6
+        },
+        "mid" : {
+          "n" : 7,
+          "recall" : 0.2857,
+          "all_gold_rate" : 0.1429
+        }
+      },
+      "items" : [ {
+        "qid" : "B01",
+        "context_messages" : 20,
+        "context_chars" : 3917,
+        "overlap_bucket" : "mid",
+        "recall" : 0.5,
+        "all_gold" : false,
+        "missing_gold" : [ "b03", "b05" ]
+      }, {
+        "qid" : "B02",
+        "context_messages" : 20,
+        "context_chars" : 3917,
+        "overlap_bucket" : "low",
+        "recall" : 0.5,
+        "all_gold" : false,
+        "missing_gold" : [ "b05" ]
+      }, {
+        "qid" : "B03",
+        "context_messages" : 20,
+        "context_chars" : 3917,
+        "overlap_bucket" : "low",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "B04",
+        "context_messages" : 20,
+        "context_chars" : 3917,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "B05",
+        "context_messages" : 20,
+        "context_chars" : 3917,
+        "overlap_bucket" : "low",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "B06",
+        "context_messages" : 20,
+        "context_chars" : 3917,
+        "overlap_bucket" : "low",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "B07",
+        "context_messages" : 20,
+        "context_chars" : 3917,
+        "overlap_bucket" : "low",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "B08",
+        "context_messages" : 20,
+        "context_chars" : 3917,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "B09",
+        "context_messages" : 20,
+        "context_chars" : 3917,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "B10",
+        "context_messages" : 20,
+        "context_chars" : 3917,
+        "overlap_bucket" : "low",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "B11",
+        "context_messages" : 20,
+        "context_chars" : 3917,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "B12",
+        "context_messages" : 20,
+        "context_chars" : 3917,
+        "overlap_bucket" : "low",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "H01",
+        "context_messages" : 22,
+        "context_chars" : 3927,
+        "overlap_bucket" : "low",
+        "recall" : 0.0,
+        "all_gold" : false,
+        "missing_gold" : [ "h06", "h15", "h16" ],
+        "injection_in_context" : 1
+      }, {
+        "qid" : "H02",
+        "context_messages" : 22,
+        "context_chars" : 3927,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ],
+        "injection_in_context" : 1
+      }, {
+        "qid" : "H03",
+        "context_messages" : 22,
+        "context_chars" : 3948,
+        "overlap_bucket" : "high",
+        "recall" : 0.0,
+        "all_gold" : false,
+        "missing_gold" : [ "h04" ],
+        "injection_in_context" : 1
+      }, {
+        "qid" : "H04",
+        "context_messages" : 22,
+        "context_chars" : 3927,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ],
+        "injection_in_context" : 1
+      }, {
+        "qid" : "H05",
+        "context_messages" : 22,
+        "context_chars" : 3927,
+        "overlap_bucket" : "high",
+        "recall" : 0.0,
+        "all_gold" : false,
+        "missing_gold" : [ "h12", "h13" ]
+      }, {
+        "qid" : "H06",
+        "context_messages" : 22,
+        "context_chars" : 3927,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "H07",
+        "context_messages" : 22,
+        "context_chars" : 3927,
+        "overlap_bucket" : "mid",
+        "recall" : 0.5,
+        "all_gold" : false,
+        "missing_gold" : [ "h02" ]
+      }, {
+        "qid" : "H08",
+        "context_messages" : 22,
+        "context_chars" : 3927,
+        "overlap_bucket" : "high",
+        "recall" : 0.0,
+        "all_gold" : false,
+        "missing_gold" : [ "h08" ]
+      }, {
+        "qid" : "H09",
+        "context_messages" : 22,
+        "context_chars" : 3927,
+        "overlap_bucket" : "none",
+        "injection_in_context" : 1
+      }, {
+        "qid" : "F01",
+        "context_messages" : 21,
+        "context_chars" : 3880,
+        "overlap_bucket" : "mid",
+        "recall" : 0.0,
+        "all_gold" : false,
+        "missing_gold" : [ "f05", "f07" ]
+      }, {
+        "qid" : "F02",
+        "context_messages" : 21,
+        "context_chars" : 3880,
+        "overlap_bucket" : "mid",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "F03",
+        "context_messages" : 21,
+        "context_chars" : 3880,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "F04",
+        "context_messages" : 21,
+        "context_chars" : 3880,
+        "overlap_bucket" : "mid",
+        "recall" : 0.0,
+        "all_gold" : false,
+        "missing_gold" : [ "any_of[f12, f14]" ]
+      }, {
+        "qid" : "F05",
+        "context_messages" : 21,
+        "context_chars" : 3880,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "F06",
+        "context_messages" : 21,
+        "context_chars" : 3880,
+        "overlap_bucket" : "mid",
+        "recall" : 0.0,
+        "all_gold" : false,
+        "missing_gold" : [ "f11" ]
+      }, {
+        "qid" : "F07",
+        "context_messages" : 21,
+        "context_chars" : 3880,
+        "overlap_bucket" : "none",
+        "injection_in_context" : 1
+      }, {
+        "qid" : "M01",
+        "context_messages" : 21,
+        "context_chars" : 3873,
+        "overlap_bucket" : "low",
+        "recall" : 0.0,
+        "all_gold" : false,
+        "missing_gold" : [ "m04", "m05", "m07" ]
+      }, {
+        "qid" : "M02",
+        "context_messages" : 21,
+        "context_chars" : 3873,
+        "overlap_bucket" : "mid",
+        "recall" : 0.0,
+        "all_gold" : false,
+        "missing_gold" : [ "m18" ]
+      }, {
+        "qid" : "M03",
+        "context_messages" : 21,
+        "context_chars" : 3873,
+        "overlap_bucket" : "low",
+        "recall" : 0.0,
+        "all_gold" : false,
+        "missing_gold" : [ "m13", "m14" ],
+        "injection_in_context" : 1
+      }, {
+        "qid" : "M04",
+        "context_messages" : 21,
+        "context_chars" : 3873,
+        "overlap_bucket" : "high",
+        "recall" : 0.5,
+        "all_gold" : false,
+        "missing_gold" : [ "m08" ],
+        "injection_in_context" : 1
+      }, {
+        "qid" : "M05",
+        "context_messages" : 21,
+        "context_chars" : 3873,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "M06",
+        "context_messages" : 21,
+        "context_chars" : 3873,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "M07",
+        "context_messages" : 21,
+        "context_chars" : 3873,
+        "overlap_bucket" : "none"
+      } ]
+    },
+    "B-weak control" : {
+      "arm" : "B-weak control",
+      "n_questions" : 35,
+      "n_with_gold_evidence" : 27,
+      "context_recall_mean" : 0.8333,
+      "all_gold_within_budget_rate" : 0.7778,
+      "all_gold_within_budget_count" : 21,
+      "forbidden_in_context_count" : 0,
+      "forbidden_in_context_items" : 0,
+      "injection_in_context_count" : 7,
+      "injection_in_context_items" : 7,
+      "n_with_superseded" : 5,
+      "superseded_in_context_items" : 3,
+      "superseded_without_successor_items" : 0,
+      "visibility_violations" : 0,
+      "dropped_non_visible_ids" : 0,
+      "context_messages_mean" : 19.97,
+      "context_chars_mean" : 3779.3,
+      "context_chars_p95" : 3989.0,
+      "context_chars_max" : 3995.0,
+      "context_tokens_est_mean_chars_div_4" : 944.8,
+      "by_scenario" : {
+        "ambiguous_pronoun" : {
+          "n" : 3,
+          "recall" : 0.6667,
+          "all_gold_rate" : 0.6667
+        },
+        "as_of_temporal" : {
+          "n" : 1,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "conflicting" : {
+          "n" : 3,
+          "recall" : 0.8333,
+          "all_gold_rate" : 0.6667
+        },
+        "context_dependent_rec" : {
+          "n" : 3,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "correction" : {
+          "n" : 4,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "cross_language" : {
+          "n" : 9,
+          "recall" : 0.6667,
+          "all_gold_rate" : 0.5556
+        },
+        "deleted" : {
+          "n" : 1,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "forwarded_non_independent" : {
+          "n" : 1,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "injection" : {
+          "n" : 9,
+          "recall" : 0.7778,
+          "all_gold_rate" : 0.6667
+        },
+        "missing_reply_link" : {
+          "n" : 5,
+          "recall" : 0.6,
+          "all_gold_rate" : 0.6
+        },
+        "multi_hop_distant" : {
+          "n" : 2,
+          "recall" : 0.5,
+          "all_gold_rate" : 0.0
+        },
+        "offer_vs_confirmed" : {
+          "n" : 2,
+          "recall" : 0.5,
+          "all_gold_rate" : 0.5
+        },
+        "parallel_threads" : {
+          "n" : 3,
+          "recall" : 0.6667,
+          "all_gold_rate" : 0.6667
+        },
+        "plain_lookup" : {
+          "n" : 3,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "resumed_conversation" : {
+          "n" : 4,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "split_reconnect" : {
+          "n" : 2,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "spread_recommendations" : {
+          "n" : 2,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "superseded" : {
+          "n" : 3,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        }
+      },
+      "by_lang" : {
+        "en" : {
+          "n" : 11,
+          "recall" : 0.8182,
+          "all_gold_rate" : 0.8182
+        },
+        "he" : {
+          "n" : 10,
+          "recall" : 0.85,
+          "all_gold_rate" : 0.8
+        },
+        "mixed" : {
+          "n" : 6,
+          "recall" : 0.8333,
+          "all_gold_rate" : 0.6667
+        }
+      },
+      "by_overlap_bucket" : {
+        "high" : {
+          "n" : 10,
+          "recall" : 0.95,
+          "all_gold_rate" : 0.9
+        },
+        "low" : {
+          "n" : 10,
+          "recall" : 0.75,
+          "all_gold_rate" : 0.7
+        },
+        "mid" : {
+          "n" : 7,
+          "recall" : 0.7857,
+          "all_gold_rate" : 0.7143
+        }
+      },
+      "items" : [ {
+        "qid" : "B01",
+        "context_messages" : 20,
+        "context_chars" : 3925,
+        "overlap_bucket" : "mid",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "B02",
+        "context_messages" : 18,
+        "context_chars" : 3509,
+        "overlap_bucket" : "low",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "B03",
+        "context_messages" : 20,
+        "context_chars" : 3966,
+        "overlap_bucket" : "low",
+        "recall" : 0.0,
+        "all_gold" : false,
+        "missing_gold" : [ "b12" ]
+      }, {
+        "qid" : "B04",
+        "context_messages" : 20,
+        "context_chars" : 3935,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "B05",
+        "context_messages" : 18,
+        "context_chars" : 3552,
+        "overlap_bucket" : "low",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "B06",
+        "context_messages" : 20,
+        "context_chars" : 3944,
+        "overlap_bucket" : "low",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "B07",
+        "context_messages" : 20,
+        "context_chars" : 3905,
+        "overlap_bucket" : "low",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "B08",
+        "context_messages" : 20,
+        "context_chars" : 3861,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "B09",
+        "context_messages" : 18,
+        "context_chars" : 3590,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "B10",
+        "context_messages" : 20,
+        "context_chars" : 3958,
+        "overlap_bucket" : "low",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "B11",
+        "context_messages" : 20,
+        "context_chars" : 3956,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "B12",
+        "context_messages" : 5,
+        "context_chars" : 951,
+        "overlap_bucket" : "low",
+        "recall" : 0.0,
+        "all_gold" : false,
+        "missing_gold" : [ "b18" ]
+      }, {
+        "qid" : "H01",
+        "context_messages" : 21,
+        "context_chars" : 3821,
+        "overlap_bucket" : "low",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ],
+        "injection_in_context" : 1
+      }, {
+        "qid" : "H02",
+        "context_messages" : 21,
+        "context_chars" : 3855,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ],
+        "injection_in_context" : 1
+      }, {
+        "qid" : "H03",
+        "context_messages" : 22,
+        "context_chars" : 3986,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ],
+        "injection_in_context" : 1
+      }, {
+        "qid" : "H04",
+        "context_messages" : 22,
+        "context_chars" : 3934,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ],
+        "injection_in_context" : 1
+      }, {
+        "qid" : "H05",
+        "context_messages" : 17,
+        "context_chars" : 3127,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "H06",
+        "context_messages" : 22,
+        "context_chars" : 3987,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "H07",
+        "context_messages" : 22,
+        "context_chars" : 3989,
+        "overlap_bucket" : "mid",
+        "recall" : 0.5,
+        "all_gold" : false,
+        "missing_gold" : [ "h02" ]
+      }, {
+        "qid" : "H08",
+        "context_messages" : 22,
+        "context_chars" : 3955,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "H09",
+        "context_messages" : 22,
+        "context_chars" : 3971,
+        "overlap_bucket" : "none",
+        "injection_in_context" : 1
+      }, {
+        "qid" : "F01",
+        "context_messages" : 20,
+        "context_chars" : 3987,
+        "overlap_bucket" : "mid",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "F02",
+        "context_messages" : 20,
+        "context_chars" : 3868,
+        "overlap_bucket" : "mid",
+        "recall" : 0.0,
+        "all_gold" : false,
+        "missing_gold" : [ "f32" ]
+      }, {
+        "qid" : "F03",
+        "context_messages" : 20,
+        "context_chars" : 3954,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "F04",
+        "context_messages" : 20,
+        "context_chars" : 3876,
+        "overlap_bucket" : "mid",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "F05",
+        "context_messages" : 20,
+        "context_chars" : 3845,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "F06",
+        "context_messages" : 21,
+        "context_chars" : 3963,
+        "overlap_bucket" : "mid",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "F07",
+        "context_messages" : 20,
+        "context_chars" : 3957,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "M01",
+        "context_messages" : 18,
+        "context_chars" : 3442,
+        "overlap_bucket" : "low",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "M02",
+        "context_messages" : 21,
+        "context_chars" : 3886,
+        "overlap_bucket" : "mid",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "M03",
+        "context_messages" : 21,
+        "context_chars" : 3889,
+        "overlap_bucket" : "low",
+        "recall" : 0.5,
+        "all_gold" : false,
+        "missing_gold" : [ "m13" ],
+        "injection_in_context" : 1
+      }, {
+        "qid" : "M04",
+        "context_messages" : 22,
+        "context_chars" : 3995,
+        "overlap_bucket" : "high",
+        "recall" : 0.5,
+        "all_gold" : false,
+        "missing_gold" : [ "m08" ],
+        "injection_in_context" : 1
+      }, {
+        "qid" : "M05",
+        "context_messages" : 22,
+        "context_chars" : 3970,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "M06",
+        "context_messages" : 22,
+        "context_chars" : 3987,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "M07",
+        "context_messages" : 22,
+        "context_chars" : 3980,
+        "overlap_bucket" : "none"
+      } ]
+    },
+    "C-today" : {
+      "arm" : "C-today",
+      "n_questions" : 35,
+      "n_with_gold_evidence" : 27,
+      "context_recall_mean" : 0.6636,
+      "all_gold_within_budget_rate" : 0.5556,
+      "all_gold_within_budget_count" : 15,
+      "forbidden_in_context_count" : 0,
+      "forbidden_in_context_items" : 0,
+      "injection_in_context_count" : 3,
+      "injection_in_context_items" : 3,
+      "n_with_superseded" : 5,
+      "superseded_in_context_items" : 3,
+      "superseded_without_successor_items" : 0,
+      "visibility_violations" : 0,
+      "dropped_non_visible_ids" : 0,
+      "context_messages_mean" : 4.94,
+      "context_chars_mean" : 993.2,
+      "context_chars_p95" : 1642.0,
+      "context_chars_max" : 1701.0,
+      "context_tokens_est_mean_chars_div_4" : 248.3,
+      "by_scenario" : {
+        "ambiguous_pronoun" : {
+          "n" : 3,
+          "recall" : 0.6667,
+          "all_gold_rate" : 0.6667
+        },
+        "as_of_temporal" : {
+          "n" : 1,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "conflicting" : {
+          "n" : 3,
+          "recall" : 0.5833,
+          "all_gold_rate" : 0.3333
+        },
+        "context_dependent_rec" : {
+          "n" : 3,
+          "recall" : 0.4167,
+          "all_gold_rate" : 0.0
+        },
+        "correction" : {
+          "n" : 4,
+          "recall" : 0.75,
+          "all_gold_rate" : 0.75
+        },
+        "cross_language" : {
+          "n" : 9,
+          "recall" : 0.25,
+          "all_gold_rate" : 0.1111
+        },
+        "deleted" : {
+          "n" : 1,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "forwarded_non_independent" : {
+          "n" : 1,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "injection" : {
+          "n" : 9,
+          "recall" : 0.7963,
+          "all_gold_rate" : 0.6667
+        },
+        "missing_reply_link" : {
+          "n" : 5,
+          "recall" : 0.35,
+          "all_gold_rate" : 0.2
+        },
+        "multi_hop_distant" : {
+          "n" : 2,
+          "recall" : 0.5,
+          "all_gold_rate" : 0.0
+        },
+        "offer_vs_confirmed" : {
+          "n" : 2,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "parallel_threads" : {
+          "n" : 3,
+          "recall" : 0.3333,
+          "all_gold_rate" : 0.3333
+        },
+        "plain_lookup" : {
+          "n" : 3,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "resumed_conversation" : {
+          "n" : 4,
+          "recall" : 0.5,
+          "all_gold_rate" : 0.5
+        },
+        "split_reconnect" : {
+          "n" : 2,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "spread_recommendations" : {
+          "n" : 2,
+          "recall" : 0.3333,
+          "all_gold_rate" : 0.0
+        },
+        "superseded" : {
+          "n" : 3,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        }
+      },
+      "by_lang" : {
+        "en" : {
+          "n" : 11,
+          "recall" : 0.75,
+          "all_gold_rate" : 0.6364
+        },
+        "he" : {
+          "n" : 10,
+          "recall" : 0.6167,
+          "all_gold_rate" : 0.5
+        },
+        "mixed" : {
+          "n" : 6,
+          "recall" : 0.5833,
+          "all_gold_rate" : 0.5
+        }
+      },
+      "by_overlap_bucket" : {
+        "high" : {
+          "n" : 10,
+          "recall" : 0.95,
+          "all_gold_rate" : 0.9
+        },
+        "low" : {
+          "n" : 10,
+          "recall" : 0.2667,
+          "all_gold_rate" : 0.2
+        },
+        "mid" : {
+          "n" : 7,
+          "recall" : 0.8214,
+          "all_gold_rate" : 0.5714
+        }
+      },
+      "items" : [ {
+        "qid" : "B01",
+        "context_messages" : 6,
+        "context_chars" : 1276,
+        "overlap_bucket" : "mid",
+        "recall" : 0.75,
+        "all_gold" : false,
+        "missing_gold" : [ "b03" ]
+      }, {
+        "qid" : "B02",
+        "context_messages" : 0,
+        "context_chars" : 2,
+        "overlap_bucket" : "low",
+        "recall" : 0.0,
+        "all_gold" : false,
+        "missing_gold" : [ "b05", "b22" ]
+      }, {
+        "qid" : "B03",
+        "context_messages" : 8,
+        "context_chars" : 1605,
+        "overlap_bucket" : "low",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "B04",
+        "context_messages" : 8,
+        "context_chars" : 1566,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "B05",
+        "context_messages" : 1,
+        "context_chars" : 204,
+        "overlap_bucket" : "low",
+        "recall" : 0.0,
+        "all_gold" : false,
+        "missing_gold" : [ "b13" ]
+      }, {
+        "qid" : "B06",
+        "context_messages" : 8,
+        "context_chars" : 1589,
+        "overlap_bucket" : "low",
+        "recall" : 0.0,
+        "all_gold" : false,
+        "missing_gold" : [ "b23" ]
+      }, {
+        "qid" : "B07",
+        "context_messages" : 1,
+        "context_chars" : 207,
+        "overlap_bucket" : "low",
+        "recall" : 0.0,
+        "all_gold" : false,
+        "missing_gold" : [ "b08", "b10" ]
+      }, {
+        "qid" : "B08",
+        "context_messages" : 0,
+        "context_chars" : 2,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "B09",
+        "context_messages" : 7,
+        "context_chars" : 1482,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "B10",
+        "context_messages" : 7,
+        "context_chars" : 1482,
+        "overlap_bucket" : "low",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "B11",
+        "context_messages" : 8,
+        "context_chars" : 1575,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "B12",
+        "context_messages" : 6,
+        "context_chars" : 1166,
+        "overlap_bucket" : "low",
+        "recall" : 0.0,
+        "all_gold" : false,
+        "missing_gold" : [ "b18" ]
+      }, {
+        "qid" : "H01",
+        "context_messages" : 8,
+        "context_chars" : 1564,
+        "overlap_bucket" : "low",
+        "recall" : 0.6667,
+        "all_gold" : false,
+        "missing_gold" : [ "h16" ]
+      }, {
+        "qid" : "H02",
+        "context_messages" : 4,
+        "context_chars" : 809,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ],
+        "injection_in_context" : 1
+      }, {
+        "qid" : "H03",
+        "context_messages" : 3,
+        "context_chars" : 606,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ],
+        "injection_in_context" : 1
+      }, {
+        "qid" : "H04",
+        "context_messages" : 3,
+        "context_chars" : 549,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "H05",
+        "context_messages" : 6,
+        "context_chars" : 1123,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "H06",
+        "context_messages" : 0,
+        "context_chars" : 2,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "H07",
+        "context_messages" : 3,
+        "context_chars" : 575,
+        "overlap_bucket" : "mid",
+        "recall" : 0.5,
+        "all_gold" : false,
+        "missing_gold" : [ "h02" ]
+      }, {
+        "qid" : "H08",
+        "context_messages" : 8,
+        "context_chars" : 1553,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "H09",
+        "context_messages" : 0,
+        "context_chars" : 2,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "F01",
+        "context_messages" : 8,
+        "context_chars" : 1701,
+        "overlap_bucket" : "mid",
+        "recall" : 0.5,
+        "all_gold" : false,
+        "missing_gold" : [ "f07" ]
+      }, {
+        "qid" : "F02",
+        "context_messages" : 8,
+        "context_chars" : 1642,
+        "overlap_bucket" : "mid",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "F03",
+        "context_messages" : 8,
+        "context_chars" : 1601,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "F04",
+        "context_messages" : 5,
+        "context_chars" : 1099,
+        "overlap_bucket" : "mid",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "F05",
+        "context_messages" : 2,
+        "context_chars" : 354,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "F06",
+        "context_messages" : 6,
+        "context_chars" : 1144,
+        "overlap_bucket" : "mid",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "F07",
+        "context_messages" : 7,
+        "context_chars" : 1411,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "M01",
+        "context_messages" : 2,
+        "context_chars" : 373,
+        "overlap_bucket" : "low",
+        "recall" : 0.0,
+        "all_gold" : false,
+        "missing_gold" : [ "m04", "m05", "m07" ]
+      }, {
+        "qid" : "M02",
+        "context_messages" : 7,
+        "context_chars" : 1424,
+        "overlap_bucket" : "mid",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "M03",
+        "context_messages" : 7,
+        "context_chars" : 1325,
+        "overlap_bucket" : "low",
+        "recall" : 0.0,
+        "all_gold" : false,
+        "missing_gold" : [ "m13", "m14" ],
+        "injection_in_context" : 1
+      }, {
+        "qid" : "M04",
+        "context_messages" : 5,
+        "context_chars" : 1038,
+        "overlap_bucket" : "high",
+        "recall" : 0.5,
+        "all_gold" : false,
+        "missing_gold" : [ "m08" ]
+      }, {
+        "qid" : "M05",
+        "context_messages" : 4,
+        "context_chars" : 870,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "M06",
+        "context_messages" : 6,
+        "context_chars" : 1169,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "M07",
+        "context_messages" : 3,
+        "context_chars" : 671,
+        "overlap_bucket" : "none"
+      } ]
+    },
+    "C-graph-off" : {
+      "arm" : "C-graph-off",
+      "n_questions" : 35,
+      "n_with_gold_evidence" : 27,
+      "context_recall_mean" : 0.608,
+      "all_gold_within_budget_rate" : 0.4815,
+      "all_gold_within_budget_count" : 13,
+      "forbidden_in_context_count" : 0,
+      "forbidden_in_context_items" : 0,
+      "injection_in_context_count" : 3,
+      "injection_in_context_items" : 3,
+      "n_with_superseded" : 5,
+      "superseded_in_context_items" : 3,
+      "superseded_without_successor_items" : 0,
+      "visibility_violations" : 0,
+      "dropped_non_visible_ids" : 0,
+      "context_messages_mean" : 3.8,
+      "context_chars_mean" : 780.7,
+      "context_chars_p95" : 1553.0,
+      "context_chars_max" : 1575.0,
+      "context_tokens_est_mean_chars_div_4" : 195.2,
+      "by_scenario" : {
+        "ambiguous_pronoun" : {
+          "n" : 3,
+          "recall" : 0.1667,
+          "all_gold_rate" : 0.0
+        },
+        "as_of_temporal" : {
+          "n" : 1,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "conflicting" : {
+          "n" : 3,
+          "recall" : 0.5833,
+          "all_gold_rate" : 0.3333
+        },
+        "context_dependent_rec" : {
+          "n" : 3,
+          "recall" : 0.4167,
+          "all_gold_rate" : 0.0
+        },
+        "correction" : {
+          "n" : 4,
+          "recall" : 0.75,
+          "all_gold_rate" : 0.75
+        },
+        "cross_language" : {
+          "n" : 9,
+          "recall" : 0.1389,
+          "all_gold_rate" : 0.0
+        },
+        "deleted" : {
+          "n" : 1,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "forwarded_non_independent" : {
+          "n" : 1,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "injection" : {
+          "n" : 9,
+          "recall" : 0.7963,
+          "all_gold_rate" : 0.6667
+        },
+        "missing_reply_link" : {
+          "n" : 5,
+          "recall" : 0.15,
+          "all_gold_rate" : 0.0
+        },
+        "multi_hop_distant" : {
+          "n" : 2,
+          "recall" : 0.5,
+          "all_gold_rate" : 0.0
+        },
+        "offer_vs_confirmed" : {
+          "n" : 2,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "parallel_threads" : {
+          "n" : 3,
+          "recall" : 0.3333,
+          "all_gold_rate" : 0.3333
+        },
+        "plain_lookup" : {
+          "n" : 3,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "resumed_conversation" : {
+          "n" : 4,
+          "recall" : 0.375,
+          "all_gold_rate" : 0.25
+        },
+        "split_reconnect" : {
+          "n" : 2,
+          "recall" : 0.75,
+          "all_gold_rate" : 0.5
+        },
+        "spread_recommendations" : {
+          "n" : 2,
+          "recall" : 0.3333,
+          "all_gold_rate" : 0.0
+        },
+        "superseded" : {
+          "n" : 3,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        }
+      },
+      "by_lang" : {
+        "en" : {
+          "n" : 11,
+          "recall" : 0.6136,
+          "all_gold_rate" : 0.4545
+        },
+        "he" : {
+          "n" : 10,
+          "recall" : 0.6167,
+          "all_gold_rate" : 0.5
+        },
+        "mixed" : {
+          "n" : 6,
+          "recall" : 0.5833,
+          "all_gold_rate" : 0.5
+        }
+      },
+      "by_overlap_bucket" : {
+        "high" : {
+          "n" : 10,
+          "recall" : 0.95,
+          "all_gold_rate" : 0.9
+        },
+        "low" : {
+          "n" : 10,
+          "recall" : 0.1167,
+          "all_gold_rate" : 0.0
+        },
+        "mid" : {
+          "n" : 7,
+          "recall" : 0.8214,
+          "all_gold_rate" : 0.5714
+        }
+      },
+      "items" : [ {
+        "qid" : "B01",
+        "context_messages" : 4,
+        "context_chars" : 894,
+        "overlap_bucket" : "mid",
+        "recall" : 0.75,
+        "all_gold" : false,
+        "missing_gold" : [ "b03" ]
+      }, {
+        "qid" : "B02",
+        "context_messages" : 0,
+        "context_chars" : 2,
+        "overlap_bucket" : "low",
+        "recall" : 0.0,
+        "all_gold" : false,
+        "missing_gold" : [ "b05", "b22" ]
+      }, {
+        "qid" : "B03",
+        "context_messages" : 5,
+        "context_chars" : 1083,
+        "overlap_bucket" : "low",
+        "recall" : 0.0,
+        "all_gold" : false,
+        "missing_gold" : [ "b12" ]
+      }, {
+        "qid" : "B04",
+        "context_messages" : 7,
+        "context_chars" : 1371,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "B05",
+        "context_messages" : 1,
+        "context_chars" : 204,
+        "overlap_bucket" : "low",
+        "recall" : 0.0,
+        "all_gold" : false,
+        "missing_gold" : [ "b13" ]
+      }, {
+        "qid" : "B06",
+        "context_messages" : 2,
+        "context_chars" : 398,
+        "overlap_bucket" : "low",
+        "recall" : 0.0,
+        "all_gold" : false,
+        "missing_gold" : [ "b23" ]
+      }, {
+        "qid" : "B07",
+        "context_messages" : 1,
+        "context_chars" : 207,
+        "overlap_bucket" : "low",
+        "recall" : 0.0,
+        "all_gold" : false,
+        "missing_gold" : [ "b08", "b10" ]
+      }, {
+        "qid" : "B08",
+        "context_messages" : 0,
+        "context_chars" : 2,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "B09",
+        "context_messages" : 6,
+        "context_chars" : 1284,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "B10",
+        "context_messages" : 6,
+        "context_chars" : 1273,
+        "overlap_bucket" : "low",
+        "recall" : 0.5,
+        "all_gold" : false,
+        "missing_gold" : [ "b22" ]
+      }, {
+        "qid" : "B11",
+        "context_messages" : 8,
+        "context_chars" : 1575,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "B12",
+        "context_messages" : 1,
+        "context_chars" : 183,
+        "overlap_bucket" : "low",
+        "recall" : 0.0,
+        "all_gold" : false,
+        "missing_gold" : [ "b18" ]
+      }, {
+        "qid" : "H01",
+        "context_messages" : 7,
+        "context_chars" : 1370,
+        "overlap_bucket" : "low",
+        "recall" : 0.6667,
+        "all_gold" : false,
+        "missing_gold" : [ "h16" ]
+      }, {
+        "qid" : "H02",
+        "context_messages" : 4,
+        "context_chars" : 809,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ],
+        "injection_in_context" : 1
+      }, {
+        "qid" : "H03",
+        "context_messages" : 3,
+        "context_chars" : 606,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ],
+        "injection_in_context" : 1
+      }, {
+        "qid" : "H04",
+        "context_messages" : 2,
+        "context_chars" : 395,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "H05",
+        "context_messages" : 6,
+        "context_chars" : 1123,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "H06",
+        "context_messages" : 0,
+        "context_chars" : 2,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "H07",
+        "context_messages" : 3,
+        "context_chars" : 575,
+        "overlap_bucket" : "mid",
+        "recall" : 0.5,
+        "all_gold" : false,
+        "missing_gold" : [ "h02" ]
+      }, {
+        "qid" : "H08",
+        "context_messages" : 8,
+        "context_chars" : 1553,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "H09",
+        "context_messages" : 0,
+        "context_chars" : 2,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "F01",
+        "context_messages" : 6,
+        "context_chars" : 1325,
+        "overlap_bucket" : "mid",
+        "recall" : 0.5,
+        "all_gold" : false,
+        "missing_gold" : [ "f07" ]
+      }, {
+        "qid" : "F02",
+        "context_messages" : 7,
+        "context_chars" : 1471,
+        "overlap_bucket" : "mid",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "F03",
+        "context_messages" : 4,
+        "context_chars" : 848,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "F04",
+        "context_messages" : 4,
+        "context_chars" : 946,
+        "overlap_bucket" : "mid",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "F05",
+        "context_messages" : 1,
+        "context_chars" : 190,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "F06",
+        "context_messages" : 5,
+        "context_chars" : 991,
+        "overlap_bucket" : "mid",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "F07",
+        "context_messages" : 4,
+        "context_chars" : 879,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "M01",
+        "context_messages" : 1,
+        "context_chars" : 179,
+        "overlap_bucket" : "low",
+        "recall" : 0.0,
+        "all_gold" : false,
+        "missing_gold" : [ "m04", "m05", "m07" ]
+      }, {
+        "qid" : "M02",
+        "context_messages" : 6,
+        "context_chars" : 1269,
+        "overlap_bucket" : "mid",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "M03",
+        "context_messages" : 4,
+        "context_chars" : 724,
+        "overlap_bucket" : "low",
+        "recall" : 0.0,
+        "all_gold" : false,
+        "missing_gold" : [ "m13", "m14" ],
+        "injection_in_context" : 1
+      }, {
+        "qid" : "M04",
+        "context_messages" : 5,
+        "context_chars" : 1038,
+        "overlap_bucket" : "high",
+        "recall" : 0.5,
+        "all_gold" : false,
+        "missing_gold" : [ "m08" ]
+      }, {
+        "qid" : "M05",
+        "context_messages" : 4,
+        "context_chars" : 870,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "M06",
+        "context_messages" : 5,
+        "context_chars" : 1014,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "M07",
+        "context_messages" : 3,
+        "context_chars" : 671,
+        "overlap_bucket" : "none"
+      } ]
+    },
+    "B-weak no-window (diag)" : {
+      "arm" : "B-weak no-window (diag)",
+      "n_questions" : 35,
+      "n_with_gold_evidence" : 27,
+      "context_recall_mean" : 0.6389,
+      "all_gold_within_budget_rate" : 0.4815,
+      "all_gold_within_budget_count" : 13,
+      "forbidden_in_context_count" : 0,
+      "forbidden_in_context_items" : 0,
+      "injection_in_context_count" : 4,
+      "injection_in_context_items" : 4,
+      "n_with_superseded" : 5,
+      "superseded_in_context_items" : 3,
+      "superseded_without_successor_items" : 0,
+      "visibility_violations" : 0,
+      "dropped_non_visible_ids" : 0,
+      "context_messages_mean" : 7.4,
+      "context_chars_mean" : 1483.1,
+      "context_chars_p95" : 1741.0,
+      "context_chars_max" : 1812.0,
+      "context_tokens_est_mean_chars_div_4" : 370.8,
+      "by_scenario" : {
+        "ambiguous_pronoun" : {
+          "n" : 3,
+          "recall" : 0.3333,
+          "all_gold_rate" : 0.0
+        },
+        "as_of_temporal" : {
+          "n" : 1,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "conflicting" : {
+          "n" : 3,
+          "recall" : 0.5833,
+          "all_gold_rate" : 0.3333
+        },
+        "context_dependent_rec" : {
+          "n" : 3,
+          "recall" : 0.4167,
+          "all_gold_rate" : 0.0
+        },
+        "correction" : {
+          "n" : 4,
+          "recall" : 0.75,
+          "all_gold_rate" : 0.75
+        },
+        "cross_language" : {
+          "n" : 9,
+          "recall" : 0.1759,
+          "all_gold_rate" : 0.0
+        },
+        "deleted" : {
+          "n" : 1,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "forwarded_non_independent" : {
+          "n" : 1,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "injection" : {
+          "n" : 9,
+          "recall" : 0.7963,
+          "all_gold_rate" : 0.6667
+        },
+        "missing_reply_link" : {
+          "n" : 5,
+          "recall" : 0.25,
+          "all_gold_rate" : 0.0
+        },
+        "multi_hop_distant" : {
+          "n" : 2,
+          "recall" : 0.5,
+          "all_gold_rate" : 0.0
+        },
+        "offer_vs_confirmed" : {
+          "n" : 2,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "parallel_threads" : {
+          "n" : 3,
+          "recall" : 0.5,
+          "all_gold_rate" : 0.3333
+        },
+        "plain_lookup" : {
+          "n" : 3,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "resumed_conversation" : {
+          "n" : 4,
+          "recall" : 0.375,
+          "all_gold_rate" : 0.25
+        },
+        "split_reconnect" : {
+          "n" : 2,
+          "recall" : 0.75,
+          "all_gold_rate" : 0.5
+        },
+        "spread_recommendations" : {
+          "n" : 2,
+          "recall" : 0.5,
+          "all_gold_rate" : 0.0
+        },
+        "superseded" : {
+          "n" : 3,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        }
+      },
+      "by_lang" : {
+        "en" : {
+          "n" : 11,
+          "recall" : 0.6591,
+          "all_gold_rate" : 0.4545
+        },
+        "he" : {
+          "n" : 10,
+          "recall" : 0.6167,
+          "all_gold_rate" : 0.5
+        },
+        "mixed" : {
+          "n" : 6,
+          "recall" : 0.6389,
+          "all_gold_rate" : 0.5
+        }
+      },
+      "by_overlap_bucket" : {
+        "high" : {
+          "n" : 10,
+          "recall" : 0.95,
+          "all_gold_rate" : 0.9
+        },
+        "low" : {
+          "n" : 10,
+          "recall" : 0.2,
+          "all_gold_rate" : 0.0
+        },
+        "mid" : {
+          "n" : 7,
+          "recall" : 0.8214,
+          "all_gold_rate" : 0.5714
+        }
+      },
+      "items" : [ {
+        "qid" : "B01",
+        "context_messages" : 8,
+        "context_chars" : 1625,
+        "overlap_bucket" : "mid",
+        "recall" : 0.75,
+        "all_gold" : false,
+        "missing_gold" : [ "b03" ]
+      }, {
+        "qid" : "B02",
+        "context_messages" : 4,
+        "context_chars" : 746,
+        "overlap_bucket" : "low",
+        "recall" : 0.0,
+        "all_gold" : false,
+        "missing_gold" : [ "b05", "b22" ]
+      }, {
+        "qid" : "B03",
+        "context_messages" : 8,
+        "context_chars" : 1653,
+        "overlap_bucket" : "low",
+        "recall" : 0.0,
+        "all_gold" : false,
+        "missing_gold" : [ "b12" ]
+      }, {
+        "qid" : "B04",
+        "context_messages" : 8,
+        "context_chars" : 1566,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "B05",
+        "context_messages" : 4,
+        "context_chars" : 753,
+        "overlap_bucket" : "low",
+        "recall" : 0.0,
+        "all_gold" : false,
+        "missing_gold" : [ "b13" ]
+      }, {
+        "qid" : "B06",
+        "context_messages" : 8,
+        "context_chars" : 1616,
+        "overlap_bucket" : "low",
+        "recall" : 0.0,
+        "all_gold" : false,
+        "missing_gold" : [ "b23" ]
+      }, {
+        "qid" : "B07",
+        "context_messages" : 8,
+        "context_chars" : 1642,
+        "overlap_bucket" : "low",
+        "recall" : 0.5,
+        "all_gold" : false,
+        "missing_gold" : [ "b08" ]
+      }, {
+        "qid" : "B08",
+        "context_messages" : 8,
+        "context_chars" : 1561,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "B09",
+        "context_messages" : 8,
+        "context_chars" : 1672,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "B10",
+        "context_messages" : 8,
+        "context_chars" : 1649,
+        "overlap_bucket" : "low",
+        "recall" : 0.5,
+        "all_gold" : false,
+        "missing_gold" : [ "b22" ]
+      }, {
+        "qid" : "B11",
+        "context_messages" : 8,
+        "context_chars" : 1575,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "B12",
+        "context_messages" : 1,
+        "context_chars" : 183,
+        "overlap_bucket" : "low",
+        "recall" : 0.0,
+        "all_gold" : false,
+        "missing_gold" : [ "b18" ]
+      }, {
+        "qid" : "H01",
+        "context_messages" : 8,
+        "context_chars" : 1583,
+        "overlap_bucket" : "low",
+        "recall" : 0.6667,
+        "all_gold" : false,
+        "missing_gold" : [ "h16" ]
+      }, {
+        "qid" : "H02",
+        "context_messages" : 8,
+        "context_chars" : 1543,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ],
+        "injection_in_context" : 1
+      }, {
+        "qid" : "H03",
+        "context_messages" : 8,
+        "context_chars" : 1462,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ],
+        "injection_in_context" : 1
+      }, {
+        "qid" : "H04",
+        "context_messages" : 8,
+        "context_chars" : 1580,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ],
+        "injection_in_context" : 1
+      }, {
+        "qid" : "H05",
+        "context_messages" : 8,
+        "context_chars" : 1537,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "H06",
+        "context_messages" : 8,
+        "context_chars" : 1433,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "H07",
+        "context_messages" : 8,
+        "context_chars" : 1462,
+        "overlap_bucket" : "mid",
+        "recall" : 0.5,
+        "all_gold" : false,
+        "missing_gold" : [ "h02" ]
+      }, {
+        "qid" : "H08",
+        "context_messages" : 8,
+        "context_chars" : 1553,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "H09",
+        "context_messages" : 8,
+        "context_chars" : 1470,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "F01",
+        "context_messages" : 8,
+        "context_chars" : 1711,
+        "overlap_bucket" : "mid",
+        "recall" : 0.5,
+        "all_gold" : false,
+        "missing_gold" : [ "f07" ]
+      }, {
+        "qid" : "F02",
+        "context_messages" : 8,
+        "context_chars" : 1635,
+        "overlap_bucket" : "mid",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "F03",
+        "context_messages" : 8,
+        "context_chars" : 1719,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "F04",
+        "context_messages" : 8,
+        "context_chars" : 1812,
+        "overlap_bucket" : "mid",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "F05",
+        "context_messages" : 8,
+        "context_chars" : 1683,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "F06",
+        "context_messages" : 8,
+        "context_chars" : 1741,
+        "overlap_bucket" : "mid",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "F07",
+        "context_messages" : 8,
+        "context_chars" : 1655,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "M01",
+        "context_messages" : 5,
+        "context_chars" : 966,
+        "overlap_bucket" : "low",
+        "recall" : 0.3333,
+        "all_gold" : false,
+        "missing_gold" : [ "m05", "m07" ]
+      }, {
+        "qid" : "M02",
+        "context_messages" : 8,
+        "context_chars" : 1619,
+        "overlap_bucket" : "mid",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "M03",
+        "context_messages" : 5,
+        "context_chars" : 911,
+        "overlap_bucket" : "low",
+        "recall" : 0.0,
+        "all_gold" : false,
+        "missing_gold" : [ "m13", "m14" ],
+        "injection_in_context" : 1
+      }, {
+        "qid" : "M04",
+        "context_messages" : 8,
+        "context_chars" : 1685,
+        "overlap_bucket" : "high",
+        "recall" : 0.5,
+        "all_gold" : false,
+        "missing_gold" : [ "m08" ]
+      }, {
+        "qid" : "M05",
+        "context_messages" : 8,
+        "context_chars" : 1667,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "M06",
+        "context_messages" : 8,
+        "context_chars" : 1611,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "M07",
+        "context_messages" : 8,
+        "context_chars" : 1628,
+        "overlap_bucket" : "none"
+      } ]
+    },
+    "C-today +/-2 (diag)" : {
+      "arm" : "C-today +/-2 (diag)",
+      "n_questions" : 35,
+      "n_with_gold_evidence" : 27,
+      "context_recall_mean" : 0.7593,
+      "all_gold_within_budget_rate" : 0.7037,
+      "all_gold_within_budget_count" : 19,
+      "forbidden_in_context_count" : 0,
+      "forbidden_in_context_items" : 0,
+      "injection_in_context_count" : 6,
+      "injection_in_context_items" : 6,
+      "n_with_superseded" : 5,
+      "superseded_in_context_items" : 3,
+      "superseded_without_successor_items" : 0,
+      "visibility_violations" : 0,
+      "dropped_non_visible_ids" : 0,
+      "context_messages_mean" : 14.43,
+      "context_chars_mean" : 2738.9,
+      "context_chars_p95" : 3956.0,
+      "context_chars_max" : 3967.0,
+      "context_tokens_est_mean_chars_div_4" : 684.7,
+      "by_scenario" : {
+        "ambiguous_pronoun" : {
+          "n" : 3,
+          "recall" : 0.8333,
+          "all_gold_rate" : 0.6667
+        },
+        "as_of_temporal" : {
+          "n" : 1,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "conflicting" : {
+          "n" : 3,
+          "recall" : 0.6667,
+          "all_gold_rate" : 0.6667
+        },
+        "context_dependent_rec" : {
+          "n" : 3,
+          "recall" : 0.6667,
+          "all_gold_rate" : 0.6667
+        },
+        "correction" : {
+          "n" : 4,
+          "recall" : 0.75,
+          "all_gold_rate" : 0.75
+        },
+        "cross_language" : {
+          "n" : 9,
+          "recall" : 0.5,
+          "all_gold_rate" : 0.4444
+        },
+        "deleted" : {
+          "n" : 1,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "forwarded_non_independent" : {
+          "n" : 1,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "injection" : {
+          "n" : 9,
+          "recall" : 0.7222,
+          "all_gold_rate" : 0.6667
+        },
+        "missing_reply_link" : {
+          "n" : 5,
+          "recall" : 0.9,
+          "all_gold_rate" : 0.8
+        },
+        "multi_hop_distant" : {
+          "n" : 2,
+          "recall" : 0.5,
+          "all_gold_rate" : 0.0
+        },
+        "offer_vs_confirmed" : {
+          "n" : 2,
+          "recall" : 0.5,
+          "all_gold_rate" : 0.5
+        },
+        "parallel_threads" : {
+          "n" : 3,
+          "recall" : 0.8333,
+          "all_gold_rate" : 0.6667
+        },
+        "plain_lookup" : {
+          "n" : 3,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "resumed_conversation" : {
+          "n" : 4,
+          "recall" : 0.75,
+          "all_gold_rate" : 0.75
+        },
+        "split_reconnect" : {
+          "n" : 2,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "spread_recommendations" : {
+          "n" : 2,
+          "recall" : 0.5,
+          "all_gold_rate" : 0.5
+        },
+        "superseded" : {
+          "n" : 3,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        }
+      },
+      "by_lang" : {
+        "en" : {
+          "n" : 11,
+          "recall" : 0.8636,
+          "all_gold_rate" : 0.8182
+        },
+        "he" : {
+          "n" : 10,
+          "recall" : 0.75,
+          "all_gold_rate" : 0.7
+        },
+        "mixed" : {
+          "n" : 6,
+          "recall" : 0.5833,
+          "all_gold_rate" : 0.5
+        }
+      },
+      "by_overlap_bucket" : {
+        "high" : {
+          "n" : 10,
+          "recall" : 0.95,
+          "all_gold_rate" : 0.9
+        },
+        "low" : {
+          "n" : 10,
+          "recall" : 0.55,
+          "all_gold_rate" : 0.5
+        },
+        "mid" : {
+          "n" : 7,
+          "recall" : 0.7857,
+          "all_gold_rate" : 0.7143
+        }
+      },
+      "items" : [ {
+        "qid" : "B01",
+        "context_messages" : 18,
+        "context_chars" : 3601,
+        "overlap_bucket" : "mid",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "B02",
+        "context_messages" : 0,
+        "context_chars" : 2,
+        "overlap_bucket" : "low",
+        "recall" : 0.0,
+        "all_gold" : false,
+        "missing_gold" : [ "b05", "b22" ]
+      }, {
+        "qid" : "B03",
+        "context_messages" : 19,
+        "context_chars" : 3797,
+        "overlap_bucket" : "low",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "B04",
+        "context_messages" : 20,
+        "context_chars" : 3935,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "B05",
+        "context_messages" : 5,
+        "context_chars" : 1011,
+        "overlap_bucket" : "low",
+        "recall" : 0.0,
+        "all_gold" : false,
+        "missing_gold" : [ "b13" ]
+      }, {
+        "qid" : "B06",
+        "context_messages" : 20,
+        "context_chars" : 3921,
+        "overlap_bucket" : "low",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "B07",
+        "context_messages" : 5,
+        "context_chars" : 1010,
+        "overlap_bucket" : "low",
+        "recall" : 0.5,
+        "all_gold" : false,
+        "missing_gold" : [ "b10" ]
+      }, {
+        "qid" : "B08",
+        "context_messages" : 0,
+        "context_chars" : 2,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "B09",
+        "context_messages" : 18,
+        "context_chars" : 3601,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "B10",
+        "context_messages" : 18,
+        "context_chars" : 3601,
+        "overlap_bucket" : "low",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "B11",
+        "context_messages" : 20,
+        "context_chars" : 3956,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "B12",
+        "context_messages" : 17,
+        "context_chars" : 3336,
+        "overlap_bucket" : "low",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "H01",
+        "context_messages" : 21,
+        "context_chars" : 3829,
+        "overlap_bucket" : "low",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ],
+        "injection_in_context" : 1
+      }, {
+        "qid" : "H02",
+        "context_messages" : 17,
+        "context_chars" : 3091,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ],
+        "injection_in_context" : 1
+      }, {
+        "qid" : "H03",
+        "context_messages" : 12,
+        "context_chars" : 2161,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ],
+        "injection_in_context" : 1
+      }, {
+        "qid" : "H04",
+        "context_messages" : 11,
+        "context_chars" : 1927,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ],
+        "injection_in_context" : 1
+      }, {
+        "qid" : "H05",
+        "context_messages" : 14,
+        "context_chars" : 2565,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "H06",
+        "context_messages" : 0,
+        "context_chars" : 2,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "H07",
+        "context_messages" : 11,
+        "context_chars" : 2011,
+        "overlap_bucket" : "mid",
+        "recall" : 0.5,
+        "all_gold" : false,
+        "missing_gold" : [ "h02" ]
+      }, {
+        "qid" : "H08",
+        "context_messages" : 22,
+        "context_chars" : 3948,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "H09",
+        "context_messages" : 0,
+        "context_chars" : 2,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "F01",
+        "context_messages" : 15,
+        "context_chars" : 3069,
+        "overlap_bucket" : "mid",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "F02",
+        "context_messages" : 20,
+        "context_chars" : 3868,
+        "overlap_bucket" : "mid",
+        "recall" : 0.0,
+        "all_gold" : false,
+        "missing_gold" : [ "f32" ]
+      }, {
+        "qid" : "F03",
+        "context_messages" : 18,
+        "context_chars" : 3597,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "F04",
+        "context_messages" : 17,
+        "context_chars" : 3294,
+        "overlap_bucket" : "mid",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "F05",
+        "context_messages" : 6,
+        "context_chars" : 1124,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "F06",
+        "context_messages" : 21,
+        "context_chars" : 3886,
+        "overlap_bucket" : "mid",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "F07",
+        "context_messages" : 17,
+        "context_chars" : 3295,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "M01",
+        "context_messages" : 6,
+        "context_chars" : 1102,
+        "overlap_bucket" : "low",
+        "recall" : 0.0,
+        "all_gold" : false,
+        "missing_gold" : [ "m04", "m05", "m07" ]
+      }, {
+        "qid" : "M02",
+        "context_messages" : 21,
+        "context_chars" : 3854,
+        "overlap_bucket" : "mid",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "M03",
+        "context_messages" : 21,
+        "context_chars" : 3925,
+        "overlap_bucket" : "low",
+        "recall" : 0.0,
+        "all_gold" : false,
+        "missing_gold" : [ "m13", "m14" ],
+        "injection_in_context" : 1
+      }, {
+        "qid" : "M04",
+        "context_messages" : 22,
+        "context_chars" : 3967,
+        "overlap_bucket" : "high",
+        "recall" : 0.5,
+        "all_gold" : false,
+        "missing_gold" : [ "m08" ],
+        "injection_in_context" : 1
+      }, {
+        "qid" : "M05",
+        "context_messages" : 18,
+        "context_chars" : 3254,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "M06",
+        "context_messages" : 20,
+        "context_chars" : 3621,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "M07",
+        "context_messages" : 15,
+        "context_chars" : 2698,
+        "overlap_bucket" : "none"
+      } ]
+    },
+    "O-gold" : {
+      "arm" : "O-gold",
+      "n_questions" : 35,
+      "n_with_gold_evidence" : 27,
+      "context_recall_mean" : 1.0,
+      "all_gold_within_budget_rate" : 1.0,
+      "all_gold_within_budget_count" : 27,
+      "forbidden_in_context_count" : 0,
+      "forbidden_in_context_items" : 0,
+      "injection_in_context_count" : 0,
+      "injection_in_context_items" : 0,
+      "n_with_superseded" : 5,
+      "superseded_in_context_items" : 3,
+      "superseded_without_successor_items" : 0,
+      "visibility_violations" : 0,
+      "dropped_non_visible_ids" : 0,
+      "context_messages_mean" : 3.91,
+      "context_chars_mean" : 771.2,
+      "context_chars_p95" : 1517.0,
+      "context_chars_max" : 1825.0,
+      "context_tokens_est_mean_chars_div_4" : 192.8,
+      "by_scenario" : {
+        "ambiguous_pronoun" : {
+          "n" : 3,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "as_of_temporal" : {
+          "n" : 1,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "conflicting" : {
+          "n" : 3,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "context_dependent_rec" : {
+          "n" : 3,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "correction" : {
+          "n" : 4,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "cross_language" : {
+          "n" : 9,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "deleted" : {
+          "n" : 1,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "forwarded_non_independent" : {
+          "n" : 1,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "injection" : {
+          "n" : 9,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "missing_reply_link" : {
+          "n" : 5,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "multi_hop_distant" : {
+          "n" : 2,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "offer_vs_confirmed" : {
+          "n" : 2,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "parallel_threads" : {
+          "n" : 3,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "plain_lookup" : {
+          "n" : 3,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "resumed_conversation" : {
+          "n" : 4,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "split_reconnect" : {
+          "n" : 2,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "spread_recommendations" : {
+          "n" : 2,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "superseded" : {
+          "n" : 3,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        }
+      },
+      "by_lang" : {
+        "en" : {
+          "n" : 11,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "he" : {
+          "n" : 10,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "mixed" : {
+          "n" : 6,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        }
+      },
+      "by_overlap_bucket" : {
+        "high" : {
+          "n" : 10,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "low" : {
+          "n" : 10,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        },
+        "mid" : {
+          "n" : 7,
+          "recall" : 1.0,
+          "all_gold_rate" : 1.0
+        }
+      },
+      "items" : [ {
+        "qid" : "B01",
+        "context_messages" : 9,
+        "context_chars" : 1825,
+        "overlap_bucket" : "mid",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "B02",
+        "context_messages" : 5,
+        "context_chars" : 1061,
+        "overlap_bucket" : "low",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "B03",
+        "context_messages" : 4,
+        "context_chars" : 788,
+        "overlap_bucket" : "low",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "B04",
+        "context_messages" : 7,
+        "context_chars" : 1344,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "B05",
+        "context_messages" : 3,
+        "context_chars" : 624,
+        "overlap_bucket" : "low",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "B06",
+        "context_messages" : 3,
+        "context_chars" : 624,
+        "overlap_bucket" : "low",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "B07",
+        "context_messages" : 3,
+        "context_chars" : 574,
+        "overlap_bucket" : "low",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "B08",
+        "context_messages" : 1,
+        "context_chars" : 174,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "B09",
+        "context_messages" : 4,
+        "context_chars" : 879,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "B10",
+        "context_messages" : 5,
+        "context_chars" : 1061,
+        "overlap_bucket" : "low",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "B11",
+        "context_messages" : 3,
+        "context_chars" : 610,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "B12",
+        "context_messages" : 4,
+        "context_chars" : 791,
+        "overlap_bucket" : "low",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "H01",
+        "context_messages" : 6,
+        "context_chars" : 1115,
+        "overlap_bucket" : "low",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "H02",
+        "context_messages" : 3,
+        "context_chars" : 570,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "H03",
+        "context_messages" : 1,
+        "context_chars" : 195,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "H04",
+        "context_messages" : 5,
+        "context_chars" : 931,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "H05",
+        "context_messages" : 4,
+        "context_chars" : 716,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "H06",
+        "context_messages" : 1,
+        "context_chars" : 180,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "H07",
+        "context_messages" : 3,
+        "context_chars" : 541,
+        "overlap_bucket" : "mid",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "H08",
+        "context_messages" : 4,
+        "context_chars" : 753,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "H09",
+        "context_messages" : 0,
+        "context_chars" : 2,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "F01",
+        "context_messages" : 7,
+        "context_chars" : 1517,
+        "overlap_bucket" : "mid",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "F02",
+        "context_messages" : 6,
+        "context_chars" : 1127,
+        "overlap_bucket" : "mid",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "F03",
+        "context_messages" : 7,
+        "context_chars" : 1406,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "F04",
+        "context_messages" : 5,
+        "context_chars" : 1109,
+        "overlap_bucket" : "mid",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "F05",
+        "context_messages" : 1,
+        "context_chars" : 187,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "F06",
+        "context_messages" : 4,
+        "context_chars" : 735,
+        "overlap_bucket" : "mid",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "F07",
+        "context_messages" : 2,
+        "context_chars" : 355,
+        "overlap_bucket" : "none"
+      }, {
+        "qid" : "M01",
+        "context_messages" : 7,
+        "context_chars" : 1373,
+        "overlap_bucket" : "low",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "M02",
+        "context_messages" : 8,
+        "context_chars" : 1424,
+        "overlap_bucket" : "mid",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "M03",
+        "context_messages" : 3,
+        "context_chars" : 539,
+        "overlap_bucket" : "low",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "M04",
+        "context_messages" : 3,
+        "context_chars" : 628,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "M05",
+        "context_messages" : 2,
+        "context_chars" : 380,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "M06",
+        "context_messages" : 3,
+        "context_chars" : 622,
+        "overlap_bucket" : "high",
+        "recall" : 1.0,
+        "all_gold" : true,
+        "missing_gold" : [ ]
+      }, {
+        "qid" : "M07",
+        "context_messages" : 1,
+        "context_chars" : 231,
+        "overlap_bucket" : "none"
+      } ]
+    }
+  }
+}

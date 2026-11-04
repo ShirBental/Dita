@@ -1,0 +1,49 @@
+# Message documents. Text lives ONLY here and in Postgres; it is deleted on every deletion (both modes).
+# Every query MUST filter on group_id (group isolation). Embeddings: dimension 8 is a placeholder for the
+# infrastructure test (synthetic vectors); the production embedder/dimension is decided under G3.
+schema message {
+    document message {
+        field group_id type string {
+            indexing: attribute | summary
+            attribute: fast-search
+            rank: filter
+        }
+        field message_id type string {
+            indexing: attribute | summary
+        }
+        field text type string {
+            indexing: index | summary
+            index: enable-bm25
+        }
+        field embedding type tensor<float>(x[8]) {
+            indexing: attribute | index
+            attribute {
+                distance-metric: angular
+            }
+            index {
+                hnsw {
+                    max-links-per-node: 16
+                    neighbors-to-explore-at-insert: 100
+                }
+            }
+        }
+    }
+    fieldset default {
+        fields: text
+    }
+    rank-profile bm25 {
+        first-phase {
+            expression: bm25(text)
+        }
+        match-features: bm25(text)
+    }
+    rank-profile hybrid inherits bm25 {
+        inputs {
+            query(q) tensor<float>(x[8])
+        }
+        first-phase {
+            expression: bm25(text) + 10 * closeness(field, embedding)
+        }
+        match-features: bm25(text) closeness(field, embedding)
+    }
+}

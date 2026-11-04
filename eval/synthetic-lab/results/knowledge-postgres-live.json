@@ -1,0 +1,1397 @@
+{
+  "mode" : "LIVE",
+  "backend" : "POSTGRES",
+  "group" : "lab-6d79eaf5",
+  "batch" : "xb-a2a1ca0c6decb21e49f2",
+  "status" : "DONE",
+  "error" : null,
+  "accepted" : 39,
+  "duplicates" : 0,
+  "relations" : 6,
+  "superseded" : 5,
+  "model_calls" : 1,
+  "request_chars" : 9695,
+  "dataset" : "lab",
+  "usage" : {
+    "completion_tokens" : 6698,
+    "prompt_tokens" : 2602,
+    "total_tokens" : 9300,
+    "completion_tokens_details" : {
+      "reasoning_tokens" : 2210
+    },
+    "prompt_tokens_details" : {
+      "cached_tokens" : 0
+    }
+  },
+  "cost_usd_at_user_prices" : 0.031719,
+  "rejections" : [ {
+    "item" : 4,
+    "reason" : "hearsay source does not occur in the evidence"
+  }, {
+    "item" : 21,
+    "reason" : "no explicit decision wording"
+  }, {
+    "item" : 33,
+    "reason" : "no explicit decision wording"
+  } ],
+  "items" : [ {
+    "id" : "k-9fe7d747d78979f92300",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Dana",
+    "speaker_id" : "900001",
+    "subject_id" : "birthday_party",
+    "subject" : "Noa's 7th birthday party",
+    "predicate" : "states",
+    "validity" : "SUPERSEDED",
+    "stated_at" : "2026-10-30T18:00:00Z",
+    "evidence" : [ {
+      "message" : "m1000",
+      "role" : "ASSERTS",
+      "quote" : "We need to organize Noa's 7th birthday party for November 14."
+    } ],
+    "qualifiers" : [ {
+      "kind" : "TIME",
+      "message" : "m1000",
+      "text" : "for November 14"
+    } ],
+    "entities" : [ {
+      "id" : "noa",
+      "surface" : "Noa's"
+    }, {
+      "id" : "nov14",
+      "surface" : "November 14"
+    } ]
+  }, {
+    "id" : "k-15d83e2ea01f13efcf42",
+    "status" : "OFFER",
+    "certainty" : "ASSERTED",
+    "speaker" : "Maya",
+    "speaker_id" : "900003",
+    "subject_id" : "backyard",
+    "subject" : "my backyard",
+    "predicate" : "offers",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-10-30T18:01:30Z",
+    "evidence" : [ {
+      "message" : "m1001",
+      "role" : "ASSERTS",
+      "quote" : "I can host in my backyard if the weather is good."
+    } ],
+    "qualifiers" : [ {
+      "kind" : "CONDITION",
+      "message" : "m1001",
+      "text" : "if the weather is good"
+    } ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-20235f83c9cc31083079",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Yossi",
+    "speaker_id" : "900002",
+    "subject_id" : "playlab",
+    "subject" : "PlayLab in Westfield",
+    "predicate" : "recommends",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-10-30T18:03:00Z",
+    "evidence" : [ {
+      "message" : "m1002",
+      "role" : "ASSERTS",
+      "quote" : "I recommend PlayLab in Westfield."
+    } ],
+    "qualifiers" : [ ],
+    "entities" : [ {
+      "id" : "westfield",
+      "surface" : "Westfield"
+    } ]
+  }, {
+    "id" : "k-4480d4846e0bde200eb2",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Ron",
+    "speaker_id" : "900004",
+    "subject_id" : "noa_preference",
+    "subject" : "Noa",
+    "predicate" : "states",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-10-30T18:04:30Z",
+    "evidence" : [ {
+      "message" : "m1003",
+      "role" : "ASSERTS",
+      "quote" : "Noa doesn't like loud music."
+    } ],
+    "qualifiers" : [ ],
+    "entities" : [ {
+      "id" : "loud_music",
+      "surface" : "loud music"
+    } ]
+  }, {
+    "id" : "k-398d1e6f80e97f095768",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Dana",
+    "speaker_id" : "900001",
+    "subject_id" : "noa_preference",
+    "subject" : "Noa",
+    "predicate" : "states",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-10-30T18:06:00Z",
+    "evidence" : [ {
+      "message" : "m1004",
+      "role" : "ASSERTS",
+      "quote" : "Noa prefers crafts and science activities to loud games."
+    } ],
+    "qualifiers" : [ ],
+    "entities" : [ {
+      "id" : "crafts_science",
+      "surface" : "crafts and science activities"
+    }, {
+      "id" : "loud_games",
+      "surface" : "loud games"
+    } ]
+  }, {
+    "id" : "k-736512beda5e600fc039",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Maya",
+    "speaker_id" : "900003",
+    "subject_id" : "colorhouse",
+    "subject" : "ColorHouse",
+    "predicate" : "states",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-10-30T18:07:30Z",
+    "evidence" : [ {
+      "message" : "m1005",
+      "role" : "ASSERTS",
+      "quote" : "There's also ColorHouse. They run painting workshops for children."
+    } ],
+    "qualifiers" : [ {
+      "kind" : "POPULATION",
+      "message" : "m1005",
+      "text" : "for children"
+    } ],
+    "entities" : [ {
+      "id" : "painting_workshops",
+      "surface" : "painting workshops"
+    } ]
+  }, {
+    "id" : "k-383d70db8711bacfbfb4",
+    "status" : "REPORTED_CLAIM",
+    "certainty" : "HEARSAY",
+    "speaker" : "Yossi",
+    "speaker_id" : "900002",
+    "subject_id" : "colorhouse_price",
+    "subject" : "ColorHouse",
+    "predicate" : "states",
+    "validity" : "SUPERSEDED",
+    "stated_at" : "2026-10-30T18:09:00Z",
+    "attributed_to" : "their quote last month",
+    "evidence" : [ {
+      "message" : "m1006",
+      "role" : "ASSERTS",
+      "quote" : "ColorHouse charges about $32 per child, according to their quote last month."
+    } ],
+    "qualifiers" : [ {
+      "kind" : "POPULATION",
+      "message" : "m1006",
+      "text" : "per child"
+    } ],
+    "entities" : [ {
+      "id" : "price_32",
+      "surface" : "$32"
+    } ]
+  }, {
+    "id" : "k-a028b6f282a4b5d5a7f4",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Ron",
+    "speaker_id" : "900004",
+    "subject_id" : "activity_budget",
+    "subject" : "the activity budget",
+    "predicate" : "recommends",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-10-30T18:10:30Z",
+    "evidence" : [ {
+      "message" : "m1007",
+      "role" : "ASSERTS",
+      "quote" : "I suggest we keep the activity budget under $400."
+    } ],
+    "qualifiers" : [ ],
+    "entities" : [ {
+      "id" : "400",
+      "surface" : "$400"
+    } ]
+  }, {
+    "id" : "k-3394aaeda00edc7a470f",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Dana",
+    "speaker_id" : "900001",
+    "subject_id" : "guest_count",
+    "subject" : "12 children",
+    "predicate" : "states",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-10-30T18:12:00Z",
+    "evidence" : [ {
+      "message" : "m1008",
+      "role" : "ASSERTS",
+      "quote" : "Let's invite 12 children, not counting siblings."
+    } ],
+    "qualifiers" : [ {
+      "kind" : "POPULATION",
+      "message" : "m1008",
+      "text" : "12 children"
+    }, {
+      "kind" : "POPULATION",
+      "message" : "m1008",
+      "text" : "not counting siblings"
+    } ],
+    "entities" : [ {
+      "id" : "siblings",
+      "surface" : "siblings"
+    } ]
+  }, {
+    "id" : "k-44d57c9ee239d71f765e",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Maya",
+    "speaker_id" : "900003",
+    "subject_id" : "guest_count",
+    "subject" : "14 children total",
+    "predicate" : "states",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-10-30T18:13:30Z",
+    "evidence" : [ {
+      "message" : "m1009",
+      "role" : "ASSERTS",
+      "quote" : "two siblings will also attend, so we'd have 14 children total."
+    } ],
+    "qualifiers" : [ {
+      "kind" : "POPULATION",
+      "message" : "m1009",
+      "text" : "14 children total"
+    } ],
+    "entities" : [ {
+      "id" : "siblings2",
+      "surface" : "two siblings"
+    } ]
+  }, {
+    "id" : "k-d9b885987249abf5cc7e",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Yossi",
+    "speaker_id" : "900002",
+    "subject_id" : "colorhouse_price",
+    "subject" : "ColorHouse",
+    "predicate" : "states",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-10-30T18:15:00Z",
+    "evidence" : [ {
+      "message" : "m1010",
+      "role" : "ASSERTS",
+      "quote" : "For 14 kids, ColorHouse could cost around $448, based on that quote."
+    } ],
+    "qualifiers" : [ {
+      "kind" : "POPULATION",
+      "message" : "m1010",
+      "text" : "For 14 kids"
+    } ],
+    "entities" : [ {
+      "id" : "448",
+      "surface" : "$448"
+    } ]
+  }, {
+    "id" : "k-e5ac45579c4ce89b69cb",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Ron",
+    "speaker_id" : "900004",
+    "subject_id" : "backyard_workshop",
+    "subject" : "a backyard workshop",
+    "predicate" : "recommends",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-10-30T18:16:30Z",
+    "evidence" : [ {
+      "message" : "m1011",
+      "role" : "ASSERTS",
+      "quote" : "That's over our $400 activity budget. I prefer a backyard workshop."
+    } ],
+    "qualifiers" : [ ],
+    "entities" : [ {
+      "id" : "budget400",
+      "surface" : "$400 activity budget"
+    } ]
+  }, {
+    "id" : "k-edee4045c14d0ba7f4e7",
+    "status" : "OFFER",
+    "certainty" : "ASSERTED",
+    "speaker" : "Maya",
+    "speaker_id" : "900003",
+    "subject_id" : "clay_workshop",
+    "subject" : "a clay workshop in the backyard",
+    "predicate" : "offers",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-10-30T18:18:00Z",
+    "evidence" : [ {
+      "message" : "m1012",
+      "role" : "ASSERTS",
+      "quote" : "I can lead a clay workshop in the backyard."
+    } ],
+    "qualifiers" : [ {
+      "kind" : "CONTEXT",
+      "message" : "m1012",
+      "text" : "in the backyard"
+    } ],
+    "entities" : [ {
+      "id" : "backyard",
+      "surface" : "backyard"
+    } ]
+  }, {
+    "id" : "k-1e5c848ea199e5a1706d",
+    "status" : "QUESTION",
+    "certainty" : "ASSERTED",
+    "speaker" : "Dana",
+    "speaker_id" : "900001",
+    "subject_id" : "supplies",
+    "subject" : "help buying supplies",
+    "predicate" : "asks",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-10-30T18:19:30Z",
+    "evidence" : [ {
+      "message" : "m1013",
+      "role" : "ASSERTS",
+      "quote" : "Would you need help buying supplies?"
+    } ],
+    "qualifiers" : [ ],
+    "entities" : [ {
+      "id" : "supplies",
+      "surface" : "supplies"
+    } ]
+  }, {
+    "id" : "k-50f93c083693b64b81a0",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Maya",
+    "speaker_id" : "900003",
+    "subject_id" : "supplies",
+    "subject" : "the clay",
+    "predicate" : "states",
+    "validity" : "SUPERSEDED",
+    "stated_at" : "2026-10-30T18:21:00Z",
+    "evidence" : [ {
+      "message" : "m1014",
+      "role" : "ASSERTS",
+      "quote" : "I can get the clay, but someone else should bring aprons."
+    } ],
+    "qualifiers" : [ ],
+    "entities" : [ {
+      "id" : "aprons",
+      "surface" : "aprons"
+    } ]
+  }, {
+    "id" : "k-75849bd2ac7ed0a04307",
+    "status" : "CONFIRMED_COMMITMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Yossi",
+    "speaker_id" : "900002",
+    "subject_id" : "aprons",
+    "subject" : "15 aprons",
+    "predicate" : "commits",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-10-30T18:22:30Z",
+    "evidence" : [ {
+      "message" : "m1015",
+      "role" : "ASSERTS",
+      "quote" : "I can bring 15 aprons. I'll buy them on November 7."
+    } ],
+    "qualifiers" : [ {
+      "kind" : "TIME",
+      "message" : "m1015",
+      "text" : "on November 7"
+    } ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-4c74a7eb0024373e2b71",
+    "status" : "CONFIRMED_COMMITMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Ron",
+    "speaker_id" : "900004",
+    "subject_id" : "drinks",
+    "subject" : "drinks",
+    "predicate" : "commits",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-10-30T18:24:00Z",
+    "evidence" : [ {
+      "message" : "m1016",
+      "role" : "ASSERTS",
+      "quote" : "I'll handle drinks: water and juice boxes for the kids."
+    } ],
+    "qualifiers" : [ {
+      "kind" : "POPULATION",
+      "message" : "m1016",
+      "text" : "for the kids"
+    } ],
+    "entities" : [ {
+      "id" : "water_juice",
+      "surface" : "water and juice boxes"
+    } ]
+  }, {
+    "id" : "k-08333d4d41c4b8c7f84e",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Dana",
+    "speaker_id" : "900001",
+    "subject_id" : "birthday_party",
+    "subject" : "Saturday, November 14, from 2 PM to 4 PM",
+    "predicate" : "states",
+    "validity" : "SUPERSEDED",
+    "stated_at" : "2026-10-30T18:25:30Z",
+    "evidence" : [ {
+      "message" : "m1017",
+      "role" : "ASSERTS",
+      "quote" : "Let's plan for Saturday, November 14, from 2 PM to 4 PM."
+    } ],
+    "qualifiers" : [ {
+      "kind" : "TIME",
+      "message" : "m1017",
+      "text" : "from 2 PM to 4 PM"
+    } ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-ec305e7f6b6eafa501a0",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Maya",
+    "speaker_id" : "900003",
+    "subject_id" : "birthday_party",
+    "subject" : "November 14",
+    "predicate" : "states",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-10-30T18:27:00Z",
+    "evidence" : [ {
+      "message" : "m1018",
+      "role" : "ASSERTS",
+      "quote" : "I won't be home on November 14. I forgot about my sister's wedding."
+    } ],
+    "qualifiers" : [ {
+      "kind" : "TIME",
+      "message" : "m1018",
+      "text" : "on November 14"
+    } ],
+    "entities" : [ {
+      "id" : "sister_wedding",
+      "surface" : "my sister's wedding"
+    } ]
+  }, {
+    "id" : "k-e86b79f1f58a4cf934bc",
+    "status" : "QUESTION",
+    "certainty" : "ASSERTED",
+    "speaker" : "Yossi",
+    "speaker_id" : "900002",
+    "subject_id" : "birthday_party",
+    "subject" : "Sunday, November 15, from 2 PM to 4 PM",
+    "predicate" : "asks",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-10-30T18:30:00Z",
+    "evidence" : [ {
+      "message" : "m1020",
+      "role" : "ASSERTS",
+      "quote" : "What about Sunday, November 15, from 2 PM to 4 PM?"
+    } ],
+    "qualifiers" : [ {
+      "kind" : "TIME",
+      "message" : "m1020",
+      "text" : "from 2 PM to 4 PM"
+    } ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-06ece141c402848f1b07",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Ron",
+    "speaker_id" : "900004",
+    "subject_id" : "birthday_party",
+    "subject" : "November 15",
+    "predicate" : "states",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-10-30T18:31:30Z",
+    "evidence" : [ {
+      "message" : "m1021",
+      "role" : "ASSERTS",
+      "quote" : "November 15 works for me."
+    } ],
+    "qualifiers" : [ {
+      "kind" : "TIME",
+      "message" : "m1021",
+      "text" : "November 15"
+    } ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-5707bd8db268ceebbfea",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Maya",
+    "speaker_id" : "900003",
+    "subject_id" : "backyard",
+    "subject" : "my backyard",
+    "predicate" : "states",
+    "validity" : "SUPERSEDED",
+    "stated_at" : "2026-10-30T18:33:00Z",
+    "evidence" : [ {
+      "message" : "m1022",
+      "role" : "ASSERTS",
+      "quote" : "November 15 works for me too, and my backyard is available."
+    } ],
+    "qualifiers" : [ {
+      "kind" : "TIME",
+      "message" : "m1022",
+      "text" : "November 15"
+    } ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-ff7d5eb4ec713b042391",
+    "status" : "DECISION",
+    "certainty" : "ASSERTED",
+    "speaker" : "Dana",
+    "speaker_id" : "900001",
+    "subject_id" : "birthday_party",
+    "subject" : "the party",
+    "predicate" : "decides",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-10-30T18:34:30Z",
+    "evidence" : [ {
+      "message" : "m1023",
+      "role" : "ASSERTS",
+      "quote" : "Decision: the party is Sunday, November 15, 2 PM to 4 PM, at Maya's backyard."
+    } ],
+    "qualifiers" : [ {
+      "kind" : "TIME",
+      "message" : "m1023",
+      "text" : "Sunday, November 15, 2 PM to 4 PM"
+    }, {
+      "kind" : "CONTEXT",
+      "message" : "m1023",
+      "text" : "at Maya's backyard"
+    } ],
+    "entities" : [ {
+      "id" : "mayas_backyard",
+      "surface" : "Maya's backyard"
+    } ]
+  }, {
+    "id" : "k-8cf3054ba3f6a51fbd5a",
+    "status" : "OFFER",
+    "certainty" : "ASSERTED",
+    "speaker" : "Ron",
+    "speaker_id" : "900004",
+    "subject_id" : "speaker",
+    "subject" : "a portable speaker for background music",
+    "predicate" : "offers",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-10-30T18:36:00Z",
+    "evidence" : [ {
+      "message" : "m1024",
+      "role" : "ASSERTS",
+      "quote" : "I can bring a portable speaker for background music."
+    } ],
+    "qualifiers" : [ ],
+    "entities" : [ {
+      "id" : "bg_music",
+      "surface" : "background music"
+    } ]
+  }, {
+    "id" : "k-95969a669ee38c0bad9a",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Dana",
+    "speaker_id" : "900001",
+    "subject_id" : "speaker",
+    "subject" : "the speaker",
+    "predicate" : "advises_against",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-10-30T18:37:30Z",
+    "evidence" : [ {
+      "message" : "m1025",
+      "role" : "ASSERTS",
+      "quote" : "Please skip the speaker. Noa is sensitive to loud sound."
+    } ],
+    "qualifiers" : [ ],
+    "entities" : [ {
+      "id" : "noa2",
+      "surface" : "Noa"
+    } ]
+  }, {
+    "id" : "k-7e6f8178a3f7b509b2b6",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Ron",
+    "speaker_id" : "900004",
+    "subject_id" : "drinks",
+    "subject" : "drinks",
+    "predicate" : "states",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-10-30T18:39:00Z",
+    "evidence" : [ {
+      "message" : "m1026",
+      "role" : "ASSERTS",
+      "quote" : "Understood. No speaker. I'll bring drinks only."
+    } ],
+    "qualifiers" : [ ],
+    "entities" : [ {
+      "id" : "speaker2",
+      "surface" : "No speaker"
+    } ]
+  }, {
+    "id" : "k-13a4a65ff071d6a69a44",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Maya",
+    "speaker_id" : "900003",
+    "subject_id" : "supplies",
+    "subject" : "disposable tablecloths",
+    "predicate" : "states",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-10-30T18:40:30Z",
+    "evidence" : [ {
+      "message" : "m1027",
+      "role" : "ASSERTS",
+      "quote" : "I said I'd get clay; correction: I can also bring disposable tablecloths."
+    } ],
+    "qualifiers" : [ ],
+    "entities" : [ {
+      "id" : "clay",
+      "surface" : "clay"
+    } ]
+  }, {
+    "id" : "k-cbc1ef65db307a424145",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Yossi",
+    "speaker_id" : "900002",
+    "subject_id" : "aprons",
+    "subject" : "the aprons",
+    "predicate" : "states",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-10-30T18:42:00Z",
+    "evidence" : [ {
+      "message" : "m1028",
+      "role" : "ASSERTS",
+      "quote" : "Update: the aprons arrive November 10, so I can still bring them."
+    } ],
+    "qualifiers" : [ {
+      "kind" : "TIME",
+      "message" : "m1028",
+      "text" : "November 10"
+    } ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-f944aba985280f4430e6",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Dana",
+    "speaker_id" : "900001",
+    "subject_id" : "rsvps",
+    "subject" : "RSVPs",
+    "predicate" : "states",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-10-30T18:43:30Z",
+    "evidence" : [ {
+      "message" : "m1029",
+      "role" : "ASSERTS",
+      "quote" : "We need someone to manage RSVPs. I haven't assigned that."
+    } ],
+    "qualifiers" : [ ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-21e8493c98e7dd423731",
+    "status" : "OFFER",
+    "certainty" : "ASSERTED",
+    "speaker" : "Ron",
+    "speaker_id" : "900004",
+    "subject_id" : "rsvps",
+    "subject" : "RSVPs",
+    "predicate" : "offers",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-10-30T18:45:00Z",
+    "evidence" : [ {
+      "message" : "m1030",
+      "role" : "ASSERTS",
+      "quote" : "I can handle RSVPs if you send me the guest list."
+    } ],
+    "qualifiers" : [ {
+      "kind" : "CONDITION",
+      "message" : "m1030",
+      "text" : "if you send me the guest list"
+    } ],
+    "entities" : [ {
+      "id" : "guest_list",
+      "surface" : "the guest list"
+    } ]
+  }, {
+    "id" : "k-63b38551488014111f2a",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Maya",
+    "speaker_id" : "900003",
+    "subject_id" : "backyard",
+    "subject" : "the backyard",
+    "predicate" : "states",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-10-30T18:48:00Z",
+    "evidence" : [ {
+      "message" : "m1032",
+      "role" : "ASSERTS",
+      "quote" : "Potential issue: if it rains, the backyard won't work."
+    } ],
+    "qualifiers" : [ {
+      "kind" : "CONDITION",
+      "message" : "m1032",
+      "text" : "if it rains"
+    } ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-7a28e54b80af1557ecd9",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "HEDGED",
+    "speaker" : "Yossi",
+    "speaker_id" : "900002",
+    "subject_id" : "community_center",
+    "subject" : "the community center as a rain backup",
+    "predicate" : "recommends",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-10-30T18:49:30Z",
+    "evidence" : [ {
+      "message" : "m1033",
+      "role" : "ASSERTS",
+      "quote" : "I recommend the community center as a rain backup, but I haven't checked availability."
+    } ],
+    "qualifiers" : [ {
+      "kind" : "CONTEXT",
+      "message" : "m1033",
+      "text" : "as a rain backup"
+    } ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-8746ef4924f1fbbdfbd4",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Dana",
+    "speaker_id" : "900001",
+    "subject_id" : "community_center",
+    "subject" : "The community center",
+    "predicate" : "states",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-10-30T18:51:00Z",
+    "evidence" : [ {
+      "message" : "m1034",
+      "role" : "ASSERTS",
+      "quote" : "The community center is only a suggestion, not a confirmed backup."
+    } ],
+    "qualifiers" : [ ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-308e6b519f5a50dbcc25",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Ron",
+    "speaker_id" : "900004",
+    "subject_id" : "rain_plan",
+    "subject" : "the rain plan",
+    "predicate" : "states",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-10-30T18:52:30Z",
+    "evidence" : [ {
+      "message" : "m1035",
+      "role" : "ASSERTS",
+      "quote" : "Reminder: we should decide on the rain plan by November 12."
+    } ],
+    "qualifiers" : [ {
+      "kind" : "TIME",
+      "message" : "m1035",
+      "text" : "by November 12"
+    } ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-22e1e9e943507698a6e0",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Maya",
+    "speaker_id" : "900003",
+    "subject_id" : "food",
+    "subject" : "plain cheese pizza and fruit",
+    "predicate" : "recommends",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-10-30T18:54:00Z",
+    "evidence" : [ {
+      "message" : "m1036",
+      "role" : "ASSERTS",
+      "quote" : "For food, I recommend ordering plain cheese pizza and fruit."
+    } ],
+    "qualifiers" : [ {
+      "kind" : "CONTEXT",
+      "message" : "m1036",
+      "text" : "For food"
+    } ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-b53797483b711c2fb47d",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "HEDGED",
+    "speaker" : "Dana",
+    "speaker_id" : "900001",
+    "subject_id" : "dairy_allergy",
+    "subject" : "a dairy allergy",
+    "predicate" : "states",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-10-30T18:55:30Z",
+    "evidence" : [ {
+      "message" : "m1037",
+      "role" : "ASSERTS",
+      "quote" : "One child may have a dairy allergy; this is not confirmed yet."
+    } ],
+    "qualifiers" : [ {
+      "kind" : "POPULATION",
+      "message" : "m1037",
+      "text" : "One child"
+    } ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-d4bbbcecb3d0b3aea975",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Yossi",
+    "speaker_id" : "900002",
+    "subject_id" : "food",
+    "subject" : "food",
+    "predicate" : "states",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-10-30T18:57:00Z",
+    "evidence" : [ {
+      "message" : "m1038",
+      "role" : "ASSERTS",
+      "quote" : "Then let's not finalize food until we confirm dietary restrictions."
+    } ],
+    "qualifiers" : [ {
+      "kind" : "CONDITION",
+      "message" : "m1038",
+      "text" : "until we confirm dietary restrictions"
+    } ],
+    "entities" : [ {
+      "id" : "dietary",
+      "surface" : "dietary restrictions"
+    } ]
+  }, {
+    "id" : "k-95af2a0d63e2474a278a",
+    "status" : "QUESTION",
+    "certainty" : "ASSERTED",
+    "speaker" : "Ron",
+    "speaker_id" : "900004",
+    "subject_id" : "cake",
+    "subject" : "the cake",
+    "predicate" : "asks",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-10-30T18:58:30Z",
+    "evidence" : [ {
+      "message" : "m1039",
+      "role" : "ASSERTS",
+      "quote" : "Who is bringing the cake? I don't think we assigned that."
+    } ],
+    "qualifiers" : [ ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-7b4ac8c33d544adc6ebe",
+    "status" : "CONFIRMED_COMMITMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Dana",
+    "speaker_id" : "900001",
+    "subject_id" : "cake",
+    "subject" : "the cake",
+    "predicate" : "commits",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-10-30T19:00:00Z",
+    "evidence" : [ {
+      "message" : "m1040",
+      "role" : "ASSERTS",
+      "quote" : "I will order the cake, but only after we confirm dietary restrictions."
+    } ],
+    "qualifiers" : [ {
+      "kind" : "CONDITION",
+      "message" : "m1040",
+      "text" : "only after we confirm dietary restrictions"
+    } ],
+    "entities" : [ {
+      "id" : "dietary2",
+      "surface" : "dietary restrictions"
+    } ]
+  } ],
+  "relation_list" : [ {
+    "from" : "k-d9b885987249abf5cc7e",
+    "kind" : "SUPERSEDES",
+    "to" : "k-383d70db8711bacfbfb4"
+  }, {
+    "from" : "k-08333d4d41c4b8c7f84e",
+    "kind" : "SUPERSEDES",
+    "to" : "k-9fe7d747d78979f92300"
+  }, {
+    "from" : "k-ff7d5eb4ec713b042391",
+    "kind" : "SUPERSEDES",
+    "to" : "k-9fe7d747d78979f92300"
+  }, {
+    "from" : "k-ff7d5eb4ec713b042391",
+    "kind" : "SUPERSEDES",
+    "to" : "k-08333d4d41c4b8c7f84e"
+  }, {
+    "from" : "k-13a4a65ff071d6a69a44",
+    "kind" : "SUPERSEDES",
+    "to" : "k-50f93c083693b64b81a0"
+  }, {
+    "from" : "k-63b38551488014111f2a",
+    "kind" : "SUPERSEDES",
+    "to" : "k-5707bd8db268ceebbfea"
+  } ],
+  "projection_check" : {
+    "postgres_items" : 39,
+    "postgres_relations" : 6,
+    "neo4j_knowledge_nodes" : 39,
+    "neo4j_relates_edges" : 6,
+    "neo4j_derived_from_edges" : 39,
+    "items" : [ {
+      "id" : "k-9fe7d747d78979f92300",
+      "pg_validity" : "SUPERSEDED",
+      "vespa_present" : true,
+      "vespa_validity" : "SUPERSEDED",
+      "vespa_text" : "900001 states Noa's 7th birthday party — for November 14 — \"We need to organize Noa's 7th birthday party for November 14.\"",
+      "neo4j_validity" : "SUPERSEDED",
+      "neo4j_speaker" : "900001",
+      "neo4j_predicate" : "states",
+      "neo4j_subject" : "birthday_party"
+    }, {
+      "id" : "k-15d83e2ea01f13efcf42",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "900003 offers my backyard — if the weather is good — \"I can host in my backyard if the weather is good.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "900003",
+      "neo4j_predicate" : "offers",
+      "neo4j_subject" : "backyard"
+    }, {
+      "id" : "k-20235f83c9cc31083079",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "900002 recommends PlayLab in Westfield — \"I recommend PlayLab in Westfield.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "900002",
+      "neo4j_predicate" : "recommends",
+      "neo4j_subject" : "playlab"
+    }, {
+      "id" : "k-4480d4846e0bde200eb2",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "900004 states Noa — \"Noa doesn't like loud music.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "900004",
+      "neo4j_predicate" : "states",
+      "neo4j_subject" : "noa_preference"
+    }, {
+      "id" : "k-398d1e6f80e97f095768",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "900001 states Noa — \"Noa prefers crafts and science activities to loud games.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "900001",
+      "neo4j_predicate" : "states",
+      "neo4j_subject" : "noa_preference"
+    }, {
+      "id" : "k-736512beda5e600fc039",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "900003 states ColorHouse — for children — \"There's also ColorHouse. They run painting workshops for children.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "900003",
+      "neo4j_predicate" : "states",
+      "neo4j_subject" : "colorhouse"
+    }, {
+      "id" : "k-383d70db8711bacfbfb4",
+      "pg_validity" : "SUPERSEDED",
+      "vespa_present" : true,
+      "vespa_validity" : "SUPERSEDED",
+      "vespa_text" : "900002 states ColorHouse (relayed from their quote last month) — per child — \"ColorHouse charges about $32 per child, according to their quote last month.\"",
+      "neo4j_validity" : "SUPERSEDED",
+      "neo4j_speaker" : "900002",
+      "neo4j_predicate" : "states",
+      "neo4j_subject" : "colorhouse_price"
+    }, {
+      "id" : "k-a028b6f282a4b5d5a7f4",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "900004 recommends the activity budget — \"I suggest we keep the activity budget under $400.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "900004",
+      "neo4j_predicate" : "recommends",
+      "neo4j_subject" : "activity_budget"
+    }, {
+      "id" : "k-3394aaeda00edc7a470f",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "900001 states 12 children — 12 children; not counting siblings — \"Let's invite 12 children, not counting siblings.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "900001",
+      "neo4j_predicate" : "states",
+      "neo4j_subject" : "guest_count"
+    }, {
+      "id" : "k-44d57c9ee239d71f765e",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "900003 states 14 children total — 14 children total — \"two siblings will also attend, so we'd have 14 children total.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "900003",
+      "neo4j_predicate" : "states",
+      "neo4j_subject" : "guest_count"
+    }, {
+      "id" : "k-d9b885987249abf5cc7e",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "900002 states ColorHouse — For 14 kids — \"For 14 kids, ColorHouse could cost around $448, based on that quote.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "900002",
+      "neo4j_predicate" : "states",
+      "neo4j_subject" : "colorhouse_price"
+    }, {
+      "id" : "k-e5ac45579c4ce89b69cb",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "900004 recommends a backyard workshop — \"That's over our $400 activity budget. I prefer a backyard workshop.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "900004",
+      "neo4j_predicate" : "recommends",
+      "neo4j_subject" : "backyard_workshop"
+    }, {
+      "id" : "k-edee4045c14d0ba7f4e7",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "900003 offers a clay workshop in the backyard — in the backyard — \"I can lead a clay workshop in the backyard.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "900003",
+      "neo4j_predicate" : "offers",
+      "neo4j_subject" : "clay_workshop"
+    }, {
+      "id" : "k-1e5c848ea199e5a1706d",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "900001 asks about help buying supplies — \"Would you need help buying supplies?\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "900001",
+      "neo4j_predicate" : "asks",
+      "neo4j_subject" : "supplies"
+    }, {
+      "id" : "k-50f93c083693b64b81a0",
+      "pg_validity" : "SUPERSEDED",
+      "vespa_present" : true,
+      "vespa_validity" : "SUPERSEDED",
+      "vespa_text" : "900003 states the clay — \"I can get the clay, but someone else should bring aprons.\"",
+      "neo4j_validity" : "SUPERSEDED",
+      "neo4j_speaker" : "900003",
+      "neo4j_predicate" : "states",
+      "neo4j_subject" : "supplies"
+    }, {
+      "id" : "k-75849bd2ac7ed0a04307",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "900002 commits to 15 aprons — on November 7 — \"I can bring 15 aprons. I'll buy them on November 7.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "900002",
+      "neo4j_predicate" : "commits",
+      "neo4j_subject" : "aprons"
+    }, {
+      "id" : "k-4c74a7eb0024373e2b71",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "900004 commits to drinks — for the kids — \"I'll handle drinks: water and juice boxes for the kids.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "900004",
+      "neo4j_predicate" : "commits",
+      "neo4j_subject" : "drinks"
+    }, {
+      "id" : "k-08333d4d41c4b8c7f84e",
+      "pg_validity" : "SUPERSEDED",
+      "vespa_present" : true,
+      "vespa_validity" : "SUPERSEDED",
+      "vespa_text" : "900001 states Saturday, November 14, from 2 PM to 4 PM — from 2 PM to 4 PM — \"Let's plan for Saturday, November 14, from 2 PM to 4 PM.\"",
+      "neo4j_validity" : "SUPERSEDED",
+      "neo4j_speaker" : "900001",
+      "neo4j_predicate" : "states",
+      "neo4j_subject" : "birthday_party"
+    }, {
+      "id" : "k-ec305e7f6b6eafa501a0",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "900003 states November 14 — on November 14 — \"I won't be home on November 14. I forgot about my sister's wedding.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "900003",
+      "neo4j_predicate" : "states",
+      "neo4j_subject" : "birthday_party"
+    }, {
+      "id" : "k-e86b79f1f58a4cf934bc",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "900002 asks about Sunday, November 15, from 2 PM to 4 PM — from 2 PM to 4 PM — \"What about Sunday, November 15, from 2 PM to 4 PM?\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "900002",
+      "neo4j_predicate" : "asks",
+      "neo4j_subject" : "birthday_party"
+    }, {
+      "id" : "k-06ece141c402848f1b07",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "900004 states November 15 — November 15 — \"November 15 works for me.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "900004",
+      "neo4j_predicate" : "states",
+      "neo4j_subject" : "birthday_party"
+    }, {
+      "id" : "k-5707bd8db268ceebbfea",
+      "pg_validity" : "SUPERSEDED",
+      "vespa_present" : true,
+      "vespa_validity" : "SUPERSEDED",
+      "vespa_text" : "900003 states my backyard — November 15 — \"November 15 works for me too, and my backyard is available.\"",
+      "neo4j_validity" : "SUPERSEDED",
+      "neo4j_speaker" : "900003",
+      "neo4j_predicate" : "states",
+      "neo4j_subject" : "backyard"
+    }, {
+      "id" : "k-ff7d5eb4ec713b042391",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "900001 decided on the party — Sunday, November 15, 2 PM to 4 PM; at Maya's backyard — \"Decision: the party is Sunday, November 15, 2 PM to 4 PM, at Maya's backyard.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "900001",
+      "neo4j_predicate" : "decides",
+      "neo4j_subject" : "birthday_party"
+    }, {
+      "id" : "k-8cf3054ba3f6a51fbd5a",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "900004 offers a portable speaker for background music — \"I can bring a portable speaker for background music.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "900004",
+      "neo4j_predicate" : "offers",
+      "neo4j_subject" : "speaker"
+    }, {
+      "id" : "k-95969a669ee38c0bad9a",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "900001 advises against the speaker — \"Please skip the speaker. Noa is sensitive to loud sound.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "900001",
+      "neo4j_predicate" : "advises_against",
+      "neo4j_subject" : "speaker"
+    }, {
+      "id" : "k-7e6f8178a3f7b509b2b6",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "900004 states drinks — \"Understood. No speaker. I'll bring drinks only.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "900004",
+      "neo4j_predicate" : "states",
+      "neo4j_subject" : "drinks"
+    }, {
+      "id" : "k-13a4a65ff071d6a69a44",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "900003 states disposable tablecloths — \"I said I'd get clay; correction: I can also bring disposable tablecloths.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "900003",
+      "neo4j_predicate" : "states",
+      "neo4j_subject" : "supplies"
+    }, {
+      "id" : "k-cbc1ef65db307a424145",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "900002 states the aprons — November 10 — \"Update: the aprons arrive November 10, so I can still bring them.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "900002",
+      "neo4j_predicate" : "states",
+      "neo4j_subject" : "aprons"
+    }, {
+      "id" : "k-f944aba985280f4430e6",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "900001 states RSVPs — \"We need someone to manage RSVPs. I haven't assigned that.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "900001",
+      "neo4j_predicate" : "states",
+      "neo4j_subject" : "rsvps"
+    }, {
+      "id" : "k-21e8493c98e7dd423731",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "900004 offers RSVPs — if you send me the guest list — \"I can handle RSVPs if you send me the guest list.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "900004",
+      "neo4j_predicate" : "offers",
+      "neo4j_subject" : "rsvps"
+    }, {
+      "id" : "k-63b38551488014111f2a",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "900003 states the backyard — if it rains — \"Potential issue: if it rains, the backyard won't work.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "900003",
+      "neo4j_predicate" : "states",
+      "neo4j_subject" : "backyard"
+    }, {
+      "id" : "k-7a28e54b80af1557ecd9",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "900002 recommends the community center as a rain backup — as a rain backup — \"I recommend the community center as a rain backup, but I haven't checked availability.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "900002",
+      "neo4j_predicate" : "recommends",
+      "neo4j_subject" : "community_center"
+    }, {
+      "id" : "k-8746ef4924f1fbbdfbd4",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "900001 states The community center — \"The community center is only a suggestion, not a confirmed backup.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "900001",
+      "neo4j_predicate" : "states",
+      "neo4j_subject" : "community_center"
+    }, {
+      "id" : "k-308e6b519f5a50dbcc25",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "900004 states the rain plan — by November 12 — \"Reminder: we should decide on the rain plan by November 12.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "900004",
+      "neo4j_predicate" : "states",
+      "neo4j_subject" : "rain_plan"
+    }, {
+      "id" : "k-22e1e9e943507698a6e0",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "900003 recommends plain cheese pizza and fruit — For food — \"For food, I recommend ordering plain cheese pizza and fruit.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "900003",
+      "neo4j_predicate" : "recommends",
+      "neo4j_subject" : "food"
+    }, {
+      "id" : "k-b53797483b711c2fb47d",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "900001 states a dairy allergy — One child — \"One child may have a dairy allergy; this is not confirmed yet.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "900001",
+      "neo4j_predicate" : "states",
+      "neo4j_subject" : "dairy_allergy"
+    }, {
+      "id" : "k-d4bbbcecb3d0b3aea975",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "900002 states food — until we confirm dietary restrictions — \"Then let's not finalize food until we confirm dietary restrictions.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "900002",
+      "neo4j_predicate" : "states",
+      "neo4j_subject" : "food"
+    }, {
+      "id" : "k-95af2a0d63e2474a278a",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "900004 asks about the cake — \"Who is bringing the cake? I don't think we assigned that.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "900004",
+      "neo4j_predicate" : "asks",
+      "neo4j_subject" : "cake"
+    }, {
+      "id" : "k-7b4ac8c33d544adc6ebe",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "900001 commits to the cake — only after we confirm dietary restrictions — \"I will order the cake, but only after we confirm dietary restrictions.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "900001",
+      "neo4j_predicate" : "commits",
+      "neo4j_subject" : "cake"
+    } ],
+    "vespa_knowledge_docs" : 39,
+    "vespa_knowledge_retrieval" : [ {
+      "q" : 1,
+      "active_hits" : [ "k-ff7d5eb4ec713b042391", "k-4c74a7eb0024373e2b71", "k-22e1e9e943507698a6e0", "k-398d1e6f80e97f095768", "k-15d83e2ea01f13efcf42" ]
+    }, {
+      "q" : 2,
+      "active_hits" : [ "k-edee4045c14d0ba7f4e7", "k-a028b6f282a4b5d5a7f4", "k-95969a669ee38c0bad9a", "k-8746ef4924f1fbbdfbd4", "k-63b38551488014111f2a" ]
+    }, {
+      "q" : 3,
+      "active_hits" : [ "k-95af2a0d63e2474a278a", "k-cbc1ef65db307a424145", "k-75849bd2ac7ed0a04307", "k-736512beda5e600fc039", "k-8cf3054ba3f6a51fbd5a" ]
+    }, {
+      "q" : 4,
+      "active_hits" : [ "k-e86b79f1f58a4cf934bc", "k-736512beda5e600fc039", "k-8cf3054ba3f6a51fbd5a", "k-d9b885987249abf5cc7e", "k-4c74a7eb0024373e2b71" ]
+    }, {
+      "q" : 5,
+      "active_hits" : [ "k-ff7d5eb4ec713b042391", "k-95af2a0d63e2474a278a", "k-e86b79f1f58a4cf934bc", "k-15d83e2ea01f13efcf42", "k-95969a669ee38c0bad9a" ]
+    }, {
+      "q" : 6,
+      "active_hits" : [ "k-7a28e54b80af1557ecd9", "k-308e6b519f5a50dbcc25", "k-edee4045c14d0ba7f4e7", "k-a028b6f282a4b5d5a7f4", "k-95969a669ee38c0bad9a" ]
+    }, {
+      "q" : 7,
+      "active_hits" : [ "k-22e1e9e943507698a6e0", "k-d4bbbcecb3d0b3aea975", "k-15d83e2ea01f13efcf42", "k-95969a669ee38c0bad9a", "k-8746ef4924f1fbbdfbd4" ]
+    }, {
+      "q" : 8,
+      "active_hits" : [ "k-95af2a0d63e2474a278a", "k-7b4ac8c33d544adc6ebe", "k-22e1e9e943507698a6e0", "k-15d83e2ea01f13efcf42", "k-95969a669ee38c0bad9a" ]
+    }, {
+      "q" : 9,
+      "active_hits" : [ "k-736512beda5e600fc039", "k-d9b885987249abf5cc7e", "k-3394aaeda00edc7a470f", "k-8746ef4924f1fbbdfbd4", "k-b53797483b711c2fb47d" ]
+    }, {
+      "q" : 10,
+      "active_hits" : [ "k-308e6b519f5a50dbcc25", "k-ec305e7f6b6eafa501a0", "k-3394aaeda00edc7a470f", "k-e86b79f1f58a4cf934bc", "k-ff7d5eb4ec713b042391" ]
+    }, {
+      "q" : 11,
+      "active_hits" : [ "k-8746ef4924f1fbbdfbd4", "k-7a28e54b80af1557ecd9", "k-15d83e2ea01f13efcf42", "k-95969a669ee38c0bad9a", "k-95af2a0d63e2474a278a" ]
+    }, {
+      "q" : 12,
+      "active_hits" : [ "k-e5ac45579c4ce89b69cb", "k-a028b6f282a4b5d5a7f4", "k-4480d4846e0bde200eb2", "k-398d1e6f80e97f095768", "k-95969a669ee38c0bad9a" ]
+    }, {
+      "q" : 13,
+      "active_hits" : [ "k-95969a669ee38c0bad9a", "k-8cf3054ba3f6a51fbd5a", "k-4c74a7eb0024373e2b71", "k-ff7d5eb4ec713b042391", "k-22e1e9e943507698a6e0" ]
+    }, {
+      "q" : 14,
+      "active_hits" : [ "k-95af2a0d63e2474a278a", "k-63b38551488014111f2a", "k-7b4ac8c33d544adc6ebe", "k-4c74a7eb0024373e2b71", "k-22e1e9e943507698a6e0" ]
+    }, {
+      "q" : 15,
+      "active_hits" : [ "k-edee4045c14d0ba7f4e7", "k-a028b6f282a4b5d5a7f4", "k-95969a669ee38c0bad9a", "k-8746ef4924f1fbbdfbd4", "k-63b38551488014111f2a" ]
+    } ]
+  }
+}

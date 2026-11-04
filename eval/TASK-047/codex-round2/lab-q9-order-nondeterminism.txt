@@ -1,0 +1,9 @@
+Lab C Q9 citation order per run (same content, order only). frozen* = Codex's tree 71423ebd; run* = round-2 tree.
+c-frozen1.jsonl [1005, 1006, 1010, 1008]
+c-frozen2.jsonl [1005, 1006, 1010, 1008]
+c-frozen3.jsonl [1005, 1010, 1006, 1008]
+c-run1.jsonl [1005, 1010, 1006, 1008]
+c-run2.jsonl [1005, 1010, 1006, 1008]
+c-run3.jsonl [1005, 1010, 1006, 1008]
+c-run4.jsonl [1005, 1010, 1006, 1008]
+c-run5.jsonl [1005, 1010, 1006, 1008]

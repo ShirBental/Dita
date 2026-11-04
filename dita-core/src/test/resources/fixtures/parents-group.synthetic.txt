@@ -1,0 +1,11 @@
+# SYNTHETIC FIXTURE. Not real platform messages. Fictional names. Scenario A seed.
+# id|author|minutesFromStart|replyToId|text
+m1|dana|0||Does anyone know a good pediatrician near the park?
+m2|yossi|3|m1|Dr. Levi on Herzl St. is excellent, we've been going for years
+m3|maya|5||ממליצה על ד"ר לוי, סבלנית מאוד עם תינוקות
+m4|noa|7||Hey, who is bringing the snacks for Friday's trip?
+m5|ron|9||Dr. Levi is fine for babies but avoid him for teenagers, he was dismissive with my son
+m6|amir|10|m4|I can bring snacks
+m7|dana|12||thanks! is she also good with allergies?
+m8|amir|15||Correction: I can bring snacks only on Thursday, sorry
+m9|yossi|2000||Back to the pediatrician question - Dr. Levi now also has evening hours

@@ -1,0 +1,1621 @@
+{
+  "mode" : "LIVE",
+  "backend" : "POSTGRES",
+  "group" : "lab-9eb1270f",
+  "batch" : "xb-5ed2350e01023d751f3c",
+  "status" : "DONE",
+  "error" : null,
+  "accepted" : 49,
+  "duplicates" : 0,
+  "relations" : 1,
+  "superseded" : 1,
+  "model_calls" : 1,
+  "request_chars" : 10082,
+  "dataset" : "holdout-v2",
+  "knowledge_retriever" : "vespa-knowledge-bm25+dita-rerank",
+  "usage" : {
+    "completion_tokens" : 9898,
+    "prompt_tokens" : 2710,
+    "total_tokens" : 12608,
+    "completion_tokens_details" : {
+      "reasoning_tokens" : 5097
+    },
+    "prompt_tokens_details" : {
+      "cached_tokens" : 0
+    }
+  },
+  "cost_usd_at_user_prices" : 0.045454,
+  "rejections" : [ {
+    "item" : 29,
+    "reason" : "quote is too short"
+  } ],
+  "items" : [ {
+    "id" : "k-ecc755113438c5300de3",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Tamar",
+    "speaker_id" : "920001",
+    "subject_id" : "lake_camping_trip",
+    "subject" : "the lake camping trip",
+    "predicate" : "states",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-11-05T17:33:20Z",
+    "evidence" : [ {
+      "message" : "m2000",
+      "role" : "ASSERTS",
+      "quote" : "the lake camping trip is happening! Plan is Friday November 27 to Sunday November 29, two nights."
+    } ],
+    "qualifiers" : [ {
+      "kind" : "TIME",
+      "message" : "m2000",
+      "text" : "Friday November 27 to Sunday November 29"
+    } ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-c14083fa4ad32d797af4",
+    "status" : "QUESTION",
+    "certainty" : "ASSERTED",
+    "speaker" : "Ezra",
+    "speaker_id" : "920002",
+    "subject_id" : "campsite",
+    "subject" : "Which campsite",
+    "predicate" : "asks",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-11-05T17:40:20Z",
+    "evidence" : [ {
+      "message" : "m2001",
+      "role" : "ASSERTS",
+      "quote" : "Which campsite are we going for?"
+    } ],
+    "qualifiers" : [ ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-b55d8230d6be7a34cd13",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Priya",
+    "speaker_id" : "920003",
+    "subject_id" : "north_shore_site",
+    "subject" : "the north shore site",
+    "predicate" : "recommends",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-11-05T17:47:20Z",
+    "evidence" : [ {
+      "message" : "m2002",
+      "role" : "ASSERTS",
+      "quote" : "I vote for the north shore site, it's closest to the swimming beach."
+    } ],
+    "qualifiers" : [ ],
+    "entities" : [ {
+      "id" : "swimming_beach",
+      "surface" : "the swimming beach"
+    } ]
+  }, {
+    "id" : "k-379daa24b02c33b1a166",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Keiko",
+    "speaker_id" : "920005",
+    "subject_id" : "north_shore_site",
+    "subject" : "North shore",
+    "predicate" : "states",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-11-05T17:54:20Z",
+    "evidence" : [ {
+      "message" : "m2003",
+      "role" : "ASSERTS",
+      "quote" : "North shore works for me."
+    } ],
+    "qualifiers" : [ ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-b87b00ca03bc279e9965",
+    "status" : "DECISION",
+    "certainty" : "ASSERTED",
+    "speaker" : "Tamar",
+    "speaker_id" : "920001",
+    "subject_id" : "north_shore_site",
+    "subject" : "the north shore site",
+    "predicate" : "decides",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-11-05T18:01:20Z",
+    "evidence" : [ {
+      "message" : "m2004",
+      "role" : "ASSERTS",
+      "quote" : "Decided then: we're going with the north shore site."
+    } ],
+    "qualifiers" : [ ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-1f86907acbbced23b799",
+    "status" : "CONFIRMED_COMMITMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Tamar",
+    "speaker_id" : "920001",
+    "subject_id" : "booking_page",
+    "subject" : "the booking page",
+    "predicate" : "commits",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-11-05T18:01:20Z",
+    "evidence" : [ {
+      "message" : "m2004",
+      "role" : "ASSERTS",
+      "quote" : "I'll look at the booking page tonight."
+    } ],
+    "qualifiers" : [ {
+      "kind" : "TIME",
+      "message" : "m2004",
+      "text" : "tonight"
+    } ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-dc32c999da7482b1f554",
+    "status" : "OFFER",
+    "certainty" : "HEDGED",
+    "speaker" : "Jonas",
+    "speaker_id" : "920004",
+    "subject_id" : "van",
+    "subject" : "my cousin's van",
+    "predicate" : "offers",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-11-05T18:08:20Z",
+    "evidence" : [ {
+      "message" : "m2005",
+      "role" : "ASSERTS",
+      "quote" : "I might be able to borrow my cousin's van so we can all go in one car."
+    } ],
+    "qualifiers" : [ ],
+    "entities" : [ {
+      "id" : "cousin",
+      "surface" : "my cousin"
+    }, {
+      "id" : "one_car",
+      "surface" : "one car"
+    } ]
+  }, {
+    "id" : "k-990bfcab16b6f29507ff",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Ezra",
+    "speaker_id" : "920002",
+    "subject_id" : "cars",
+    "subject" : "two cars",
+    "predicate" : "states",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-11-05T18:15:20Z",
+    "evidence" : [ {
+      "message" : "m2006",
+      "role" : "ASSERTS",
+      "quote" : "Otherwise we need two cars."
+    } ],
+    "qualifiers" : [ ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-27783cee94bb62835f7f",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Tamar",
+    "speaker_id" : "920001",
+    "subject_id" : "site_fee",
+    "subject" : "Site fee",
+    "predicate" : "states",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-11-05T18:22:20Z",
+    "evidence" : [ {
+      "message" : "m2007",
+      "role" : "ASSERTS",
+      "quote" : "Site fee is $45 per night, so $90 total for both nights."
+    } ],
+    "qualifiers" : [ {
+      "kind" : "TIME",
+      "message" : "m2007",
+      "text" : "per night"
+    }, {
+      "kind" : "TIME",
+      "message" : "m2007",
+      "text" : "for both nights"
+    } ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-fa5b48f1fbf22b2d1be0",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Keiko",
+    "speaker_id" : "920005",
+    "subject_id" : "ridge_loop_trail",
+    "subject" : "the ridge loop trail",
+    "predicate" : "recommends",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-11-05T18:29:20Z",
+    "evidence" : [ {
+      "message" : "m2008",
+      "role" : "ASSERTS",
+      "quote" : "For the Saturday hike I'd recommend the ridge loop trail."
+    } ],
+    "qualifiers" : [ {
+      "kind" : "TIME",
+      "message" : "m2008",
+      "text" : "For the Saturday hike"
+    } ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-55f4ef37602341c01da4",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Keiko",
+    "speaker_id" : "920005",
+    "subject_id" : "ridge_loop_trail",
+    "subject" : "the ridge loop",
+    "predicate" : "states",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-11-05T18:36:20Z",
+    "evidence" : [ {
+      "message" : "m2009",
+      "role" : "ASSERTS",
+      "quote" : "After rain the ridge loop gets muddy and slippery,"
+    } ],
+    "qualifiers" : [ {
+      "kind" : "CONDITION",
+      "message" : "m2009",
+      "text" : "After rain"
+    }, {
+      "kind" : "CONDITION",
+      "message" : "m2009",
+      "text" : "only if it's dry"
+    } ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-e6cc862e32e305b68999",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Keiko",
+    "speaker_id" : "920005",
+    "subject_id" : "shoreline_path",
+    "subject" : "the flat shoreline path",
+    "predicate" : "recommends",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-11-05T18:36:20Z",
+    "evidence" : [ {
+      "message" : "m2009",
+      "role" : "ASSERTS",
+      "quote" : "and then the flat shoreline path is the better option."
+    } ],
+    "qualifiers" : [ {
+      "kind" : "CONDITION",
+      "message" : "m2009",
+      "text" : "After rain"
+    } ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-9bf46ed6b54d36ed72f8",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Ezra",
+    "speaker_id" : "920002",
+    "subject_id" : "campfire_cooking",
+    "subject" : "a campfire",
+    "predicate" : "recommends",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-11-05T18:43:20Z",
+    "evidence" : [ {
+      "message" : "m2010",
+      "role" : "ASSERTS",
+      "quote" : "I really want to cook everything over a campfire."
+    } ],
+    "qualifiers" : [ {
+      "kind" : "CONTEXT",
+      "message" : "m2010",
+      "text" : "For food"
+    } ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-18d245156c43b8c0713d",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Priya",
+    "speaker_id" : "920003",
+    "subject_id" : "gas_stove",
+    "subject" : "a gas stove",
+    "predicate" : "recommends",
+    "validity" : "SUPERSEDED",
+    "stated_at" : "2026-11-05T18:50:20Z",
+    "evidence" : [ {
+      "message" : "m2011",
+      "role" : "ASSERTS",
+      "quote" : "I'd rather we bring a gas stove."
+    } ],
+    "qualifiers" : [ {
+      "kind" : "CONDITION",
+      "message" : "m2011",
+      "text" : "If there's a fire ban that weekend"
+    } ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-a9104d54d426f1d455cd",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Ezra",
+    "speaker_id" : "920002",
+    "subject_id" : "fire_ban",
+    "subject" : "Fire bans",
+    "predicate" : "states",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-11-05T18:57:20Z",
+    "evidence" : [ {
+      "message" : "m2012",
+      "role" : "ASSERTS",
+      "quote" : "Fire bans are rare in late November."
+    } ],
+    "qualifiers" : [ {
+      "kind" : "TIME",
+      "message" : "m2012",
+      "text" : "in late November"
+    } ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-c26fbe4b8515ad7fea9f",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Ezra",
+    "speaker_id" : "920002",
+    "subject_id" : "campfire_cooking",
+    "subject" : "The campfire",
+    "predicate" : "states",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-11-05T18:57:20Z",
+    "evidence" : [ {
+      "message" : "m2012",
+      "role" : "ASSERTS",
+      "quote" : "The campfire is the whole point."
+    } ],
+    "qualifiers" : [ ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-65ab7c858b45e23fbe6d",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "HEDGED",
+    "speaker" : "Priya",
+    "speaker_id" : "920003",
+    "subject_id" : "gas_stove",
+    "subject" : "a stove",
+    "predicate" : "states",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-11-05T19:04:20Z",
+    "evidence" : [ {
+      "message" : "m2013",
+      "role" : "ASSERTS",
+      "quote" : "I still think a stove is safer."
+    } ],
+    "qualifiers" : [ ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-a52f6d62ac1f45f67d39",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Tamar",
+    "speaker_id" : "920001",
+    "subject_id" : "site_fee",
+    "subject" : "the fee",
+    "predicate" : "states",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-11-05T19:11:20Z",
+    "evidence" : [ {
+      "message" : "m2014",
+      "role" : "ASSERTS",
+      "quote" : "it's $54 per night, not $45."
+    } ],
+    "qualifiers" : [ {
+      "kind" : "TIME",
+      "message" : "m2014",
+      "text" : "per night"
+    } ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-18ff4b11bd7a3c5eae2f",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Jonas",
+    "speaker_id" : "920004",
+    "subject_id" : "cost_per_person",
+    "subject" : "$21.60 each",
+    "predicate" : "states",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-11-05T19:18:20Z",
+    "evidence" : [ {
+      "message" : "m2015",
+      "role" : "ASSERTS",
+      "quote" : "Split five ways that's $21.60 each."
+    } ],
+    "qualifiers" : [ {
+      "kind" : "POPULATION",
+      "message" : "m2015",
+      "text" : "Split five ways"
+    } ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-2233509492106f500985",
+    "status" : "QUESTION",
+    "certainty" : "ASSERTED",
+    "speaker" : "Ezra",
+    "speaker_id" : "920002",
+    "subject_id" : "drinking_water",
+    "subject" : "drinking water at the campground",
+    "predicate" : "asks",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-11-05T19:25:20Z",
+    "evidence" : [ {
+      "message" : "m2016",
+      "role" : "ASSERTS",
+      "quote" : "Does anyone know if there's drinking water at the campground, or do we need to haul our own?"
+    } ],
+    "qualifiers" : [ ],
+    "entities" : [ {
+      "id" : "campground",
+      "surface" : "the campground"
+    } ]
+  }, {
+    "id" : "k-8e4aada2d313e8e26394",
+    "status" : "QUESTION",
+    "certainty" : "ASSERTED",
+    "speaker" : "Keiko",
+    "speaker_id" : "920005",
+    "subject_id" : "tent",
+    "subject" : "tents",
+    "predicate" : "asks",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-11-05T19:32:20Z",
+    "evidence" : [ {
+      "message" : "m2017",
+      "role" : "ASSERTS",
+      "quote" : "Who's bringing tents?"
+    } ],
+    "qualifiers" : [ ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-4cfa8e60688ba7b1ecb6",
+    "status" : "OFFER",
+    "certainty" : "ASSERTED",
+    "speaker" : "Keiko",
+    "speaker_id" : "920005",
+    "subject_id" : "tent",
+    "subject" : "a 4-person tent",
+    "predicate" : "offers",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-11-05T19:32:20Z",
+    "evidence" : [ {
+      "message" : "m2017",
+      "role" : "ASSERTS",
+      "quote" : "I have a 4-person tent I can bring."
+    } ],
+    "qualifiers" : [ ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-ea0450f0f990736bfb0a",
+    "status" : "CONFIRMED_COMMITMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Ezra",
+    "speaker_id" : "920002",
+    "subject_id" : "tent",
+    "subject" : "my 2-person tent",
+    "predicate" : "commits",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-11-05T19:39:20Z",
+    "evidence" : [ {
+      "message" : "m2018",
+      "role" : "ASSERTS",
+      "quote" : "I'll bring my 2-person tent."
+    } ],
+    "qualifiers" : [ ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-350157848820e418bb88",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Tamar",
+    "speaker_id" : "920001",
+    "subject_id" : "north_shore_site",
+    "subject" : "the north shore site",
+    "predicate" : "states",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-11-06T18:33:20Z",
+    "evidence" : [ {
+      "message" : "m2019",
+      "role" : "ASSERTS",
+      "quote" : "the north shore site is closed that weekend for maintenance."
+    } ],
+    "qualifiers" : [ {
+      "kind" : "TIME",
+      "message" : "m2019",
+      "text" : "that weekend"
+    }, {
+      "kind" : "CONTEXT",
+      "message" : "m2019",
+      "text" : "for maintenance"
+    } ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-4b46d011d4a41583b49d",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Tamar",
+    "speaker_id" : "920001",
+    "subject_id" : "east_meadow_site",
+    "subject" : "the east meadow site",
+    "predicate" : "states",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-11-06T18:40:20Z",
+    "evidence" : [ {
+      "message" : "m2020",
+      "role" : "ASSERTS",
+      "quote" : "we're booking the east meadow site instead, same dates."
+    } ],
+    "qualifiers" : [ {
+      "kind" : "TIME",
+      "message" : "m2020",
+      "text" : "same dates"
+    } ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-c1ccc3b7e498d650dc25",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Tamar",
+    "speaker_id" : "920001",
+    "subject_id" : "site_fee",
+    "subject" : "Same price",
+    "predicate" : "states",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-11-06T18:40:20Z",
+    "evidence" : [ {
+      "message" : "m2020",
+      "role" : "ASSERTS",
+      "quote" : "Same price too, $54 per night."
+    } ],
+    "qualifiers" : [ {
+      "kind" : "TIME",
+      "message" : "m2020",
+      "text" : "per night"
+    } ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-ac837ea35f921ae068c9",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Priya",
+    "speaker_id" : "920003",
+    "subject_id" : "east_meadow_site",
+    "subject" : "East meadow",
+    "predicate" : "states",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-11-06T18:47:20Z",
+    "evidence" : [ {
+      "message" : "m2021",
+      "role" : "ASSERTS",
+      "quote" : "East meadow is fine. A bit further from the beach but quieter."
+    } ],
+    "qualifiers" : [ ],
+    "entities" : [ {
+      "id" : "beach",
+      "surface" : "the beach"
+    } ]
+  }, {
+    "id" : "k-2be3d00d092d2df7ae89",
+    "status" : "REPORTED_CLAIM",
+    "certainty" : "HEARSAY",
+    "speaker" : "Jonas",
+    "speaker_id" : "920004",
+    "subject_id" : "van",
+    "subject" : "the van",
+    "predicate" : "states",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-11-06T18:54:20Z",
+    "attributed_to" : "My cousin",
+    "evidence" : [ {
+      "message" : "m2022",
+      "role" : "ASSERTS",
+      "quote" : "My cousin says I can have the van for the whole weekend."
+    } ],
+    "qualifiers" : [ {
+      "kind" : "TIME",
+      "message" : "m2022",
+      "text" : "for the whole weekend"
+    } ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-9e82e7f3e48d66977d9a",
+    "status" : "CONFIRMED_COMMITMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Jonas",
+    "speaker_id" : "920004",
+    "subject_id" : "pickup",
+    "subject" : "everyone",
+    "predicate" : "commits",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-11-06T19:01:20Z",
+    "evidence" : [ {
+      "message" : "m2023",
+      "role" : "ASSERTS",
+      "quote" : "I can pick everyone up on Friday at 4 PM."
+    } ],
+    "qualifiers" : [ {
+      "kind" : "POPULATION",
+      "message" : "m2023",
+      "text" : "everyone"
+    }, {
+      "kind" : "TIME",
+      "message" : "m2023",
+      "text" : "on Friday at 4 PM"
+    } ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-2ec391fc92ee5f9095de",
+    "status" : "QUESTION",
+    "certainty" : "ASSERTED",
+    "speaker" : "Keiko",
+    "speaker_id" : "920005",
+    "subject_id" : "pickup",
+    "subject" : "the train station",
+    "predicate" : "asks",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-11-06T19:08:20Z",
+    "evidence" : [ {
+      "message" : "m2024",
+      "role" : "ASSERTS",
+      "quote" : "Can you pick me up at the train station instead of my place?"
+    } ],
+    "qualifiers" : [ ],
+    "entities" : [ {
+      "id" : "my_place",
+      "surface" : "my place"
+    } ]
+  }, {
+    "id" : "k-3376a6636cfa0a6a8203",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Jonas",
+    "speaker_id" : "920004",
+    "subject_id" : "pickup",
+    "subject" : "train station pickup",
+    "predicate" : "states",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-11-06T19:15:20Z",
+    "evidence" : [ {
+      "message" : "m2025",
+      "role" : "ASSERTS",
+      "quote" : "Sure, train station pickup for you."
+    } ],
+    "qualifiers" : [ {
+      "kind" : "POPULATION",
+      "message" : "m2025",
+      "text" : "for you"
+    } ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-25f77655ce1eb37151da",
+    "status" : "CONFIRMED_COMMITMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Priya",
+    "speaker_id" : "920003",
+    "subject_id" : "booking_deposit",
+    "subject" : "the booking deposit for the east meadow site",
+    "predicate" : "commits",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-11-06T19:22:20Z",
+    "evidence" : [ {
+      "message" : "m2026",
+      "role" : "ASSERTS",
+      "quote" : "I'll pay the booking deposit for the east meadow site by November 20."
+    } ],
+    "qualifiers" : [ {
+      "kind" : "TIME",
+      "message" : "m2026",
+      "text" : "by November 20"
+    } ],
+    "entities" : [ {
+      "id" : "east_meadow_site",
+      "surface" : "the east meadow site"
+    } ]
+  }, {
+    "id" : "k-d96528ff6ed27e2fa45b",
+    "status" : "CONFIRMED_COMMITMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Tamar",
+    "speaker_id" : "920001",
+    "subject_id" : "groceries",
+    "subject" : "the groceries for the weekend",
+    "predicate" : "commits",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-11-06T19:29:20Z",
+    "evidence" : [ {
+      "message" : "m2027",
+      "role" : "ASSERTS",
+      "quote" : "I'll handle the groceries for the weekend."
+    } ],
+    "qualifiers" : [ {
+      "kind" : "TIME",
+      "message" : "m2027",
+      "text" : "for the weekend"
+    } ],
+    "entities" : [ {
+      "id" : "priya",
+      "surface" : "Priya"
+    } ]
+  }, {
+    "id" : "k-17f991a41d1b5b57b379",
+    "status" : "QUESTION",
+    "certainty" : "ASSERTED",
+    "speaker" : "Jonas",
+    "speaker_id" : "920004",
+    "subject_id" : "dog_biscuit",
+    "subject" : "my dog Biscuit",
+    "predicate" : "asks",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-11-06T19:36:20Z",
+    "evidence" : [ {
+      "message" : "m2028",
+      "role" : "ASSERTS",
+      "quote" : "Can I bring my dog Biscuit?"
+    } ],
+    "qualifiers" : [ ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-66605d354773a239e1c7",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "HEDGED",
+    "speaker" : "Tamar",
+    "speaker_id" : "920001",
+    "subject_id" : "east_meadow_site",
+    "subject" : "the east meadow site",
+    "predicate" : "states",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-11-06T19:43:20Z",
+    "evidence" : [ {
+      "message" : "m2029",
+      "role" : "ASSERTS",
+      "quote" : "I think the east meadow site allows dogs, but I haven't confirmed that yet."
+    } ],
+    "qualifiers" : [ ],
+    "entities" : [ {
+      "id" : "dogs",
+      "surface" : "dogs"
+    } ]
+  }, {
+    "id" : "k-a9a3e99a08af1a53d4da",
+    "status" : "QUESTION",
+    "certainty" : "ASSERTED",
+    "speaker" : "Ezra",
+    "speaker_id" : "920002",
+    "subject_id" : "first_aid_kit",
+    "subject" : "a first aid kit",
+    "predicate" : "asks",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-11-07T19:33:20Z",
+    "evidence" : [ {
+      "message" : "m2030",
+      "role" : "ASSERTS",
+      "quote" : "Should we bring a first aid kit, or does someone already have one?"
+    } ],
+    "qualifiers" : [ ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-ada0962bfc14aafb9ba0",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "HEDGED",
+    "speaker" : "Keiko",
+    "speaker_id" : "920005",
+    "subject_id" : "weather_forecast",
+    "subject" : "Forecast",
+    "predicate" : "states",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-11-07T19:40:20Z",
+    "evidence" : [ {
+      "message" : "m2031",
+      "role" : "ASSERTS",
+      "quote" : "Forecast says possible rain on Friday, dry on Saturday."
+    } ],
+    "qualifiers" : [ {
+      "kind" : "TIME",
+      "message" : "m2031",
+      "text" : "on Friday"
+    }, {
+      "kind" : "TIME",
+      "message" : "m2031",
+      "text" : "on Saturday"
+    } ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-db9096325684df69d575",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Ezra",
+    "speaker_id" : "920002",
+    "subject_id" : "campfire_cooking",
+    "subject" : "campfire dinners",
+    "predicate" : "states",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-11-07T19:47:20Z",
+    "evidence" : [ {
+      "message" : "m2032",
+      "role" : "ASSERTS",
+      "quote" : "I'm still planning campfire dinners."
+    } ],
+    "qualifiers" : [ {
+      "kind" : "CONTEXT",
+      "message" : "m2032",
+      "text" : "Back to food"
+    } ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-8c3fe57c3abc32b72924",
+    "status" : "CONFIRMED_COMMITMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Ezra",
+    "speaker_id" : "920002",
+    "subject_id" : "grill_grate",
+    "subject" : "the grill grate",
+    "predicate" : "commits",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-11-07T19:47:20Z",
+    "evidence" : [ {
+      "message" : "m2032",
+      "role" : "ASSERTS",
+      "quote" : "I'll bring the grill grate."
+    } ],
+    "qualifiers" : [ ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-df09165af36c76ff8e3a",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "HEDGED",
+    "speaker" : "Priya",
+    "speaker_id" : "920003",
+    "subject_id" : "gas_stove",
+    "subject" : "a stove as a backup",
+    "predicate" : "recommends",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-11-07T19:54:20Z",
+    "evidence" : [ {
+      "message" : "m2033",
+      "role" : "ASSERTS",
+      "quote" : "And I still think we need a stove as a backup."
+    } ],
+    "qualifiers" : [ {
+      "kind" : "CONTEXT",
+      "message" : "m2033",
+      "text" : "as a backup"
+    } ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-683755a8a2e0bc1f44d4",
+    "status" : "QUESTION",
+    "certainty" : "ASSERTED",
+    "speaker" : "Jonas",
+    "speaker_id" : "920004",
+    "subject_id" : "tasks",
+    "subject" : "who is doing what",
+    "predicate" : "asks",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-11-07T20:01:20Z",
+    "evidence" : [ {
+      "message" : "m2034",
+      "role" : "ASSERTS",
+      "quote" : "So who is doing what? I'm on driving."
+    } ],
+    "qualifiers" : [ ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-18c87bdb785323809771",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Jonas",
+    "speaker_id" : "920004",
+    "subject_id" : "driving",
+    "subject" : "driving",
+    "predicate" : "states",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-11-07T20:01:20Z",
+    "evidence" : [ {
+      "message" : "m2034",
+      "role" : "ASSERTS",
+      "quote" : "I'm on driving."
+    } ],
+    "qualifiers" : [ ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-dbf6f144c979e0f2dd19",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Tamar",
+    "speaker_id" : "920001",
+    "subject_id" : "groceries",
+    "subject" : "groceries",
+    "predicate" : "states",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-11-07T20:08:20Z",
+    "evidence" : [ {
+      "message" : "m2035",
+      "role" : "ASSERTS",
+      "quote" : "Me: groceries and checking the dog rule."
+    } ],
+    "qualifiers" : [ ],
+    "entities" : [ {
+      "id" : "dog_rule",
+      "surface" : "the dog rule"
+    } ]
+  }, {
+    "id" : "k-76e15600dbcbc171b39a",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Tamar",
+    "speaker_id" : "920001",
+    "subject_id" : "booking_deposit",
+    "subject" : "deposit",
+    "predicate" : "states",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-11-07T20:08:20Z",
+    "evidence" : [ {
+      "message" : "m2035",
+      "role" : "ASSERTS",
+      "quote" : "Priya: deposit."
+    } ],
+    "qualifiers" : [ ],
+    "entities" : [ {
+      "id" : "priya",
+      "surface" : "Priya"
+    } ]
+  }, {
+    "id" : "k-ce9962a9611eab402c75",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Tamar",
+    "speaker_id" : "920001",
+    "subject_id" : "tent",
+    "subject" : "tents",
+    "predicate" : "states",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-11-07T20:08:20Z",
+    "evidence" : [ {
+      "message" : "m2035",
+      "role" : "ASSERTS",
+      "quote" : "Keiko and Ezra: tents."
+    } ],
+    "qualifiers" : [ {
+      "kind" : "POPULATION",
+      "message" : "m2035",
+      "text" : "Keiko and Ezra"
+    } ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-5eed3381535103e15a44",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Tamar",
+    "speaker_id" : "920001",
+    "subject_id" : "van",
+    "subject" : "van and pickups",
+    "predicate" : "states",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-11-07T20:08:20Z",
+    "evidence" : [ {
+      "message" : "m2035",
+      "role" : "ASSERTS",
+      "quote" : "Jonas: van and pickups."
+    } ],
+    "qualifiers" : [ ],
+    "entities" : [ {
+      "id" : "jonas",
+      "surface" : "Jonas"
+    } ]
+  }, {
+    "id" : "k-5f8eadea02262f76f264",
+    "status" : "CONFIRMED_COMMITMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Keiko",
+    "speaker_id" : "920005",
+    "subject_id" : "camping_lantern",
+    "subject" : "the camping lantern",
+    "predicate" : "commits",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-11-07T20:15:20Z",
+    "evidence" : [ {
+      "message" : "m2036",
+      "role" : "ASSERTS",
+      "quote" : "I'll also bring the camping lantern."
+    } ],
+    "qualifiers" : [ ],
+    "entities" : [ ]
+  }, {
+    "id" : "k-eac78b2c9885e14ddae1",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Jonas",
+    "speaker_id" : "920004",
+    "subject_id" : "dog_biscuit",
+    "subject" : "Biscuit",
+    "predicate" : "states",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-11-07T20:22:20Z",
+    "evidence" : [ {
+      "message" : "m2037",
+      "role" : "ASSERTS",
+      "quote" : "Biscuit is hoping for a yes on the dog question."
+    } ],
+    "qualifiers" : [ ],
+    "entities" : [ {
+      "id" : "dog_question",
+      "surface" : "the dog question"
+    } ]
+  }, {
+    "id" : "k-bf28507367b92731f3f7",
+    "status" : "ATTRIBUTED_STATEMENT",
+    "certainty" : "ASSERTED",
+    "speaker" : "Tamar",
+    "speaker_id" : "920001",
+    "subject_id" : "east_meadow_site",
+    "subject" : "east meadow site",
+    "predicate" : "states",
+    "validity" : "ACTIVE",
+    "stated_at" : "2026-11-07T20:29:20Z",
+    "evidence" : [ {
+      "message" : "m2038",
+      "role" : "ASSERTS",
+      "quote" : "Summary so far: east meadow site, November 27 to 29, $54 per night, $108 total."
+    } ],
+    "qualifiers" : [ {
+      "kind" : "TIME",
+      "message" : "m2038",
+      "text" : "November 27 to 29"
+    } ],
+    "entities" : [ ]
+  } ],
+  "relation_list" : [ {
+    "from" : "k-df09165af36c76ff8e3a",
+    "kind" : "SUPERSEDES",
+    "to" : "k-18d245156c43b8c0713d"
+  } ],
+  "projection_check" : {
+    "postgres_items" : 49,
+    "postgres_relations" : 1,
+    "neo4j_knowledge_nodes" : 49,
+    "neo4j_relates_edges" : 1,
+    "neo4j_derived_from_edges" : 49,
+    "items" : [ {
+      "id" : "k-ecc755113438c5300de3",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "920001 states the lake camping trip — Friday November 27 to Sunday November 29 — \"the lake camping trip is happening! Plan is Friday November 27 to Sunday November 29, two nights.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "920001",
+      "neo4j_predicate" : "states",
+      "neo4j_subject" : "lake_camping_trip"
+    }, {
+      "id" : "k-c14083fa4ad32d797af4",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "920002 asks about Which campsite — \"Which campsite are we going for?\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "920002",
+      "neo4j_predicate" : "asks",
+      "neo4j_subject" : "campsite"
+    }, {
+      "id" : "k-b55d8230d6be7a34cd13",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "920003 recommends the north shore site — \"I vote for the north shore site, it's closest to the swimming beach.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "920003",
+      "neo4j_predicate" : "recommends",
+      "neo4j_subject" : "north_shore_site"
+    }, {
+      "id" : "k-379daa24b02c33b1a166",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "920005 states North shore — \"North shore works for me.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "920005",
+      "neo4j_predicate" : "states",
+      "neo4j_subject" : "north_shore_site"
+    }, {
+      "id" : "k-b87b00ca03bc279e9965",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "920001 decided on the north shore site — \"Decided then: we're going with the north shore site.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "920001",
+      "neo4j_predicate" : "decides",
+      "neo4j_subject" : "north_shore_site"
+    }, {
+      "id" : "k-1f86907acbbced23b799",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "920001 commits to the booking page — tonight — \"I'll look at the booking page tonight.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "920001",
+      "neo4j_predicate" : "commits",
+      "neo4j_subject" : "booking_page"
+    }, {
+      "id" : "k-dc32c999da7482b1f554",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "920004 offers my cousin's van — \"I might be able to borrow my cousin's van so we can all go in one car.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "920004",
+      "neo4j_predicate" : "offers",
+      "neo4j_subject" : "van"
+    }, {
+      "id" : "k-990bfcab16b6f29507ff",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "920002 states two cars — \"Otherwise we need two cars.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "920002",
+      "neo4j_predicate" : "states",
+      "neo4j_subject" : "cars"
+    }, {
+      "id" : "k-27783cee94bb62835f7f",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "920001 states Site fee — per night; for both nights — \"Site fee is $45 per night, so $90 total for both nights.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "920001",
+      "neo4j_predicate" : "states",
+      "neo4j_subject" : "site_fee"
+    }, {
+      "id" : "k-fa5b48f1fbf22b2d1be0",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "920005 recommends the ridge loop trail — For the Saturday hike — \"For the Saturday hike I'd recommend the ridge loop trail.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "920005",
+      "neo4j_predicate" : "recommends",
+      "neo4j_subject" : "ridge_loop_trail"
+    }, {
+      "id" : "k-55f4ef37602341c01da4",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "920005 states the ridge loop — After rain; only if it's dry — \"After rain the ridge loop gets muddy and slippery,\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "920005",
+      "neo4j_predicate" : "states",
+      "neo4j_subject" : "ridge_loop_trail"
+    }, {
+      "id" : "k-e6cc862e32e305b68999",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "920005 recommends the flat shoreline path — After rain — \"and then the flat shoreline path is the better option.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "920005",
+      "neo4j_predicate" : "recommends",
+      "neo4j_subject" : "shoreline_path"
+    }, {
+      "id" : "k-9bf46ed6b54d36ed72f8",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "920002 recommends a campfire — For food — \"I really want to cook everything over a campfire.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "920002",
+      "neo4j_predicate" : "recommends",
+      "neo4j_subject" : "campfire_cooking"
+    }, {
+      "id" : "k-18d245156c43b8c0713d",
+      "pg_validity" : "SUPERSEDED",
+      "vespa_present" : true,
+      "vespa_validity" : "SUPERSEDED",
+      "vespa_text" : "920003 recommends a gas stove — If there's a fire ban that weekend — \"I'd rather we bring a gas stove.\"",
+      "neo4j_validity" : "SUPERSEDED",
+      "neo4j_speaker" : "920003",
+      "neo4j_predicate" : "recommends",
+      "neo4j_subject" : "gas_stove"
+    }, {
+      "id" : "k-a9104d54d426f1d455cd",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "920002 states Fire bans — in late November — \"Fire bans are rare in late November.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "920002",
+      "neo4j_predicate" : "states",
+      "neo4j_subject" : "fire_ban"
+    }, {
+      "id" : "k-c26fbe4b8515ad7fea9f",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "920002 states The campfire — \"The campfire is the whole point.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "920002",
+      "neo4j_predicate" : "states",
+      "neo4j_subject" : "campfire_cooking"
+    }, {
+      "id" : "k-65ab7c858b45e23fbe6d",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "920003 states a stove — \"I still think a stove is safer.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "920003",
+      "neo4j_predicate" : "states",
+      "neo4j_subject" : "gas_stove"
+    }, {
+      "id" : "k-a52f6d62ac1f45f67d39",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "920001 states the fee — per night — \"it's $54 per night, not $45.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "920001",
+      "neo4j_predicate" : "states",
+      "neo4j_subject" : "site_fee"
+    }, {
+      "id" : "k-18ff4b11bd7a3c5eae2f",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "920004 states $21.60 each — Split five ways — \"Split five ways that's $21.60 each.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "920004",
+      "neo4j_predicate" : "states",
+      "neo4j_subject" : "cost_per_person"
+    }, {
+      "id" : "k-2233509492106f500985",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "920002 asks about drinking water at the campground — \"Does anyone know if there's drinking water at the campground, or do we need to haul our own?\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "920002",
+      "neo4j_predicate" : "asks",
+      "neo4j_subject" : "drinking_water"
+    }, {
+      "id" : "k-8e4aada2d313e8e26394",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "920005 asks about tents — \"Who's bringing tents?\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "920005",
+      "neo4j_predicate" : "asks",
+      "neo4j_subject" : "tent"
+    }, {
+      "id" : "k-4cfa8e60688ba7b1ecb6",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "920005 offers a 4-person tent — \"I have a 4-person tent I can bring.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "920005",
+      "neo4j_predicate" : "offers",
+      "neo4j_subject" : "tent"
+    }, {
+      "id" : "k-ea0450f0f990736bfb0a",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "920002 commits to my 2-person tent — \"I'll bring my 2-person tent.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "920002",
+      "neo4j_predicate" : "commits",
+      "neo4j_subject" : "tent"
+    }, {
+      "id" : "k-350157848820e418bb88",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "920001 states the north shore site — that weekend; for maintenance — \"the north shore site is closed that weekend for maintenance.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "920001",
+      "neo4j_predicate" : "states",
+      "neo4j_subject" : "north_shore_site"
+    }, {
+      "id" : "k-4b46d011d4a41583b49d",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "920001 states the east meadow site — same dates — \"we're booking the east meadow site instead, same dates.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "920001",
+      "neo4j_predicate" : "states",
+      "neo4j_subject" : "east_meadow_site"
+    }, {
+      "id" : "k-c1ccc3b7e498d650dc25",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "920001 states Same price — per night — \"Same price too, $54 per night.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "920001",
+      "neo4j_predicate" : "states",
+      "neo4j_subject" : "site_fee"
+    }, {
+      "id" : "k-ac837ea35f921ae068c9",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "920003 states East meadow — \"East meadow is fine. A bit further from the beach but quieter.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "920003",
+      "neo4j_predicate" : "states",
+      "neo4j_subject" : "east_meadow_site"
+    }, {
+      "id" : "k-2be3d00d092d2df7ae89",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "920004 states the van (relayed from My cousin) — for the whole weekend — \"My cousin says I can have the van for the whole weekend.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "920004",
+      "neo4j_predicate" : "states",
+      "neo4j_subject" : "van"
+    }, {
+      "id" : "k-9e82e7f3e48d66977d9a",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "920004 commits to everyone — everyone; on Friday at 4 PM — \"I can pick everyone up on Friday at 4 PM.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "920004",
+      "neo4j_predicate" : "commits",
+      "neo4j_subject" : "pickup"
+    }, {
+      "id" : "k-2ec391fc92ee5f9095de",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "920005 asks about the train station — \"Can you pick me up at the train station instead of my place?\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "920005",
+      "neo4j_predicate" : "asks",
+      "neo4j_subject" : "pickup"
+    }, {
+      "id" : "k-3376a6636cfa0a6a8203",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "920004 states train station pickup — for you — \"Sure, train station pickup for you.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "920004",
+      "neo4j_predicate" : "states",
+      "neo4j_subject" : "pickup"
+    }, {
+      "id" : "k-25f77655ce1eb37151da",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "920003 commits to the booking deposit for the east meadow site — by November 20 — \"I'll pay the booking deposit for the east meadow site by November 20.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "920003",
+      "neo4j_predicate" : "commits",
+      "neo4j_subject" : "booking_deposit"
+    }, {
+      "id" : "k-d96528ff6ed27e2fa45b",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "920001 commits to the groceries for the weekend — for the weekend — \"I'll handle the groceries for the weekend.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "920001",
+      "neo4j_predicate" : "commits",
+      "neo4j_subject" : "groceries"
+    }, {
+      "id" : "k-17f991a41d1b5b57b379",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "920004 asks about my dog Biscuit — \"Can I bring my dog Biscuit?\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "920004",
+      "neo4j_predicate" : "asks",
+      "neo4j_subject" : "dog_biscuit"
+    }, {
+      "id" : "k-66605d354773a239e1c7",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "920001 states the east meadow site — \"I think the east meadow site allows dogs, but I haven't confirmed that yet.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "920001",
+      "neo4j_predicate" : "states",
+      "neo4j_subject" : "east_meadow_site"
+    }, {
+      "id" : "k-a9a3e99a08af1a53d4da",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "920002 asks about a first aid kit — \"Should we bring a first aid kit, or does someone already have one?\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "920002",
+      "neo4j_predicate" : "asks",
+      "neo4j_subject" : "first_aid_kit"
+    }, {
+      "id" : "k-ada0962bfc14aafb9ba0",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "920005 states Forecast — on Friday; on Saturday — \"Forecast says possible rain on Friday, dry on Saturday.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "920005",
+      "neo4j_predicate" : "states",
+      "neo4j_subject" : "weather_forecast"
+    }, {
+      "id" : "k-db9096325684df69d575",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "920002 states campfire dinners — Back to food — \"I'm still planning campfire dinners.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "920002",
+      "neo4j_predicate" : "states",
+      "neo4j_subject" : "campfire_cooking"
+    }, {
+      "id" : "k-8c3fe57c3abc32b72924",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "920002 commits to the grill grate — \"I'll bring the grill grate.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "920002",
+      "neo4j_predicate" : "commits",
+      "neo4j_subject" : "grill_grate"
+    }, {
+      "id" : "k-df09165af36c76ff8e3a",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "920003 recommends a stove as a backup — as a backup — \"And I still think we need a stove as a backup.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "920003",
+      "neo4j_predicate" : "recommends",
+      "neo4j_subject" : "gas_stove"
+    }, {
+      "id" : "k-683755a8a2e0bc1f44d4",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "920004 asks about who is doing what — \"So who is doing what? I'm on driving.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "920004",
+      "neo4j_predicate" : "asks",
+      "neo4j_subject" : "tasks"
+    }, {
+      "id" : "k-18c87bdb785323809771",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "920004 states driving — \"I'm on driving.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "920004",
+      "neo4j_predicate" : "states",
+      "neo4j_subject" : "driving"
+    }, {
+      "id" : "k-dbf6f144c979e0f2dd19",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "920001 states groceries — \"Me: groceries and checking the dog rule.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "920001",
+      "neo4j_predicate" : "states",
+      "neo4j_subject" : "groceries"
+    }, {
+      "id" : "k-76e15600dbcbc171b39a",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "920001 states deposit — \"Priya: deposit.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "920001",
+      "neo4j_predicate" : "states",
+      "neo4j_subject" : "booking_deposit"
+    }, {
+      "id" : "k-ce9962a9611eab402c75",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "920001 states tents — Keiko and Ezra — \"Keiko and Ezra: tents.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "920001",
+      "neo4j_predicate" : "states",
+      "neo4j_subject" : "tent"
+    }, {
+      "id" : "k-5eed3381535103e15a44",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "920001 states van and pickups — \"Jonas: van and pickups.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "920001",
+      "neo4j_predicate" : "states",
+      "neo4j_subject" : "van"
+    }, {
+      "id" : "k-5f8eadea02262f76f264",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "920005 commits to the camping lantern — \"I'll also bring the camping lantern.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "920005",
+      "neo4j_predicate" : "commits",
+      "neo4j_subject" : "camping_lantern"
+    }, {
+      "id" : "k-eac78b2c9885e14ddae1",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "920004 states Biscuit — \"Biscuit is hoping for a yes on the dog question.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "920004",
+      "neo4j_predicate" : "states",
+      "neo4j_subject" : "dog_biscuit"
+    }, {
+      "id" : "k-bf28507367b92731f3f7",
+      "pg_validity" : "ACTIVE",
+      "vespa_present" : true,
+      "vespa_validity" : "ACTIVE",
+      "vespa_text" : "920001 states east meadow site — November 27 to 29 — \"Summary so far: east meadow site, November 27 to 29, $54 per night, $108 total.\"",
+      "neo4j_validity" : "ACTIVE",
+      "neo4j_speaker" : "920001",
+      "neo4j_predicate" : "states",
+      "neo4j_subject" : "east_meadow_site"
+    } ],
+    "vespa_knowledge_docs" : 49,
+    "vespa_knowledge_retrieval" : [ {
+      "q" : 1,
+      "active_hits" : [ "k-ecc755113438c5300de3", "k-5f8eadea02262f76f264", "k-e6cc862e32e305b68999", "k-dbf6f144c979e0f2dd19", "k-5eed3381535103e15a44" ]
+    }, {
+      "q" : 2,
+      "active_hits" : [ "k-c14083fa4ad32d797af4", "k-d96528ff6ed27e2fa45b", "k-c26fbe4b8515ad7fea9f", "k-fa5b48f1fbf22b2d1be0", "k-2be3d00d092d2df7ae89" ]
+    }, {
+      "q" : 3,
+      "active_hits" : [ "k-27783cee94bb62835f7f", "k-350157848820e418bb88", "k-683755a8a2e0bc1f44d4", "k-a52f6d62ac1f45f67d39", "k-b87b00ca03bc279e9965" ]
+    }, {
+      "q" : 4,
+      "active_hits" : [ "k-2233509492106f500985", "k-c26fbe4b8515ad7fea9f", "k-e6cc862e32e305b68999", "k-ecc755113438c5300de3", "k-eac78b2c9885e14ddae1" ]
+    }, {
+      "q" : 5,
+      "active_hits" : [ "k-683755a8a2e0bc1f44d4", "k-5eed3381535103e15a44", "k-350157848820e418bb88", "k-eac78b2c9885e14ddae1", "k-27783cee94bb62835f7f" ]
+    }, {
+      "q" : 6,
+      "active_hits" : [ "k-8e4aada2d313e8e26394", "k-ce9962a9611eab402c75", "k-683755a8a2e0bc1f44d4", "k-c26fbe4b8515ad7fea9f", "k-65ab7c858b45e23fbe6d" ]
+    }, {
+      "q" : 7,
+      "active_hits" : [ "k-fa5b48f1fbf22b2d1be0", "k-ce9962a9611eab402c75", "k-c14083fa4ad32d797af4", "k-a9a3e99a08af1a53d4da", "k-2233509492106f500985" ]
+    }, {
+      "q" : 8,
+      "active_hits" : [ "k-df09165af36c76ff8e3a", "k-65ab7c858b45e23fbe6d", "k-9bf46ed6b54d36ed72f8", "k-c26fbe4b8515ad7fea9f", "k-b87b00ca03bc279e9965" ]
+    }, {
+      "q" : 9,
+      "active_hits" : [ "k-17f991a41d1b5b57b379", "k-5eed3381535103e15a44", "k-dbf6f144c979e0f2dd19", "k-eac78b2c9885e14ddae1", "k-4cfa8e60688ba7b1ecb6" ]
+    }, {
+      "q" : 10,
+      "active_hits" : [ "k-25f77655ce1eb37151da", "k-76e15600dbcbc171b39a", "k-1f86907acbbced23b799", "k-683755a8a2e0bc1f44d4", "k-4b46d011d4a41583b49d" ]
+    }, {
+      "q" : 11,
+      "active_hits" : [ "k-2233509492106f500985", "k-1f86907acbbced23b799", "k-9e82e7f3e48d66977d9a", "k-2ec391fc92ee5f9095de", "k-c26fbe4b8515ad7fea9f" ]
+    }, {
+      "q" : 12,
+      "active_hits" : [ "k-a9a3e99a08af1a53d4da", "k-8e4aada2d313e8e26394", "k-683755a8a2e0bc1f44d4", "k-65ab7c858b45e23fbe6d", "k-df09165af36c76ff8e3a" ]
+    }, {
+      "q" : 13,
+      "active_hits" : [ "k-683755a8a2e0bc1f44d4", "k-c14083fa4ad32d797af4", "k-55f4ef37602341c01da4", "k-a52f6d62ac1f45f67d39", "k-b55d8230d6be7a34cd13" ]
+    }, {
+      "q" : 14,
+      "active_hits" : [ "k-18ff4b11bd7a3c5eae2f", "k-350157848820e418bb88", "k-b55d8230d6be7a34cd13", "k-ea0450f0f990736bfb0a", "k-4cfa8e60688ba7b1ecb6" ]
+    }, {
+      "q" : 15,
+      "active_hits" : [ "k-683755a8a2e0bc1f44d4", "k-350157848820e418bb88", "k-eac78b2c9885e14ddae1", "k-27783cee94bb62835f7f", "k-d96528ff6ed27e2fa45b" ]
+    } ]
+  }
+}

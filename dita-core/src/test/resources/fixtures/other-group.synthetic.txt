@@ -1,0 +1,5 @@
+# SYNTHETIC FIXTURE. A different group used only for isolation tests.
+x1|eve|1||Dr. Levi is the worst dentist in town, the pediatrician on Herzl is better
+y1|dafna|0||Dr. Katz on Weizmann St. closed her clinic, she moved abroad
+y2|avi|5||Teacher Michal gift: we collect 100 NIS per child
+y3|dafna|9||The blue jacket in the lobby belongs to my son

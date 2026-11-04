@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>app.dita</groupId>
+    <artifactId>dita-parent</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>dita-semeval</artifactId>
+  <description>TASK-046 semantic relation evaluation (DEC-037). EXPERIMENT ONLY: built only with -P semeval, every dependency is
+    test-scoped, nothing depends on this module, and nothing here writes truth outside throwaway in-memory stores. The local NLI
+    model (approved for testing, not for production) is loaded from eval/TASK-046/nli by sha256-pinned path.</description>
+  <dependencies>
+    <dependency><groupId>app.dita</groupId><artifactId>dita-core</artifactId><scope>test</scope></dependency>
+    <dependency><groupId>app.dita</groupId><artifactId>dita-muse</artifactId><version>${project.version}</version><scope>test</scope></dependency>
+    <dependency><groupId>com.fasterxml.jackson.core</groupId><artifactId>jackson-databind</artifactId><scope>test</scope></dependency>
+    <dependency><groupId>org.junit.jupiter</groupId><artifactId>junit-jupiter</artifactId><scope>test</scope></dependency>
+    <dependency><groupId>com.microsoft.onnxruntime</groupId><artifactId>onnxruntime</artifactId><version>1.30.0</version><scope>test</scope></dependency>
+    <dependency><groupId>ai.djl.huggingface</groupId><artifactId>tokenizers</artifactId><version>0.38.0</version><scope>test</scope></dependency>
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <configuration>
+          <argLine>-Djava.io.tmpdir=${project.build.directory} -Dai.djl.offline=true</argLine>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

@@ -1,0 +1,740 @@
+[
+  {
+    "update_id": 800000,
+    "message": {
+      "message_id": 1000,
+      "from": {
+        "id": 900001,
+        "is_bot": false,
+        "first_name": "Dana"
+      },
+      "chat": {
+        "id": -1001000000054,
+        "title": "Dita Synthetic Lab",
+        "type": "group"
+      },
+      "date": 1793383200,
+      "text": "We need to organize Noa's 7th birthday party for November 14."
+    }
+  },
+  {
+    "update_id": 800001,
+    "message": {
+      "message_id": 1001,
+      "from": {
+        "id": 900003,
+        "is_bot": false,
+        "first_name": "Maya"
+      },
+      "chat": {
+        "id": -1001000000054,
+        "title": "Dita Synthetic Lab",
+        "type": "group"
+      },
+      "date": 1793383290,
+      "text": "I can host in my backyard if the weather is good."
+    }
+  },
+  {
+    "update_id": 800002,
+    "message": {
+      "message_id": 1002,
+      "from": {
+        "id": 900002,
+        "is_bot": false,
+        "first_name": "Yossi"
+      },
+      "chat": {
+        "id": -1001000000054,
+        "title": "Dita Synthetic Lab",
+        "type": "group"
+      },
+      "date": 1793383380,
+      "text": "I recommend PlayLab in Westfield. We used it last year."
+    }
+  },
+  {
+    "update_id": 800003,
+    "message": {
+      "message_id": 1003,
+      "from": {
+        "id": 900004,
+        "is_bot": false,
+        "first_name": "Ron"
+      },
+      "chat": {
+        "id": -1001000000054,
+        "title": "Dita Synthetic Lab",
+        "type": "group"
+      },
+      "date": 1793383470,
+      "text": "I heard PlayLab gets noisy. Noa doesn't like loud music."
+    }
+  },
+  {
+    "update_id": 800004,
+    "message": {
+      "message_id": 1004,
+      "from": {
+        "id": 900001,
+        "is_bot": false,
+        "first_name": "Dana"
+      },
+      "chat": {
+        "id": -1001000000054,
+        "title": "Dita Synthetic Lab",
+        "type": "group"
+      },
+      "date": 1793383560,
+      "text": "Noa prefers crafts and science activities to loud games."
+    }
+  },
+  {
+    "update_id": 800005,
+    "message": {
+      "message_id": 1005,
+      "from": {
+        "id": 900003,
+        "is_bot": false,
+        "first_name": "Maya"
+      },
+      "chat": {
+        "id": -1001000000054,
+        "title": "Dita Synthetic Lab",
+        "type": "group"
+      },
+      "date": 1793383650,
+      "text": "There's also ColorHouse. They run painting workshops for children."
+    }
+  },
+  {
+    "update_id": 800006,
+    "message": {
+      "message_id": 1006,
+      "from": {
+        "id": 900002,
+        "is_bot": false,
+        "first_name": "Yossi"
+      },
+      "chat": {
+        "id": -1001000000054,
+        "title": "Dita Synthetic Lab",
+        "type": "group"
+      },
+      "date": 1793383740,
+      "text": "ColorHouse charges about $32 per child, according to their quote last month."
+    }
+  },
+  {
+    "update_id": 800007,
+    "message": {
+      "message_id": 1007,
+      "from": {
+        "id": 900004,
+        "is_bot": false,
+        "first_name": "Ron"
+      },
+      "chat": {
+        "id": -1001000000054,
+        "title": "Dita Synthetic Lab",
+        "type": "group"
+      },
+      "date": 1793383830,
+      "text": "I suggest we keep the activity budget under $400."
+    }
+  },
+  {
+    "update_id": 800008,
+    "message": {
+      "message_id": 1008,
+      "from": {
+        "id": 900001,
+        "is_bot": false,
+        "first_name": "Dana"
+      },
+      "chat": {
+        "id": -1001000000054,
+        "title": "Dita Synthetic Lab",
+        "type": "group"
+      },
+      "date": 1793383920,
+      "text": "Let's invite 12 children, not counting siblings."
+    }
+  },
+  {
+    "update_id": 800009,
+    "message": {
+      "message_id": 1009,
+      "from": {
+        "id": 900003,
+        "is_bot": false,
+        "first_name": "Maya"
+      },
+      "chat": {
+        "id": -1001000000054,
+        "title": "Dita Synthetic Lab",
+        "type": "group"
+      },
+      "date": 1793384010,
+      "text": "Actually, two siblings will also attend, so we'd have 14 children total."
+    }
+  },
+  {
+    "update_id": 800010,
+    "message": {
+      "message_id": 1010,
+      "from": {
+        "id": 900002,
+        "is_bot": false,
+        "first_name": "Yossi"
+      },
+      "chat": {
+        "id": -1001000000054,
+        "title": "Dita Synthetic Lab",
+        "type": "group"
+      },
+      "date": 1793384100,
+      "text": "For 14 kids, ColorHouse could cost around $448, based on that quote."
+    }
+  },
+  {
+    "update_id": 800011,
+    "message": {
+      "message_id": 1011,
+      "from": {
+        "id": 900004,
+        "is_bot": false,
+        "first_name": "Ron"
+      },
+      "chat": {
+        "id": -1001000000054,
+        "title": "Dita Synthetic Lab",
+        "type": "group"
+      },
+      "date": 1793384190,
+      "text": "That's over our $400 activity budget. I prefer a backyard workshop."
+    }
+  },
+  {
+    "update_id": 800012,
+    "message": {
+      "message_id": 1012,
+      "from": {
+        "id": 900003,
+        "is_bot": false,
+        "first_name": "Maya"
+      },
+      "chat": {
+        "id": -1001000000054,
+        "title": "Dita Synthetic Lab",
+        "type": "group"
+      },
+      "date": 1793384280,
+      "text": "I can lead a clay workshop in the backyard."
+    }
+  },
+  {
+    "update_id": 800013,
+    "message": {
+      "message_id": 1013,
+      "from": {
+        "id": 900001,
+        "is_bot": false,
+        "first_name": "Dana"
+      },
+      "chat": {
+        "id": -1001000000054,
+        "title": "Dita Synthetic Lab",
+        "type": "group"
+      },
+      "date": 1793384370,
+      "text": "Would you need help buying supplies?"
+    }
+  },
+  {
+    "update_id": 800014,
+    "message": {
+      "message_id": 1014,
+      "from": {
+        "id": 900003,
+        "is_bot": false,
+        "first_name": "Maya"
+      },
+      "chat": {
+        "id": -1001000000054,
+        "title": "Dita Synthetic Lab",
+        "type": "group"
+      },
+      "date": 1793384460,
+      "text": "Yes. I can get the clay, but someone else should bring aprons."
+    }
+  },
+  {
+    "update_id": 800015,
+    "message": {
+      "message_id": 1015,
+      "from": {
+        "id": 900002,
+        "is_bot": false,
+        "first_name": "Yossi"
+      },
+      "chat": {
+        "id": -1001000000054,
+        "title": "Dita Synthetic Lab",
+        "type": "group"
+      },
+      "date": 1793384550,
+      "text": "I can bring 15 aprons. I'll buy them on November 7."
+    }
+  },
+  {
+    "update_id": 800016,
+    "message": {
+      "message_id": 1016,
+      "from": {
+        "id": 900004,
+        "is_bot": false,
+        "first_name": "Ron"
+      },
+      "chat": {
+        "id": -1001000000054,
+        "title": "Dita Synthetic Lab",
+        "type": "group"
+      },
+      "date": 1793384640,
+      "text": "I'll handle drinks: water and juice boxes for the kids."
+    }
+  },
+  {
+    "update_id": 800017,
+    "message": {
+      "message_id": 1017,
+      "from": {
+        "id": 900001,
+        "is_bot": false,
+        "first_name": "Dana"
+      },
+      "chat": {
+        "id": -1001000000054,
+        "title": "Dita Synthetic Lab",
+        "type": "group"
+      },
+      "date": 1793384730,
+      "text": "Let's plan for Saturday, November 14, from 2 PM to 4 PM."
+    }
+  },
+  {
+    "update_id": 800018,
+    "message": {
+      "message_id": 1018,
+      "from": {
+        "id": 900003,
+        "is_bot": false,
+        "first_name": "Maya"
+      },
+      "chat": {
+        "id": -1001000000054,
+        "title": "Dita Synthetic Lab",
+        "type": "group"
+      },
+      "date": 1793384820,
+      "text": "I won't be home on November 14. I forgot about my sister's wedding."
+    }
+  },
+  {
+    "update_id": 800019,
+    "message": {
+      "message_id": 1019,
+      "from": {
+        "id": 900001,
+        "is_bot": false,
+        "first_name": "Dana"
+      },
+      "chat": {
+        "id": -1001000000054,
+        "title": "Dita Synthetic Lab",
+        "type": "group"
+      },
+      "date": 1793384910,
+      "text": "Thanks for catching that. November 14 is no longer an option."
+    }
+  },
+  {
+    "update_id": 800020,
+    "message": {
+      "message_id": 1020,
+      "from": {
+        "id": 900002,
+        "is_bot": false,
+        "first_name": "Yossi"
+      },
+      "chat": {
+        "id": -1001000000054,
+        "title": "Dita Synthetic Lab",
+        "type": "group"
+      },
+      "date": 1793385000,
+      "text": "What about Sunday, November 15, from 2 PM to 4 PM?"
+    }
+  },
+  {
+    "update_id": 800021,
+    "message": {
+      "message_id": 1021,
+      "from": {
+        "id": 900004,
+        "is_bot": false,
+        "first_name": "Ron"
+      },
+      "chat": {
+        "id": -1001000000054,
+        "title": "Dita Synthetic Lab",
+        "type": "group"
+      },
+      "date": 1793385090,
+      "text": "November 15 works for me."
+    }
+  },
+  {
+    "update_id": 800022,
+    "message": {
+      "message_id": 1022,
+      "from": {
+        "id": 900003,
+        "is_bot": false,
+        "first_name": "Maya"
+      },
+      "chat": {
+        "id": -1001000000054,
+        "title": "Dita Synthetic Lab",
+        "type": "group"
+      },
+      "date": 1793385180,
+      "text": "November 15 works for me too, and my backyard is available."
+    }
+  },
+  {
+    "update_id": 800023,
+    "message": {
+      "message_id": 1023,
+      "from": {
+        "id": 900001,
+        "is_bot": false,
+        "first_name": "Dana"
+      },
+      "chat": {
+        "id": -1001000000054,
+        "title": "Dita Synthetic Lab",
+        "type": "group"
+      },
+      "date": 1793385270,
+      "text": "Decision: the party is Sunday, November 15, 2 PM to 4 PM, at Maya's backyard."
+    }
+  },
+  {
+    "update_id": 800024,
+    "message": {
+      "message_id": 1024,
+      "from": {
+        "id": 900004,
+        "is_bot": false,
+        "first_name": "Ron"
+      },
+      "chat": {
+        "id": -1001000000054,
+        "title": "Dita Synthetic Lab",
+        "type": "group"
+      },
+      "date": 1793385360,
+      "text": "I can bring a portable speaker for background music."
+    }
+  },
+  {
+    "update_id": 800025,
+    "message": {
+      "message_id": 1025,
+      "from": {
+        "id": 900001,
+        "is_bot": false,
+        "first_name": "Dana"
+      },
+      "chat": {
+        "id": -1001000000054,
+        "title": "Dita Synthetic Lab",
+        "type": "group"
+      },
+      "date": 1793385450,
+      "text": "Please skip the speaker. Noa is sensitive to loud sound."
+    }
+  },
+  {
+    "update_id": 800026,
+    "message": {
+      "message_id": 1026,
+      "from": {
+        "id": 900004,
+        "is_bot": false,
+        "first_name": "Ron"
+      },
+      "chat": {
+        "id": -1001000000054,
+        "title": "Dita Synthetic Lab",
+        "type": "group"
+      },
+      "date": 1793385540,
+      "text": "Understood. No speaker. I'll bring drinks only."
+    }
+  },
+  {
+    "update_id": 800027,
+    "message": {
+      "message_id": 1027,
+      "from": {
+        "id": 900003,
+        "is_bot": false,
+        "first_name": "Maya"
+      },
+      "chat": {
+        "id": -1001000000054,
+        "title": "Dita Synthetic Lab",
+        "type": "group"
+      },
+      "date": 1793385630,
+      "text": "I said I'd get clay; correction: I can also bring disposable tablecloths."
+    }
+  },
+  {
+    "update_id": 800028,
+    "message": {
+      "message_id": 1028,
+      "from": {
+        "id": 900002,
+        "is_bot": false,
+        "first_name": "Yossi"
+      },
+      "chat": {
+        "id": -1001000000054,
+        "title": "Dita Synthetic Lab",
+        "type": "group"
+      },
+      "date": 1793385720,
+      "text": "Update: the aprons arrive November 10, so I can still bring them."
+    }
+  },
+  {
+    "update_id": 800029,
+    "message": {
+      "message_id": 1029,
+      "from": {
+        "id": 900001,
+        "is_bot": false,
+        "first_name": "Dana"
+      },
+      "chat": {
+        "id": -1001000000054,
+        "title": "Dita Synthetic Lab",
+        "type": "group"
+      },
+      "date": 1793385810,
+      "text": "We need someone to manage RSVPs. I haven't assigned that."
+    }
+  },
+  {
+    "update_id": 800030,
+    "message": {
+      "message_id": 1030,
+      "from": {
+        "id": 900004,
+        "is_bot": false,
+        "first_name": "Ron"
+      },
+      "chat": {
+        "id": -1001000000054,
+        "title": "Dita Synthetic Lab",
+        "type": "group"
+      },
+      "date": 1793385900,
+      "text": "I can handle RSVPs if you send me the guest list."
+    }
+  },
+  {
+    "update_id": 800031,
+    "message": {
+      "message_id": 1031,
+      "from": {
+        "id": 900001,
+        "is_bot": false,
+        "first_name": "Dana"
+      },
+      "chat": {
+        "id": -1001000000054,
+        "title": "Dita Synthetic Lab",
+        "type": "group"
+      },
+      "date": 1793385990,
+      "text": "Ron, please handle RSVPs. I'll send you the list tonight."
+    }
+  },
+  {
+    "update_id": 800032,
+    "message": {
+      "message_id": 1032,
+      "from": {
+        "id": 900003,
+        "is_bot": false,
+        "first_name": "Maya"
+      },
+      "chat": {
+        "id": -1001000000054,
+        "title": "Dita Synthetic Lab",
+        "type": "group"
+      },
+      "date": 1793386080,
+      "text": "Potential issue: if it rains, the backyard won't work."
+    }
+  },
+  {
+    "update_id": 800033,
+    "message": {
+      "message_id": 1033,
+      "from": {
+        "id": 900002,
+        "is_bot": false,
+        "first_name": "Yossi"
+      },
+      "chat": {
+        "id": -1001000000054,
+        "title": "Dita Synthetic Lab",
+        "type": "group"
+      },
+      "date": 1793386170,
+      "text": "I recommend the community center as a rain backup, but I haven't checked availability."
+    }
+  },
+  {
+    "update_id": 800034,
+    "message": {
+      "message_id": 1034,
+      "from": {
+        "id": 900001,
+        "is_bot": false,
+        "first_name": "Dana"
+      },
+      "chat": {
+        "id": -1001000000054,
+        "title": "Dita Synthetic Lab",
+        "type": "group"
+      },
+      "date": 1793386260,
+      "text": "The community center is only a suggestion, not a confirmed backup."
+    }
+  },
+  {
+    "update_id": 800035,
+    "message": {
+      "message_id": 1035,
+      "from": {
+        "id": 900004,
+        "is_bot": false,
+        "first_name": "Ron"
+      },
+      "chat": {
+        "id": -1001000000054,
+        "title": "Dita Synthetic Lab",
+        "type": "group"
+      },
+      "date": 1793386350,
+      "text": "Reminder: we should decide on the rain plan by November 12."
+    }
+  },
+  {
+    "update_id": 800036,
+    "message": {
+      "message_id": 1036,
+      "from": {
+        "id": 900003,
+        "is_bot": false,
+        "first_name": "Maya"
+      },
+      "chat": {
+        "id": -1001000000054,
+        "title": "Dita Synthetic Lab",
+        "type": "group"
+      },
+      "date": 1793386440,
+      "text": "For food, I recommend ordering plain cheese pizza and fruit."
+    }
+  },
+  {
+    "update_id": 800037,
+    "message": {
+      "message_id": 1037,
+      "from": {
+        "id": 900001,
+        "is_bot": false,
+        "first_name": "Dana"
+      },
+      "chat": {
+        "id": -1001000000054,
+        "title": "Dita Synthetic Lab",
+        "type": "group"
+      },
+      "date": 1793386530,
+      "text": "One child may have a dairy allergy; this is not confirmed yet."
+    }
+  },
+  {
+    "update_id": 800038,
+    "message": {
+      "message_id": 1038,
+      "from": {
+        "id": 900002,
+        "is_bot": false,
+        "first_name": "Yossi"
+      },
+      "chat": {
+        "id": -1001000000054,
+        "title": "Dita Synthetic Lab",
+        "type": "group"
+      },
+      "date": 1793386620,
+      "text": "Then let's not finalize food until we confirm dietary restrictions."
+    }
+  },
+  {
+    "update_id": 800039,
+    "message": {
+      "message_id": 1039,
+      "from": {
+        "id": 900004,
+        "is_bot": false,
+        "first_name": "Ron"
+      },
+      "chat": {
+        "id": -1001000000054,
+        "title": "Dita Synthetic Lab",
+        "type": "group"
+      },
+      "date": 1793386710,
+      "text": "Who is bringing the cake? I don't think we assigned that."
+    }
+  },
+  {
+    "update_id": 800040,
+    "message": {
+      "message_id": 1040,
+      "from": {
+        "id": 900001,
+        "is_bot": false,
+        "first_name": "Dana"
+      },
+      "chat": {
+        "id": -1001000000054,
+        "title": "Dita Synthetic Lab",
+        "type": "group"
+      },
+      "date": 1793386800,
+      "text": "I will order the cake, but only after we confirm dietary restrictions."
+    }
+  }
+]

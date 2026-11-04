@@ -1,0 +1,4 @@
+<validation-overrides>
+  <!-- DEC-028: knowledge.text stemming best -> none. One-time allowance; remove this file after the change is active. -->
+  <allow until="2026-11-01" comment="DEC-028 knowledge.text stemming none">indexing-change</allow>
+</validation-overrides>

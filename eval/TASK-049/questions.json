@@ -1,0 +1,100 @@
+[
+  {
+    "id": "q1",
+    "question": "Where is the workshop venue?",
+    "expectedSources": [
+      "m2"
+    ],
+    "paraphrase": false
+  },
+  {
+    "id": "q2",
+    "question": "Who will bring lemonade?",
+    "expectedSources": [
+      "m3"
+    ],
+    "paraphrase": false
+  },
+  {
+    "id": "q3",
+    "question": "Who is handling refreshments?",
+    "expectedSources": [
+      "m3"
+    ],
+    "paraphrase": true
+  },
+  {
+    "id": "q4",
+    "question": "Who provides a shuttle for the helpers?",
+    "expectedSources": [
+      "m4"
+    ],
+    "paraphrase": true
+  },
+  {
+    "id": "q5",
+    "question": "How can disabled attendees get inside?",
+    "expectedSources": [
+      "m5"
+    ],
+    "paraphrase": true
+  },
+  {
+    "id": "q6",
+    "question": "Do visitors have to pay?",
+    "expectedSources": [
+      "m6"
+    ],
+    "paraphrase": true
+  },
+  {
+    "id": "q7",
+    "question": "Who takes care of tidying up?",
+    "expectedSources": [
+      "m7"
+    ],
+    "paraphrase": true
+  },
+  {
+    "id": "q8",
+    "question": "What is the final location for our session?",
+    "expectedSources": [
+      "m2"
+    ],
+    "paraphrase": true
+  },
+  {
+    "id": "q9",
+    "question": "Who will drive the volunteers?",
+    "expectedSources": [
+      "m4"
+    ],
+    "paraphrase": false
+  },
+  {
+    "id": "q10",
+    "question": "What is the forecast for Saturday?",
+    "expectedSources": [
+      "m9"
+    ],
+    "paraphrase": false
+  },
+  {
+    "id": "q11",
+    "question": "Who has committed to arranging insurance?",
+    "expectedSources": [],
+    "paraphrase": false
+  },
+  {
+    "id": "q12",
+    "question": "What is the wifi password?",
+    "expectedSources": [],
+    "paraphrase": true
+  },
+  {
+    "id": "q13",
+    "question": "Who is supplying sandwiches?",
+    "expectedSources": [],
+    "paraphrase": true
+  }
+]

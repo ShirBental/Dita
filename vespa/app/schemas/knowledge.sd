@@ -1,0 +1,68 @@
+# Knowledge documents (RFC-002 §3.3/§4, Natasha K-1/K-7). Keyed by (group_id, knowledge_id): document id
+# id:dita:knowledge::<groupId>::<knowledgeId>. `text` holds ONLY Dita's template rendering (speaker id, fixed predicate
+# phrase, verbatim spans cut from LIVE messages); never the model's wording. Written/deleted by VespaProjection.onKnowledge;
+# a message deletion re-renders or deletes every document whose source_ids contain the message.
+# Every query MUST filter on group_id (group isolation). `text` is not a summary field: queries return ids only.
+schema knowledge {
+    document knowledge {
+        field group_id type string {
+            indexing: attribute | summary
+            attribute: fast-search
+            rank: filter
+        }
+        field content_hash type string {
+            indexing: attribute | summary
+        }
+        field knowledge_id type string {
+            indexing: attribute | summary
+        }
+        # stemming: none (DEC-028). Vespa detects a language PER DOCUMENT; on these short documents it guesses wrongly
+        # (live, 2026-10-30: "yossi recommends Dr. Levi ..." was stemmed as a Romance language: levi->lev, yossi->yoss,
+        # while English queries searched levi/yossi), so names and words silently stopped matching. Without stemming,
+        # matching depends only on tokenization + normalization (lowercase, accent folding), identical for every language.
+        # Tradeoff: no morphological recall (teenager != teenagers). Path to dual retrieval: add a second field, e.g.
+        # `text_ling` (same input, stemming on, language set explicitly), and query both with a rank expression that
+        # weights exact matches higher; do NOT merge fields with different stemming into one fieldset.
+        field text type string {
+            indexing: index
+            index: enable-bm25
+            stemming: none
+        }
+        field status type string {
+            indexing: attribute | summary
+            rank: filter
+        }
+        field predicate type string {
+            indexing: attribute
+            rank: filter
+        }
+        field validity type string {
+            indexing: attribute | summary
+            attribute: fast-search
+            rank: filter
+        }
+        field subject_id type string {
+            indexing: attribute
+            attribute: fast-search
+            rank: filter
+        }
+        field speaker_id type string {
+            indexing: attribute
+            rank: filter
+        }
+        field source_ids type array<string> {
+            indexing: attribute
+            attribute: fast-search
+            rank: filter
+        }
+    }
+    fieldset default {
+        fields: text
+    }
+    rank-profile bm25 {
+        first-phase {
+            expression: bm25(text)
+        }
+        match-features: bm25(text)
+    }
+}

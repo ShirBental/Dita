@@ -1,0 +1,59 @@
+{
+  "id": "S2",
+  "theme": "Amateur robotics club: conflicting recommendations and qualified opinions",
+  "names": {
+    "u-pell": "Pell Aranda",
+    "u-ottilie": "Ottilie Brask",
+    "u-devrim": "Devrim Solak",
+    "u-hana": "Hana Wexford",
+    "u-rook": "Rook Tamsin"
+  },
+  "messages": [
+    {"id": "s2m01", "author": "u-pell", "minute": 0, "replyTo": null, "text": "Kicking off parts for the line-follower build. Which microcontroller board should we standardise on?"},
+    {"id": "s2m02", "author": "u-ottilie", "minute": 4, "replyTo": "s2m01", "text": "For beginners, the Kestrel Nano. Simple pinout and great tutorials."},
+    {"id": "s2m03", "author": "u-devrim", "minute": 7, "replyTo": "s2m01", "text": "I'd go Vireo S3. More pins and wifi, better long term."},
+    {"id": "s2m04", "author": "u-ottilie", "minute": 9, "replyTo": "s2m03", "text": "Vireo is fine for experienced members, but it's overkill for first builds."},
+    {"id": "s2m05", "author": "u-hana", "minute": 14, "replyTo": null, "text": "Budget check: we have 400 for the whole season."},
+    {"id": "s2m06", "author": "u-rook", "minute": 18, "replyTo": null, "text": "Motors: under budget, Bumble gearmotors are the way. If money weren't an issue I'd say Pallas N20 metal gear."},
+    {"id": "s2m07", "author": "u-devrim", "minute": 22, "replyTo": "s2m06", "text": "Disagree, Bumbles strip their gears fast. I'd still pick the Pallas."},
+    {"id": "s2m08", "author": "u-pell", "minute": 26, "replyTo": null, "text": "Venue for build nights: the scout hut on Larch Road?"},
+    {"id": "s2m09", "author": "u-hana", "minute": 29, "replyTo": "s2m08", "text": "Scout hut is great in summer, but it has no heating. In winter it's freezing."},
+    {"id": "s2m10", "author": "u-rook", "minute": 33, "replyTo": "s2m08", "text": "Library makerspace has heating and a soldering bench, but only on Tuesdays."},
+    {"id": "s2m11", "author": "u-pell", "minute": 38, "replyTo": null, "text": "Decision for the board: Kestrel Nano for the beginner kits. Advanced members can bring their own Vireo."},
+    {"id": "s2m12", "author": "u-ottilie", "minute": 42, "replyTo": null, "text": "Batteries: 4xAA packs for beginners. LiPo only for members who've done the safety session."},
+    {"id": "s2m13", "author": "u-devrim", "minute": 47, "replyTo": "s2m12", "text": "Update on LiPo: I found a cheaper charger, 18 instead of 30."},
+    {"id": "s2m14", "author": "u-hana", "minute": 52, "replyTo": null, "text": "Motors decision: Bumble gearmotors for the 8 club kits, keeps us under 400."},
+    {"id": "s2m15", "author": "u-rook", "minute": 56, "replyTo": "s2m14", "text": "Correction to Hana's numbers: we need 10 kits, not 8. Still Bumbles, still under budget."},
+    {"id": "s2m16", "author": "u-hana", "minute": 59, "replyTo": "s2m15", "text": "Yes, Rook's right, my mistake."},
+    {"id": "s2m17", "author": "u-pell", "minute": 64, "replyTo": null, "text": "Venue: scout hut from now until end of September, then library makerspace on Tuesdays for winter."},
+    {"id": "s2m18", "author": "u-devrim", "minute": 69, "replyTo": null, "text": "Has anyone used the Corvid line sensor? Is it any good?"},
+    {"id": "s2m19", "author": "u-ottilie", "minute": 74, "replyTo": null, "text": "Wheels: I'd recommend the 65mm rubber ones, at least for smooth floors. On carpet they slip."},
+    {"id": "s2m20", "author": "u-hana", "minute": 79, "replyTo": null, "text": "Scout hut just told me they're closing for repairs in September."},
+    {"id": "s2m21", "author": "u-pell", "minute": 83, "replyTo": "s2m20", "text": "Change of plan: scout hut through August only, library makerspace on Tuesdays from 1 September."},
+    {"id": "s2m22", "author": "u-rook", "minute": 88, "replyTo": null, "text": "Soldering irons: I can lend two."},
+    {"id": "s2m23", "author": "u-devrim", "minute": 93, "replyTo": "s2m11", "text": "For what it's worth, I still think Vireo would be better for everyone."},
+    {"id": "s2m24", "author": "u-pell", "minute": 97, "replyTo": "s2m23", "text": "Noted, Devrim, but the decision stands: Kestrel Nano for kits."},
+    {"id": "s2m25", "author": "u-ottilie", "minute": 102, "replyTo": null, "text": "Which board did we land on for the kits again?"},
+    {"id": "s2m26", "author": "u-hana", "minute": 104, "replyTo": "s2m25", "text": "Kestrel Nano for kits, see Pell's decision."},
+    {"id": "s2m27", "author": "u-rook", "minute": 110, "replyTo": null, "text": "Should we enter the regional line-follower contest in November?"},
+    {"id": "s2m28", "author": "u-devrim", "minute": 115, "replyTo": "s2m27", "text": "Maybe, if the robots are working by October."}
+  ],
+  "state": [
+    {"topic": "kit microcontroller", "current": ["s2m11"], "superseded": [], "expectedSupersedes": [], "note": "s2m02 (Kestrel, for beginners) and s2m03 (Vireo) are conflicting recommendations from different people; s2m11 adopts Kestrel for beginner kits and allows Vireo for advanced members. No pair: the decision adopts a recommendation rather than correcting a claim, and s2m23 is a mere disagreement that s2m24 explicitly rejects."},
+    {"topic": "motor kit count", "current": ["s2m15"], "superseded": ["s2m14"], "expectedSupersedes": [["s2m15", "s2m14"]], "note": "One-detail correction: 8 -> 10 kits; motor choice (Bumble) unchanged. s2m16 only confirms. s2m07 is a disagreement with s2m06 about motor quality, not a supersession. s2m06 is qualified (under budget vs money no object)."},
+    {"topic": "build-night venue", "current": ["s2m21"], "superseded": ["s2m17"], "expectedSupersedes": [["s2m21", "s2m17"]], "note": "s2m17's switch-over date (end of September) is replaced by 1 September after the scout hut closure news (s2m20). s2m09 and s2m10 are qualified opinions (summer/winter, Tuesdays only), not decisions. s2m13 uses 'update' and 'instead' but adds new info about a charger and corrects nothing."}
+  ],
+  "questions": [
+    {"qid": "S2-Q1", "question": "Which microcontroller are the club kits using?", "kind": "current-state", "polarity": "positive", "goldAnswer": "The Kestrel Nano. Advanced members may bring their own Vireo.", "expectUnknown": false, "mustCite": ["s2m11"], "allowCite": ["s2m24", "s2m26", "s2m02"], "mustNotCite": [], "textMust": ["Kestrel Nano"], "textMustNot": [], "note": "Decision s2m11, reaffirmed in s2m24 and paraphrased question answered in s2m26."},
+    {"qid": "S2-Q2", "question": "Is the Vireo S3 the board recommended for beginners?", "kind": "qualified", "polarity": "negative", "goldAnswer": "No. Ottilie recommended the Kestrel Nano for beginners and said the Vireo is fine only for experienced members.", "expectUnknown": false, "mustCite": ["s2m02", "s2m04"], "allowCite": ["s2m03", "s2m11"], "mustNotCite": [], "textMust": ["For beginners"], "textMustNot": [], "note": "Recommendation qualified by population."},
+    {"qid": "S2-Q3", "question": "Are we buying motors for 8 kits?", "kind": "superseded-check", "polarity": "negative", "goldAnswer": "No. Rook corrected it to 10 kits; still Bumble gearmotors and still under budget.", "expectUnknown": false, "mustCite": ["s2m15"], "allowCite": ["s2m16"], "mustNotCite": ["s2m14"], "textMust": ["10 kits"], "textMustNot": ["8 club kits"], "note": "One-detail correction."},
+    {"qid": "S2-Q4", "question": "Which motors would Rook pick if money weren't an issue?", "kind": "qualified", "polarity": "positive", "goldAnswer": "Pallas N20 metal gear motors; under budget he recommends Bumble gearmotors.", "expectUnknown": false, "mustCite": ["s2m06"], "allowCite": ["s2m07"], "mustNotCite": [], "textMust": ["Pallas N20"], "textMustNot": [], "note": "Opinion qualified by budget condition."},
+    {"qid": "S2-Q5", "question": "Where are build nights in September?", "kind": "current-state", "polarity": "positive", "goldAnswer": "At the library makerspace on Tuesdays from 1 September, because the scout hut closes for repairs.", "expectUnknown": false, "mustCite": ["s2m21"], "allowCite": ["s2m20", "s2m10"], "mustNotCite": ["s2m17"], "textMust": ["library makerspace"], "textMustNot": ["end of September"], "note": "s2m21 replaced the end-of-September switch in s2m17."},
+    {"qid": "S2-Q6", "question": "Can every member use LiPo batteries?", "kind": "qualified", "polarity": "negative", "goldAnswer": "No. LiPo is only for members who have done the safety session; beginners use 4xAA packs.", "expectUnknown": false, "mustCite": ["s2m12"], "allowCite": ["s2m13"], "mustNotCite": [], "textMust": ["safety session"], "textMustNot": [], "note": "Qualified rule by population."},
+    {"qid": "S2-Q7", "question": "Did the club switch the kits to Vireo after Devrim objected?", "kind": "negative", "polarity": "negative", "goldAnswer": "No. Devrim disagreed, but Pell said the decision stands: Kestrel Nano for kits.", "expectUnknown": false, "mustCite": ["s2m24"], "allowCite": ["s2m23", "s2m11"], "mustNotCite": [], "textMust": ["decision stands"], "textMustNot": [], "note": "Disagreement does not supersede a decision."},
+    {"qid": "S2-Q8", "question": "Is the Corvid line sensor any good?", "kind": "unknown", "polarity": "positive", "goldAnswer": "Unknown. Devrim asked, but nobody answered.", "expectUnknown": true, "mustCite": [], "allowCite": ["s2m18"], "mustNotCite": [], "textMust": [], "textMustNot": [], "note": "Unanswered question."},
+    {"qid": "S2-Q9", "question": "Are we entering the regional contest in November?", "kind": "unknown", "polarity": "negative", "goldAnswer": "Not decided. Devrim only said maybe, if the robots are working by October.", "expectUnknown": true, "mustCite": [], "allowCite": ["s2m27", "s2m28"], "mustNotCite": [], "textMust": [], "textMustNot": [], "note": "A conditional 'maybe' is not a decision."},
+    {"qid": "S2-Q10", "question": "Will the 65mm rubber wheels work on carpet?", "kind": "qualified", "polarity": "negative", "goldAnswer": "No. Ottilie recommends them for smooth floors but said they slip on carpet.", "expectUnknown": false, "mustCite": ["s2m19"], "allowCite": [], "mustNotCite": [], "textMust": ["On carpet they slip"], "textMustNot": [], "note": "Recommendation applies to a different condition."}
+  ],
+  "deletionProbe": {"delete": "s2m15", "question": "How many kits are we buying motors for?", "mustNotCite": ["s2m15"], "textMustNot": ["10 kits"]}
+}

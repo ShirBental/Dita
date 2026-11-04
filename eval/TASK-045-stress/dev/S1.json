@@ -1,0 +1,60 @@
+{
+  "id": "S1",
+  "theme": "Community garden committee: decisions, corrections, retractions and conditional changes",
+  "names": {
+    "u-marisol": "Marisol Venn",
+    "u-teodor": "Teodor Pike",
+    "u-annika": "Annika Rowe",
+    "u-bram": "Bram Lisdale",
+    "u-quinn": "Quinn Harrow",
+    "u-ines": "Ines Calloway"
+  },
+  "messages": [
+    {"id": "s1m01", "author": "u-marisol", "minute": 0, "replyTo": null, "text": "Hi all! Proposal for the spring work day: Saturday 12 April, 9am, meeting at the north beds."},
+    {"id": "s1m02", "author": "u-teodor", "minute": 3, "replyTo": "s1m01", "text": "Works for me. Are we getting compost this year?"},
+    {"id": "s1m03", "author": "u-annika", "minute": 6, "replyTo": "s1m02", "text": "Yes. Decided on last night's call: 3 cubic metres from Fernhill Supply."},
+    {"id": "s1m04", "author": "u-bram", "minute": 9, "replyTo": "s1m03", "text": "Small correction: we agreed 4 cubic metres, not 3. Still Fernhill Supply."},
+    {"id": "s1m05", "author": "u-annika", "minute": 11, "replyTo": "s1m04", "text": "Bram's right, 4 it is."},
+    {"id": "s1m06", "author": "u-quinn", "minute": 15, "replyTo": "s1m01", "text": "If it rains on the 12th we move to the tool shed and do seed sorting instead."},
+    {"id": "s1m07", "author": "u-marisol", "minute": 18, "replyTo": "s1m06", "text": "Agreed, that's the rain plan."},
+    {"id": "s1m08", "author": "u-teodor", "minute": 22, "replyTo": null, "text": "Thinking out loud: maybe we could add a second water butt by the herb spiral?"},
+    {"id": "s1m09", "author": "u-annika", "minute": 25, "replyTo": "s1m08", "text": "Maybe. Depends on the budget, let's revisit in May."},
+    {"id": "s1m10", "author": "u-bram", "minute": 30, "replyTo": "s1m01", "text": "9am is early for families with kids. Could we start at 10am?"},
+    {"id": "s1m11", "author": "u-marisol", "minute": 34, "replyTo": "s1m10", "text": "Fine by me. New plan: Saturday 12 April, 10am start, north beds."},
+    {"id": "s1m12", "author": "u-ines", "minute": 39, "replyTo": null, "text": "Quick update from me: I repainted all the plot number signs this week."},
+    {"id": "s1m13", "author": "u-teodor", "minute": 44, "replyTo": null, "text": "I'll bring my wheelbarrow and two spades on the day."},
+    {"id": "s1m14", "author": "u-annika", "minute": 50, "replyTo": null, "text": "FYI the gate code changes to 4471 from 1 April."},
+    {"id": "s1m15", "author": "u-quinn", "minute": 55, "replyTo": null, "text": "Fernhill says delivery goes to the north gate. If the roadworks are still blocking it, they'll drop the compost at the south car park."},
+    {"id": "s1m16", "author": "u-marisol", "minute": 61, "replyTo": null, "text": "If fewer than 6 people sign up, we'll postpone the work day to the 19th."},
+    {"id": "s1m17", "author": "u-ines", "minute": 66, "replyTo": "s1m16", "text": "I've signed up. Who's doing the tool safety talk this year?"},
+    {"id": "s1m18", "author": "u-teodor", "minute": 72, "replyTo": "s1m13", "text": "Bad news: my wheelbarrow has a flat tyre, so I can't bring it. Spades still coming."},
+    {"id": "s1m19", "author": "u-bram", "minute": 75, "replyTo": "s1m18", "text": "No problem, I'll bring my wheelbarrow instead."},
+    {"id": "s1m20", "author": "u-annika", "minute": 81, "replyTo": "s1m14", "text": "Retraction: ignore my gate code message. The lock company postponed, so the code stays 2580 for now."},
+    {"id": "s1m21", "author": "u-quinn", "minute": 88, "replyTo": "s1m15", "text": "Walked past on Friday, roadworks are still there. So the compost drop is at the south car park."},
+    {"id": "s1m22", "author": "u-marisol", "minute": 92, "replyTo": "s1m21", "text": "Thanks Quinn. I'll put a sign up there."},
+    {"id": "s1m23", "author": "u-ines", "minute": 97, "replyTo": null, "text": "Instead of buying new gloves, I'll ask the library swap shelf if they have spares."},
+    {"id": "s1m24", "author": "u-bram", "minute": 103, "replyTo": null, "text": "Can someone remind me what we're doing if the weather is bad?"},
+    {"id": "s1m25", "author": "u-quinn", "minute": 106, "replyTo": "s1m24", "text": "Tool shed, seed sorting. See my message from earlier."},
+    {"id": "s1m26", "author": "u-teodor", "minute": 112, "replyTo": null, "text": "See you all at 10 on the 12th."}
+  ],
+  "state": [
+    {"topic": "work day start time", "current": ["s1m11"], "superseded": ["s1m01"], "expectedSupersedes": [["s1m11", "s1m01"]], "note": "s1m11 restates date and place and changes 9am to 10am. s1m10 is only a request, not a decision, so it is not paired. The rain plan (s1m06) and the postponement rule (s1m16) are conditionals that were never triggered, so neither supersedes s1m11."},
+    {"topic": "compost quantity", "current": ["s1m04", "s1m05"], "superseded": ["s1m03"], "expectedSupersedes": [["s1m04", "s1m03"]], "note": "One-detail correction: quantity 3 -> 4, supplier unchanged. s1m05 only confirms s1m04 and is not paired separately."},
+    {"topic": "compost drop location", "current": ["s1m21"], "superseded": ["s1m15"], "expectedSupersedes": [["s1m21", "s1m15"]], "note": "Conditional change that WAS triggered: roadworks still blocking, so the default north gate drop is replaced by the south car park. s1m15 remains the source of the rule and is acceptable supporting evidence."},
+    {"topic": "gate code", "current": ["s1m20"], "superseded": ["s1m14"], "expectedSupersedes": [["s1m20", "s1m14"]], "note": "Explicit retraction by the same author; code stays 2580."},
+    {"topic": "wheelbarrow and spades", "current": ["s1m18", "s1m19"], "superseded": ["s1m13"], "expectedSupersedes": [["s1m18", "s1m13"]], "note": "Teodor withdraws only the wheelbarrow (spades still coming, restated in s1m18). Bram takes over the wheelbarrow in s1m19, which is an ownership handover, additive, not a pair. Trap: s1m19 and s1m23 use 'instead'; s1m23 is not a correction of anything. s1m12 uses 'update' without correcting anything. s1m08/s1m09 water butt is only a maybe."}
+  ],
+  "questions": [
+    {"qid": "S1-Q1", "question": "What time does the spring work day start?", "kind": "current-state", "polarity": "positive", "goldAnswer": "It starts at 10am on Saturday 12 April at the north beds.", "expectUnknown": false, "mustCite": ["s1m11"], "allowCite": ["s1m26"], "mustNotCite": ["s1m01"], "textMust": ["10am"], "textMustNot": ["9am"], "note": "s1m11 replaced the original 9am proposal. s1m10 was only a request and also contains '9am', so it is neither required nor allowed."},
+    {"qid": "S1-Q2", "question": "Are we getting 3 cubic metres of compost?", "kind": "superseded-check", "polarity": "negative", "goldAnswer": "No. Bram corrected it to 4 cubic metres, still from Fernhill Supply.", "expectUnknown": false, "mustCite": ["s1m04"], "allowCite": ["s1m05"], "mustNotCite": ["s1m03"], "textMust": ["4 cubic metres"], "textMustNot": ["3 cubic metres"], "note": "One-detail correction; supplier unchanged."},
+    {"qid": "S1-Q3", "question": "Is the gate code changing to 4471?", "kind": "superseded-check", "polarity": "negative", "goldAnswer": "No. Annika retracted that; the lock company postponed and the code stays 2580 for now.", "expectUnknown": false, "mustCite": ["s1m20"], "allowCite": [], "mustNotCite": ["s1m14"], "textMust": ["2580"], "textMustNot": ["4471"], "note": "Explicit retraction of s1m14."},
+    {"qid": "S1-Q4", "question": "Where will the compost be dropped off?", "kind": "current-state", "polarity": "positive", "goldAnswer": "At the south car park, because the roadworks were still blocking the north gate.", "expectUnknown": false, "mustCite": ["s1m21"], "allowCite": ["s1m15", "s1m22"], "mustNotCite": [], "textMust": ["south car park"], "textMustNot": [], "note": "The conditional in s1m15 was triggered by s1m21. s1m15 is allowed because it states the rule being applied."},
+    {"qid": "S1-Q5", "question": "Who is bringing a wheelbarrow to the work day?", "kind": "ownership", "polarity": "positive", "goldAnswer": "Bram. Teodor withdrew his wheelbarrow because of a flat tyre but is still bringing spades.", "expectUnknown": false, "mustCite": ["s1m19"], "allowCite": ["s1m18"], "mustNotCite": ["s1m13"], "textMust": ["wheelbarrow"], "textMustNot": [], "note": "Offer withdrawn (s1m18) and taken over by someone else (s1m19)."},
+    {"qid": "S1-Q6", "question": "Have we confirmed seed sorting in the tool shed on the 12th?", "kind": "qualified", "polarity": "negative", "goldAnswer": "No. Tool shed and seed sorting is only the rain plan; nobody confirmed rain, so the main plan is still the north beds at 10am.", "expectUnknown": false, "mustCite": ["s1m06"], "allowCite": ["s1m07", "s1m11", "s1m25"], "mustNotCite": [], "textMust": ["If it rains"], "textMustNot": [], "note": "Conditional whose condition is never confirmed."},
+    {"qid": "S1-Q7", "question": "Has the work day been postponed to the 19th?", "kind": "negative", "polarity": "negative", "goldAnswer": "No. The 19th was only a fallback if fewer than 6 people sign up, and nobody said that happened.", "expectUnknown": false, "mustCite": ["s1m16"], "allowCite": ["s1m17", "s1m11"], "mustNotCite": [], "textMust": ["fewer than 6"], "textMustNot": [], "note": "Untriggered conditional; no sign-up count was reported."},
+    {"qid": "S1-Q8", "question": "Did the committee decide to buy a second water butt?", "kind": "negative", "polarity": "negative", "goldAnswer": "No. It was only a maybe; Annika said it depends on the budget and to revisit in May.", "expectUnknown": false, "mustCite": ["s1m09"], "allowCite": ["s1m08"], "mustNotCite": [], "textMust": ["revisit in May"], "textMustNot": [], "note": "'Maybe' is not a decision."},
+    {"qid": "S1-Q9", "question": "Who is giving the tool safety talk this year?", "kind": "unknown", "polarity": "positive", "goldAnswer": "Unknown. Ines asked, but nobody answered in the chat.", "expectUnknown": true, "mustCite": [], "allowCite": ["s1m17"], "mustNotCite": [], "textMust": [], "textMustNot": [], "note": "Question asked and never answered."},
+    {"qid": "S1-Q10", "question": "How much did the compost order cost?", "kind": "unknown", "polarity": "positive", "goldAnswer": "Unknown. The price of the compost was never mentioned in the chat.", "expectUnknown": true, "mustCite": [], "allowCite": ["s1m04"], "mustNotCite": [], "textMust": [], "textMustNot": [], "note": "Not discussed."}
+  ],
+  "deletionProbe": {"delete": "s1m20", "question": "What is the gate code right now?", "mustNotCite": ["s1m20"], "textMustNot": ["2580"]}
+}

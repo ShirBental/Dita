@@ -1,0 +1,8 @@
+[ERROR] Tests run: 14, Failures: 7, Errors: 0, Skipped: 0, Time elapsed: 0.107 s <<< FAILURE! -- in app.dita.core.knowledge.Task047CodexReviewTest
+[ERROR]   Task047CodexReviewTest.f1_control_theActiveClaimInTheMixedMessageIsStillAnsweredWithoutTheUnresolvedWords:131 the unresolved words are never quoted alongside: What the group said:
+[ERROR]   Task047CodexReviewTest.f1_mixedMessage_earlyDeletion_fallbackNeverQuotesTheUnresolvedClaim_fullAndLimitedHistory:114->assertNoCurrentDinnerTime:102 limited=false → What the group said:
+[ERROR]   Task047CodexReviewTest.f1_mixedMessage_lateDeletion_fallbackNeverQuotesTheUnresolvedClaim:121->assertNoCurrentDinnerTime:102 late limited=false → What the group said:
+[ERROR]   Task047CodexReviewTest.f2_withdrawalDuringRetrieval_finalGateRejectsTheNowUnresolvedEvidence:156->assertNoCurrentDinnerTime:102 race → What the group said:
+[ERROR]   Task047CodexReviewTest.f3_control_withdrawalHistorySurvivesAFalseRelationThatIsLaterRejected:243 still retired, history kept ==> expected: <UNRESOLVED> but was: <SUPERSEDED>
+[ERROR]   Task047CodexReviewTest.f3_rejectingAFalseRelationRestoresTheEarlierClaimAndItsAnswer:208 no replacement occurred ==> expected: <ACTIVE> but was: <UNRESOLVED>
+[ERROR]   Task047CodexReviewTest.f5_editingAnUnrelatedParentKeepsASelfContainedCorrection:279 the valid supersession is kept ==> expected: <SUPERSEDED> but was: <UNRESOLVED>

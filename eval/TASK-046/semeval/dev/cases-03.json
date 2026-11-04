@@ -1,0 +1,599 @@
+[
+{"id":"DEV-061","template":"T-vc-park-closed-instead","class":"replaces","mechanism":"value-change","lure":"reported-speech",
+ "names":{"u-wes":"Wes","u-yara":"Yara"},
+ "messages":[
+  {"id":"m1","author":"u-wes","minute":0,"text":"End-of-term picnic: we're meeting at Cedar Park, by the big oak.","replyTo":null},
+  {"id":"m2","author":"u-yara","minute":2,"text":"Zane told me he's bringing the grill for everyone.","replyTo":"m1"},
+  {"id":"m3","author":"u-wes","minute":25,"text":"Cedar Park closed the lawn for reseeding, ugh. Picnic's at Willow Green instead, near the playground.","replyTo":null}
+ ],
+ "items":[
+  {"mid":"m1","status":"ATTRIBUTED_STATEMENT","certainty":"ASSERTED","subjectId":"term-picnic-location","subject":"End-of-term picnic","predicate":"states","quote":"we're meeting at Cedar Park, by the big oak.","qualifiers":[],"attributedTo":null},
+  {"mid":"m2","status":"CONFIRMED_COMMITMENT","certainty":"ASSERTED","subjectId":"term-picnic-grill","subject":"the grill","predicate":"commits","quote":"he's bringing the grill for everyone.","qualifiers":[],"attributedTo":null},
+  {"mid":"m3","status":"ATTRIBUTED_STATEMENT","certainty":"ASSERTED","subjectId":"term-picnic-location","subject":"Picnic","predicate":"states","quote":"Picnic's at Willow Green instead, near the playground.","qualifiers":[],"attributedTo":null}
+ ],
+ "question":"Where is the end-of-term picnic?",
+ "authorGold":{
+  "pairs":[{"later":"m3","earlier":"m1","sameProperty":"yes","replaces":"yes","evidence":"Picnic's at Willow Green instead"}],
+  "status":{"m1":"ATTRIBUTED_STATEMENT","m2":"REPORTED_CLAIM","m3":"ATTRIBUTED_STATEMENT"},
+  "current":["m2","m3"],"notCurrent":["m1"],
+  "answer":{"mustState":["Willow Green"],"mustNotStateAsCurrent":["Cedar Park"],"mustNotLabel":["Zane committed"]}
+ }
+},
+{"id":"DEV-062","template":"T-od-asked-then-wins","class":"replaces","mechanism":"option-decision","lure":"question",
+ "names":{"u-ana":"Ana","u-ben":"Ben","u-cara":"Cara"},
+ "messages":[
+  {"id":"m1","author":"u-ana","minute":0,"text":"Do we want the carpool to leave Friday night or Saturday at dawn for the lake trip?","replyTo":null},
+  {"id":"m2","author":"u-ben","minute":2,"text":"Friday night, I can't do a 5am drive.","replyTo":"m1"},
+  {"id":"m3","author":"u-cara","minute":3,"text":"Saturday works better for me but I'll live.","replyTo":"m1"},
+  {"id":"m4","author":"u-ana","minute":7,"text":"Carpool leaves Friday night then, we roll out at 7 from my place.","replyTo":"m3"}
+ ],
+ "items":[
+  {"mid":"m1","status":"DECISION","certainty":"ASSERTED","subjectId":"lake-trip-departure","subject":"the carpool","predicate":"decides","quote":"Do we want the carpool to leave Friday night or Saturday at dawn for the lake trip?","qualifiers":[],"attributedTo":null},
+  {"mid":"m4","status":"DECISION","certainty":"ASSERTED","subjectId":"lake-trip-departure","subject":"Carpool","predicate":"decides","quote":"Carpool leaves Friday night then, we roll out at 7 from my place.","qualifiers":[],"attributedTo":null}
+ ],
+ "question":"When does the carpool leave for the lake trip?",
+ "authorGold":{
+  "pairs":[{"later":"m4","earlier":"m1","sameProperty":"yes","replaces":"yes","evidence":"Carpool leaves Friday night then"}],
+  "status":{"m1":"QUESTION","m4":"DECISION"},
+  "current":["m4"],"notCurrent":["m1"],
+  "answer":{"mustState":["Friday night","7"],"mustNotStateAsCurrent":["Saturday at dawn"],"mustNotLabel":[]}
+ }
+},
+{"id":"DEV-063","template":"T-oc-could-then-put-me-down","class":"replaces","mechanism":"offer-confirmation","lure":"negation",
+ "names":{"u-dev":"Dev","u-eli":"Eli","u-fay":"Fay"},
+ "messages":[
+  {"id":"m1","author":"u-dev","minute":0,"text":"I could do the face painting at the fair if you're short on helpers.","replyTo":null},
+  {"id":"m2","author":"u-fay","minute":2,"text":"I'm not on the bake table this year, before anyone asks.","replyTo":null},
+  {"id":"m3","author":"u-eli","minute":3,"text":"We are short, Dev, please!","replyTo":"m1"},
+  {"id":"m4","author":"u-dev","minute":6,"text":"Then put me down for face painting, 10 till 1.","replyTo":"m3"}
+ ],
+ "items":[
+  {"mid":"m1","status":"OFFER","certainty":"ASSERTED","subjectId":"fair-face-painting","subject":"the face painting","predicate":"offers","quote":"I could do the face painting at the fair if you're short on helpers.","qualifiers":[{"kind":"CONDITION","mid":"m1","quote":"if you're short on helpers"}],"attributedTo":null},
+  {"mid":"m2","status":"CONFIRMED_COMMITMENT","certainty":"ASSERTED","subjectId":"fair-bake-table","subject":"the bake table","predicate":"commits","quote":"on the bake table this year","qualifiers":[],"attributedTo":null},
+  {"mid":"m4","status":"CONFIRMED_COMMITMENT","certainty":"ASSERTED","subjectId":"fair-face-painting","subject":"face painting","predicate":"commits","quote":"put me down for face painting, 10 till 1.","qualifiers":[],"attributedTo":null}
+ ],
+ "question":"Who is doing face painting at the fair, and when?",
+ "authorGold":{
+  "pairs":[{"later":"m4","earlier":"m1","sameProperty":"yes","replaces":"yes","evidence":"put me down for face painting"}],
+  "status":{"m1":"OFFER","m2":"ATTRIBUTED_STATEMENT","m4":"CONFIRMED_COMMITMENT"},
+  "current":["m2","m4"],"notCurrent":["m1"],
+  "answer":{"mustState":["Dev","10 till 1"],"mustNotStateAsCurrent":[],"mustNotLabel":["Fay committed"]}
+ }
+},
+{"id":"DEV-064","template":"T-oc-happy-then-spoken-for","class":"replaces","mechanism":"offer-confirmation","lure":"decision-prefix-on-option",
+ "names":{"u-gus":"Gus","u-hana":"Hana"},
+ "messages":[
+  {"id":"m1","author":"u-gus","minute":0,"text":"Happy to drive the team to the away match, I've got seven seats.","replyTo":null},
+  {"id":"m2","author":"u-hana","minute":2,"text":"Decision: meet at the school or at the club?","replyTo":"m1"},
+  {"id":"m3","author":"u-gus","minute":5,"text":"Club's easier. And yes, I'm driving, seven seats are spoken for.","replyTo":"m2"}
+ ],
+ "items":[
+  {"mid":"m1","status":"OFFER","certainty":"ASSERTED","subjectId":"away-match-driving","subject":"the team","predicate":"offers","quote":"Happy to drive the team to the away match, I've got seven seats.","qualifiers":[],"attributedTo":null},
+  {"mid":"m2","status":"DECISION","certainty":"ASSERTED","subjectId":"away-match-meetpoint","subject":"the club","predicate":"decides","quote":"Decision: meet at the school or at the club?","qualifiers":[],"attributedTo":null},
+  {"mid":"m3","status":"CONFIRMED_COMMITMENT","certainty":"ASSERTED","subjectId":"away-match-driving","subject":"seven seats","predicate":"commits","quote":"yes, I'm driving, seven seats are spoken for.","qualifiers":[],"attributedTo":null}
+ ],
+ "question":"Is Gus driving the team to the away match?",
+ "authorGold":{
+  "pairs":[{"later":"m3","earlier":"m1","sameProperty":"yes","replaces":"yes","evidence":"yes, I'm driving"}],
+  "status":{"m1":"OFFER","m2":"QUESTION","m3":"CONFIRMED_COMMITMENT"},
+  "current":["m3"],"notCurrent":["m1","m2"],
+  "answer":{"mustState":["Gus is driving","seven seats"],"mustNotStateAsCurrent":[],"mustNotLabel":["Hana decided"]}
+ }
+},
+{"id":"DEV-065","template":"T-rev-tentative-then-steer-clear","class":"replaces","mechanism":"reversal","lure":"trimmed-quote",
+ "names":{"u-ivo":"Ivo","u-jun":"Jun"},
+ "messages":[
+  {"id":"m1","author":"u-ivo","minute":0,"text":"We're doing the pottery class for Lea's birthday, I think, unless the price is crazy.","replyTo":null},
+  {"id":"m2","author":"u-jun","minute":3,"text":"Lea would love that.","replyTo":"m1"},
+  {"id":"m3","author":"u-ivo","minute":15,"text":"Checked: pottery's $45 a kid. I'd steer clear of it now, the trampoline place is half that.","replyTo":null}
+ ],
+ "items":[
+  {"mid":"m1","status":"DECISION","certainty":"ASSERTED","subjectId":"lea-birthday-activity","subject":"the pottery class","predicate":"decides","quote":"We're doing the pottery class for Lea's birthday","qualifiers":[],"attributedTo":null},
+  {"mid":"m3","status":"ATTRIBUTED_STATEMENT","certainty":"ASSERTED","subjectId":"lea-birthday-activity","subject":"pottery","predicate":"advises_against","quote":"I'd steer clear of it now, the trampoline place is half that.","qualifiers":[],"attributedTo":null}
+ ],
+ "question":"Is the pottery class still the plan for Lea's birthday?",
+ "authorGold":{
+  "pairs":[{"later":"m3","earlier":"m1","sameProperty":"yes","replaces":"yes","evidence":"I'd steer clear of it now"}],
+  "status":{"m1":"ATTRIBUTED_STATEMENT","m3":"ATTRIBUTED_STATEMENT"},
+  "current":["m3"],"notCurrent":["m1"],
+  "answer":{"mustState":["Ivo advises against the pottery class"],"mustNotStateAsCurrent":["doing the pottery class"],"mustNotLabel":["decided on the pottery class"]}
+ }
+},
+{"id":"DEV-066","template":"T-wd-fevers-wont-make","class":"replaces","mechanism":"withdrawal","lure":null,
+ "names":{"u-kemi":"Kemi","u-lior":"Lior"},
+ "messages":[
+  {"id":"m1","author":"u-kemi","minute":0,"text":"Count me in for the beach cleanup, I'll bring the litter pickers.","replyTo":null},
+  {"id":"m2","author":"u-lior","minute":3,"text":"Brilliant, we only had four.","replyTo":"m1"},
+  {"id":"m3","author":"u-kemi","minute":50,"text":"Bad news, the kids both have fevers. Won't make the cleanup, and the pickers are stuck at my place, sorry.","replyTo":"m2"}
+ ],
+ "items":[
+  {"mid":"m1","status":"CONFIRMED_COMMITMENT","certainty":"ASSERTED","subjectId":"beach-cleanup-kemi","subject":"the litter pickers","predicate":"commits","quote":"Count me in for the beach cleanup, I'll bring the litter pickers.","qualifiers":[],"attributedTo":null},
+  {"mid":"m3","status":"ATTRIBUTED_STATEMENT","certainty":"ASSERTED","subjectId":"beach-cleanup-kemi","subject":"the pickers","predicate":"states","quote":"Won't make the cleanup, and the pickers are stuck at my place, sorry.","qualifiers":[],"attributedTo":null}
+ ],
+ "question":"Is Kemi bringing the litter pickers to the beach cleanup?",
+ "authorGold":{
+  "pairs":[{"later":"m3","earlier":"m1","sameProperty":"yes","replaces":"yes","evidence":"Won't make the cleanup"}],
+  "status":{"m1":"CONFIRMED_COMMITMENT","m3":"ATTRIBUTED_STATEMENT"},
+  "current":["m3"],"notCurrent":["m1"],
+  "answer":{"mustState":["Kemi withdrew"],"mustNotStateAsCurrent":["Kemi is bringing the litter pickers"],"mustNotLabel":[]}
+ }
+},
+{"id":"DEV-067","template":"T-wd-up-for-grabs","class":"replaces","mechanism":"withdrawal","lure":"condition",
+ "names":{"u-mara":"Mara","u-omar":"Omar"},
+ "messages":[
+  {"id":"m1","author":"u-mara","minute":0,"text":"I'll make the playlist for the potluck.","replyTo":null},
+  {"id":"m2","author":"u-omar","minute":2,"text":"If Nico's speaker is free, I'll bring it over.","replyTo":"m1"},
+  {"id":"m3","author":"u-mara","minute":20,"text":"My laptop just died, so the playlist is up for grabs again.","replyTo":null}
+ ],
+ "items":[
+  {"mid":"m1","status":"CONFIRMED_COMMITMENT","certainty":"ASSERTED","subjectId":"potluck-playlist","subject":"the playlist","predicate":"commits","quote":"I'll make the playlist for the potluck.","qualifiers":[],"attributedTo":null},
+  {"mid":"m2","status":"CONFIRMED_COMMITMENT","certainty":"ASSERTED","subjectId":"potluck-speaker","subject":"Nico's speaker","predicate":"commits","quote":"I'll bring it over.","qualifiers":[{"kind":"CONDITION","mid":"m2","quote":"If Nico's speaker is free"}],"attributedTo":null},
+  {"mid":"m3","status":"ATTRIBUTED_STATEMENT","certainty":"ASSERTED","subjectId":"potluck-playlist","subject":"the playlist","predicate":"states","quote":"the playlist is up for grabs again.","qualifiers":[],"attributedTo":null}
+ ],
+ "question":"Who is making the playlist for the potluck?",
+ "authorGold":{
+  "pairs":[{"later":"m3","earlier":"m1","sameProperty":"yes","replaces":"yes","evidence":"up for grabs again"}],
+  "status":{"m1":"CONFIRMED_COMMITMENT","m2":"OFFER","m3":"ATTRIBUTED_STATEMENT"},
+  "current":["m2","m3"],"notCurrent":["m1"],
+  "answer":{"mustState":["Mara withdrew","up for grabs"],"mustNotStateAsCurrent":["Mara is making the playlist"],"mustNotLabel":["Omar committed"]}
+ }
+},
+{"id":"DEV-068","template":"T-rs-same-as-i-said-updated","class":"restatement","mechanism":null,"lure":"question",
+ "names":{"u-pia":"Pia","u-quinn":"Quinn"},
+ "messages":[
+  {"id":"m1","author":"u-pia","minute":0,"text":"Volleyball practice is at 6 at the rec center gym.","replyTo":null},
+  {"id":"m2","author":"u-quinn","minute":2,"text":"Is it confirmed we have the gym, or is it the outdoor court again?","replyTo":"m1"},
+  {"id":"m3","author":"u-pia","minute":4,"text":"Gym, 6, same as I said. Updated the calendar invite so it shows.","replyTo":"m2"}
+ ],
+ "items":[
+  {"mid":"m1","status":"ATTRIBUTED_STATEMENT","certainty":"ASSERTED","subjectId":"volleyball-practice","subject":"Volleyball practice","predicate":"states","quote":"Volleyball practice is at 6 at the rec center gym.","qualifiers":[],"attributedTo":null},
+  {"mid":"m2","status":"DECISION","certainty":"ASSERTED","subjectId":"volleyball-practice","subject":"the gym","predicate":"decides","quote":"Is it confirmed we have the gym","qualifiers":[],"attributedTo":null},
+  {"mid":"m3","status":"ATTRIBUTED_STATEMENT","certainty":"ASSERTED","subjectId":"volleyball-practice","subject":"Gym","predicate":"states","quote":"Gym, 6, same as I said.","qualifiers":[],"attributedTo":null}
+ ],
+ "question":"Where and when is volleyball practice?",
+ "authorGold":{
+  "pairs":[{"later":"m3","earlier":"m1","sameProperty":"yes","replaces":"no","evidence":"same as I said"}],
+  "status":{"m1":"ATTRIBUTED_STATEMENT","m2":"QUESTION","m3":"ATTRIBUTED_STATEMENT"},
+  "current":["m1","m3"],"notCurrent":["m2"],
+  "answer":{"mustState":["rec center gym","6"],"mustNotStateAsCurrent":["outdoor court"],"mustNotLabel":["Quinn decided"]}
+ }
+},
+{"id":"DEV-069","template":"T-rs-catching-up-recap","class":"restatement","mechanism":null,"lure":"negation",
+ "names":{"u-rosa":"Rosa","u-sami":"Sami"},
+ "messages":[
+  {"id":"m1","author":"u-rosa","minute":0,"text":"Birthday party at the bowling alley, 3pm on Saturday.","replyTo":null},
+  {"id":"m2","author":"u-sami","minute":2,"text":"I can't promise we'll make the party before 3:30.","replyTo":"m1"},
+  {"id":"m3","author":"u-rosa","minute":6,"text":"No worries! For anyone just catching up: bowling alley, Saturday, kicks off at 3.","replyTo":"m2"}
+ ],
+ "items":[
+  {"mid":"m1","status":"ATTRIBUTED_STATEMENT","certainty":"ASSERTED","subjectId":"bday-bowling","subject":"Birthday party","predicate":"states","quote":"Birthday party at the bowling alley, 3pm on Saturday.","qualifiers":[],"attributedTo":null},
+  {"mid":"m2","status":"CONFIRMED_COMMITMENT","certainty":"ASSERTED","subjectId":"bday-bowling","subject":"the party","predicate":"commits","quote":"promise we'll make the party before 3:30.","qualifiers":[],"attributedTo":null},
+  {"mid":"m3","status":"ATTRIBUTED_STATEMENT","certainty":"ASSERTED","subjectId":"bday-bowling","subject":"bowling alley","predicate":"states","quote":"bowling alley, Saturday, kicks off at 3.","qualifiers":[],"attributedTo":null}
+ ],
+ "question":"When does the bowling birthday party start?",
+ "authorGold":{
+  "pairs":[{"later":"m3","earlier":"m1","sameProperty":"yes","replaces":"no","evidence":"For anyone just catching up"}],
+  "status":{"m1":"ATTRIBUTED_STATEMENT","m2":"ATTRIBUTED_STATEMENT","m3":"ATTRIBUTED_STATEMENT"},
+  "current":["m1","m2","m3"],"notCurrent":[],
+  "answer":{"mustState":["3pm","Saturday"],"mustNotStateAsCurrent":["3:30"],"mustNotLabel":["Sami committed"]}
+ }
+},
+{"id":"DEV-070","template":"T-rs-as-booked","class":"restatement","mechanism":null,"lure":"decision-prefix-on-option",
+ "names":{"u-tova":"Tova","u-uri":"Uri"},
+ "messages":[
+  {"id":"m1","author":"u-tova","minute":0,"text":"The book club will meet at the library annex on the 4th.","replyTo":null},
+  {"id":"m2","author":"u-uri","minute":2,"text":"Decision: annex or the café this time?","replyTo":"m1"},
+  {"id":"m3","author":"u-tova","minute":4,"text":"It's the annex, as booked, on the 4th.","replyTo":"m2"}
+ ],
+ "items":[
+  {"mid":"m1","status":"ATTRIBUTED_STATEMENT","certainty":"ASSERTED","subjectId":"book-club-meeting","subject":"The book club","predicate":"states","quote":"The book club will meet at the library annex on the 4th.","qualifiers":[],"attributedTo":null},
+  {"mid":"m2","status":"DECISION","certainty":"ASSERTED","subjectId":"book-club-meeting","subject":"annex","predicate":"decides","quote":"Decision: annex or the café this time?","qualifiers":[],"attributedTo":null},
+  {"mid":"m3","status":"ATTRIBUTED_STATEMENT","certainty":"ASSERTED","subjectId":"book-club-meeting","subject":"the annex","predicate":"states","quote":"It's the annex, as booked, on the 4th.","qualifiers":[],"attributedTo":null}
+ ],
+ "question":"Where does the book club meet on the 4th?",
+ "authorGold":{
+  "pairs":[{"later":"m3","earlier":"m1","sameProperty":"yes","replaces":"no","evidence":"as booked"}],
+  "status":{"m1":"ATTRIBUTED_STATEMENT","m2":"QUESTION","m3":"ATTRIBUTED_STATEMENT"},
+  "current":["m1","m3"],"notCurrent":["m2"],
+  "answer":{"mustState":["library annex"],"mustNotStateAsCurrent":["café"],"mustNotLabel":["Uri decided"]}
+ }
+},
+{"id":"DEV-071","template":"T-add-too-hedged-later","class":"addition","mechanism":null,"lure":"trimmed-quote",
+ "names":{"u-vera":"Vera","u-wes":"Wes"},
+ "messages":[
+  {"id":"m1","author":"u-vera","minute":0,"text":"I'm bringing paper plates to the potluck.","replyTo":null},
+  {"id":"m2","author":"u-wes","minute":2,"text":"Cups still needed!","replyTo":"m1"},
+  {"id":"m3","author":"u-vera","minute":4,"text":"I'll grab cups too, if the store has the compostable ones, otherwise someone else should.","replyTo":"m2"}
+ ],
+ "items":[
+  {"mid":"m1","status":"CONFIRMED_COMMITMENT","certainty":"ASSERTED","subjectId":"potluck-vera-supplies","subject":"paper plates","predicate":"commits","quote":"I'm bringing paper plates to the potluck.","qualifiers":[],"attributedTo":null},
+  {"mid":"m3","status":"CONFIRMED_COMMITMENT","certainty":"ASSERTED","subjectId":"potluck-vera-supplies","subject":"cups","predicate":"commits","quote":"I'll grab cups too","qualifiers":[],"attributedTo":null}
+ ],
+ "question":"What is Vera bringing to the potluck?",
+ "authorGold":{
+  "pairs":[{"later":"m3","earlier":"m1","sameProperty":"yes","replaces":"no","evidence":"cups too"}],
+  "status":{"m1":"CONFIRMED_COMMITMENT","m3":"OFFER"},
+  "current":["m1","m3"],"notCurrent":[],
+  "answer":{"mustState":["paper plates"],"mustNotStateAsCurrent":[],"mustNotLabel":["committed to bring cups"]}
+ }
+},
+{"id":"DEV-072","template":"T-add-add-to-list","class":"addition","mechanism":null,"lure":"reported-speech",
+ "names":{"u-yara":"Yara","u-zane":"Zane"},
+ "messages":[
+  {"id":"m1","author":"u-yara","minute":0,"text":"School trip packing list: water bottle and a packed lunch.","replyTo":null},
+  {"id":"m2","author":"u-zane","minute":2,"text":"Ms. Ferro said she's ordering bus snacks for the class.","replyTo":"m1"},
+  {"id":"m3","author":"u-yara","minute":5,"text":"Add a rain jacket to that list, forecast looks iffy.","replyTo":null}
+ ],
+ "items":[
+  {"mid":"m1","status":"ATTRIBUTED_STATEMENT","certainty":"ASSERTED","subjectId":"trip-packing-list","subject":"School trip packing list","predicate":"states","quote":"School trip packing list: water bottle and a packed lunch.","qualifiers":[],"attributedTo":null},
+  {"mid":"m2","status":"CONFIRMED_COMMITMENT","certainty":"ASSERTED","subjectId":"trip-snacks","subject":"bus snacks","predicate":"commits","quote":"she's ordering bus snacks for the class.","qualifiers":[],"attributedTo":null},
+  {"mid":"m3","status":"ATTRIBUTED_STATEMENT","certainty":"ASSERTED","subjectId":"trip-packing-list","subject":"list","predicate":"states","quote":"Add a rain jacket to that list, forecast looks iffy.","qualifiers":[],"attributedTo":null}
+ ],
+ "question":"What should kids pack for the school trip?",
+ "authorGold":{
+  "pairs":[{"later":"m3","earlier":"m1","sameProperty":"yes","replaces":"no","evidence":"Add a rain jacket"}],
+  "status":{"m1":"ATTRIBUTED_STATEMENT","m2":"REPORTED_CLAIM","m3":"ATTRIBUTED_STATEMENT"},
+  "current":["m1","m2","m3"],"notCurrent":[],
+  "answer":{"mustState":["water bottle","packed lunch","rain jacket"],"mustNotStateAsCurrent":[],"mustNotLabel":["Ms. Ferro committed"]}
+ }
+},
+{"id":"DEV-073","template":"T-cond-in-the-event-driver","class":"conditional","mechanism":null,"lure":"condition",
+ "names":{"u-ben":"Ben","u-cara":"Cara"},
+ "messages":[
+  {"id":"m1","author":"u-ben","minute":0,"text":"I'm driving Cara's kids home after practice Tuesday.","replyTo":null},
+  {"id":"m2","author":"u-cara","minute":2,"text":"Thank you!!","replyTo":"m1"},
+  {"id":"m3","author":"u-ben","minute":5,"text":"In the event practice runs past 7, my partner will grab them instead, I've got choir at 7:30.","replyTo":null}
+ ],
+ "items":[
+  {"mid":"m1","status":"CONFIRMED_COMMITMENT","certainty":"ASSERTED","subjectId":"tuesday-ride","subject":"Cara's kids","predicate":"commits","quote":"I'm driving Cara's kids home after practice Tuesday.","qualifiers":[],"attributedTo":null},
+  {"mid":"m3","status":"CONFIRMED_COMMITMENT","certainty":"ASSERTED","subjectId":"tuesday-ride","subject":"practice","predicate":"commits","quote":"my partner will grab them instead","qualifiers":[{"kind":"CONDITION","mid":"m3","quote":"In the event practice runs past 7"}],"attributedTo":null}
+ ],
+ "question":"Who is driving Cara's kids home after Tuesday practice?",
+ "authorGold":{
+  "pairs":[{"later":"m3","earlier":"m1","sameProperty":"yes","replaces":"no","evidence":"In the event practice runs past 7"}],
+  "status":{"m1":"CONFIRMED_COMMITMENT","m3":"ATTRIBUTED_STATEMENT"},
+  "current":["m1","m3"],"notCurrent":[],
+  "answer":{"mustState":["Ben"],"mustNotStateAsCurrent":["Ben's partner is driving"],"mustNotLabel":["partner committed"]}
+ }
+},
+{"id":"DEV-074","template":"T-cond-should-it-pour","class":"conditional","mechanism":null,"lure":"question",
+ "names":{"u-dev":"Dev","u-eli":"Eli"},
+ "messages":[
+  {"id":"m1","author":"u-dev","minute":0,"text":"The graduation picnic is at the river meadow, noon.","replyTo":null},
+  {"id":"m2","author":"u-eli","minute":2,"text":"Did we agree on a rain plan already?","replyTo":"m1"},
+  {"id":"m3","author":"u-dev","minute":4,"text":"Should it pour, we squeeze into my garage, but the meadow is the plan.","replyTo":"m2"}
+ ],
+ "items":[
+  {"mid":"m1","status":"ATTRIBUTED_STATEMENT","certainty":"ASSERTED","subjectId":"grad-picnic-venue","subject":"The graduation picnic","predicate":"states","quote":"The graduation picnic is at the river meadow, noon.","qualifiers":[],"attributedTo":null},
+  {"mid":"m2","status":"DECISION","certainty":"ASSERTED","subjectId":"grad-picnic-venue","subject":"a rain plan","predicate":"decides","quote":"Did we agree on a rain plan already?","qualifiers":[],"attributedTo":null},
+  {"mid":"m3","status":"ATTRIBUTED_STATEMENT","certainty":"ASSERTED","subjectId":"grad-picnic-venue","subject":"the meadow","predicate":"states","quote":"Should it pour, we squeeze into my garage, but the meadow is the plan.","qualifiers":[{"kind":"CONDITION","mid":"m3","quote":"Should it pour"}],"attributedTo":null}
+ ],
+ "question":"Where is the graduation picnic?",
+ "authorGold":{
+  "pairs":[{"later":"m3","earlier":"m1","sameProperty":"yes","replaces":"no","evidence":"Should it pour"}],
+  "status":{"m1":"ATTRIBUTED_STATEMENT","m2":"QUESTION","m3":"ATTRIBUTED_STATEMENT"},
+  "current":["m1","m3"],"notCurrent":["m2"],
+  "answer":{"mustState":["river meadow"],"mustNotStateAsCurrent":["garage"],"mustNotLabel":["Eli decided"]}
+ }
+},
+{"id":"DEV-075","template":"T-scope-kids-parents-route","class":"scoped","mechanism":null,"lure":"condition",
+ "names":{"u-fay":"Fay","u-gus":"Gus"},
+ "messages":[
+  {"id":"m1","author":"u-fay","minute":0,"text":"School fun run: kids do the 2k loop, starting 9am.","replyTo":null},
+  {"id":"m2","author":"u-gus","minute":2,"text":"If it's not too hot, I'll run with the little ones.","replyTo":"m1"},
+  {"id":"m3","author":"u-fay","minute":6,"text":"Parents doing it get the 5k route along the river.","replyTo":null}
+ ],
+ "items":[
+  {"mid":"m1","status":"ATTRIBUTED_STATEMENT","certainty":"ASSERTED","subjectId":"fun-run-route","subject":"School fun run","predicate":"states","quote":"kids do the 2k loop, starting 9am.","qualifiers":[{"kind":"POPULATION","mid":"m1","quote":"kids"}],"attributedTo":null},
+  {"mid":"m2","status":"CONFIRMED_COMMITMENT","certainty":"ASSERTED","subjectId":"fun-run-gus","subject":"the little ones","predicate":"commits","quote":"I'll run with the little ones.","qualifiers":[{"kind":"CONDITION","mid":"m2","quote":"If it's not too hot"}],"attributedTo":null},
+  {"mid":"m3","status":"ATTRIBUTED_STATEMENT","certainty":"ASSERTED","subjectId":"fun-run-route","subject":"the 5k route","predicate":"states","quote":"Parents doing it get the 5k route along the river.","qualifiers":[{"kind":"POPULATION","mid":"m3","quote":"Parents doing it"}],"attributedTo":null}
+ ],
+ "question":"Which route do the kids do at the school fun run?",
+ "authorGold":{
+  "pairs":[{"later":"m3","earlier":"m1","sameProperty":"yes","replaces":"no","evidence":"Parents doing it"}],
+  "status":{"m1":"ATTRIBUTED_STATEMENT","m2":"OFFER","m3":"ATTRIBUTED_STATEMENT"},
+  "current":["m1","m2","m3"],"notCurrent":[],
+  "answer":{"mustState":["2k loop"],"mustNotStateAsCurrent":["5k"],"mustNotLabel":["Gus committed"]}
+ }
+},
+{"id":"DEV-076","template":"T-scope-kids-coaches-menu","class":"scoped","mechanism":null,"lure":"negation",
+ "names":{"u-hana":"Hana","u-ivo":"Ivo"},
+ "messages":[
+  {"id":"m1","author":"u-hana","minute":0,"text":"Dinner for the team kids is mac and cheese at 5:30.","replyTo":null},
+  {"id":"m2","author":"u-ivo","minute":2,"text":"Nobody's decided on dessert yet.","replyTo":"m1"},
+  {"id":"m3","author":"u-hana","minute":4,"text":"Coaches and parents are getting the chili, it's spicier.","replyTo":null}
+ ],
+ "items":[
+  {"mid":"m1","status":"ATTRIBUTED_STATEMENT","certainty":"ASSERTED","subjectId":"team-dinner-menu","subject":"Dinner","predicate":"states","quote":"Dinner for the team kids is mac and cheese at 5:30.","qualifiers":[{"kind":"POPULATION","mid":"m1","quote":"for the team kids"}],"attributedTo":null},
+  {"mid":"m2","status":"DECISION","certainty":"ASSERTED","subjectId":"team-dinner-dessert","subject":"dessert","predicate":"decides","quote":"decided on dessert","qualifiers":[],"attributedTo":null},
+  {"mid":"m3","status":"ATTRIBUTED_STATEMENT","certainty":"ASSERTED","subjectId":"team-dinner-menu","subject":"the chili","predicate":"states","quote":"Coaches and parents are getting the chili, it's spicier.","qualifiers":[{"kind":"POPULATION","mid":"m3","quote":"Coaches and parents"}],"attributedTo":null}
+ ],
+ "question":"What are the team kids having for dinner?",
+ "authorGold":{
+  "pairs":[{"later":"m3","earlier":"m1","sameProperty":"yes","replaces":"no","evidence":"Coaches and parents"}],
+  "status":{"m1":"ATTRIBUTED_STATEMENT","m2":"ATTRIBUTED_STATEMENT","m3":"ATTRIBUTED_STATEMENT"},
+  "current":["m1","m2","m3"],"notCurrent":[],
+  "answer":{"mustState":["mac and cheese"],"mustNotStateAsCurrent":["chili"],"mustNotLabel":["decided on dessert"]}
+ }
+},
+{"id":"DEV-077","template":"T-scope-child-adult-entry","class":"scoped","mechanism":null,"lure":"trimmed-quote",
+ "names":{"u-jun":"Jun","u-kemi":"Kemi"},
+ "messages":[
+  {"id":"m1","author":"u-jun","minute":0,"text":"Museum entry for children under 12 is free on the trip.","replyTo":null},
+  {"id":"m2","author":"u-kemi","minute":2,"text":"I'll cover the adult tickets, well, maybe, depends what the PTA reimburses.","replyTo":"m1"},
+  {"id":"m3","author":"u-jun","minute":5,"text":"For the grown-ups, entry is $12 at the door.","replyTo":null}
+ ],
+ "items":[
+  {"mid":"m1","status":"ATTRIBUTED_STATEMENT","certainty":"ASSERTED","subjectId":"museum-entry","subject":"Museum entry","predicate":"states","quote":"Museum entry for children under 12 is free on the trip.","qualifiers":[{"kind":"POPULATION","mid":"m1","quote":"children under 12"}],"attributedTo":null},
+  {"mid":"m2","status":"CONFIRMED_COMMITMENT","certainty":"ASSERTED","subjectId":"museum-adult-tickets","subject":"the adult tickets","predicate":"commits","quote":"I'll cover the adult tickets","qualifiers":[],"attributedTo":null},
+  {"mid":"m3","status":"ATTRIBUTED_STATEMENT","certainty":"ASSERTED","subjectId":"museum-entry","subject":"entry","predicate":"states","quote":"For the grown-ups, entry is $12 at the door.","qualifiers":[{"kind":"POPULATION","mid":"m3","quote":"For the grown-ups"}],"attributedTo":null}
+ ],
+ "question":"How much is museum entry for the children on the trip?",
+ "authorGold":{
+  "pairs":[{"later":"m3","earlier":"m1","sameProperty":"yes","replaces":"no","evidence":"For the grown-ups"}],
+  "status":{"m1":"ATTRIBUTED_STATEMENT","m2":"OFFER","m3":"ATTRIBUTED_STATEMENT"},
+  "current":["m1","m2","m3"],"notCurrent":[],
+  "answer":{"mustState":["free"],"mustNotStateAsCurrent":["$12"],"mustNotLabel":["Kemi committed"]}
+ }
+},
+{"id":"DEV-078","template":"T-dp-launch-vs-cost","class":"different-property","mechanism":null,"lure":"reported-speech",
+ "names":{"u-lior":"Lior","u-mara":"Mara"},
+ "messages":[
+  {"id":"m1","author":"u-lior","minute":0,"text":"Kayak trip: we launch from the north dock at 10.","replyTo":null},
+  {"id":"m2","author":"u-mara","minute":2,"text":"Jo said she's renting the double kayaks for us.","replyTo":"m1"},
+  {"id":"m3","author":"u-lior","minute":5,"text":"Kayak trip cost works out to $18 each, including the paddles.","replyTo":null}
+ ],
+ "items":[
+  {"mid":"m1","status":"ATTRIBUTED_STATEMENT","certainty":"ASSERTED","subjectId":"kayak-trip","subject":"Kayak trip","predicate":"states","quote":"we launch from the north dock at 10.","qualifiers":[],"attributedTo":null},
+  {"mid":"m2","status":"CONFIRMED_COMMITMENT","certainty":"ASSERTED","subjectId":"kayak-trip","subject":"the double kayaks","predicate":"commits","quote":"she's renting the double kayaks for us.","qualifiers":[],"attributedTo":null},
+  {"mid":"m3","status":"ATTRIBUTED_STATEMENT","certainty":"ASSERTED","subjectId":"kayak-trip","subject":"Kayak trip","predicate":"states","quote":"Kayak trip cost works out to $18 each, including the paddles.","qualifiers":[],"attributedTo":null}
+ ],
+ "question":"Where and when does the kayak trip launch?",
+ "authorGold":{
+  "pairs":[{"later":"m3","earlier":"m1","sameProperty":"no","replaces":"no","evidence":"cost works out to $18 each"}],
+  "status":{"m1":"ATTRIBUTED_STATEMENT","m2":"REPORTED_CLAIM","m3":"ATTRIBUTED_STATEMENT"},
+  "current":["m1","m2","m3"],"notCurrent":[],
+  "answer":{"mustState":["north dock","10"],"mustNotStateAsCurrent":[],"mustNotLabel":["Jo committed"]}
+ }
+},
+{"id":"DEV-079","template":"T-dp-start-vs-grill-time","class":"different-property","mechanism":null,"lure":"decision-prefix-on-option",
+ "names":{"u-nico":"Nico","u-omar":"Omar"},
+ "messages":[
+  {"id":"m1","author":"u-nico","minute":0,"text":"Cookout at our place starts at 4.","replyTo":null},
+  {"id":"m2","author":"u-omar","minute":2,"text":"Decision: burgers or kebabs?","replyTo":"m1"},
+  {"id":"m3","author":"u-nico","minute":5,"text":"Whatever the grill allows. The grill gets lit around 4:30, so don't arrive starving.","replyTo":"m2"}
+ ],
+ "items":[
+  {"mid":"m1","status":"ATTRIBUTED_STATEMENT","certainty":"ASSERTED","subjectId":"cookout","subject":"Cookout","predicate":"states","quote":"Cookout at our place starts at 4.","qualifiers":[],"attributedTo":null},
+  {"mid":"m2","status":"DECISION","certainty":"ASSERTED","subjectId":"cookout","subject":"Cookout","predicate":"decides","quote":"Decision: burgers or kebabs?","qualifiers":[],"attributedTo":null},
+  {"mid":"m3","status":"ATTRIBUTED_STATEMENT","certainty":"ASSERTED","subjectId":"cookout","subject":"The grill","predicate":"states","quote":"The grill gets lit around 4:30, so don't arrive starving.","qualifiers":[],"attributedTo":null}
+ ],
+ "question":"What time does the cookout start?",
+ "authorGold":{
+  "pairs":[{"later":"m3","earlier":"m1","sameProperty":"no","replaces":"no","evidence":"The grill gets lit around 4:30"}],
+  "status":{"m1":"ATTRIBUTED_STATEMENT","m2":"QUESTION","m3":"ATTRIBUTED_STATEMENT"},
+  "current":["m1","m3"],"notCurrent":["m2"],
+  "answer":{"mustState":["4"],"mustNotStateAsCurrent":["starts at 4:30"],"mustNotLabel":["Omar decided"]}
+ }
+},
+{"id":"DEV-080","template":"T-dp-date-vs-venue","class":"different-property","mechanism":null,"lure":"question",
+ "names":{"u-pia":"Pia","u-quinn":"Quinn","u-rosa":"Rosa"},
+ "messages":[
+  {"id":"m1","author":"u-pia","minute":0,"text":"Rosa's baby shower is Sunday the 8th.","replyTo":null},
+  {"id":"m2","author":"u-quinn","minute":2,"text":"Is the venue locked yet?","replyTo":"m1"},
+  {"id":"m3","author":"u-rosa","minute":3,"text":"Eek, so excited!","replyTo":"m1"},
+  {"id":"m4","author":"u-pia","minute":6,"text":"It's my sister's garden, she offered last night.","replyTo":"m2"}
+ ],
+ "items":[
+  {"mid":"m1","status":"ATTRIBUTED_STATEMENT","certainty":"ASSERTED","subjectId":"baby-shower","subject":"Rosa's baby shower","predicate":"states","quote":"Rosa's baby shower is Sunday the 8th.","qualifiers":[],"attributedTo":null},
+  {"mid":"m2","status":"DECISION","certainty":"ASSERTED","subjectId":"baby-shower","subject":"the venue","predicate":"decides","quote":"Is the venue locked yet?","qualifiers":[],"attributedTo":null},
+  {"mid":"m4","status":"ATTRIBUTED_STATEMENT","certainty":"ASSERTED","subjectId":"baby-shower","subject":"the venue","predicate":"states","quote":"It's my sister's garden","qualifiers":[],"attributedTo":null}
+ ],
+ "question":"When is Rosa's baby shower?",
+ "authorGold":{
+  "pairs":[{"later":"m4","earlier":"m1","sameProperty":"no","replaces":"no","evidence":"my sister's garden"}],
+  "status":{"m1":"ATTRIBUTED_STATEMENT","m2":"QUESTION","m4":"ATTRIBUTED_STATEMENT"},
+  "current":["m1","m4"],"notCurrent":["m2"],
+  "answer":{"mustState":["Sunday the 8th"],"mustNotStateAsCurrent":[],"mustNotLabel":["Quinn decided"]}
+ }
+},
+{"id":"DEV-081","template":"T-ds-two-parties","class":"different-subject","mechanism":null,"lure":"condition",
+ "names":{"u-sami":"Sami","u-tova":"Tova"},
+ "messages":[
+  {"id":"m1","author":"u-sami","minute":0,"text":"The party for Grandma June is at 2 in the church hall.","replyTo":null},
+  {"id":"m2","author":"u-tova","minute":2,"text":"If the hall kitchen is open, I'll bake for the party.","replyTo":"m1"},
+  {"id":"m3","author":"u-sami","minute":6,"text":"Unrelated, but Max's class party is at 11 tomorrow, bring a snack.","replyTo":null}
+ ],
+ "items":[
+  {"mid":"m1","status":"ATTRIBUTED_STATEMENT","certainty":"ASSERTED","subjectId":"party","subject":"The party","predicate":"states","quote":"The party for Grandma June is at 2 in the church hall.","qualifiers":[],"attributedTo":null},
+  {"mid":"m2","status":"CONFIRMED_COMMITMENT","certainty":"ASSERTED","subjectId":"party","subject":"the party","predicate":"commits","quote":"I'll bake for the party.","qualifiers":[{"kind":"CONDITION","mid":"m2","quote":"If the hall kitchen is open"}],"attributedTo":null},
+  {"mid":"m3","status":"ATTRIBUTED_STATEMENT","certainty":"ASSERTED","subjectId":"party","subject":"Max's class party","predicate":"states","quote":"Max's class party is at 11 tomorrow, bring a snack.","qualifiers":[],"attributedTo":null}
+ ],
+ "question":"What time is the party for Grandma June?",
+ "authorGold":{
+  "pairs":[{"later":"m3","earlier":"m1","sameProperty":"no","replaces":"no","evidence":"Max's class party"}],
+  "status":{"m1":"ATTRIBUTED_STATEMENT","m2":"OFFER","m3":"ATTRIBUTED_STATEMENT"},
+  "current":["m1","m2","m3"],"notCurrent":[],
+  "answer":{"mustState":["2"],"mustNotStateAsCurrent":["11"],"mustNotLabel":["Tova committed"]}
+ }
+},
+{"id":"DEV-082","template":"T-ds-two-slips","class":"different-subject","mechanism":null,"lure":"trimmed-quote",
+ "names":{"u-uri":"Uri","u-vera":"Vera"},
+ "messages":[
+  {"id":"m1","author":"u-uri","minute":0,"text":"Field trip permission slips are due Friday.","replyTo":null},
+  {"id":"m2","author":"u-vera","minute":2,"text":"I'll collect the slips at the gate, probably, unless I'm on the late shift.","replyTo":"m1"},
+  {"id":"m3","author":"u-uri","minute":4,"text":"And the swim club slips need to be in by Monday.","replyTo":null}
+ ],
+ "items":[
+  {"mid":"m1","status":"ATTRIBUTED_STATEMENT","certainty":"ASSERTED","subjectId":"slips","subject":"Field trip permission slips","predicate":"states","quote":"Field trip permission slips are due Friday.","qualifiers":[],"attributedTo":null},
+  {"mid":"m2","status":"CONFIRMED_COMMITMENT","certainty":"ASSERTED","subjectId":"slips","subject":"the slips","predicate":"commits","quote":"I'll collect the slips at the gate","qualifiers":[],"attributedTo":null},
+  {"mid":"m3","status":"ATTRIBUTED_STATEMENT","certainty":"ASSERTED","subjectId":"slips","subject":"the swim club slips","predicate":"states","quote":"the swim club slips need to be in by Monday.","qualifiers":[],"attributedTo":null}
+ ],
+ "question":"When are the field trip permission slips due?",
+ "authorGold":{
+  "pairs":[{"later":"m3","earlier":"m1","sameProperty":"no","replaces":"no","evidence":"the swim club slips"}],
+  "status":{"m1":"ATTRIBUTED_STATEMENT","m2":"OFFER","m3":"ATTRIBUTED_STATEMENT"},
+  "current":["m1","m2","m3"],"notCurrent":[],
+  "answer":{"mustState":["Friday"],"mustNotStateAsCurrent":["Monday"],"mustNotLabel":["Vera committed"]}
+ }
+},
+{"id":"DEV-083","template":"T-ds-two-grills","class":"different-subject","mechanism":null,"lure":"negation",
+ "names":{"u-wes":"Wes","u-yara":"Yara"},
+ "messages":[
+  {"id":"m1","author":"u-wes","minute":0,"text":"Grill for Saturday's block party is the big gas one, I'm wheeling it over.","replyTo":null},
+  {"id":"m2","author":"u-yara","minute":2,"text":"I'm not lending our charcoal grill again, it came back broken.","replyTo":null},
+  {"id":"m3","author":"u-wes","minute":5,"text":"The school's grill for the fundraiser is booked by the PTA already.","replyTo":"m2"}
+ ],
+ "items":[
+  {"mid":"m1","status":"CONFIRMED_COMMITMENT","certainty":"ASSERTED","subjectId":"grill","subject":"Grill","predicate":"commits","quote":"Grill for Saturday's block party is the big gas one, I'm wheeling it over.","qualifiers":[],"attributedTo":null},
+  {"mid":"m2","status":"OFFER","certainty":"ASSERTED","subjectId":"grill","subject":"our charcoal grill","predicate":"offers","quote":"lending our charcoal grill","qualifiers":[],"attributedTo":null},
+  {"mid":"m3","status":"ATTRIBUTED_STATEMENT","certainty":"ASSERTED","subjectId":"grill","subject":"The school's grill","predicate":"states","quote":"The school's grill for the fundraiser is booked by the PTA already.","qualifiers":[],"attributedTo":null}
+ ],
+ "question":"Which grill is going to the block party?",
+ "authorGold":{
+  "pairs":[{"later":"m3","earlier":"m1","sameProperty":"no","replaces":"no","evidence":"The school's grill for the fundraiser"}],
+  "status":{"m1":"CONFIRMED_COMMITMENT","m2":"ATTRIBUTED_STATEMENT","m3":"ATTRIBUTED_STATEMENT"},
+  "current":["m1","m2","m3"],"notCurrent":[],
+  "answer":{"mustState":["big gas one"],"mustNotStateAsCurrent":[],"mustNotLabel":["Yara offered"]}
+ }
+},
+{"id":"DEV-084","template":"T-ds-two-rehearsals","class":"different-subject","mechanism":null,"lure":"reported-speech",
+ "names":{"u-zane":"Zane","u-ana":"Ana"},
+ "messages":[
+  {"id":"m1","author":"u-zane","minute":0,"text":"The rehearsal for the school play is Thursday at 4.","replyTo":null},
+  {"id":"m2","author":"u-ana","minute":2,"text":"Mr. Hale said the band rehearsal is cancelled this week.","replyTo":"m1"},
+  {"id":"m3","author":"u-zane","minute":5,"text":"That's the band one. My sister's wedding rehearsal is Friday at 6, so I'm out that night.","replyTo":"m2"}
+ ],
+ "items":[
+  {"mid":"m1","status":"ATTRIBUTED_STATEMENT","certainty":"ASSERTED","subjectId":"rehearsal","subject":"The rehearsal","predicate":"states","quote":"The rehearsal for the school play is Thursday at 4.","qualifiers":[],"attributedTo":null},
+  {"mid":"m2","status":"DECISION","certainty":"ASSERTED","subjectId":"rehearsal","subject":"the band rehearsal","predicate":"decides","quote":"the band rehearsal is cancelled this week.","qualifiers":[],"attributedTo":null},
+  {"mid":"m3","status":"ATTRIBUTED_STATEMENT","certainty":"ASSERTED","subjectId":"rehearsal","subject":"wedding rehearsal","predicate":"states","quote":"My sister's wedding rehearsal is Friday at 6, so I'm out that night.","qualifiers":[],"attributedTo":null}
+ ],
+ "question":"When is the rehearsal for the school play?",
+ "authorGold":{
+  "pairs":[{"later":"m3","earlier":"m1","sameProperty":"no","replaces":"no","evidence":"wedding rehearsal"}],
+  "status":{"m1":"ATTRIBUTED_STATEMENT","m2":"REPORTED_CLAIM","m3":"ATTRIBUTED_STATEMENT"},
+  "current":["m1","m2","m3"],"notCurrent":[],
+  "answer":{"mustState":["Thursday at 4"],"mustNotStateAsCurrent":["Friday at 6","cancelled"],"mustNotLabel":["decided to cancel"]}
+ }
+},
+{"id":"DEV-085","template":"T-sg-rota-as-well","class":"status-genuine","mechanism":null,"lure":"decision-prefix-on-option",
+ "names":{"u-ben":"Ben","u-cara":"Cara","u-dev":"Dev"},
+ "messages":[
+  {"id":"m1","author":"u-ben","minute":0,"text":"Carpool rota for swim club: I'm taking Mondays.","replyTo":null},
+  {"id":"m2","author":"u-cara","minute":2,"text":"Decision for Wednesdays: me or Dev?","replyTo":"m1"},
+  {"id":"m3","author":"u-dev","minute":3,"text":"I'll take Wednesdays, Cara has the late shift.","replyTo":"m2"},
+  {"id":"m4","author":"u-ben","minute":6,"text":"And I'll do Fridays as well, it's on my way.","replyTo":"m1"}
+ ],
+ "items":[
+  {"mid":"m1","status":"CONFIRMED_COMMITMENT","certainty":"ASSERTED","subjectId":"swim-rota-ben","subject":"Carpool rota","predicate":"commits","quote":"I'm taking Mondays.","qualifiers":[],"attributedTo":null},
+  {"mid":"m2","status":"DECISION","certainty":"ASSERTED","subjectId":"swim-rota-wed","subject":"Wednesdays","predicate":"decides","quote":"Decision for Wednesdays: me or Dev?","qualifiers":[],"attributedTo":null},
+  {"mid":"m3","status":"CONFIRMED_COMMITMENT","certainty":"ASSERTED","subjectId":"swim-rota-wed","subject":"Wednesdays","predicate":"commits","quote":"I'll take Wednesdays, Cara has the late shift.","qualifiers":[],"attributedTo":null},
+  {"mid":"m4","status":"CONFIRMED_COMMITMENT","certainty":"ASSERTED","subjectId":"swim-rota-ben","subject":"Fridays","predicate":"commits","quote":"And I'll do Fridays as well, it's on my way.","qualifiers":[],"attributedTo":null}
+ ],
+ "question":"Who is driving for swim club on which days?",
+ "authorGold":{
+  "pairs":[{"later":"m4","earlier":"m1","sameProperty":"yes","replaces":"no","evidence":"I'll do Fridays as well"}],
+  "status":{"m1":"CONFIRMED_COMMITMENT","m2":"QUESTION","m3":"CONFIRMED_COMMITMENT","m4":"CONFIRMED_COMMITMENT"},
+  "current":["m1","m3","m4"],"notCurrent":["m2"],
+  "answer":{"mustState":["Ben: Mondays and Fridays","Dev: Wednesdays"],"mustNotStateAsCurrent":[],"mustNotLabel":["Cara decided"]}
+ }
+},
+{"id":"DEV-086","template":"T-sg-final-call-meetpoint","class":"status-genuine","mechanism":null,"lure":null,
+ "names":{"u-eli":"Eli","u-fay":"Fay"},
+ "messages":[
+  {"id":"m1","author":"u-eli","minute":0,"text":"The neighbourhood cleanup is Saturday morning.","replyTo":null},
+  {"id":"m2","author":"u-fay","minute":3,"text":"Where are we meeting?","replyTo":"m1"},
+  {"id":"m3","author":"u-eli","minute":6,"text":"Final call from me: we meet by the fountain in the park.","replyTo":"m2"}
+ ],
+ "items":[
+  {"mid":"m1","status":"ATTRIBUTED_STATEMENT","certainty":"ASSERTED","subjectId":"cleanup","subject":"The neighbourhood cleanup","predicate":"states","quote":"The neighbourhood cleanup is Saturday morning.","qualifiers":[],"attributedTo":null},
+  {"mid":"m3","status":"DECISION","certainty":"ASSERTED","subjectId":"cleanup","subject":"the park","predicate":"decides","quote":"Final call from me: we meet by the fountain in the park.","qualifiers":[],"attributedTo":null}
+ ],
+ "question":"Where does the cleanup group meet?",
+ "authorGold":{
+  "pairs":[{"later":"m3","earlier":"m1","sameProperty":"no","replaces":"no","evidence":"we meet by the fountain"}],
+  "status":{"m1":"ATTRIBUTED_STATEMENT","m3":"DECISION"},
+  "current":["m1","m3"],"notCurrent":[],
+  "answer":{"mustState":["fountain"],"mustNotStateAsCurrent":[],"mustNotLabel":[]}
+ }
+},
+{"id":"DEV-087","template":"T-sg-commit-two-roles","class":"status-genuine","mechanism":null,"lure":null,
+ "names":{"u-gus":"Gus","u-hana":"Hana"},
+ "messages":[
+  {"id":"m1","author":"u-hana","minute":0,"text":"Birthday bake-off is on the 15th at the youth club.","replyTo":null},
+  {"id":"m2","author":"u-gus","minute":2,"text":"I'll judge.","replyTo":"m1"},
+  {"id":"m3","author":"u-gus","minute":4,"text":"And I'm bringing the prize ribbons, already bought them.","replyTo":"m1"}
+ ],
+ "items":[
+  {"mid":"m1","status":"ATTRIBUTED_STATEMENT","certainty":"ASSERTED","subjectId":"bake-off","subject":"Birthday bake-off","predicate":"states","quote":"Birthday bake-off is on the 15th at the youth club.","qualifiers":[],"attributedTo":null},
+  {"mid":"m2","status":"CONFIRMED_COMMITMENT","certainty":"ASSERTED","subjectId":"bake-off","subject":"Birthday bake-off","predicate":"commits","quote":"I'll judge.","qualifiers":[],"attributedTo":null},
+  {"mid":"m3","status":"CONFIRMED_COMMITMENT","certainty":"ASSERTED","subjectId":"bake-off","subject":"the prize ribbons","predicate":"commits","quote":"I'm bringing the prize ribbons, already bought them.","qualifiers":[],"attributedTo":null}
+ ],
+ "question":"What is Gus doing for the bake-off?",
+ "authorGold":{
+  "pairs":[{"later":"m3","earlier":"m2","sameProperty":"no","replaces":"no","evidence":"I'm bringing the prize ribbons"}],
+  "status":{"m1":"ATTRIBUTED_STATEMENT","m2":"CONFIRMED_COMMITMENT","m3":"CONFIRMED_COMMITMENT"},
+  "current":["m1","m2","m3"],"notCurrent":[],
+  "answer":{"mustState":["judging","prize ribbons"],"mustNotStateAsCurrent":[],"mustNotLabel":[]}
+ }
+},
+{"id":"DEV-088","template":"T-sg-offer-dont-mind","class":"status-genuine","mechanism":null,"lure":null,
+ "names":{"u-ivo":"Ivo","u-jun":"Jun"},
+ "messages":[
+  {"id":"m1","author":"u-ivo","minute":0,"text":"School concert is Thursday at 6:30 in the auditorium.","replyTo":null},
+  {"id":"m2","author":"u-jun","minute":2,"text":"We'll need someone at the door.","replyTo":"m1"},
+  {"id":"m3","author":"u-ivo","minute":4,"text":"I don't mind running the door if nobody else wants it.","replyTo":"m2"}
+ ],
+ "items":[
+  {"mid":"m1","status":"ATTRIBUTED_STATEMENT","certainty":"ASSERTED","subjectId":"concert","subject":"School concert","predicate":"states","quote":"School concert is Thursday at 6:30 in the auditorium.","qualifiers":[],"attributedTo":null},
+  {"mid":"m3","status":"OFFER","certainty":"ASSERTED","subjectId":"concert","subject":"the door","predicate":"offers","quote":"I don't mind running the door if nobody else wants it.","qualifiers":[{"kind":"CONDITION","mid":"m3","quote":"if nobody else wants it"}],"attributedTo":null}
+ ],
+ "question":"Who might run the door at the school concert?",
+ "authorGold":{
+  "pairs":[{"later":"m3","earlier":"m1","sameProperty":"no","replaces":"no","evidence":"I don't mind running the door"}],
+  "status":{"m1":"ATTRIBUTED_STATEMENT","m3":"OFFER"},
+  "current":["m1","m3"],"notCurrent":[],
+  "answer":{"mustState":["Ivo offered"],"mustNotStateAsCurrent":[],"mustNotLabel":["Ivo committed"]}
+ }
+},
+{"id":"DEV-089","template":"T-sg-done-deal-ordered","class":"status-genuine","mechanism":null,"lure":null,
+ "names":{"u-kemi":"Kemi","u-lior":"Lior","u-mara":"Mara"},
+ "messages":[
+  {"id":"m1","author":"u-kemi","minute":0,"text":"Book club snacks are a free-for-all this time.","replyTo":null},
+  {"id":"m2","author":"u-lior","minute":2,"text":"Could we try a new genre next?","replyTo":"m1"},
+  {"id":"m3","author":"u-mara","minute":3,"text":"Ooh, mysteries!","replyTo":"m2"},
+  {"id":"m4","author":"u-kemi","minute":6,"text":"Done deal, next month is a mystery: The Lighthouse Ledger. I've ordered six copies.","replyTo":"m3"}
+ ],
+ "items":[
+  {"mid":"m1","status":"ATTRIBUTED_STATEMENT","certainty":"ASSERTED","subjectId":"book-club-session","subject":"Book club snacks","predicate":"states","quote":"Book club snacks are a free-for-all this time.","qualifiers":[],"attributedTo":null},
+  {"mid":"m4","status":"DECISION","certainty":"ASSERTED","subjectId":"book-club-session","subject":"The Lighthouse Ledger","predicate":"decides","quote":"Done deal, next month is a mystery: The Lighthouse Ledger.","qualifiers":[],"attributedTo":null}
+ ],
+ "question":"What is the book club reading next month?",
+ "authorGold":{
+  "pairs":[{"later":"m4","earlier":"m1","sameProperty":"no","replaces":"no","evidence":"next month is a mystery"}],
+  "status":{"m1":"ATTRIBUTED_STATEMENT","m4":"DECISION"},
+  "current":["m1","m4"],"notCurrent":[],
+  "answer":{"mustState":["The Lighthouse Ledger"],"mustNotStateAsCurrent":[],"mustNotLabel":[]}
+ }
+},
+{"id":"DEV-090","template":"T-sg-commit-gassed-up","class":"status-genuine","mechanism":null,"lure":null,
+ "names":{"u-nico":"Nico","u-omar":"Omar"},
+ "messages":[
+  {"id":"m1","author":"u-nico","minute":0,"text":"Moving help: I'm free Sunday, I'll bring my truck.","replyTo":null},
+  {"id":"m2","author":"u-omar","minute":3,"text":"Legend. Starting 10ish.","replyTo":"m1"},
+  {"id":"m3","author":"u-nico","minute":5,"text":"Truck's gassed up, I'll be at yours at 10.","replyTo":"m2"}
+ ],
+ "items":[
+  {"mid":"m1","status":"CONFIRMED_COMMITMENT","certainty":"ASSERTED","subjectId":"moving-nico","subject":"my truck","predicate":"commits","quote":"I'm free Sunday, I'll bring my truck.","qualifiers":[],"attributedTo":null},
+  {"mid":"m3","status":"CONFIRMED_COMMITMENT","certainty":"ASSERTED","subjectId":"moving-nico","subject":"Truck","predicate":"commits","quote":"Truck's gassed up, I'll be at yours at 10.","qualifiers":[],"attributedTo":null}
+ ],
+ "question":"Is Nico bringing his truck for the move, and when?",
+ "authorGold":{
+  "pairs":[{"later":"m3","earlier":"m1","sameProperty":"yes","replaces":"no","evidence":"I'll be at yours at 10"}],
+  "status":{"m1":"CONFIRMED_COMMITMENT","m3":"CONFIRMED_COMMITMENT"},
+  "current":["m1","m3"],"notCurrent":[],
+  "answer":{"mustState":["truck","Sunday","10"],"mustNotStateAsCurrent":[],"mustNotLabel":[]}
+ }
+}
+]

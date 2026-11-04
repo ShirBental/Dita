@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <title>Dita mascot</title>
+  <!-- Exactly two colors: #2D1B4E (ink plum) and #FFF1DC (warm cream) -->
+  <rect width="512" height="512" fill="#FFF1DC"/>
+  <g transform="translate(0 30)">
+  <!-- Hair: compact bob silhouette -->
+  <path d="M112 334 V256 A144 144 0 0 1 400 256 V334 Q400 352 382 352 H130 Q112 352 112 334 Z" fill="#2D1B4E"/>
+  <!-- Face -->
+  <circle cx="256" cy="288" r="104" fill="#FFF1DC" stroke="#2D1B4E" stroke-width="14"/>
+  <!-- Side-swept fringe -->
+  <path d="M150 300 C140 205 200 168 262 168 C332 168 372 220 362 292 C330 228 262 212 206 236 C180 248 162 270 150 300 Z" fill="#2D1B4E"/>
+  <!-- Signature curl rising from the crown -->
+  <path d="M284 118 C292 66 364 56 372 102 C378 136 334 146 326 120 C320 102 340 94 348 106" fill="none" stroke="#2D1B4E" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Dot eyes -->
+  <circle cx="218" cy="304" r="11" fill="#2D1B4E"/>
+  <circle cx="294" cy="304" r="11" fill="#2D1B4E"/>
+  <!-- Tiny knowing smile (right corner lifted) -->
+  <path d="M238 346 Q258 360 280 340" fill="none" stroke="#2D1B4E" stroke-width="9" stroke-linecap="round"/>
+  </g>
+</svg>

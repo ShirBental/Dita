@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <title>Dita mascot v3: tilted head, wink, smirk, flicked bob, "d" silhouette</title>
+  <!-- Exactly two colors: #2D1B4E (ink plum) and #FFF1DC (warm cream) -->
+  <rect width="512" height="512" fill="#FFF1DC"/>
+  <g transform="translate(14 8) rotate(-8 236 296)">
+    <!-- Hair: bob with a sassy outward flick at the end -->
+    <path d="M364 282 A128 128 0 0 0 108 282 V330 C108 352 98 362 80 368 C110 382 152 372 172 346 H364 Z" fill="#2D1B4E"/>
+    <!-- Face -->
+    <circle cx="236" cy="296" r="98" fill="#FFF1DC" stroke="#2D1B4E" stroke-width="14"/>
+    <!-- Side-swept fringe -->
+    <path d="M330 290 C342 200 280 172 226 176 C166 180 136 230 140 296 C164 240 214 222 262 236 C292 246 316 266 330 290 Z" fill="#2D1B4E"/>
+    <!-- The long lock: stem of the "d", ending in the signature curl -->
+    <path d="M356 404 V180 C356 96 286 70 252 104 C226 130 248 170 282 160" fill="none" stroke="#2D1B4E" stroke-width="52" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Wink: closed happy eye on the left, open dot eye on the right -->
+    <path d="M192 320 Q206 304 220 320" fill="none" stroke="#2D1B4E" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="274" cy="314" r="12" fill="#2D1B4E"/>
+    <!-- Lopsided smirk: one corner pulled up -->
+    <path d="M222 354 Q246 368 272 342" fill="none" stroke="#2D1B4E" stroke-width="10" stroke-linecap="round"/>
+  </g>
+</svg>

@@ -1,0 +1,2042 @@
+[
+ {
+  "id": "DEV-001",
+  "names": {
+   "u-ana": "Ana",
+   "u-ben": "Ben"
+  },
+  "messages": [
+   {
+    "id": "m1",
+    "author": "u-ana",
+    "minute": 0,
+    "text": "Carpool for Saturday's game: I'll pick everyone up at 8:15 by the library.",
+    "replyTo": null
+   },
+   {
+    "id": "m2",
+    "author": "u-ben",
+    "minute": 3,
+    "text": "So pickup is locked at 8:15? My kid has a dentist thing right before.",
+    "replyTo": "m1"
+   },
+   {
+    "id": "m3",
+    "author": "u-ana",
+    "minute": 6,
+    "text": "Make it 8:40 then, same spot.",
+    "replyTo": "m2"
+   }
+  ],
+  "items": [
+   {
+    "mid": "m1",
+    "status": "CONFIRMED_COMMITMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "carpool-pickup",
+    "subject": "Carpool",
+    "predicate": "commits",
+    "quote": "I'll pick everyone up at 8:15 by the library.",
+    "qualifiers": [
+     {
+      "kind": "TIME",
+      "mid": "m1",
+      "quote": "Saturday's game"
+     }
+    ],
+    "attributedTo": null
+   },
+   {
+    "mid": "m2",
+    "status": "DECISION",
+    "certainty": "ASSERTED",
+    "subjectId": "carpool-pickup",
+    "subject": "pickup",
+    "predicate": "decides",
+    "quote": "So pickup is locked at 8:15?",
+    "qualifiers": [],
+    "attributedTo": null
+   },
+   {
+    "mid": "m3",
+    "status": "CONFIRMED_COMMITMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "carpool-pickup",
+    "subject": "pickup",
+    "predicate": "commits",
+    "quote": "Make it 8:40 then, same spot.",
+    "qualifiers": [],
+    "attributedTo": null
+   }
+  ],
+  "question": "What time is Ana picking everyone up for Saturday's game?"
+ },
+ {
+  "id": "DEV-002",
+  "names": {
+   "u-dev": "Dev",
+   "u-eli": "Eli"
+  },
+  "messages": [
+   {
+    "id": "m1",
+    "author": "u-dev",
+    "minute": 0,
+    "text": "Book club is at Eli's on the 14th, starting 7pm.",
+    "replyTo": null
+   },
+   {
+    "id": "m2",
+    "author": "u-eli",
+    "minute": 2,
+    "text": "I haven't said yes to hosting yet, to be fair.",
+    "replyTo": "m1"
+   },
+   {
+    "id": "m3",
+    "author": "u-dev",
+    "minute": 5,
+    "text": "Ah wait, the 14th is the school concert. Let's say book club on the 21st, 7pm still.",
+    "replyTo": null
+   }
+  ],
+  "items": [
+   {
+    "mid": "m1",
+    "status": "ATTRIBUTED_STATEMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "book-club-date",
+    "subject": "Book club",
+    "predicate": "states",
+    "quote": "Book club is at Eli's on the 14th, starting 7pm.",
+    "qualifiers": [],
+    "attributedTo": null
+   },
+   {
+    "mid": "m2",
+    "status": "CONFIRMED_COMMITMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "book-club-host",
+    "subject": "hosting",
+    "predicate": "commits",
+    "quote": "said yes to hosting",
+    "qualifiers": [],
+    "attributedTo": null
+   },
+   {
+    "mid": "m3",
+    "status": "ATTRIBUTED_STATEMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "book-club-date",
+    "subject": "book club",
+    "predicate": "states",
+    "quote": "Let's say book club on the 21st, 7pm still.",
+    "qualifiers": [],
+    "attributedTo": null
+   }
+  ],
+  "question": "What date is book club?"
+ },
+ {
+  "id": "DEV-003",
+  "names": {
+   "u-fay": "Fay",
+   "u-gus": "Gus"
+  },
+  "messages": [
+   {
+    "id": "m1",
+    "author": "u-fay",
+    "minute": 0,
+    "text": "Potluck sign-up: I'm doing the lasagna.",
+    "replyTo": null
+   },
+   {
+    "id": "m2",
+    "author": "u-gus",
+    "minute": 4,
+    "text": "Nice, Hana and I have salads covered.",
+    "replyTo": "m1"
+   },
+   {
+    "id": "m3",
+    "author": "u-fay",
+    "minute": 9,
+    "text": "Oven's broken, so I'll swap to a big couscous thing instead of the lasagna.",
+    "replyTo": "m2"
+   }
+  ],
+  "items": [
+   {
+    "mid": "m1",
+    "status": "CONFIRMED_COMMITMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "potluck-fay-dish",
+    "subject": "the lasagna",
+    "predicate": "commits",
+    "quote": "I'm doing the lasagna.",
+    "qualifiers": [],
+    "attributedTo": null
+   },
+   {
+    "mid": "m2",
+    "status": "CONFIRMED_COMMITMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "potluck-salads",
+    "subject": "salads",
+    "predicate": "commits",
+    "quote": "Hana and I have salads covered.",
+    "qualifiers": [],
+    "attributedTo": null
+   },
+   {
+    "mid": "m3",
+    "status": "CONFIRMED_COMMITMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "potluck-fay-dish",
+    "subject": "the lasagna",
+    "predicate": "commits",
+    "quote": "I'll swap to a big couscous thing instead of the lasagna.",
+    "qualifiers": [],
+    "attributedTo": null
+   }
+  ],
+  "question": "What dish is Fay bringing to the potluck?"
+ },
+ {
+  "id": "DEV-004",
+  "names": {
+   "u-ivo": "Ivo",
+   "u-jun": "Jun"
+  },
+  "messages": [
+   {
+    "id": "m1",
+    "author": "u-ivo",
+    "minute": 0,
+    "text": "Decision for the school trip: aquarium or the science museum?",
+    "replyTo": null
+   },
+   {
+    "id": "m2",
+    "author": "u-jun",
+    "minute": 3,
+    "text": "Museum has the free Tuesday for groups.",
+    "replyTo": "m1"
+   },
+   {
+    "id": "m3",
+    "author": "u-ivo",
+    "minute": 8,
+    "text": "Good call. We're booking the museum, Tuesday the 9th.",
+    "replyTo": "m2"
+   }
+  ],
+  "items": [
+   {
+    "mid": "m1",
+    "status": "DECISION",
+    "certainty": "ASSERTED",
+    "subjectId": "school-trip-destination",
+    "subject": "the school trip",
+    "predicate": "decides",
+    "quote": "Decision for the school trip: aquarium or the science museum?",
+    "qualifiers": [],
+    "attributedTo": null
+   },
+   {
+    "mid": "m2",
+    "status": "ATTRIBUTED_STATEMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "school-trip-destination",
+    "subject": "Museum",
+    "predicate": "states",
+    "quote": "Museum has the free Tuesday for groups.",
+    "qualifiers": [],
+    "attributedTo": null
+   },
+   {
+    "mid": "m3",
+    "status": "DECISION",
+    "certainty": "ASSERTED",
+    "subjectId": "school-trip-destination",
+    "subject": "the museum",
+    "predicate": "decides",
+    "quote": "We're booking the museum, Tuesday the 9th.",
+    "qualifiers": [],
+    "attributedTo": null
+   }
+  ],
+  "question": "Where is the school trip going?"
+ },
+ {
+  "id": "DEV-005",
+  "names": {
+   "u-kemi": "Kemi",
+   "u-lior": "Lior"
+  },
+  "messages": [
+   {
+    "id": "m1",
+    "author": "u-kemi",
+    "minute": 0,
+    "text": "For Mara's birthday dinner I'm torn between the taco place and the ramen bar.",
+    "replyTo": null
+   },
+   {
+    "id": "m2",
+    "author": "u-lior",
+    "minute": 2,
+    "text": "Mara told me she's already booked the ramen bar herself.",
+    "replyTo": "m1"
+   },
+   {
+    "id": "m3",
+    "author": "u-kemi",
+    "minute": 6,
+    "text": "Ha, then she'd be booking her own surprise. I've reserved the taco place for 8, keep it quiet.",
+    "replyTo": "m2"
+   }
+  ],
+  "items": [
+   {
+    "mid": "m1",
+    "status": "ATTRIBUTED_STATEMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "birthday-dinner-venue",
+    "subject": "Mara's birthday dinner",
+    "predicate": "states",
+    "quote": "I'm torn between the taco place and the ramen bar.",
+    "qualifiers": [],
+    "attributedTo": null
+   },
+   {
+    "mid": "m2",
+    "status": "DECISION",
+    "certainty": "ASSERTED",
+    "subjectId": "birthday-dinner-venue",
+    "subject": "the ramen bar",
+    "predicate": "decides",
+    "quote": "she's already booked the ramen bar herself.",
+    "qualifiers": [],
+    "attributedTo": null
+   },
+   {
+    "mid": "m3",
+    "status": "DECISION",
+    "certainty": "ASSERTED",
+    "subjectId": "birthday-dinner-venue",
+    "subject": "the taco place",
+    "predicate": "decides",
+    "quote": "I've reserved the taco place for 8, keep it quiet.",
+    "qualifiers": [],
+    "attributedTo": null
+   }
+  ],
+  "question": "Where is Mara's birthday dinner?"
+ },
+ {
+  "id": "DEV-006",
+  "names": {
+   "u-nico": "Nico",
+   "u-omar": "Omar",
+   "u-pia": "Pia"
+  },
+  "messages": [
+   {
+    "id": "m1",
+    "author": "u-nico",
+    "minute": 0,
+    "text": "I can bring my folding tables to the picnic if that helps.",
+    "replyTo": null
+   },
+   {
+    "id": "m2",
+    "author": "u-omar",
+    "minute": 3,
+    "text": "If the park shelter is taken, I'll bring the pop-up canopy.",
+    "replyTo": null
+   },
+   {
+    "id": "m3",
+    "author": "u-pia",
+    "minute": 5,
+    "text": "Yes please Nico, tables would be a lifesaver.",
+    "replyTo": "m1"
+   },
+   {
+    "id": "m4",
+    "author": "u-nico",
+    "minute": 7,
+    "text": "Done, they're in the trunk already.",
+    "replyTo": "m3"
+   }
+  ],
+  "items": [
+   {
+    "mid": "m1",
+    "status": "OFFER",
+    "certainty": "ASSERTED",
+    "subjectId": "picnic-tables",
+    "subject": "my folding tables",
+    "predicate": "offers",
+    "quote": "I can bring my folding tables to the picnic if that helps.",
+    "qualifiers": [],
+    "attributedTo": null
+   },
+   {
+    "mid": "m2",
+    "status": "CONFIRMED_COMMITMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "picnic-canopy",
+    "subject": "the pop-up canopy",
+    "predicate": "commits",
+    "quote": "I'll bring the pop-up canopy.",
+    "qualifiers": [
+     {
+      "kind": "CONDITION",
+      "mid": "m2",
+      "quote": "If the park shelter is taken"
+     }
+    ],
+    "attributedTo": null
+   },
+   {
+    "mid": "m3",
+    "status": "ATTRIBUTED_STATEMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "picnic-tables",
+    "subject": "tables",
+    "predicate": "states",
+    "quote": "tables would be a lifesaver.",
+    "qualifiers": [],
+    "attributedTo": null
+   },
+   {
+    "mid": "m4",
+    "status": "CONFIRMED_COMMITMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "picnic-tables",
+    "subject": "tables",
+    "predicate": "commits",
+    "quote": "Done, they're in the trunk already.",
+    "qualifiers": [],
+    "attributedTo": null
+   }
+  ],
+  "question": "Is anyone definitely bringing tables to the picnic?"
+ },
+ {
+  "id": "DEV-007",
+  "names": {
+   "u-quinn": "Quinn",
+   "u-rosa": "Rosa"
+  },
+  "messages": [
+   {
+    "id": "m1",
+    "author": "u-quinn",
+    "minute": 0,
+    "text": "Moving day Sunday: I could lend my van for the morning.",
+    "replyTo": null
+   },
+   {
+    "id": "m2",
+    "author": "u-rosa",
+    "minute": 4,
+    "text": "Amazing. I'll handle the boxes, or at least try to, no promises with my week.",
+    "replyTo": "m1"
+   },
+   {
+    "id": "m3",
+    "author": "u-quinn",
+    "minute": 9,
+    "text": "Van's yours 8 to noon, keys under the mat Saturday night.",
+    "replyTo": null
+   }
+  ],
+  "items": [
+   {
+    "mid": "m1",
+    "status": "OFFER",
+    "certainty": "ASSERTED",
+    "subjectId": "moving-van",
+    "subject": "my van",
+    "predicate": "offers",
+    "quote": "I could lend my van for the morning.",
+    "qualifiers": [
+     {
+      "kind": "TIME",
+      "mid": "m1",
+      "quote": "Sunday"
+     }
+    ],
+    "attributedTo": null
+   },
+   {
+    "mid": "m2",
+    "status": "CONFIRMED_COMMITMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "moving-boxes",
+    "subject": "the boxes",
+    "predicate": "commits",
+    "quote": "I'll handle the boxes",
+    "qualifiers": [],
+    "attributedTo": null
+   },
+   {
+    "mid": "m3",
+    "status": "CONFIRMED_COMMITMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "moving-van",
+    "subject": "Van",
+    "predicate": "commits",
+    "quote": "Van's yours 8 to noon, keys under the mat Saturday night.",
+    "qualifiers": [],
+    "attributedTo": null
+   }
+  ],
+  "question": "Is Quinn's van confirmed for moving day, and for what hours?"
+ },
+ {
+  "id": "DEV-008",
+  "names": {
+   "u-sami": "Sami",
+   "u-uri": "Uri"
+  },
+  "messages": [
+   {
+    "id": "m1",
+    "author": "u-sami",
+    "minute": 0,
+    "text": "For Saturday's hike with the kids I'd avoid the lake trail, it was a swamp last week.",
+    "replyTo": null
+   },
+   {
+    "id": "m2",
+    "author": "u-uri",
+    "minute": 3,
+    "text": "No one has signed off on the ridge route either.",
+    "replyTo": "m1"
+   },
+   {
+    "id": "m3",
+    "author": "u-sami",
+    "minute": 10,
+    "text": "Walked it this morning, the lake trail's bone dry now. Honestly the best pick for little legs.",
+    "replyTo": null
+   }
+  ],
+  "items": [
+   {
+    "mid": "m1",
+    "status": "ATTRIBUTED_STATEMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "hike-lake-trail",
+    "subject": "the lake trail",
+    "predicate": "advises_against",
+    "quote": "I'd avoid the lake trail, it was a swamp last week.",
+    "qualifiers": [
+     {
+      "kind": "POPULATION",
+      "mid": "m1",
+      "quote": "with the kids"
+     }
+    ],
+    "attributedTo": null
+   },
+   {
+    "mid": "m2",
+    "status": "DECISION",
+    "certainty": "ASSERTED",
+    "subjectId": "hike-route",
+    "subject": "the ridge route",
+    "predicate": "decides",
+    "quote": "signed off on the ridge route",
+    "qualifiers": [],
+    "attributedTo": null
+   },
+   {
+    "mid": "m3",
+    "status": "ATTRIBUTED_STATEMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "hike-lake-trail",
+    "subject": "the lake trail",
+    "predicate": "recommends",
+    "quote": "the lake trail's bone dry now. Honestly the best pick for little legs.",
+    "qualifiers": [],
+    "attributedTo": null
+   }
+  ],
+  "question": "What does Sami think of the lake trail for Saturday's hike?"
+ },
+ {
+  "id": "DEV-009",
+  "names": {
+   "u-vera": "Vera",
+   "u-wes": "Wes"
+  },
+  "messages": [
+   {
+    "id": "m1",
+    "author": "u-vera",
+    "minute": 0,
+    "text": "I'll run the snack table at the soccer tournament.",
+    "replyTo": null
+   },
+   {
+    "id": "m2",
+    "author": "u-wes",
+    "minute": 2,
+    "text": "Great, should I order the juice boxes then?",
+    "replyTo": "m1"
+   },
+   {
+    "id": "m3",
+    "author": "u-vera",
+    "minute": 30,
+    "text": "Just got called in for a shift that Saturday, so someone else will need to take the snacks. Sorry!",
+    "replyTo": null
+   }
+  ],
+  "items": [
+   {
+    "mid": "m1",
+    "status": "CONFIRMED_COMMITMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "tournament-snack-table",
+    "subject": "the snack table",
+    "predicate": "commits",
+    "quote": "I'll run the snack table at the soccer tournament.",
+    "qualifiers": [],
+    "attributedTo": null
+   },
+   {
+    "mid": "m2",
+    "status": "OFFER",
+    "certainty": "ASSERTED",
+    "subjectId": "tournament-juice",
+    "subject": "the juice boxes",
+    "predicate": "offers",
+    "quote": "should I order the juice boxes then?",
+    "qualifiers": [],
+    "attributedTo": null
+   },
+   {
+    "mid": "m3",
+    "status": "ATTRIBUTED_STATEMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "tournament-snack-table",
+    "subject": "the snacks",
+    "predicate": "states",
+    "quote": "someone else will need to take the snacks.",
+    "qualifiers": [],
+    "attributedTo": null
+   }
+  ],
+  "question": "Who is running the snack table at the soccer tournament?"
+ },
+ {
+  "id": "DEV-010",
+  "names": {
+   "u-zane": "Zane",
+   "u-ana": "Ana"
+  },
+  "messages": [
+   {
+    "id": "m1",
+    "author": "u-zane",
+    "minute": 0,
+    "text": "Practice moves to the east field this week, 5:30 as usual.",
+    "replyTo": null
+   },
+   {
+    "id": "m2",
+    "author": "u-ana",
+    "minute": 3,
+    "text": "Decision: should we move the snack rota to Thursdays too?",
+    "replyTo": "m1"
+   },
+   {
+    "id": "m3",
+    "author": "u-zane",
+    "minute": 20,
+    "text": "Update for the parents who missed it: practice is on the east field this week, 5:30.",
+    "replyTo": null
+   }
+  ],
+  "items": [
+   {
+    "mid": "m1",
+    "status": "ATTRIBUTED_STATEMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "practice-location",
+    "subject": "Practice",
+    "predicate": "states",
+    "quote": "Practice moves to the east field this week, 5:30 as usual.",
+    "qualifiers": [
+     {
+      "kind": "TIME",
+      "mid": "m1",
+      "quote": "this week"
+     }
+    ],
+    "attributedTo": null
+   },
+   {
+    "mid": "m2",
+    "status": "DECISION",
+    "certainty": "ASSERTED",
+    "subjectId": "snack-rota",
+    "subject": "the snack rota",
+    "predicate": "decides",
+    "quote": "Decision: should we move the snack rota to Thursdays too?",
+    "qualifiers": [],
+    "attributedTo": null
+   },
+   {
+    "mid": "m3",
+    "status": "ATTRIBUTED_STATEMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "practice-location",
+    "subject": "practice",
+    "predicate": "states",
+    "quote": "practice is on the east field this week, 5:30.",
+    "qualifiers": [
+     {
+      "kind": "TIME",
+      "mid": "m3",
+      "quote": "this week"
+     }
+    ],
+    "attributedTo": null
+   }
+  ],
+  "question": "Where and when is practice this week?"
+ },
+ {
+  "id": "DEV-011",
+  "names": {
+   "u-ben": "Ben",
+   "u-cara": "Cara"
+  },
+  "messages": [
+   {
+    "id": "m1",
+    "author": "u-ben",
+    "minute": 0,
+    "text": "School trip bus leaves at 7:10 from the main gate.",
+    "replyTo": null
+   },
+   {
+    "id": "m2",
+    "author": "u-cara",
+    "minute": 2,
+    "text": "So early!",
+    "replyTo": "m1"
+   },
+   {
+    "id": "m3",
+    "author": "u-ben",
+    "minute": 6,
+    "text": "I know. Ms. Okafor said at pickup the bus is definitely 7:10, main gate.",
+    "replyTo": "m2"
+   }
+  ],
+  "items": [
+   {
+    "mid": "m1",
+    "status": "ATTRIBUTED_STATEMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "trip-bus-departure",
+    "subject": "School trip bus",
+    "predicate": "states",
+    "quote": "School trip bus leaves at 7:10 from the main gate.",
+    "qualifiers": [],
+    "attributedTo": null
+   },
+   {
+    "mid": "m3",
+    "status": "DECISION",
+    "certainty": "ASSERTED",
+    "subjectId": "trip-bus-departure",
+    "subject": "the bus",
+    "predicate": "decides",
+    "quote": "the bus is definitely 7:10, main gate.",
+    "qualifiers": [],
+    "attributedTo": null
+   }
+  ],
+  "question": "When and where does the school trip bus leave?"
+ },
+ {
+  "id": "DEV-012",
+  "names": {
+   "u-dev": "Dev",
+   "u-fay": "Fay"
+  },
+  "messages": [
+   {
+    "id": "m1",
+    "author": "u-dev",
+    "minute": 0,
+    "text": "Potluck starts at 6 at the community hall.",
+    "replyTo": null
+   },
+   {
+    "id": "m2",
+    "author": "u-fay",
+    "minute": 4,
+    "text": "I can't commit to bringing dessert this time.",
+    "replyTo": "m1"
+   },
+   {
+    "id": "m3",
+    "author": "u-dev",
+    "minute": 15,
+    "text": "Updated potluck flyer is up: same 6 o'clock start, doors open a bit before.",
+    "replyTo": null
+   }
+  ],
+  "items": [
+   {
+    "mid": "m1",
+    "status": "ATTRIBUTED_STATEMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "potluck-start",
+    "subject": "Potluck",
+    "predicate": "states",
+    "quote": "Potluck starts at 6 at the community hall.",
+    "qualifiers": [],
+    "attributedTo": null
+   },
+   {
+    "mid": "m2",
+    "status": "CONFIRMED_COMMITMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "potluck-dessert",
+    "subject": "dessert",
+    "predicate": "commits",
+    "quote": "commit to bringing dessert this time.",
+    "qualifiers": [],
+    "attributedTo": null
+   },
+   {
+    "mid": "m3",
+    "status": "ATTRIBUTED_STATEMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "potluck-start",
+    "subject": "potluck",
+    "predicate": "states",
+    "quote": "Updated potluck flyer is up: same 6 o'clock start, doors open a bit before.",
+    "qualifiers": [],
+    "attributedTo": null
+   }
+  ],
+  "question": "What time does the potluck start?"
+ },
+ {
+  "id": "DEV-013",
+  "names": {
+   "u-gus": "Gus",
+   "u-hana": "Hana"
+  },
+  "messages": [
+   {
+    "id": "m1",
+    "author": "u-gus",
+    "minute": 0,
+    "text": "I'll bring the charcoal for the beach cookout.",
+    "replyTo": null
+   },
+   {
+    "id": "m2",
+    "author": "u-hana",
+    "minute": 2,
+    "text": "Perfect, who's on ice?",
+    "replyTo": "m1"
+   },
+   {
+    "id": "m3",
+    "author": "u-gus",
+    "minute": 5,
+    "text": "I'll also grab ice if the gas station by the pier has any left.",
+    "replyTo": "m2"
+   }
+  ],
+  "items": [
+   {
+    "mid": "m1",
+    "status": "CONFIRMED_COMMITMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "cookout-gus-supplies",
+    "subject": "the charcoal",
+    "predicate": "commits",
+    "quote": "I'll bring the charcoal for the beach cookout.",
+    "qualifiers": [],
+    "attributedTo": null
+   },
+   {
+    "mid": "m3",
+    "status": "CONFIRMED_COMMITMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "cookout-gus-supplies",
+    "subject": "ice",
+    "predicate": "commits",
+    "quote": "I'll also grab ice",
+    "qualifiers": [
+     {
+      "kind": "CONDITION",
+      "mid": "m3",
+      "quote": "if the gas station by the pier has any left"
+     }
+    ],
+    "attributedTo": null
+   }
+  ],
+  "question": "What is Gus bringing to the beach cookout?"
+ },
+ {
+  "id": "DEV-014",
+  "names": {
+   "u-ivo": "Ivo",
+   "u-kemi": "Kemi"
+  },
+  "messages": [
+   {
+    "id": "m1",
+    "author": "u-ivo",
+    "minute": 0,
+    "text": "Carpool to the tournament: I'll take Jun's two, if my car's back from the shop, fingers crossed.",
+    "replyTo": null
+   },
+   {
+    "id": "m2",
+    "author": "u-kemi",
+    "minute": 3,
+    "text": "Thank you Ivo!!",
+    "replyTo": "m1"
+   },
+   {
+    "id": "m3",
+    "author": "u-ivo",
+    "minute": 7,
+    "text": "And I can squeeze Kemi's daughter in the back as well.",
+    "replyTo": "m2"
+   }
+  ],
+  "items": [
+   {
+    "mid": "m1",
+    "status": "CONFIRMED_COMMITMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "tournament-carpool-ivo",
+    "subject": "Carpool",
+    "predicate": "commits",
+    "quote": "I'll take Jun's two",
+    "qualifiers": [],
+    "attributedTo": null
+   },
+   {
+    "mid": "m3",
+    "status": "OFFER",
+    "certainty": "ASSERTED",
+    "subjectId": "tournament-carpool-ivo",
+    "subject": "Kemi's daughter",
+    "predicate": "offers",
+    "quote": "I can squeeze Kemi's daughter in the back as well.",
+    "qualifiers": [],
+    "attributedTo": null
+   }
+  ],
+  "question": "Who is riding with Ivo to the tournament?"
+ },
+ {
+  "id": "DEV-015",
+  "names": {
+   "u-lior": "Lior",
+   "u-mara": "Mara"
+  },
+  "messages": [
+   {
+    "id": "m1",
+    "author": "u-lior",
+    "minute": 0,
+    "text": "Field day is set for Friday on the back lawn.",
+    "replyTo": null
+   },
+   {
+    "id": "m2",
+    "author": "u-mara",
+    "minute": 3,
+    "text": "What about the forecast?",
+    "replyTo": "m1"
+   },
+   {
+    "id": "m3",
+    "author": "u-lior",
+    "minute": 6,
+    "text": "In the event of rain I'll book the gym for field day instead, same time.",
+    "replyTo": "m2"
+   }
+  ],
+  "items": [
+   {
+    "mid": "m1",
+    "status": "ATTRIBUTED_STATEMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "field-day-location",
+    "subject": "Field day",
+    "predicate": "states",
+    "quote": "Field day is set for Friday on the back lawn.",
+    "qualifiers": [],
+    "attributedTo": null
+   },
+   {
+    "mid": "m3",
+    "status": "CONFIRMED_COMMITMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "field-day-location",
+    "subject": "field day",
+    "predicate": "commits",
+    "quote": "I'll book the gym for field day instead, same time.",
+    "qualifiers": [
+     {
+      "kind": "CONDITION",
+      "mid": "m3",
+      "quote": "In the event of rain"
+     }
+    ],
+    "attributedTo": null
+   }
+  ],
+  "question": "Where is field day on Friday?"
+ },
+ {
+  "id": "DEV-016",
+  "names": {
+   "u-nico": "Nico",
+   "u-omar": "Omar"
+  },
+  "messages": [
+   {
+    "id": "m1",
+    "author": "u-nico",
+    "minute": 0,
+    "text": "Pizza for the robotics team party comes from Marco's, pickup at 5.",
+    "replyTo": null
+   },
+   {
+    "id": "m2",
+    "author": "u-omar",
+    "minute": 2,
+    "text": "Are we definitely doing Marco's?",
+    "replyTo": "m1"
+   },
+   {
+    "id": "m3",
+    "author": "u-nico",
+    "minute": 5,
+    "text": "Yes. Backup is the sub shop next door, only if Marco's oven is down again.",
+    "replyTo": "m2"
+   }
+  ],
+  "items": [
+   {
+    "mid": "m1",
+    "status": "ATTRIBUTED_STATEMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "robotics-party-pizza",
+    "subject": "Pizza",
+    "predicate": "states",
+    "quote": "Pizza for the robotics team party comes from Marco's, pickup at 5.",
+    "qualifiers": [],
+    "attributedTo": null
+   },
+   {
+    "mid": "m2",
+    "status": "DECISION",
+    "certainty": "ASSERTED",
+    "subjectId": "robotics-party-pizza",
+    "subject": "Marco's",
+    "predicate": "decides",
+    "quote": "Are we definitely doing Marco's?",
+    "qualifiers": [],
+    "attributedTo": null
+   },
+   {
+    "mid": "m3",
+    "status": "ATTRIBUTED_STATEMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "robotics-party-pizza",
+    "subject": "Marco's",
+    "predicate": "states",
+    "quote": "Backup is the sub shop next door, only if Marco's oven is down again.",
+    "qualifiers": [
+     {
+      "kind": "CONDITION",
+      "mid": "m3",
+      "quote": "only if Marco's oven is down again"
+     }
+    ],
+    "attributedTo": null
+   }
+  ],
+  "question": "Where is the robotics party pizza coming from?"
+ },
+ {
+  "id": "DEV-017",
+  "names": {
+   "u-pia": "Pia",
+   "u-quinn": "Quinn"
+  },
+  "messages": [
+   {
+    "id": "m1",
+    "author": "u-pia",
+    "minute": 0,
+    "text": "Rosa's farewell party: I'm bringing the cake from Lindell's bakery.",
+    "replyTo": null
+   },
+   {
+    "id": "m2",
+    "author": "u-quinn",
+    "minute": 3,
+    "text": "I'm not promising the banner, my printer's dead.",
+    "replyTo": "m1"
+   },
+   {
+    "id": "m3",
+    "author": "u-pia",
+    "minute": 8,
+    "text": "If Lindell's sells out before I get there, I'll grab cupcakes from the market instead.",
+    "replyTo": null
+   }
+  ],
+  "items": [
+   {
+    "mid": "m1",
+    "status": "CONFIRMED_COMMITMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "farewell-cake",
+    "subject": "the cake",
+    "predicate": "commits",
+    "quote": "I'm bringing the cake from Lindell's bakery.",
+    "qualifiers": [],
+    "attributedTo": null
+   },
+   {
+    "mid": "m2",
+    "status": "CONFIRMED_COMMITMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "farewell-banner",
+    "subject": "the banner",
+    "predicate": "commits",
+    "quote": "promising the banner",
+    "qualifiers": [],
+    "attributedTo": null
+   },
+   {
+    "mid": "m3",
+    "status": "OFFER",
+    "certainty": "ASSERTED",
+    "subjectId": "farewell-cake",
+    "subject": "cupcakes",
+    "predicate": "offers",
+    "quote": "I'll grab cupcakes from the market instead.",
+    "qualifiers": [
+     {
+      "kind": "CONDITION",
+      "mid": "m3",
+      "quote": "If Lindell's sells out before I get there"
+     }
+    ],
+    "attributedTo": null
+   }
+  ],
+  "question": "What is Pia bringing to Rosa's farewell party?"
+ },
+ {
+  "id": "DEV-018",
+  "names": {
+   "u-sami": "Sami",
+   "u-tova": "Tova"
+  },
+  "messages": [
+   {
+    "id": "m1",
+    "author": "u-sami",
+    "minute": 0,
+    "text": "Birthday lunch for the kids is pizza at 12:30.",
+    "replyTo": null
+   },
+   {
+    "id": "m2",
+    "author": "u-tova",
+    "minute": 2,
+    "text": "Uri says he's handling drinks for everyone.",
+    "replyTo": "m1"
+   },
+   {
+    "id": "m3",
+    "author": "u-sami",
+    "minute": 6,
+    "text": "Lunch for the adults is the curry trays, same time.",
+    "replyTo": null
+   }
+  ],
+  "items": [
+   {
+    "mid": "m1",
+    "status": "ATTRIBUTED_STATEMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "birthday-lunch",
+    "subject": "Birthday lunch",
+    "predicate": "states",
+    "quote": "Birthday lunch for the kids is pizza at 12:30.",
+    "qualifiers": [
+     {
+      "kind": "POPULATION",
+      "mid": "m1",
+      "quote": "for the kids"
+     }
+    ],
+    "attributedTo": null
+   },
+   {
+    "mid": "m2",
+    "status": "CONFIRMED_COMMITMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "birthday-drinks",
+    "subject": "drinks",
+    "predicate": "commits",
+    "quote": "he's handling drinks for everyone.",
+    "qualifiers": [],
+    "attributedTo": null
+   },
+   {
+    "mid": "m3",
+    "status": "ATTRIBUTED_STATEMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "birthday-lunch",
+    "subject": "Lunch",
+    "predicate": "states",
+    "quote": "Lunch for the adults is the curry trays, same time.",
+    "qualifiers": [
+     {
+      "kind": "POPULATION",
+      "mid": "m3",
+      "quote": "for the adults"
+     }
+    ],
+    "attributedTo": null
+   }
+  ],
+  "question": "What's for lunch for the kids at the birthday?"
+ },
+ {
+  "id": "DEV-019",
+  "names": {
+   "u-vera": "Vera",
+   "u-wes": "Wes"
+  },
+  "messages": [
+   {
+    "id": "m1",
+    "author": "u-vera",
+    "minute": 0,
+    "text": "Swim practice for the under-10s starts at 4.",
+    "replyTo": null
+   },
+   {
+    "id": "m2",
+    "author": "u-wes",
+    "minute": 2,
+    "text": "I'll coach the relay drills, I think, if my shift ends on time. Don't hold me to it.",
+    "replyTo": "m1"
+   },
+   {
+    "id": "m3",
+    "author": "u-vera",
+    "minute": 5,
+    "text": "Thanks Wes. Practice for the older group stays at 5:15, by the way.",
+    "replyTo": "m2"
+   }
+  ],
+  "items": [
+   {
+    "mid": "m1",
+    "status": "ATTRIBUTED_STATEMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "swim-practice-start",
+    "subject": "Swim practice",
+    "predicate": "states",
+    "quote": "Swim practice for the under-10s starts at 4.",
+    "qualifiers": [
+     {
+      "kind": "POPULATION",
+      "mid": "m1",
+      "quote": "for the under-10s"
+     }
+    ],
+    "attributedTo": null
+   },
+   {
+    "mid": "m2",
+    "status": "CONFIRMED_COMMITMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "swim-relay-coach",
+    "subject": "the relay drills",
+    "predicate": "commits",
+    "quote": "I'll coach the relay drills",
+    "qualifiers": [],
+    "attributedTo": null
+   },
+   {
+    "mid": "m3",
+    "status": "ATTRIBUTED_STATEMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "swim-practice-start",
+    "subject": "Practice",
+    "predicate": "states",
+    "quote": "Practice for the older group stays at 5:15",
+    "qualifiers": [
+     {
+      "kind": "POPULATION",
+      "mid": "m3",
+      "quote": "for the older group"
+     }
+    ],
+    "attributedTo": null
+   }
+  ],
+  "question": "When does swim practice start for the under-10s?"
+ },
+ {
+  "id": "DEV-020",
+  "names": {
+   "u-yara": "Yara",
+   "u-zane": "Zane"
+  },
+  "messages": [
+   {
+    "id": "m1",
+    "author": "u-yara",
+    "minute": 0,
+    "text": "Team dinner is Thursday, kicking off at 7.",
+    "replyTo": null
+   },
+   {
+    "id": "m2",
+    "author": "u-zane",
+    "minute": 2,
+    "text": "Did we lock the restaurant already?",
+    "replyTo": "m1"
+   },
+   {
+    "id": "m3",
+    "author": "u-yara",
+    "minute": 6,
+    "text": "Not yet. Let's keep the dinner to about $20 each though, a few parents asked.",
+    "replyTo": "m2"
+   }
+  ],
+  "items": [
+   {
+    "mid": "m1",
+    "status": "ATTRIBUTED_STATEMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "team-dinner",
+    "subject": "Team dinner",
+    "predicate": "states",
+    "quote": "Team dinner is Thursday, kicking off at 7.",
+    "qualifiers": [],
+    "attributedTo": null
+   },
+   {
+    "mid": "m2",
+    "status": "DECISION",
+    "certainty": "ASSERTED",
+    "subjectId": "team-dinner",
+    "subject": "the restaurant",
+    "predicate": "decides",
+    "quote": "Did we lock the restaurant already?",
+    "qualifiers": [],
+    "attributedTo": null
+   },
+   {
+    "mid": "m3",
+    "status": "ATTRIBUTED_STATEMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "team-dinner",
+    "subject": "the dinner",
+    "predicate": "recommends",
+    "quote": "Let's keep the dinner to about $20 each though",
+    "qualifiers": [],
+    "attributedTo": null
+   }
+  ],
+  "question": "What time does the team dinner start on Thursday?"
+ },
+ {
+  "id": "DEV-021",
+  "names": {
+   "u-ben": "Ben",
+   "u-cara": "Cara"
+  },
+  "messages": [
+   {
+    "id": "m1",
+    "author": "u-ben",
+    "minute": 0,
+    "text": "Surprise party starts at 7 sharp in the church hall.",
+    "replyTo": null
+   },
+   {
+    "id": "m2",
+    "author": "u-cara",
+    "minute": 3,
+    "text": "If you need hands, I'll come early and do balloons.",
+    "replyTo": "m1"
+   },
+   {
+    "id": "m3",
+    "author": "u-ben",
+    "minute": 6,
+    "text": "Yes please. Setup for the party is from 5:30, side door will be open.",
+    "replyTo": "m2"
+   }
+  ],
+  "items": [
+   {
+    "mid": "m1",
+    "status": "ATTRIBUTED_STATEMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "surprise-party",
+    "subject": "Surprise party",
+    "predicate": "states",
+    "quote": "Surprise party starts at 7 sharp in the church hall.",
+    "qualifiers": [],
+    "attributedTo": null
+   },
+   {
+    "mid": "m2",
+    "status": "CONFIRMED_COMMITMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "surprise-party",
+    "subject": "Surprise party",
+    "predicate": "commits",
+    "quote": "I'll come early and do balloons.",
+    "qualifiers": [
+     {
+      "kind": "CONDITION",
+      "mid": "m2",
+      "quote": "If you need hands"
+     }
+    ],
+    "attributedTo": null
+   },
+   {
+    "mid": "m3",
+    "status": "ATTRIBUTED_STATEMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "surprise-party",
+    "subject": "the party",
+    "predicate": "states",
+    "quote": "Setup for the party is from 5:30, side door will be open.",
+    "qualifiers": [],
+    "attributedTo": null
+   }
+  ],
+  "question": "What time does the surprise party start?"
+ },
+ {
+  "id": "DEV-022",
+  "names": {
+   "u-eli": "Eli",
+   "u-fay": "Fay"
+  },
+  "messages": [
+   {
+    "id": "m1",
+    "author": "u-eli",
+    "minute": 0,
+    "text": "Book club this month is at my place, Sunday 3pm.",
+    "replyTo": null
+   },
+   {
+    "id": "m2",
+    "author": "u-fay",
+    "minute": 2,
+    "text": "Gus mentioned he's bringing the wine.",
+    "replyTo": "m1"
+   },
+   {
+    "id": "m3",
+    "author": "u-eli",
+    "minute": 5,
+    "text": "Book club pick is The Lantern Keeper, first twelve chapters.",
+    "replyTo": null
+   }
+  ],
+  "items": [
+   {
+    "mid": "m1",
+    "status": "ATTRIBUTED_STATEMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "book-club",
+    "subject": "Book club",
+    "predicate": "states",
+    "quote": "Book club this month is at my place, Sunday 3pm.",
+    "qualifiers": [
+     {
+      "kind": "TIME",
+      "mid": "m1",
+      "quote": "this month"
+     }
+    ],
+    "attributedTo": null
+   },
+   {
+    "mid": "m2",
+    "status": "CONFIRMED_COMMITMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "book-club-wine",
+    "subject": "the wine",
+    "predicate": "commits",
+    "quote": "he's bringing the wine.",
+    "qualifiers": [],
+    "attributedTo": null
+   },
+   {
+    "mid": "m3",
+    "status": "ATTRIBUTED_STATEMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "book-club",
+    "subject": "Book club",
+    "predicate": "states",
+    "quote": "Book club pick is The Lantern Keeper, first twelve chapters.",
+    "qualifiers": [],
+    "attributedTo": null
+   }
+  ],
+  "question": "Where and when is book club this month?"
+ },
+ {
+  "id": "DEV-023",
+  "names": {
+   "u-hana": "Hana",
+   "u-ivo": "Ivo"
+  },
+  "messages": [
+   {
+    "id": "m1",
+    "author": "u-hana",
+    "minute": 0,
+    "text": "Bake sale table needs to be up by 8 at the school gym.",
+    "replyTo": null
+   },
+   {
+    "id": "m2",
+    "author": "u-ivo",
+    "minute": 3,
+    "text": "I haven't agreed to run the cash box, just so we're clear.",
+    "replyTo": "m1"
+   },
+   {
+    "id": "m3",
+    "author": "u-hana",
+    "minute": 7,
+    "text": "Sale itself opens at 9 by the gym doors.",
+    "replyTo": null
+   }
+  ],
+  "items": [
+   {
+    "mid": "m1",
+    "status": "ATTRIBUTED_STATEMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "bake-sale",
+    "subject": "Bake sale table",
+    "predicate": "states",
+    "quote": "Bake sale table needs to be up by 8 at the school gym.",
+    "qualifiers": [],
+    "attributedTo": null
+   },
+   {
+    "mid": "m2",
+    "status": "CONFIRMED_COMMITMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "bake-sale-cash",
+    "subject": "the cash box",
+    "predicate": "commits",
+    "quote": "agreed to run the cash box",
+    "qualifiers": [],
+    "attributedTo": null
+   },
+   {
+    "mid": "m3",
+    "status": "ATTRIBUTED_STATEMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "bake-sale",
+    "subject": "Sale",
+    "predicate": "states",
+    "quote": "Sale itself opens at 9 by the gym doors.",
+    "qualifiers": [],
+    "attributedTo": null
+   }
+  ],
+  "question": "What time does the bake sale open?"
+ },
+ {
+  "id": "DEV-024",
+  "names": {
+   "u-jun": "Jun",
+   "u-kemi": "Kemi"
+  },
+  "messages": [
+   {
+    "id": "m1",
+    "author": "u-jun",
+    "minute": 0,
+    "text": "Field trip bus leaves at 8:00 from the front loop.",
+    "replyTo": null
+   },
+   {
+    "id": "m2",
+    "author": "u-kemi",
+    "minute": 3,
+    "text": "Decision for Saturday's away game: bus or carpool?",
+    "replyTo": null
+   },
+   {
+    "id": "m3",
+    "author": "u-jun",
+    "minute": 7,
+    "text": "The away-game bus would be the club minibus at 10:30.",
+    "replyTo": "m2"
+   }
+  ],
+  "items": [
+   {
+    "mid": "m1",
+    "status": "ATTRIBUTED_STATEMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "bus",
+    "subject": "Field trip bus",
+    "predicate": "states",
+    "quote": "Field trip bus leaves at 8:00 from the front loop.",
+    "qualifiers": [],
+    "attributedTo": null
+   },
+   {
+    "mid": "m2",
+    "status": "DECISION",
+    "certainty": "ASSERTED",
+    "subjectId": "bus",
+    "subject": "bus",
+    "predicate": "decides",
+    "quote": "Decision for Saturday's away game: bus or carpool?",
+    "qualifiers": [],
+    "attributedTo": null
+   },
+   {
+    "mid": "m3",
+    "status": "ATTRIBUTED_STATEMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "bus",
+    "subject": "away-game bus",
+    "predicate": "states",
+    "quote": "The away-game bus would be the club minibus at 10:30.",
+    "qualifiers": [],
+    "attributedTo": null
+   }
+  ],
+  "question": "When does the field trip bus leave?"
+ },
+ {
+  "id": "DEV-025",
+  "names": {
+   "u-mara": "Mara",
+   "u-nico": "Nico"
+  },
+  "messages": [
+   {
+    "id": "m1",
+    "author": "u-mara",
+    "minute": 0,
+    "text": "Leo's cake is chocolate, picking it up Friday.",
+    "replyTo": null
+   },
+   {
+    "id": "m2",
+    "author": "u-nico",
+    "minute": 2,
+    "text": "I'll make the frosting, probably, if I find the piping bags.",
+    "replyTo": "m1"
+   },
+   {
+    "id": "m3",
+    "author": "u-mara",
+    "minute": 6,
+    "text": "And the cake for Grandpa Sol's 80th is lemon, from the same bakery.",
+    "replyTo": null
+   }
+  ],
+  "items": [
+   {
+    "mid": "m1",
+    "status": "ATTRIBUTED_STATEMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "cake",
+    "subject": "Leo's cake",
+    "predicate": "states",
+    "quote": "Leo's cake is chocolate, picking it up Friday.",
+    "qualifiers": [],
+    "attributedTo": null
+   },
+   {
+    "mid": "m2",
+    "status": "CONFIRMED_COMMITMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "cake",
+    "subject": "the frosting",
+    "predicate": "commits",
+    "quote": "I'll make the frosting",
+    "qualifiers": [],
+    "attributedTo": null
+   },
+   {
+    "mid": "m3",
+    "status": "ATTRIBUTED_STATEMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "cake",
+    "subject": "the cake",
+    "predicate": "states",
+    "quote": "the cake for Grandpa Sol's 80th is lemon, from the same bakery.",
+    "qualifiers": [],
+    "attributedTo": null
+   }
+  ],
+  "question": "What flavour is Leo's cake?"
+ },
+ {
+  "id": "DEV-026",
+  "names": {
+   "u-omar": "Omar",
+   "u-pia": "Pia"
+  },
+  "messages": [
+   {
+    "id": "m1",
+    "author": "u-omar",
+    "minute": 0,
+    "text": "Tent for the camping trip: I'm bringing my 6-person dome.",
+    "replyTo": null
+   },
+   {
+    "id": "m2",
+    "author": "u-pia",
+    "minute": 3,
+    "text": "I haven't booked the food tent for the fair yet.",
+    "replyTo": null
+   },
+   {
+    "id": "m3",
+    "author": "u-omar",
+    "minute": 8,
+    "text": "Separate thing: the fair tent is the blue gazebo, it's in the shed.",
+    "replyTo": "m2"
+   }
+  ],
+  "items": [
+   {
+    "mid": "m1",
+    "status": "CONFIRMED_COMMITMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "tent",
+    "subject": "Tent",
+    "predicate": "commits",
+    "quote": "I'm bringing my 6-person dome.",
+    "qualifiers": [],
+    "attributedTo": null
+   },
+   {
+    "mid": "m2",
+    "status": "DECISION",
+    "certainty": "ASSERTED",
+    "subjectId": "tent",
+    "subject": "the food tent",
+    "predicate": "decides",
+    "quote": "booked the food tent for the fair",
+    "qualifiers": [],
+    "attributedTo": null
+   },
+   {
+    "mid": "m3",
+    "status": "ATTRIBUTED_STATEMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "tent",
+    "subject": "the fair tent",
+    "predicate": "states",
+    "quote": "the fair tent is the blue gazebo, it's in the shed.",
+    "qualifiers": [],
+    "attributedTo": null
+   }
+  ],
+  "question": "Which tent is Omar bringing on the camping trip?"
+ },
+ {
+  "id": "DEV-027",
+  "names": {
+   "u-quinn": "Quinn",
+   "u-rosa": "Rosa"
+  },
+  "messages": [
+   {
+    "id": "m1",
+    "author": "u-quinn",
+    "minute": 0,
+    "text": "Reunion deposit is due Friday, I'll front it.",
+    "replyTo": null
+   },
+   {
+    "id": "m2",
+    "author": "u-rosa",
+    "minute": 3,
+    "text": "Decision: lake house or cabins for the reunion?",
+    "replyTo": "m1"
+   },
+   {
+    "id": "m3",
+    "author": "u-quinn",
+    "minute": 7,
+    "text": "We're taking the cabins, booked for the 3rd to the 5th.",
+    "replyTo": "m2"
+   }
+  ],
+  "items": [
+   {
+    "mid": "m1",
+    "status": "CONFIRMED_COMMITMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "reunion",
+    "subject": "Reunion deposit",
+    "predicate": "commits",
+    "quote": "Reunion deposit is due Friday, I'll front it.",
+    "qualifiers": [],
+    "attributedTo": null
+   },
+   {
+    "mid": "m2",
+    "status": "DECISION",
+    "certainty": "ASSERTED",
+    "subjectId": "reunion",
+    "subject": "the reunion",
+    "predicate": "decides",
+    "quote": "Decision: lake house or cabins for the reunion?",
+    "qualifiers": [],
+    "attributedTo": null
+   },
+   {
+    "mid": "m3",
+    "status": "DECISION",
+    "certainty": "ASSERTED",
+    "subjectId": "reunion",
+    "subject": "the cabins",
+    "predicate": "decides",
+    "quote": "We're taking the cabins, booked for the 3rd to the 5th.",
+    "qualifiers": [],
+    "attributedTo": null
+   }
+  ],
+  "question": "Where is the reunion staying?"
+ },
+ {
+  "id": "DEV-028",
+  "names": {
+   "u-uri": "Uri",
+   "u-tova": "Tova"
+  },
+  "messages": [
+   {
+    "id": "m1",
+    "author": "u-uri",
+    "minute": 0,
+    "text": "Moving day is Saturday at 9, starting from the old flat.",
+    "replyTo": null
+   },
+   {
+    "id": "m2",
+    "author": "u-tova",
+    "minute": 3,
+    "text": "Count me in, I'll be there at 9 with my brother's trailer.",
+    "replyTo": "m1"
+   },
+   {
+    "id": "m3",
+    "author": "u-tova",
+    "minute": 5,
+    "text": "And I'll stay till the last box is up, no matter how long.",
+    "replyTo": "m1"
+   }
+  ],
+  "items": [
+   {
+    "mid": "m1",
+    "status": "ATTRIBUTED_STATEMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "moving-day",
+    "subject": "Moving day",
+    "predicate": "states",
+    "quote": "Moving day is Saturday at 9, starting from the old flat.",
+    "qualifiers": [],
+    "attributedTo": null
+   },
+   {
+    "mid": "m2",
+    "status": "CONFIRMED_COMMITMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "moving-day",
+    "subject": "Moving day",
+    "predicate": "commits",
+    "quote": "Count me in, I'll be there at 9 with my brother's trailer.",
+    "qualifiers": [],
+    "attributedTo": null
+   },
+   {
+    "mid": "m3",
+    "status": "CONFIRMED_COMMITMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "moving-day",
+    "subject": "Moving day",
+    "predicate": "commits",
+    "quote": "I'll stay till the last box is up, no matter how long.",
+    "qualifiers": [],
+    "attributedTo": null
+   }
+  ],
+  "question": "Is Tova helping on moving day, and with what?"
+ },
+ {
+  "id": "DEV-029",
+  "names": {
+   "u-wes": "Wes",
+   "u-yara": "Yara"
+  },
+  "messages": [
+   {
+    "id": "m1",
+    "author": "u-wes",
+    "minute": 0,
+    "text": "Kids' soccer practice Tuesday is at the north pitch, 4:30.",
+    "replyTo": null
+   },
+   {
+    "id": "m2",
+    "author": "u-yara",
+    "minute": 2,
+    "text": "I can't get there before 5 on Tuesdays.",
+    "replyTo": "m1"
+   },
+   {
+    "id": "m3",
+    "author": "u-wes",
+    "minute": 4,
+    "text": "No stress, I'm happy to bring Ella to practice with me if you want.",
+    "replyTo": "m2"
+   }
+  ],
+  "items": [
+   {
+    "mid": "m1",
+    "status": "ATTRIBUTED_STATEMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "soccer-practice",
+    "subject": "Kids' soccer practice",
+    "predicate": "states",
+    "quote": "Kids' soccer practice Tuesday is at the north pitch, 4:30.",
+    "qualifiers": [],
+    "attributedTo": null
+   },
+   {
+    "mid": "m3",
+    "status": "OFFER",
+    "certainty": "ASSERTED",
+    "subjectId": "soccer-practice",
+    "subject": "practice",
+    "predicate": "offers",
+    "quote": "I'm happy to bring Ella to practice with me if you want.",
+    "qualifiers": [],
+    "attributedTo": null
+   }
+  ],
+  "question": "How is Ella getting to Tuesday's practice?"
+ },
+ {
+  "id": "DEV-030",
+  "names": {
+   "u-ana": "Ana",
+   "u-zane": "Zane"
+  },
+  "messages": [
+   {
+    "id": "m1",
+    "author": "u-ana",
+    "minute": 0,
+    "text": "Potluck is at my place on the 12th, 6pm.",
+    "replyTo": null
+   },
+   {
+    "id": "m2",
+    "author": "u-zane",
+    "minute": 3,
+    "text": "Theme idea: dishes from your grandparents?",
+    "replyTo": "m1"
+   },
+   {
+    "id": "m3",
+    "author": "u-ana",
+    "minute": 5,
+    "text": "Love that. Decided: the theme is grandparents' dishes.",
+    "replyTo": "m2"
+   }
+  ],
+  "items": [
+   {
+    "mid": "m1",
+    "status": "ATTRIBUTED_STATEMENT",
+    "certainty": "ASSERTED",
+    "subjectId": "potluck",
+    "subject": "Potluck",
+    "predicate": "states",
+    "quote": "Potluck is at my place on the 12th, 6pm.",
+    "qualifiers": [],
+    "attributedTo": null
+   },
+   {
+    "mid": "m2",
+    "status": "QUESTION",
+    "certainty": "ASSERTED",
+    "subjectId": "potluck",
+    "subject": "Theme",
+    "predicate": "asks",
+    "quote": "Theme idea: dishes from your grandparents?",
+    "qualifiers": [],
+    "attributedTo": null
+   },
+   {
+    "mid": "m3",
+    "status": "DECISION",
+    "certainty": "ASSERTED",
+    "subjectId": "potluck",
+    "subject": "the theme",
+    "predicate": "decides",
+    "quote": "Decided: the theme is grandparents' dishes.",
+    "qualifiers": [],
+    "attributedTo": null
+   }
+  ],
+  "question": "What is the potluck theme?"
+ }
+]

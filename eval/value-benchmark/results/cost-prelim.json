@@ -1,0 +1,1626 @@
+{
+  "title" : "TASK-039 preliminary cost analysis (offline)",
+  "status" : "ESTIMATED - no answer call measured. Extraction figures come from one live call (n=1).",
+  "not_a_result" : "No per-question answer cost, quality or CPCA has been measured. Nothing here says which arm costs less in practice.",
+  "prices" : {
+    "in_per_million" : 1.25,
+    "out_per_million" : 4.25,
+    "cached_in_per_million" : null,
+    "source" : "user-supplied, unverified"
+  },
+  "input_sha256" : {
+    "results/stage0-contexts-dev.jsonl" : "1156ee983cd400d61e8ecf3d7963404b6027da33a3fa0f127524e0cec34d61fd",
+    "results/stage0-retrieval-dev.json" : "c085b408f5903f6f7cf7445a4ea046b7e31749c78c263561241de10c71389752",
+    "usage/recorded-usage.jsonl" : "1f2d4371bffa10fbba61774dc26d1aaa7116f9e492d244382864cf61d5bd9431",
+    "usage/unledgered-usage.jsonl" : "be42d6d4e68a006d825052bf13138f52f7e2af2343dc6cc843489f6aa5914f64"
+  },
+  "stage0_contexts_reproduced_from_corpora" : 140,
+  "measured_extraction" : {
+    "run5_prompt_tokens" : {
+      "value" : 924,
+      "provenance" : "MEASURED"
+    },
+    "run5_completion_tokens" : {
+      "value" : 2846,
+      "provenance" : "MEASURED"
+    },
+    "run5_reasoning_tokens" : {
+      "value" : 2218,
+      "provenance" : "MEASURED"
+    },
+    "run5_visible_tokens" : {
+      "value" : 628,
+      "provenance" : "MEASURED"
+    },
+    "run5_cost_usd" : {
+      "value" : 0.0132505,
+      "provenance" : "MEASURED"
+    },
+    "run5_worst_case_usd" : {
+      "value" : 0.018563,
+      "provenance" : "MEASURED"
+    },
+    "run5_latency_ms" : {
+      "value" : 9884,
+      "provenance" : "MEASURED"
+    },
+    "run5_reasoning_share_of_cost" : {
+      "value" : 0.711407,
+      "provenance" : "MEASURED"
+    },
+    "run5_output_share_of_cost" : {
+      "value" : 0.912833,
+      "provenance" : "MEASURED"
+    },
+    "c_x_usd_per_message" : {
+      "value" : 0.00132505,
+      "provenance" : "MEASURED"
+    },
+    "c_x_note" : "n=1, b=10, one synthetic corpus; derived from a single call, no variance",
+    "c_x_scenario_band_usd" : {
+      "lo" : 0.00066253,
+      "hi" : 0.0026501,
+      "provenance" : "ESTIMATED"
+    },
+    "run4_cost_usd_zero_usable_output" : {
+      "value" : 0.018563,
+      "provenance" : "MEASURED"
+    },
+    "run4_finish_reason" : "length",
+    "truncation_inflation_per_batch_usd" : {
+      "f=0.05" : {
+        "value" : 0.000977,
+        "provenance" : "ESTIMATED"
+      },
+      "f=0.1" : {
+        "value" : 0.00206256,
+        "provenance" : "ESTIMATED"
+      },
+      "f=0.2" : {
+        "value" : 0.00464075,
+        "provenance" : "ESTIMATED"
+      }
+    }
+  },
+  "measured_ledger" : {
+    "extraction_usd" : {
+      "value" : 0.0318135,
+      "provenance" : "MEASURED"
+    },
+    "connectivity_usd" : {
+      "value" : 0.0008785,
+      "provenance" : "MEASURED"
+    },
+    "total_usd" : {
+      "value" : 0.032692,
+      "provenance" : "MEASURED"
+    },
+    "records" : 4,
+    "note" : "Runs 2-5 only, matching the tasks.md cost ledger. Run 1 has no recorded usage and is omitted."
+  },
+  "unledgered_measured_call" : {
+    "file" : "usage/unledgered-usage.jsonl",
+    "call_kind" : "CONNECTIVITY",
+    "max_completion_tokens" : {
+      "value" : 1024,
+      "provenance" : "MEASURED"
+    },
+    "prompt_tokens" : {
+      "value" : 25,
+      "provenance" : "MEASURED"
+    },
+    "completion_tokens" : {
+      "value" : 101,
+      "provenance" : "MEASURED"
+    },
+    "cost_usd" : {
+      "value" : 0.0004605,
+      "provenance" : "MEASURED"
+    },
+    "note" : "A real connectivity call recorded in the dita-muse connectivity report but absent from the tasks.md cost ledger. Kept separate so the ledger file matches the ledger; not added to the ledger total."
+  },
+  "fixed_prompt_S" : {
+    "chars" : {
+      "value" : 2278,
+      "provenance" : "MEASURED_OFFLINE"
+    },
+    "prose_chars" : {
+      "value" : 1470,
+      "provenance" : "MEASURED_OFFLINE"
+    },
+    "schema_chars" : {
+      "value" : 808,
+      "provenance" : "MEASURED_OFFLINE"
+    },
+    "tokens" : {
+      "lo" : 528.6667,
+      "hi" : 689.3333,
+      "provenance" : "ESTIMATED"
+    }
+  },
+  "extraction_E0" : [ {
+    "corpus" : "parents-b",
+    "messages" : 25,
+    "batches_b10" : 3,
+    "e0_usd" : {
+      "value" : 0.039174,
+      "provenance" : "ESTIMATED"
+    },
+    "e0_band_usd" : {
+      "lo" : 0.019587,
+      "hi" : 0.078348,
+      "provenance" : "ESTIMATED"
+    },
+    "e0_usd_at_f_0_2" : {
+      "value" : 0.0529519,
+      "provenance" : "ESTIMATED"
+    },
+    "delta_req_usd_per_question" : {
+      "Q=1" : {
+        "central" : {
+          "value" : 0.039174,
+          "provenance" : "ESTIMATED"
+        },
+        "band" : {
+          "lo" : 0.019587,
+          "hi" : 0.078348,
+          "provenance" : "ESTIMATED"
+        }
+      },
+      "Q=5" : {
+        "central" : {
+          "value" : 0.0078348,
+          "provenance" : "ESTIMATED"
+        },
+        "band" : {
+          "lo" : 0.0039174,
+          "hi" : 0.0156696,
+          "provenance" : "ESTIMATED"
+        }
+      },
+      "Q=10" : {
+        "central" : {
+          "value" : 0.0039174,
+          "provenance" : "ESTIMATED"
+        },
+        "band" : {
+          "lo" : 0.0019587,
+          "hi" : 0.0078348,
+          "provenance" : "ESTIMATED"
+        }
+      },
+      "Q=25" : {
+        "central" : {
+          "value" : 0.00156696,
+          "provenance" : "ESTIMATED"
+        },
+        "band" : {
+          "lo" : 0.00078348,
+          "hi" : 0.00313392,
+          "provenance" : "ESTIMATED"
+        }
+      },
+      "Q=50" : {
+        "central" : {
+          "value" : 0.00078348,
+          "provenance" : "ESTIMATED"
+        },
+        "band" : {
+          "lo" : 0.00039174,
+          "hi" : 0.00156696,
+          "provenance" : "ESTIMATED"
+        }
+      },
+      "Q=100" : {
+        "central" : {
+          "value" : 0.00039174,
+          "provenance" : "ESTIMATED"
+        },
+        "band" : {
+          "lo" : 0.00019587,
+          "hi" : 0.00078348,
+          "provenance" : "ESTIMATED"
+        }
+      }
+    }
+  }, {
+    "corpus" : "building-he",
+    "messages" : 42,
+    "batches_b10" : 5,
+    "e0_usd" : {
+      "value" : 0.0653285,
+      "provenance" : "ESTIMATED"
+    },
+    "e0_band_usd" : {
+      "lo" : 0.0326643,
+      "hi" : 0.130657,
+      "provenance" : "ESTIMATED"
+    },
+    "e0_usd_at_f_0_2" : {
+      "value" : 0.0883013,
+      "provenance" : "ESTIMATED"
+    },
+    "delta_req_usd_per_question" : {
+      "Q=1" : {
+        "central" : {
+          "value" : 0.0653285,
+          "provenance" : "ESTIMATED"
+        },
+        "band" : {
+          "lo" : 0.0326643,
+          "hi" : 0.130657,
+          "provenance" : "ESTIMATED"
+        }
+      },
+      "Q=5" : {
+        "central" : {
+          "value" : 0.0130657,
+          "provenance" : "ESTIMATED"
+        },
+        "band" : {
+          "lo" : 0.00653285,
+          "hi" : 0.0261314,
+          "provenance" : "ESTIMATED"
+        }
+      },
+      "Q=10" : {
+        "central" : {
+          "value" : 0.00653285,
+          "provenance" : "ESTIMATED"
+        },
+        "band" : {
+          "lo" : 0.00326643,
+          "hi" : 0.0130657,
+          "provenance" : "ESTIMATED"
+        }
+      },
+      "Q=25" : {
+        "central" : {
+          "value" : 0.00261314,
+          "provenance" : "ESTIMATED"
+        },
+        "band" : {
+          "lo" : 0.00130657,
+          "hi" : 0.00522628,
+          "provenance" : "ESTIMATED"
+        }
+      },
+      "Q=50" : {
+        "central" : {
+          "value" : 0.00130657,
+          "provenance" : "ESTIMATED"
+        },
+        "band" : {
+          "lo" : 0.00065329,
+          "hi" : 0.00261314,
+          "provenance" : "ESTIMATED"
+        }
+      },
+      "Q=100" : {
+        "central" : {
+          "value" : 0.00065329,
+          "provenance" : "ESTIMATED"
+        },
+        "band" : {
+          "lo" : 0.00032664,
+          "hi" : 0.00130657,
+          "provenance" : "ESTIMATED"
+        }
+      }
+    }
+  }, {
+    "corpus" : "club-mixed",
+    "messages" : 42,
+    "batches_b10" : 5,
+    "e0_usd" : {
+      "value" : 0.0653285,
+      "provenance" : "ESTIMATED"
+    },
+    "e0_band_usd" : {
+      "lo" : 0.0326643,
+      "hi" : 0.130657,
+      "provenance" : "ESTIMATED"
+    },
+    "e0_usd_at_f_0_2" : {
+      "value" : 0.0883013,
+      "provenance" : "ESTIMATED"
+    },
+    "delta_req_usd_per_question" : {
+      "Q=1" : {
+        "central" : {
+          "value" : 0.0653285,
+          "provenance" : "ESTIMATED"
+        },
+        "band" : {
+          "lo" : 0.0326643,
+          "hi" : 0.130657,
+          "provenance" : "ESTIMATED"
+        }
+      },
+      "Q=5" : {
+        "central" : {
+          "value" : 0.0130657,
+          "provenance" : "ESTIMATED"
+        },
+        "band" : {
+          "lo" : 0.00653285,
+          "hi" : 0.0261314,
+          "provenance" : "ESTIMATED"
+        }
+      },
+      "Q=10" : {
+        "central" : {
+          "value" : 0.00653285,
+          "provenance" : "ESTIMATED"
+        },
+        "band" : {
+          "lo" : 0.00326643,
+          "hi" : 0.0130657,
+          "provenance" : "ESTIMATED"
+        }
+      },
+      "Q=25" : {
+        "central" : {
+          "value" : 0.00261314,
+          "provenance" : "ESTIMATED"
+        },
+        "band" : {
+          "lo" : 0.00130657,
+          "hi" : 0.00522628,
+          "provenance" : "ESTIMATED"
+        }
+      },
+      "Q=50" : {
+        "central" : {
+          "value" : 0.00130657,
+          "provenance" : "ESTIMATED"
+        },
+        "band" : {
+          "lo" : 0.00065329,
+          "hi" : 0.00261314,
+          "provenance" : "ESTIMATED"
+        }
+      },
+      "Q=100" : {
+        "central" : {
+          "value" : 0.00065329,
+          "provenance" : "ESTIMATED"
+        },
+        "band" : {
+          "lo" : 0.00032664,
+          "hi" : 0.00130657,
+          "provenance" : "ESTIMATED"
+        }
+      }
+    }
+  }, {
+    "corpus" : "family-en",
+    "messages" : 42,
+    "batches_b10" : 5,
+    "e0_usd" : {
+      "value" : 0.0653285,
+      "provenance" : "ESTIMATED"
+    },
+    "e0_band_usd" : {
+      "lo" : 0.0326643,
+      "hi" : 0.130657,
+      "provenance" : "ESTIMATED"
+    },
+    "e0_usd_at_f_0_2" : {
+      "value" : 0.0883013,
+      "provenance" : "ESTIMATED"
+    },
+    "delta_req_usd_per_question" : {
+      "Q=1" : {
+        "central" : {
+          "value" : 0.0653285,
+          "provenance" : "ESTIMATED"
+        },
+        "band" : {
+          "lo" : 0.0326643,
+          "hi" : 0.130657,
+          "provenance" : "ESTIMATED"
+        }
+      },
+      "Q=5" : {
+        "central" : {
+          "value" : 0.0130657,
+          "provenance" : "ESTIMATED"
+        },
+        "band" : {
+          "lo" : 0.00653285,
+          "hi" : 0.0261314,
+          "provenance" : "ESTIMATED"
+        }
+      },
+      "Q=10" : {
+        "central" : {
+          "value" : 0.00653285,
+          "provenance" : "ESTIMATED"
+        },
+        "band" : {
+          "lo" : 0.00326643,
+          "hi" : 0.0130657,
+          "provenance" : "ESTIMATED"
+        }
+      },
+      "Q=25" : {
+        "central" : {
+          "value" : 0.00261314,
+          "provenance" : "ESTIMATED"
+        },
+        "band" : {
+          "lo" : 0.00130657,
+          "hi" : 0.00522628,
+          "provenance" : "ESTIMATED"
+        }
+      },
+      "Q=50" : {
+        "central" : {
+          "value" : 0.00130657,
+          "provenance" : "ESTIMATED"
+        },
+        "band" : {
+          "lo" : 0.00065329,
+          "hi" : 0.00261314,
+          "provenance" : "ESTIMATED"
+        }
+      },
+      "Q=100" : {
+        "central" : {
+          "value" : 0.00065329,
+          "provenance" : "ESTIMATED"
+        },
+        "band" : {
+          "lo" : 0.00032664,
+          "hi" : 0.00130657,
+          "provenance" : "ESTIMATED"
+        }
+      }
+    }
+  }, {
+    "corpus" : "dev corpora total (4 groups)",
+    "messages" : 151,
+    "batches_b10" : 18,
+    "e0_usd" : {
+      "value" : 0.23516,
+      "provenance" : "ESTIMATED"
+    },
+    "e0_band_usd" : {
+      "lo" : 0.11758,
+      "hi" : 0.470319,
+      "provenance" : "ESTIMATED"
+    },
+    "e0_usd_at_f_0_2" : {
+      "value" : 0.317856,
+      "provenance" : "ESTIMATED"
+    },
+    "delta_req_usd_per_question" : {
+      "Q=1" : {
+        "central" : {
+          "value" : 0.23516,
+          "provenance" : "ESTIMATED"
+        },
+        "band" : {
+          "lo" : 0.11758,
+          "hi" : 0.470319,
+          "provenance" : "ESTIMATED"
+        }
+      },
+      "Q=5" : {
+        "central" : {
+          "value" : 0.0470319,
+          "provenance" : "ESTIMATED"
+        },
+        "band" : {
+          "lo" : 0.023516,
+          "hi" : 0.0940638,
+          "provenance" : "ESTIMATED"
+        }
+      },
+      "Q=10" : {
+        "central" : {
+          "value" : 0.023516,
+          "provenance" : "ESTIMATED"
+        },
+        "band" : {
+          "lo" : 0.011758,
+          "hi" : 0.0470319,
+          "provenance" : "ESTIMATED"
+        }
+      },
+      "Q=25" : {
+        "central" : {
+          "value" : 0.00940638,
+          "provenance" : "ESTIMATED"
+        },
+        "band" : {
+          "lo" : 0.00470319,
+          "hi" : 0.0188128,
+          "provenance" : "ESTIMATED"
+        }
+      },
+      "Q=50" : {
+        "central" : {
+          "value" : 0.00470319,
+          "provenance" : "ESTIMATED"
+        },
+        "band" : {
+          "lo" : 0.0023516,
+          "hi" : 0.00940638,
+          "provenance" : "ESTIMATED"
+        }
+      },
+      "Q=100" : {
+        "central" : {
+          "value" : 0.0023516,
+          "provenance" : "ESTIMATED"
+        },
+        "band" : {
+          "lo" : 0.0011758,
+          "hi" : 0.00470319,
+          "provenance" : "ESTIMATED"
+        }
+      }
+    }
+  }, {
+    "corpus" : "scenario 60 msgs (Stage 1c)",
+    "messages" : 60,
+    "batches_b10" : 6,
+    "e0_usd" : {
+      "value" : 0.079503,
+      "provenance" : "ESTIMATED"
+    },
+    "e0_band_usd" : {
+      "lo" : 0.0397515,
+      "hi" : 0.159006,
+      "provenance" : "ESTIMATED"
+    },
+    "e0_usd_at_f_0_2" : {
+      "value" : 0.107348,
+      "provenance" : "ESTIMATED"
+    },
+    "delta_req_usd_per_question" : {
+      "Q=1" : {
+        "central" : {
+          "value" : 0.079503,
+          "provenance" : "ESTIMATED"
+        },
+        "band" : {
+          "lo" : 0.0397515,
+          "hi" : 0.159006,
+          "provenance" : "ESTIMATED"
+        }
+      },
+      "Q=5" : {
+        "central" : {
+          "value" : 0.0159006,
+          "provenance" : "ESTIMATED"
+        },
+        "band" : {
+          "lo" : 0.0079503,
+          "hi" : 0.0318012,
+          "provenance" : "ESTIMATED"
+        }
+      },
+      "Q=10" : {
+        "central" : {
+          "value" : 0.0079503,
+          "provenance" : "ESTIMATED"
+        },
+        "band" : {
+          "lo" : 0.00397515,
+          "hi" : 0.0159006,
+          "provenance" : "ESTIMATED"
+        }
+      },
+      "Q=25" : {
+        "central" : {
+          "value" : 0.00318012,
+          "provenance" : "ESTIMATED"
+        },
+        "band" : {
+          "lo" : 0.00159006,
+          "hi" : 0.00636024,
+          "provenance" : "ESTIMATED"
+        }
+      },
+      "Q=50" : {
+        "central" : {
+          "value" : 0.00159006,
+          "provenance" : "ESTIMATED"
+        },
+        "band" : {
+          "lo" : 0.00079503,
+          "hi" : 0.00318012,
+          "provenance" : "ESTIMATED"
+        }
+      },
+      "Q=100" : {
+        "central" : {
+          "value" : 0.00079503,
+          "provenance" : "ESTIMATED"
+        },
+        "band" : {
+          "lo" : 0.00039752,
+          "hi" : 0.00159006,
+          "provenance" : "ESTIMATED"
+        }
+      }
+    }
+  }, {
+    "corpus" : "scenario 100 msgs",
+    "messages" : 100,
+    "batches_b10" : 10,
+    "e0_usd" : {
+      "value" : 0.132505,
+      "provenance" : "ESTIMATED"
+    },
+    "e0_band_usd" : {
+      "lo" : 0.0662525,
+      "hi" : 0.26501,
+      "provenance" : "ESTIMATED"
+    },
+    "e0_usd_at_f_0_2" : {
+      "value" : 0.178913,
+      "provenance" : "ESTIMATED"
+    },
+    "delta_req_usd_per_question" : {
+      "Q=1" : {
+        "central" : {
+          "value" : 0.132505,
+          "provenance" : "ESTIMATED"
+        },
+        "band" : {
+          "lo" : 0.0662525,
+          "hi" : 0.26501,
+          "provenance" : "ESTIMATED"
+        }
+      },
+      "Q=5" : {
+        "central" : {
+          "value" : 0.026501,
+          "provenance" : "ESTIMATED"
+        },
+        "band" : {
+          "lo" : 0.0132505,
+          "hi" : 0.053002,
+          "provenance" : "ESTIMATED"
+        }
+      },
+      "Q=10" : {
+        "central" : {
+          "value" : 0.0132505,
+          "provenance" : "ESTIMATED"
+        },
+        "band" : {
+          "lo" : 0.00662525,
+          "hi" : 0.026501,
+          "provenance" : "ESTIMATED"
+        }
+      },
+      "Q=25" : {
+        "central" : {
+          "value" : 0.0053002,
+          "provenance" : "ESTIMATED"
+        },
+        "band" : {
+          "lo" : 0.0026501,
+          "hi" : 0.0106004,
+          "provenance" : "ESTIMATED"
+        }
+      },
+      "Q=50" : {
+        "central" : {
+          "value" : 0.0026501,
+          "provenance" : "ESTIMATED"
+        },
+        "band" : {
+          "lo" : 0.00132505,
+          "hi" : 0.0053002,
+          "provenance" : "ESTIMATED"
+        }
+      },
+      "Q=100" : {
+        "central" : {
+          "value" : 0.00132505,
+          "provenance" : "ESTIMATED"
+        },
+        "band" : {
+          "lo" : 0.00066253,
+          "hi" : 0.0026501,
+          "provenance" : "ESTIMATED"
+        }
+      }
+    }
+  }, {
+    "corpus" : "scenario 3000 msgs (large regime)",
+    "messages" : 3000,
+    "batches_b10" : 300,
+    "e0_usd" : {
+      "value" : 3.9751,
+      "provenance" : "ESTIMATED"
+    },
+    "e0_band_usd" : {
+      "lo" : 1.9876,
+      "hi" : 7.9503,
+      "provenance" : "ESTIMATED"
+    },
+    "e0_usd_at_f_0_2" : {
+      "value" : 5.3674,
+      "provenance" : "ESTIMATED"
+    },
+    "delta_req_usd_per_question" : {
+      "Q=1" : {
+        "central" : {
+          "value" : 3.9751,
+          "provenance" : "ESTIMATED"
+        },
+        "band" : {
+          "lo" : 1.9876,
+          "hi" : 7.9503,
+          "provenance" : "ESTIMATED"
+        }
+      },
+      "Q=5" : {
+        "central" : {
+          "value" : 0.79503,
+          "provenance" : "ESTIMATED"
+        },
+        "band" : {
+          "lo" : 0.397515,
+          "hi" : 1.5901,
+          "provenance" : "ESTIMATED"
+        }
+      },
+      "Q=10" : {
+        "central" : {
+          "value" : 0.397515,
+          "provenance" : "ESTIMATED"
+        },
+        "band" : {
+          "lo" : 0.198757,
+          "hi" : 0.79503,
+          "provenance" : "ESTIMATED"
+        }
+      },
+      "Q=25" : {
+        "central" : {
+          "value" : 0.159006,
+          "provenance" : "ESTIMATED"
+        },
+        "band" : {
+          "lo" : 0.079503,
+          "hi" : 0.318012,
+          "provenance" : "ESTIMATED"
+        }
+      },
+      "Q=50" : {
+        "central" : {
+          "value" : 0.079503,
+          "provenance" : "ESTIMATED"
+        },
+        "band" : {
+          "lo" : 0.0397515,
+          "hi" : 0.159006,
+          "provenance" : "ESTIMATED"
+        }
+      },
+      "Q=100" : {
+        "central" : {
+          "value" : 0.0397515,
+          "provenance" : "ESTIMATED"
+        },
+        "band" : {
+          "lo" : 0.0198757,
+          "hi" : 0.079503,
+          "provenance" : "ESTIMATED"
+        }
+      }
+    }
+  } ],
+  "maintenance_M" : "0 in this preliminary analysis (static corpus); the calculator supports new/correction/edit/deletion events",
+  "estimated_input_per_question" : {
+    "A-full" : {
+      "n" : 35,
+      "context_chars_mean" : {
+        "value" : 6613.4,
+        "provenance" : "MEASURED_OFFLINE"
+      },
+      "context_hebrew_share_mean" : {
+        "value" : 0.261243,
+        "provenance" : "MEASURED_OFFLINE"
+      },
+      "context_tokens" : {
+        "lo" : 1653.446,
+        "hi" : 2288.3048,
+        "provenance" : "ESTIMATED"
+      },
+      "input_tokens_incl_S_and_question" : {
+        "lo" : 2196.2746,
+        "hi" : 2998.3429,
+        "provenance" : "ESTIMATED"
+      },
+      "input_usd" : {
+        "lo" : 0.00274534,
+        "hi" : 0.00374793,
+        "provenance" : "ESTIMATED"
+      }
+    },
+    "A-budget" : {
+      "n" : 35,
+      "context_chars_mean" : {
+        "value" : 3903.9714,
+        "provenance" : "MEASURED_OFFLINE"
+      },
+      "context_hebrew_share_mean" : {
+        "value" : 0.228091,
+        "provenance" : "MEASURED_OFFLINE"
+      },
+      "context_tokens" : {
+        "lo" : 971.573,
+        "hi" : 1334.3347,
+        "provenance" : "ESTIMATED"
+      },
+      "input_tokens_incl_S_and_question" : {
+        "lo" : 1514.4016,
+        "hi" : 2044.3728,
+        "provenance" : "ESTIMATED"
+      },
+      "input_usd" : {
+        "lo" : 0.001893,
+        "hi" : 0.00255547,
+        "provenance" : "ESTIMATED"
+      }
+    },
+    "B-weak control" : {
+      "n" : 35,
+      "context_chars_mean" : {
+        "value" : 3779.3143,
+        "provenance" : "MEASURED_OFFLINE"
+      },
+      "context_hebrew_share_mean" : {
+        "value" : 0.259443,
+        "provenance" : "MEASURED_OFFLINE"
+      },
+      "context_tokens" : {
+        "lo" : 943.7444,
+        "hi" : 1304.5415,
+        "provenance" : "ESTIMATED"
+      },
+      "input_tokens_incl_S_and_question" : {
+        "lo" : 1486.573,
+        "hi" : 2014.5796,
+        "provenance" : "ESTIMATED"
+      },
+      "input_usd" : {
+        "lo" : 0.00185822,
+        "hi" : 0.00251822,
+        "provenance" : "ESTIMATED"
+      }
+    },
+    "C-today" : {
+      "n" : 35,
+      "context_chars_mean" : {
+        "value" : 993.1714,
+        "provenance" : "MEASURED_OFFLINE"
+      },
+      "context_hebrew_share_mean" : {
+        "value" : 0.205003,
+        "provenance" : "MEASURED_OFFLINE"
+      },
+      "context_tokens" : {
+        "lo" : 245.6413,
+        "hi" : 336.6884,
+        "provenance" : "ESTIMATED"
+      },
+      "input_tokens_incl_S_and_question" : {
+        "lo" : 788.4698,
+        "hi" : 1046.7265,
+        "provenance" : "ESTIMATED"
+      },
+      "input_usd" : {
+        "lo" : 0.00098559,
+        "hi" : 0.00130841,
+        "provenance" : "ESTIMATED"
+      }
+    }
+  },
+  "answer_output_UNKNOWN_band" : {
+    "not_a_measurement" : true,
+    "assumption" : "V in [150, 700] visible tokens, R/V in [1, 3.5]; identical for every arm because no answer call exists",
+    "output_tokens" : {
+      "lo" : 300,
+      "hi" : 3150,
+      "provenance" : "ESTIMATED"
+    },
+    "output_usd" : {
+      "lo" : 0.001275,
+      "hi" : 0.0133875,
+      "provenance" : "ESTIMATED"
+    }
+  },
+  "estimated_input_saving_per_question" : {
+    "B-weak_minus_C-today_usd" : {
+      "lo" : 0.00087263,
+      "hi" : 0.00120982,
+      "provenance" : "ESTIMATED"
+    },
+    "A-full_minus_C-today_usd" : {
+      "lo" : 0.00175976,
+      "hi" : 0.00243952,
+      "provenance" : "ESTIMATED"
+    },
+    "caveat" : "Input only. C-today needs no extraction. Using it as the C-rep context assumes notes add no tokens (optimistic for C-rep)."
+  },
+  "delta_req_vs_input_saving" : [ {
+    "corpus" : "parents-b",
+    "q_where_delta_req_equals_saving" : {
+      "lo" : 16.1901,
+      "hi" : 89.7839,
+      "provenance" : "ESTIMATED"
+    },
+    "q_central" : {
+      "value" : 37.6231,
+      "provenance" : "ESTIMATED"
+    },
+    "first_grid_q_central_delta_req_below_saving" : 50
+  }, {
+    "corpus" : "building-he",
+    "q_where_delta_req_equals_saving" : {
+      "lo" : 26.9993,
+      "hi" : 149.728,
+      "provenance" : "ESTIMATED"
+    },
+    "q_central" : {
+      "value" : 62.7421,
+      "provenance" : "ESTIMATED"
+    },
+    "first_grid_q_central_delta_req_below_saving" : 100
+  }, {
+    "corpus" : "club-mixed",
+    "q_where_delta_req_equals_saving" : {
+      "lo" : 26.9993,
+      "hi" : 149.728,
+      "provenance" : "ESTIMATED"
+    },
+    "q_central" : {
+      "value" : 62.7421,
+      "provenance" : "ESTIMATED"
+    },
+    "first_grid_q_central_delta_req_below_saving" : 100
+  }, {
+    "corpus" : "family-en",
+    "q_where_delta_req_equals_saving" : {
+      "lo" : 26.9993,
+      "hi" : 149.728,
+      "provenance" : "ESTIMATED"
+    },
+    "q_central" : {
+      "value" : 62.7421,
+      "provenance" : "ESTIMATED"
+    },
+    "first_grid_q_central_delta_req_below_saving" : 100
+  }, {
+    "corpus" : "dev corpora total (4 groups)",
+    "q_where_delta_req_equals_saving" : {
+      "lo" : 97.1881,
+      "hi" : 538.9679,
+      "provenance" : "ESTIMATED"
+    },
+    "q_central" : {
+      "value" : 225.8494,
+      "provenance" : "ESTIMATED"
+    },
+    "first_grid_q_central_delta_req_below_saving" : null
+  }, {
+    "corpus" : "scenario 60 msgs (Stage 1c)",
+    "q_where_delta_req_equals_saving" : {
+      "lo" : 32.8575,
+      "hi" : 182.2149,
+      "provenance" : "ESTIMATED"
+    },
+    "q_central" : {
+      "value" : 76.3554,
+      "provenance" : "ESTIMATED"
+    },
+    "first_grid_q_central_delta_req_below_saving" : 100
+  }, {
+    "corpus" : "scenario 100 msgs",
+    "q_where_delta_req_equals_saving" : {
+      "lo" : 54.7624,
+      "hi" : 303.6915,
+      "provenance" : "ESTIMATED"
+    },
+    "q_central" : {
+      "value" : 127.259,
+      "provenance" : "ESTIMATED"
+    },
+    "first_grid_q_central_delta_req_below_saving" : null
+  }, {
+    "corpus" : "scenario 3000 msgs (large regime)",
+    "q_where_delta_req_equals_saving" : {
+      "lo" : 1642.8733,
+      "hi" : 9110.745,
+      "provenance" : "ESTIMATED"
+    },
+    "q_central" : {
+      "value" : 3817.7714,
+      "provenance" : "ESTIMATED"
+    },
+    "first_grid_q_central_delta_req_below_saving" : null
+  } ],
+  "calculator_demo_60_msgs" : {
+    "scenario" : "C-rep proxy (C-today input, notes not counted) vs B-weak control and A-full; output tokens equal for all arms (band midpoint); quality unknown; M=0; infrastructure unpriced",
+    "e0_usd" : {
+      "value" : 0.079503,
+      "provenance" : "ESTIMATED"
+    },
+    "mean_answer_cost_usd" : {
+      "C-rep (proxy)" : {
+        "value" : 0.00847825,
+        "provenance" : "ESTIMATED"
+      },
+      "B-weak control" : {
+        "value" : 0.00951947,
+        "provenance" : "ESTIMATED"
+      },
+      "A-full" : {
+        "value" : 0.0105779,
+        "provenance" : "ESTIMATED"
+      }
+    },
+    "grid" : [ {
+      "Q" : 1,
+      "total_cost_usd" : {
+        "C-rep (proxy)" : {
+          "value" : 0.0879812,
+          "provenance" : "ESTIMATED"
+        },
+        "B-weak control" : {
+          "value" : 0.00951947,
+          "provenance" : "ESTIMATED"
+        },
+        "A-full" : {
+          "value" : 0.0105779,
+          "provenance" : "ESTIMATED"
+        }
+      },
+      "amortised_e0_per_q_usd" : {
+        "value" : 0.079503,
+        "provenance" : "ESTIMATED"
+      },
+      "cpca" : {
+        "C-rep (proxy)" : "not computable (answers not scored)",
+        "B-weak control" : "not computable (answers not scored)",
+        "A-full" : "not computable (answers not scored)"
+      }
+    }, {
+      "Q" : 5,
+      "total_cost_usd" : {
+        "C-rep (proxy)" : {
+          "value" : 0.121894,
+          "provenance" : "ESTIMATED"
+        },
+        "B-weak control" : {
+          "value" : 0.0475974,
+          "provenance" : "ESTIMATED"
+        },
+        "A-full" : {
+          "value" : 0.0528894,
+          "provenance" : "ESTIMATED"
+        }
+      },
+      "amortised_e0_per_q_usd" : {
+        "value" : 0.0159006,
+        "provenance" : "ESTIMATED"
+      },
+      "cpca" : {
+        "C-rep (proxy)" : "not computable (answers not scored)",
+        "B-weak control" : "not computable (answers not scored)",
+        "A-full" : "not computable (answers not scored)"
+      }
+    }, {
+      "Q" : 10,
+      "total_cost_usd" : {
+        "C-rep (proxy)" : {
+          "value" : 0.164285,
+          "provenance" : "ESTIMATED"
+        },
+        "B-weak control" : {
+          "value" : 0.0951947,
+          "provenance" : "ESTIMATED"
+        },
+        "A-full" : {
+          "value" : 0.105779,
+          "provenance" : "ESTIMATED"
+        }
+      },
+      "amortised_e0_per_q_usd" : {
+        "value" : 0.0079503,
+        "provenance" : "ESTIMATED"
+      },
+      "cpca" : {
+        "C-rep (proxy)" : "not computable (answers not scored)",
+        "B-weak control" : "not computable (answers not scored)",
+        "A-full" : "not computable (answers not scored)"
+      }
+    }, {
+      "Q" : 25,
+      "total_cost_usd" : {
+        "C-rep (proxy)" : {
+          "value" : 0.291459,
+          "provenance" : "ESTIMATED"
+        },
+        "B-weak control" : {
+          "value" : 0.237987,
+          "provenance" : "ESTIMATED"
+        },
+        "A-full" : {
+          "value" : 0.264447,
+          "provenance" : "ESTIMATED"
+        }
+      },
+      "amortised_e0_per_q_usd" : {
+        "value" : 0.00318012,
+        "provenance" : "ESTIMATED"
+      },
+      "cpca" : {
+        "C-rep (proxy)" : "not computable (answers not scored)",
+        "B-weak control" : "not computable (answers not scored)",
+        "A-full" : "not computable (answers not scored)"
+      }
+    }, {
+      "Q" : 50,
+      "total_cost_usd" : {
+        "C-rep (proxy)" : {
+          "value" : 0.503415,
+          "provenance" : "ESTIMATED"
+        },
+        "B-weak control" : {
+          "value" : 0.475974,
+          "provenance" : "ESTIMATED"
+        },
+        "A-full" : {
+          "value" : 0.528894,
+          "provenance" : "ESTIMATED"
+        }
+      },
+      "amortised_e0_per_q_usd" : {
+        "value" : 0.00159006,
+        "provenance" : "ESTIMATED"
+      },
+      "cpca" : {
+        "C-rep (proxy)" : "not computable (answers not scored)",
+        "B-weak control" : "not computable (answers not scored)",
+        "A-full" : "not computable (answers not scored)"
+      }
+    }, {
+      "Q" : 100,
+      "total_cost_usd" : {
+        "C-rep (proxy)" : {
+          "value" : 0.927328,
+          "provenance" : "ESTIMATED"
+        },
+        "B-weak control" : {
+          "value" : 0.951947,
+          "provenance" : "ESTIMATED"
+        },
+        "A-full" : {
+          "value" : 1.0578,
+          "provenance" : "ESTIMATED"
+        }
+      },
+      "amortised_e0_per_q_usd" : {
+        "value" : 0.00079503,
+        "provenance" : "ESTIMATED"
+      },
+      "cpca" : {
+        "C-rep (proxy)" : "not computable (answers not scored)",
+        "B-weak control" : "not computable (answers not scored)",
+        "A-full" : "not computable (answers not scored)"
+      }
+    } ],
+    "break_even" : [ {
+      "candidate" : "C-rep (proxy)",
+      "baseline" : "B-weak control",
+      "analytic_q" : {
+        "value" : 76.3554,
+        "provenance" : "ESTIMATED"
+      },
+      "grid_q" : 100,
+      "quality" : "QUALITY_UNKNOWN",
+      "verdict" : "no quality-qualified break-even; cost-only crossover at Q=100 (quality unknown)",
+      "provenance" : "ESTIMATED"
+    }, {
+      "candidate" : "C-rep (proxy)",
+      "baseline" : "A-full",
+      "analytic_q" : {
+        "value" : 37.8651,
+        "provenance" : "ESTIMATED"
+      },
+      "grid_q" : 50,
+      "quality" : "QUALITY_UNKNOWN",
+      "verdict" : "no quality-qualified break-even; cost-only crossover at Q=50 (quality unknown)",
+      "provenance" : "ESTIMATED"
+    } ],
+    "steady_state_vs_B" : [ {
+      "lambda_msgs_per_day" : 50,
+      "q_per_day" : 1,
+      "rho_w" : 0.1,
+      "lhs_q_times_saving_usd" : {
+        "value" : 0.00104122,
+        "provenance" : "ESTIMATED"
+      },
+      "rhs_lambda_cx_1_plus_rho_w_usd" : {
+        "value" : 0.0728778,
+        "provenance" : "ESTIMATED"
+      },
+      "candidate_keeps_lead" : false
+    }, {
+      "lambda_msgs_per_day" : 50,
+      "q_per_day" : 10,
+      "rho_w" : 0.1,
+      "lhs_q_times_saving_usd" : {
+        "value" : 0.0104122,
+        "provenance" : "ESTIMATED"
+      },
+      "rhs_lambda_cx_1_plus_rho_w_usd" : {
+        "value" : 0.0728778,
+        "provenance" : "ESTIMATED"
+      },
+      "candidate_keeps_lead" : false
+    }, {
+      "lambda_msgs_per_day" : 50,
+      "q_per_day" : 100,
+      "rho_w" : 0.1,
+      "lhs_q_times_saving_usd" : {
+        "value" : 0.104122,
+        "provenance" : "ESTIMATED"
+      },
+      "rhs_lambda_cx_1_plus_rho_w_usd" : {
+        "value" : 0.0728778,
+        "provenance" : "ESTIMATED"
+      },
+      "candidate_keeps_lead" : true
+    }, {
+      "lambda_msgs_per_day" : 300,
+      "q_per_day" : 1,
+      "rho_w" : 0.1,
+      "lhs_q_times_saving_usd" : {
+        "value" : 0.00104122,
+        "provenance" : "ESTIMATED"
+      },
+      "rhs_lambda_cx_1_plus_rho_w_usd" : {
+        "value" : 0.437267,
+        "provenance" : "ESTIMATED"
+      },
+      "candidate_keeps_lead" : false
+    }, {
+      "lambda_msgs_per_day" : 300,
+      "q_per_day" : 10,
+      "rho_w" : 0.1,
+      "lhs_q_times_saving_usd" : {
+        "value" : 0.0104122,
+        "provenance" : "ESTIMATED"
+      },
+      "rhs_lambda_cx_1_plus_rho_w_usd" : {
+        "value" : 0.437267,
+        "provenance" : "ESTIMATED"
+      },
+      "candidate_keeps_lead" : false
+    }, {
+      "lambda_msgs_per_day" : 300,
+      "q_per_day" : 100,
+      "rho_w" : 0.1,
+      "lhs_q_times_saving_usd" : {
+        "value" : 0.104122,
+        "provenance" : "ESTIMATED"
+      },
+      "rhs_lambda_cx_1_plus_rho_w_usd" : {
+        "value" : 0.437267,
+        "provenance" : "ESTIMATED"
+      },
+      "candidate_keeps_lead" : false
+    }, {
+      "lambda_msgs_per_day" : 2000,
+      "q_per_day" : 1,
+      "rho_w" : 0.1,
+      "lhs_q_times_saving_usd" : {
+        "value" : 0.00104122,
+        "provenance" : "ESTIMATED"
+      },
+      "rhs_lambda_cx_1_plus_rho_w_usd" : {
+        "value" : 2.9151,
+        "provenance" : "ESTIMATED"
+      },
+      "candidate_keeps_lead" : false
+    }, {
+      "lambda_msgs_per_day" : 2000,
+      "q_per_day" : 10,
+      "rho_w" : 0.1,
+      "lhs_q_times_saving_usd" : {
+        "value" : 0.0104122,
+        "provenance" : "ESTIMATED"
+      },
+      "rhs_lambda_cx_1_plus_rho_w_usd" : {
+        "value" : 2.9151,
+        "provenance" : "ESTIMATED"
+      },
+      "candidate_keeps_lead" : false
+    }, {
+      "lambda_msgs_per_day" : 2000,
+      "q_per_day" : 100,
+      "rho_w" : 0.1,
+      "lhs_q_times_saving_usd" : {
+        "value" : 0.104122,
+        "provenance" : "ESTIMATED"
+      },
+      "rhs_lambda_cx_1_plus_rho_w_usd" : {
+        "value" : 2.9151,
+        "provenance" : "ESTIMATED"
+      },
+      "candidate_keeps_lead" : false
+    } ],
+    "sensitivity_vs_B" : [ {
+      "parameter" : "answer output tokens (all arms)",
+      "low" : "x0.5",
+      "high" : "x2",
+      "q_star_base" : 76.3554,
+      "q_star_low" : 76.3554,
+      "q_star_high" : 76.3554,
+      "diff_at_q25_low_usd" : {
+        "value" : 0.0534724,
+        "provenance" : "ESTIMATED"
+      },
+      "diff_at_q25_high_usd" : {
+        "value" : 0.0534724,
+        "provenance" : "ESTIMATED"
+      },
+      "steady_margin_low_usd_per_day" : {
+        "value" : -0.426854,
+        "provenance" : "ESTIMATED"
+      },
+      "steady_margin_high_usd_per_day" : {
+        "value" : -0.426854,
+        "provenance" : "ESTIMATED"
+      }
+    }, {
+      "parameter" : "answer output tokens (candidate only; arm difference)",
+      "low" : "x0.8",
+      "high" : "x1.2",
+      "q_star_base" : 76.3554,
+      "q_star_low" : 31.7064,
+      "q_star_high" : null,
+      "diff_at_q25_low_usd" : {
+        "value" : 0.0168162,
+        "provenance" : "ESTIMATED"
+      },
+      "diff_at_q25_high_usd" : {
+        "value" : 0.0901287,
+        "provenance" : "ESTIMATED"
+      },
+      "steady_margin_low_usd_per_day" : {
+        "value" : -0.412192,
+        "provenance" : "ESTIMATED"
+      },
+      "steady_margin_high_usd_per_day" : {
+        "value" : -0.441517,
+        "provenance" : "ESTIMATED"
+      }
+    }, {
+      "parameter" : "extraction output tokens (reasoning)",
+      "low" : "x0.5",
+      "high" : "x2",
+      "q_star_base" : 76.3554,
+      "q_star_low" : 41.5055,
+      "q_star_high" : 146.0552,
+      "diff_at_q25_low_usd" : {
+        "value" : 0.0171859,
+        "provenance" : "ESTIMATED"
+      },
+      "diff_at_q25_high_usd" : {
+        "value" : 0.126045,
+        "provenance" : "ESTIMATED"
+      },
+      "steady_margin_low_usd_per_day" : {
+        "value" : -0.227279,
+        "provenance" : "ESTIMATED"
+      },
+      "steady_margin_high_usd_per_day" : {
+        "value" : -0.826006,
+        "provenance" : "ESTIMATED"
+      }
+    }, {
+      "parameter" : "extraction truncation rate f",
+      "low" : "f=0",
+      "high" : "f=0.2",
+      "q_star_base" : 76.3554,
+      "q_star_low" : 76.3554,
+      "q_star_high" : 103.0975,
+      "diff_at_q25_low_usd" : {
+        "value" : 0.0534724,
+        "provenance" : "ESTIMATED"
+      },
+      "diff_at_q25_high_usd" : {
+        "value" : 0.0813169,
+        "provenance" : "ESTIMATED"
+      },
+      "steady_margin_low_usd_per_day" : {
+        "value" : -0.426854,
+        "provenance" : "ESTIMATED"
+      },
+      "steady_margin_high_usd_per_day" : {
+        "value" : -0.579999,
+        "provenance" : "ESTIMATED"
+      }
+    }, {
+      "parameter" : "extraction batch size b",
+      "low" : "b/2",
+      "high" : "2b",
+      "q_star_base" : 76.3554,
+      "q_star_low" : 146.0552,
+      "q_star_high" : 41.5055,
+      "diff_at_q25_low_usd" : {
+        "value" : 0.126045,
+        "provenance" : "ESTIMATED"
+      },
+      "diff_at_q25_high_usd" : {
+        "value" : 0.0171859,
+        "provenance" : "ESTIMATED"
+      },
+      "steady_margin_low_usd_per_day" : {
+        "value" : -0.826006,
+        "provenance" : "ESTIMATED"
+      },
+      "steady_margin_high_usd_per_day" : {
+        "value" : -0.227279,
+        "provenance" : "ESTIMATED"
+      }
+    }, {
+      "parameter" : "extraction fixed overhead H_x",
+      "low" : "H_x=0",
+      "high" : "H_x+500 tokens",
+      "q_star_base" : 76.3554,
+      "q_star_low" : 76.3554,
+      "q_star_high" : 79.957,
+      "diff_at_q25_low_usd" : {
+        "value" : 0.0534724,
+        "provenance" : "ESTIMATED"
+      },
+      "diff_at_q25_high_usd" : {
+        "value" : 0.0572224,
+        "provenance" : "ESTIMATED"
+      },
+      "steady_margin_low_usd_per_day" : {
+        "value" : -0.426854,
+        "provenance" : "ESTIMATED"
+      },
+      "steady_margin_high_usd_per_day" : {
+        "value" : -0.447479,
+        "provenance" : "ESTIMATED"
+      }
+    }, {
+      "parameter" : "q/lambda",
+      "low" : "x0.5",
+      "high" : "x2",
+      "q_star_base" : 76.3554,
+      "q_star_low" : 76.3554,
+      "q_star_high" : 76.3554,
+      "diff_at_q25_low_usd" : {
+        "value" : 0.0534724,
+        "provenance" : "ESTIMATED"
+      },
+      "diff_at_q25_high_usd" : {
+        "value" : 0.0534724,
+        "provenance" : "ESTIMATED"
+      },
+      "steady_margin_low_usd_per_day" : {
+        "value" : -0.43206,
+        "provenance" : "ESTIMATED"
+      },
+      "steady_margin_high_usd_per_day" : {
+        "value" : -0.416442,
+        "provenance" : "ESTIMATED"
+      }
+    }, {
+      "parameter" : "chars per token (input only)",
+      "low" : "x1.25 (fewer tokens)",
+      "high" : "x0.8 (more tokens)",
+      "q_star_base" : 76.3554,
+      "q_star_low" : 93.7804,
+      "q_star_high" : 62.4155,
+      "diff_at_q25_low_usd" : {
+        "value" : 0.0572925,
+        "provenance" : "ESTIMATED"
+      },
+      "diff_at_q25_high_usd" : {
+        "value" : 0.0486973,
+        "provenance" : "ESTIMATED"
+      },
+      "steady_margin_low_usd_per_day" : {
+        "value" : -0.421314,
+        "provenance" : "ESTIMATED"
+      },
+      "steady_margin_high_usd_per_day" : {
+        "value" : -0.43378,
+        "provenance" : "ESTIMATED"
+      }
+    } ]
+  },
+  "quality_guardrail" : {
+    "provenance" : "MEASURED_OFFLINE",
+    "what" : "Stage 0 retrieval-only context recall (dev n=35, synthetic, in-memory). Not answer quality.",
+    "A-full" : {
+      "context_recall" : {
+        "value" : 1,
+        "provenance" : "MEASURED_OFFLINE"
+      },
+      "all_gold_within_t_ctx" : {
+        "value" : 1,
+        "provenance" : "MEASURED_OFFLINE"
+      }
+    },
+    "A-budget" : {
+      "context_recall" : {
+        "value" : 0.5556,
+        "provenance" : "MEASURED_OFFLINE"
+      },
+      "all_gold_within_t_ctx" : {
+        "value" : 0.4815,
+        "provenance" : "MEASURED_OFFLINE"
+      }
+    },
+    "B-weak control" : {
+      "context_recall" : {
+        "value" : 0.8333,
+        "provenance" : "MEASURED_OFFLINE"
+      },
+      "all_gold_within_t_ctx" : {
+        "value" : 0.7778,
+        "provenance" : "MEASURED_OFFLINE"
+      }
+    },
+    "C-today" : {
+      "context_recall" : {
+        "value" : 0.6636,
+        "provenance" : "MEASURED_OFFLINE"
+      },
+      "all_gold_within_t_ctx" : {
+        "value" : 0.5556,
+        "provenance" : "MEASURED_OFFLINE"
+      }
+    },
+    "C-graph-off" : {
+      "context_recall" : {
+        "value" : 0.608,
+        "provenance" : "MEASURED_OFFLINE"
+      },
+      "all_gold_within_t_ctx" : {
+        "value" : 0.4815,
+        "provenance" : "MEASURED_OFFLINE"
+      }
+    },
+    "B-weak no-window (diag)" : {
+      "context_recall" : {
+        "value" : 0.6389,
+        "provenance" : "MEASURED_OFFLINE"
+      },
+      "all_gold_within_t_ctx" : {
+        "value" : 0.4815,
+        "provenance" : "MEASURED_OFFLINE"
+      }
+    },
+    "C-today +/-2 (diag)" : {
+      "context_recall" : {
+        "value" : 0.7593,
+        "provenance" : "MEASURED_OFFLINE"
+      },
+      "all_gold_within_t_ctx" : {
+        "value" : 0.7037,
+        "provenance" : "MEASURED_OFFLINE"
+      }
+    },
+    "cpca" : "not computable: no answer has been produced or scored, so K is unknown for every arm"
+  }
+}

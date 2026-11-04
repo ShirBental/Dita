@@ -1,0 +1,73 @@
+# Dita local infrastructure (TASK-016). Development only: every default below is a deliberately non-secret
+# placeholder; override via environment or an untracked docker/.env. Ports bind to 127.0.0.1 only, on non-default
+# host ports (55432, 57474/57687, 58080/59071) so Dita never collides with a local Postgres/Neo4j/Vespa.
+# Image tags are pinned to versions believed to exist but NOT verified from this sandbox (no registry access).
+# All three images are published multi-arch (amd64 + arm64). Memory budget for a 7.75 GiB Docker Desktop VM:
+# postgres 768m + neo4j 1.5g + vespa 4g ≈ 6.3g, leaving headroom for the VM. Start order: postgres, neo4j, vespa.
+name: dita
+
+services:
+  postgres:
+    image: postgres:16.4@sha256:e62fbf9d3e2b49816a32c400ed2dba83e3b361e6833e624024309c35d334b412   # pinned 2026-10-28 from local pull (TOFU)
+    environment:
+      POSTGRES_DB: ${DITA_DB_NAME:-dita}
+      POSTGRES_USER: ${DITA_DB_OWNER:-dita}                         # schema owner (runs migrations)
+      POSTGRES_PASSWORD: ${DITA_DB_OWNER_PASSWORD:-dita-dev-not-secret}
+      DITA_APP_PASSWORD: ${DITA_APP_PASSWORD:-dita-app-dev-not-secret}   # read by init/01-app-role.sh
+    ports:
+      - "127.0.0.1:${DITA_DB_PORT:-55432}:5432"
+    volumes:
+      - ./postgres/init:/docker-entrypoint-initdb.d:ro
+      - ../db/migration:/migrations:ro
+      - dita-pg:/var/lib/postgresql/data
+    mem_limit: 768m
+    command: ["postgres", "-c", "shared_buffers=128MB", "-c", "max_connections=50"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U \"$${POSTGRES_USER}\" -d \"$${POSTGRES_DB}\""]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  neo4j:
+    image: neo4j:5.26-community@sha256:414adfe41c6ff32abb752be37f265c77607c166cab298f65a917fc4f05776218   # pinned 2026-10-28 from local pull (TOFU)
+    environment:
+      NEO4J_AUTH: neo4j/${DITA_NEO4J_PASSWORD:-dita-dev-not-secret}
+      NEO4J_PLUGINS: "[]"
+      # Explicit sizing: without it Neo4j sizes heap/page cache from the memory it can see.
+      NEO4J_server_memory_heap_initial__size: 512m
+      NEO4J_server_memory_heap_max__size: 768m
+      NEO4J_server_memory_pagecache_size: 256m
+    mem_limit: 1536m
+    ports:
+      - "127.0.0.1:${DITA_NEO4J_HTTP_PORT:-57474}:7474"
+      - "127.0.0.1:${DITA_NEO4J_BOLT_PORT:-57687}:7687"
+    volumes:
+      - dita-neo4j:/data
+    healthcheck:
+      test: ["CMD-SHELL", "cypher-shell -u neo4j -p \"$${NEO4J_AUTH#neo4j/}\" 'RETURN 1' >/dev/null 2>&1"]
+      interval: 10s
+      timeout: 10s
+      retries: 30
+      start_period: 30s
+
+  vespa:
+    image: vespaengine/vespa:8.778.45@sha256:ed696aa1c9fc24fa50aa8252c55a8cbc162e4c066bc0ff2acba0f1b98b89c57b   # resolved 2026-10-28 from Docker Hub tag list (TOFU), arm64
+    hostname: vespa-container
+    mem_limit: 4g                             # Vespa's single-node container needs ~4 GB
+    ports:
+      - "127.0.0.1:${DITA_VESPA_QUERY_PORT:-58080}:8080"
+      - "127.0.0.1:${DITA_VESPA_CONFIG_PORT:-59071}:19071"
+    volumes:
+      - dita-vespa:/opt/vespa/var
+    healthcheck:
+      # Config server health; the query port only answers after an application package is deployed.
+      test: ["CMD-SHELL", "curl -fsS http://localhost:19071/state/v1/health | grep -q '\"up\"'"]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+      start_period: 60s
+
+volumes:
+  dita-pg:
+  dita-neo4j:
+  dita-vespa:

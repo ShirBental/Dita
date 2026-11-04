@@ -1,0 +1,177 @@
+package app.dita.core.knowledge;
+
+import app.dita.core.model.Assertion;
+import app.dita.core.model.KnowledgeItem;
+import app.dita.core.text.Tokenizer;
+
+import java.util.HashSet;
+import java.util.List;
+import java.util.Locale;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeMap;
+import java.util.TreeSet;
+import java.util.function.Function;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+/**
+ * EVAL COPY of eval/TASK-046/baselines/PropertyFrame.java.txt. Mechanical fixes only (no behaviour change): calendar helpers
+ * from FrameCalendar; a duplicate "be" removed from SCAFFOLD (Set.of rejected it at load: the draft had never run).
+ * TASK-046 round 3 (Codex C1, Bruce B46R3-1..8): ONE definition of "the same property", replacing the earlier shortcuts
+ * (option markers, shared prepositions, calendar residuals, reversal and offer exemptions), each of which let close
+ * variants through.
+ *
+ * <p>A claim's FRAME is what it says once the subject, the VALUES and claim scaffolding are taken out:
+ * <ul>
+ *   <li>values, by type: calendar (clock / date / weekday / relative day / month), money, quantity-of-unit, and PLACE =
+ *       the words filling a preposition slot ("at the park", "to Haifa", Hebrew ב/ל-prefixed words);</li>
+ *   <li>scaffolding: correction / decision / offer / stance / planning words ("Update:", "Decision:", "I can", "let's").</li>
+ * </ul>
+ * The later claim's frame is read from its quoted clause up to a justification ("because …", ", it …"), so a reason
+ * added after the new value does not change the frame. Two claims are about the same property iff their frames are EQUAL;
+ * a replacement additionally needs evidence, decided in FrameArm (EXPERIMENT ONLY, arm A2). Lexical only; uncertain → no
+ * relation (both claims stay visible).
+ */
+final class PropertyFrame {
+    final Set<String> rest;
+    final Map<String, Set<String>> values;
+
+    private PropertyFrame(Set<String> rest, Map<String, Set<String>> values) { this.rest = rest; this.values = values; }
+
+    boolean sameFrameAs(PropertyFrame o) { return rest.equals(o.rest); }
+
+    /** A value type present on both sides. */
+    boolean sharesValueType(PropertyFrame o) { return values.keySet().stream().anyMatch(o.values::containsKey); }
+
+    /** A value type present on both sides whose values differ (month alone is ignored when either side has a date). */
+    boolean replacesValueOf(PropertyFrame earlier) {
+        for (var t : earlier.values.entrySet()) {
+            if (t.getKey().equals("month") && (values.containsKey("date") || earlier.values.containsKey("date"))) continue;
+            Set<String> mine = values.get(t.getKey());
+            if (mine != null && !mine.equals(t.getValue())) return true;
+        }
+        return false;
+    }
+
+    /** Frame + values carry information beyond the subject. */
+    boolean informative() { return !rest.isEmpty() || !values.isEmpty(); }
+
+    static final Set<String> SLOT_PREPOSITIONS = Set.of("at", "in", "on", "to", "from", "near", "by", "for", "into", "inside", "outside");
+    static final Set<String> HE_SLOT_WORDS = Set.of("ליד", "אצל", "מול", "בתוך", "עד");
+    private static final Set<String> SLOT_STOP = Set.of("and", "but", "or", "so", "because", "since", "with", "of", "the", "a", "an",
+            "our", "my", "your", "their", "his", "her", "this", "that", "is", "are", "be", "will", "it", "we", "i");
+    /** Claim scaffolding: never a property of its own. */
+    static final Set<String> SCAFFOLD = Set.of(
+            // correction / change
+            "update", "updated", "correction", "correct", "actually", "sorry", "wrong", "earlier", "got", "now", "instead",
+            "change", "changed", "changes", "changing", "move", "moved", "moves", "moving", "switch", "switched", "plan", "plans",
+            "mind", "scratch", "again", "back", "new", "still", "longer",
+            // decision / confirmation
+            "decision", "decided", "decide", "final", "finalized", "finalised", "confirmed", "confirm", "official", "ok", "okay",
+            "agreed", "settled", "going", "go", "goes", "we're", "we'll", "let", "let's", "lets", "shall",
+            // offer / commitment
+            "can", "could", "will", "i'll", "i'd", "would", "maybe", "happy", "glad", "able", "try", "sure", "definitely",
+            // stance
+            "recommend", "recommends", "recommended", "advise", "advises", "against", "avoid", "skip", "suggest", "suggested",
+            "propose", "proposed", "think", "prefer", "please",
+            // planning / copula
+            "need", "needs", "organize", "organise", "hold", "have", "has", "schedule", "scheduled", "set", "arrange", "arranged",
+            "happen", "happening", "take", "place", "be", "is", "are", "was", "it", "it's", "do", "does", "there",
+            // Hebrew
+            "תיקון", "עדכון", "בעצם", "החלטה", "החלטנו", "סופי", "סופית", "סגור", "אני", "אנחנו", "יהיה", "תהיה", "יהיו", "צריך",
+            "צריכים", "לארגן", "נקבע", "מתוכנן", "בואו", "נלך", "אולי", "ממליץ", "ממליצה", "מציע", "מציעה", "יכול", "יכולה", "עכשיו", "שוב");
+    private static final Pattern MONEY = Pattern.compile("(?iu)(?<![\\p{L}\\p{N}])(?:[$₪€]\\s?(\\d+(?:[.,]\\d+)?)|(\\d+(?:[.,]\\d+)?)\\s*(?:dollars?|usd|bucks|shekels?|nis|euros?|eur|ש\"ח|ש״ח|שקלים|שקל|דולר))(?![\\p{L}\\p{N}])");
+    private static final Pattern QUANTITY = Pattern.compile("(?iu)(?<![\\p{L}\\p{N}])(\\d+)\\s+([\\p{L}]{3,})");
+    private static final Pattern JUSTIFICATION = Pattern.compile("(?iu)\\s(because|since|so that|as it|as they)\\s|,\\s*(it|it's|which|so|but|they|that's|this)\\s");
+
+    /** The earlier claim: its stored quote. */
+    static PropertyFrame ofEarlier(KnowledgeItem k, Set<String> subjectTokens, Function<Assertion.Qualifier, String> qualifierText) {
+        return of(k, k.statementRedacted() ? "" : k.statement(), subjectTokens, qualifierText);
+    }
+
+    /** The later claim: its quoted clause, cut at a justification. */
+    static PropertyFrame ofLater(KnowledgeItem k, String clause, Set<String> subjectTokens, Function<Assertion.Qualifier, String> qualifierText) {
+        Matcher j = JUSTIFICATION.matcher(clause == null ? "" : clause);
+        return of(k, j.find() ? clause.substring(0, j.start()) : clause, subjectTokens, qualifierText);
+    }
+
+    /** Tokens of the earlier item's subject (both claims share a subject id; the later surface may add words). */
+    static Set<String> subjectTokens(KnowledgeItem earlier, KnowledgeItem later) {
+        Set<String> s = new HashSet<>(Tokenizer.normalizedSet(earlier.assertion().subject()));
+        Set<String> l = new HashSet<>(Tokenizer.normalizedSet(later.assertion().subject()));
+        // only the later subject words that the earlier subject shares: "the picnic carpool" keeps "carpool" in its frame
+        l.retainAll(s);
+        s.addAll(l);
+        return s;
+    }
+
+    private static PropertyFrame of(KnowledgeItem k, String text, Set<String> subject, Function<Assertion.Qualifier, String> qualifierText) {
+        String t = (text == null ? "" : text).toLowerCase(Locale.ROOT).replace('’', '\'');
+        Map<String, Set<String>> values = new TreeMap<>(FrameCalendar.calendarValues(k, t, qualifierText));
+        Set<String> valueTokens = new HashSet<>();
+        Matcher m = MONEY.matcher(t);
+        while (m.find()) { add(values, "money", norm(m.group(1) != null ? m.group(1) : m.group(2))); valueTokens.addAll(Tokenizer.rawWords(m.group())); }
+        Matcher q = QUANTITY.matcher(t);
+        while (q.find()) {
+            String unit = Tokenizer.isHebrew(q.group(2)) ? q.group(2) : Tokenizer.base(q.group(2));
+            if (FrameCalendar.calendarWord(unit) || valueTokens.contains(q.group(2))) continue;
+            add(values, "qty:" + unit, q.group(1));
+            valueTokens.add(q.group(1));
+        }
+        // place slots: words after a slot preposition up to a boundary word; calendar fillers are calendar values already
+        List<String> words = Tokenizer.rawWords(t);
+        Set<String> slotWords = new HashSet<>();
+        for (int i = 0; i < words.size(); i++) {
+            String w = words.get(i);
+            boolean english = SLOT_PREPOSITIONS.contains(w), hebrewWord = HE_SLOT_WORDS.contains(w);
+            if (english || hebrewWord) {
+                StringBuilder filler = new StringBuilder();
+                for (int j = i + 1; j < words.size(); j++) {
+                    String f = words.get(j);
+                    if (SLOT_PREPOSITIONS.contains(f) || HE_SLOT_WORDS.contains(f) || f.equals("and") || f.equals("but")) break;
+                    if (SLOT_STOP.contains(f)) continue;
+                    if (subject.contains(f) || subject.contains(Tokenizer.base(f)) || isValueWord(f)) { slotWords.add(f); continue; }
+                    slotWords.add(f);
+                    filler.append(Tokenizer.isHebrew(f) ? f : Tokenizer.base(f)).append(' ');
+                }
+                if (!filler.isEmpty()) add(values, "place", filler.toString().strip());
+            } else if (Tokenizer.isHebrew(w) && w.length() >= 4 && "בל".indexOf(w.charAt(0)) >= 0) {
+                String bare = w.substring(1);
+                if (subject.contains(w) || subject.contains(bare) || isValueWord(bare) || isValueWord(w) || bare.equals("יום")) continue;
+                slotWords.add(w);
+                add(values, "place", bare);
+            }
+        }
+        Set<String> rest = new TreeSet<>();
+        for (String w : Tokenizer.normalizedTokens(t)) {
+            if (w.length() < 2 || subject.contains(w) || SCAFFOLD.contains(w) || slotWords.contains(w) || valueTokens.contains(w)) continue;
+            if (isValueWord(w) || SCAFFOLD_FORMS.ALL.contains(w) || slotForms(slotWords).contains(w)) continue;
+            rest.add(Tokenizer.isHebrew(w) ? w : Tokenizer.base(w));
+        }
+        return new PropertyFrame(rest, values);
+    }
+
+    private static Set<String> slotForms(Set<String> slotWords) {
+        Set<String> out = new HashSet<>();
+        for (String s : slotWords) out.addAll(Tokenizer.normalizedSet(s));
+        return out;
+    }
+
+    private static final class SCAFFOLD_FORMS {
+        static final Set<String> ALL = new HashSet<>();
+        static { for (String w : SCAFFOLD) ALL.addAll(Tokenizer.normalizedSet(w)); }
+    }
+
+    static boolean isValueWord(String w) {
+        return w.chars().anyMatch(Character::isDigit) || FrameCalendar.calendarWord(w) || w.equals("am") || w.equals("pm");
+    }
+
+    private static String norm(String n) { return n.replace(',', '.'); }
+
+    private static void add(Map<String, Set<String>> values, String type, String v) {
+        values.computeIfAbsent(type, x -> new TreeSet<>()).add(v);
+    }
+
+    @Override public String toString() { return "Frame[rest=" + rest + ", values=" + values + "]"; }
+}

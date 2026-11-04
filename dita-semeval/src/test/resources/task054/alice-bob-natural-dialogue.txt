@@ -1,0 +1,299 @@
+1. Alice: Do you remember the pediatrician you mentioned? My sister needs someone for her six-month-old.
+2. Bob: Dr. Cedar on Maple Street? You recommended him to me, actually.
+
+3. Alice: Right, sleep deprivation. He was wonderful with our baby, especially when we had feeding questions.
+4. Bob: Would you recommend him for a teenager too? My nephew needs a new doctor.
+
+5. Alice: I cannot speak for teenagers. We have only gone for infant checkups.
+6. Bob: We tried him with my nephew last spring, and he felt rushed. I would look elsewhere for teenage care.
+
+7. Alice: That is useful to know. For babies, he explained everything and never made us feel silly for asking.
+8. Bob: Then I will pass on your recommendation to your sister, but not to my nephew.
+
+9. Alice: Thanks. Please say it is my experience, not a guarantee.
+10. Bob: Of course. Is his office Maple Street or Maple Avenue?
+
+11. Alice: Maple Street, beside the little pharmacy. I mixed those two up on our first visit.
+12. Bob: Good catch. Do they have evening appointments?
+
+13. Alice: I heard that they do, but I have not checked with the receptionist.
+14. Bob: I will leave that out until someone confirms it.
+
+15. Alice: Actually, let me check the appointment card. Ours was at 5:30, but that may have been an exception.
+16. Bob: So we know you had one late appointment, not that evenings are always available.
+
+17. Alice: Exactly. Also, take the vaccination record; they asked for it at our first visit.
+18. Bob: I will tell her. Is there anything you would warn her about?
+
+19. Alice: The waiting room was crowded. The care was good, but we waited about forty minutes.
+20. Bob: That is the kind of detail she will appreciate. I will suggest leaving extra time.
+
+21. Alice: Speaking of waiting around, are we still doing the park picnic this Saturday?
+22. Bob: I thought it was Sunday. Did I put it in the wrong place on my calendar?
+
+23. Alice: I originally said Sunday, then moved it to Saturday because the library event is Sunday.
+24. Bob: Ah, I missed the change. What time on Saturday?
+
+25. Alice: Noon at Meadow Park, near the west gate.
+26. Bob: Noon is tricky for us. Could we make it one instead?
+
+27. Alice: One works better for us too. Let us make it Saturday at one, not noon.
+28. Bob: Great. I will bring a vegetarian pasta salad.
+
+29. Alice: Perfect. I can bring cups and napkins. Do you have plates?
+30. Bob: I have six reusable plates, but I do not know whether that is enough.
+
+31. Alice: We have eight people confirmed so far. I can add four plates from home.
+32. Bob: That gives us ten. Please do not buy disposable ones.
+
+33. Alice: Agreed. Is your pasta salad safe for someone with a nut allergy?
+34. Bob: I will make it without nuts, but my kitchen is not nut-free. Please check with them first.
+
+35. Alice: I will. If rain is forecast, should we use the library room?
+36. Bob: I asked yesterday. It is booked, so that is not an option.
+
+37. Alice: Then rain means postponing, unless we find somewhere else.
+38. Bob: Yes, let us not promise an indoor backup we do not have.
+
+39. Alice: I will check the forecast Friday evening and update the group.
+40. Bob: Thanks. Saturday at one, west gate, weather permitting. That is what I have now.
+
+41. Alice: Before I forget, have you tried the cafe across from that pharmacy?
+42. Bob: Do you mean Cedar Cafe? It is on River Road, not beside the doctor.
+
+43. Alice: Yes, Cedar Cafe. I am clearly mixing up everything with Cedar in the name.
+44. Bob: Easy to do. I like it for breakfast on weekdays.
+
+45. Alice: Would it work for a birthday dinner for twelve people?
+46. Bob: I would not choose it for that. The room is small and gets noisy with large groups.
+
+47. Alice: So good for a quiet breakfast, less good for a big evening party?
+48. Bob: Exactly. Their courtyard is lovely if the weather is dry.
+
+49. Alice: Do they take reservations for two?
+50. Bob: Last time they told me breakfast tables were first come, first served. That was in September.
+
+51. Alice: I might go Tuesday after school drop-off. Around nine?
+52. Bob: I can join at nine-thirty. Would that be too late?
+
+53. Alice: Nine-thirty is fine. Let us meet outside so we can change plans if it is full.
+54. Bob: Good idea. I spent about twelve dollars on breakfast there last time, before a tip.
+
+55. Alice: Was that coffee and food, or just the food?
+56. Bob: Coffee and a small breakfast. I would not use it as a current menu quote.
+
+57. Alice: Understood. Do they have dairy-free options?
+58. Bob: I had oat milk in my coffee, but I did not ask about the pastries.
+
+59. Alice: I will check the pastries myself. And I am writing River Road this time.
+60. Bob: Thank you. I would hate to find you waiting outside the pediatrician with a coffee order.
+
+61. Alice: My bike is making that scraping sound again. Was Pine Repair any good?
+62. Bob: For a regular bicycle tune-up, yes. They sorted my brakes out.
+
+63. Alice: Mine is a commuter bike, nothing electric. Did you need an appointment?
+64. Bob: I called ahead and left it there Friday morning. They said walk-ins depend on workload.
+
+65. Alice: Someone told me they repair electric scooters as well.
+66. Bob: They would not take mine. I would ask before carrying one over.
+
+67. Alice: I will just take the bike. Where are they?
+68. Bob: Elm Lane, in the workshop behind the hardware shop.
+
+69. Alice: How much did the brake work cost?
+70. Bob: Thirty-five dollars for the adjustment. Parts would have been extra.
+
+71. Alice: That sounds reasonable. My wheel has a lock; should I leave the key?
+72. Bob: Yes, bring it. I forgot mine and had to go home again.
+
+73. Alice: Did they finish the same day?
+74. Bob: They finished mine by five, but they did not promise that for every repair.
+
+75. Alice: I was about to say you guaranteed same-day service. Glad I asked.
+76. Bob: Please do not! They were kind, not magical.
+
+77. Alice: I will call tomorrow and describe the scraping before booking.
+78. Bob: Mention whether it happens only when braking. That helped them understand mine.
+
+79. Alice: It does happen only when I brake. Thanks, that gives me something useful to say.
+80. Bob: Let me know what they find. If it needs parts, we can take the bus to the picnic instead.
+
+81. Alice: On the subject of the picnic, did a green backpack turn up in your car?
+82. Bob: I have not looked yet. Was it yours or your nephew's?
+
+83. Alice: My nephew's. Small, green, with a yellow rocket patch.
+84. Bob: I remember it now. We put the bags by the swings before leaving.
+
+85. Alice: I checked the bench but not the swings.
+86. Bob: I can walk past the playground after lunch and look.
+
+87. Alice: Thank you. There is nothing valuable inside, just a water bottle and a dinosaur book.
+88. Bob: Still worth finding. Have you checked the lost-property desk?
+
+89. Alice: Not yet. Is that in the town hall?
+90. Bob: Yes, in the lobby. I collected a scarf there last month.
+
+91. Alice: Do you know the opening hours?
+92. Bob: No, only that I went around three on a Friday. Please do not assume that is their schedule.
+
+93. Alice: Fair. I will phone before going.
+94. Bob: Wait, I just checked the back seat. There is a green bag under the booster seat.
+
+95. Alice: Does it have the rocket patch?
+96. Bob: Yes! And a blue water bottle in the side pocket.
+
+97. Alice: That is the one. No need to search the playground now.
+98. Bob: I will bring it to the picnic, unless he needs the book sooner.
+
+99. Alice: Saturday is fine. I will tell him the backpack is found, not still missing.
+100. Bob: Please do. We can stop everyone else from looking too.
+
+101. Alice: That dinosaur book reminds me: what is happening at Willow Library on Sunday?
+102. Bob: A storytelling session at four, according to the poster I picked up.
+
+103. Alice: For what age group? My nephew may be too old.
+104. Bob: The poster says ages three to six. It is probably not aimed at teenagers.
+
+105. Alice: Good, I will take the little one instead. Do we need tickets?
+106. Bob: It says free, but registration is required because the room is small.
+
+107. Alice: Free and drop-in are not the same, then.
+108. Bob: Exactly. I nearly made that mistake.
+
+109. Alice: Where do you register?
+110. Bob: At the library desk. I do not have a reliable online link to send you.
+
+111. Alice: I will stop by tomorrow. Is the entrance still on Oak Avenue?
+112. Bob: Yes, but use the side entrance if you have the stroller; there is a ramp there.
+
+113. Alice: That saves me wrestling it up the front steps.
+114. Bob: Also, the quiet reading room is upstairs. The storytelling room is downstairs.
+
+115. Alice: I was planning to work in the reading room while they listened.
+116. Bob: You will need someone else watching the child. It is not a supervised drop-off event.
+
+117. Alice: Then I will stay for the story and work later.
+118. Bob: That sounds less stressful. Bring the library card in case they need it for registration.
+
+119. Alice: Sunday at four, ages three to six, register first. I think I have it straight.
+120. Bob: Yes. And the picnic is Saturday, so those two plans no longer clash.
+
+121. Alice: One more activity question: would you recommend Coach Willow for a nervous beginner?
+122. Bob: For beginner swimming, absolutely. He let our child get comfortable in the shallow water first.
+
+123. Alice: That is what we need. Is he at Brook Gym?
+124. Bob: Yes, at the pool inside Brook Gym, not the sports hall next door.
+
+125. Alice: Does he teach diving too?
+126. Bob: Not advanced diving, as far as my experience goes. I would choose a specialist for that.
+
+127. Alice: I am only looking for basic water confidence.
+128. Bob: Then his beginner group is worth asking about. Our lesson had four children.
+
+129. Alice: Do you know whether four is the maximum?
+130. Bob: No. That was our group size, not a policy I checked.
+
+131. Alice: What should we bring besides a swimsuit?
+132. Bob: Goggles, a towel and a dry layer for afterwards. The changing room felt chilly.
+
+133. Alice: I remember you saying the class was Sunday at ten.
+134. Bob: It was, but our new group starts at ten-thirty. Please use ten-thirty for our current class.
+
+135. Alice: Thanks for correcting that. How much do you pay?
+136. Bob: Eighteen dollars per session in our block booking. Trial lessons may be different.
+
+137. Alice: I will ask about a trial instead of committing to a whole block.
+138. Bob: Good plan. I can introduce you after our next class, but I cannot book a place for you.
+
+139. Alice: That would help. We will watch first if there is no place available.
+140. Bob: Ask the front desk whether spectators are allowed; I do not know that part.
+
+141. Alice: I need something that will survive on my windy balcony. Any plant ideas?
+142. Bob: Fern Nursery helped me choose herbs. Which direction does your balcony face?
+
+143. Alice: South, with a lot of afternoon sun. I forget to water sometimes.
+144. Bob: Tell them that honestly. They suggested rosemary for my sunny spot, but your wind may matter too.
+
+145. Alice: I was going to buy mint because it looked cheerful.
+146. Bob: Keep mint in its own pot if you get it. Mine took over the shared planter.
+
+147. Alice: Noted. Is Fern Nursery on Hill Road?
+148. Bob: Yes, just before the bend. Bring a box if you are walking home with plants.
+
+149. Alice: Do they sell big fruit trees too?
+150. Bob: I saw a few, but I only recommend them from my experience buying balcony herbs.
+
+151. Alice: How much were the small herb pots?
+152. Bob: Six dollars each when I went. That may have changed.
+
+153. Alice: Would you come with me Saturday morning before the picnic?
+154. Bob: I can do nine, but I need to leave by ten to make the pasta salad.
+
+155. Alice: That gives us enough time. I can carry the plants home.
+156. Bob: Great. Do not leave them in my car through the picnic; it gets hot in there.
+
+157. Alice: I will drop them at home first. Do I need special soil?
+158. Bob: Ask the nursery. I used the potting mix they suggested, but I do not remember its name.
+
+159. Alice: Rosemary advice, separate pot for mint, ask about the soil. Thanks.
+160. Bob: And mention the wind. That is the detail neither of us should guess about.
+
+161. Alice: Can I ask about Paws Grooming? The puppy is getting very fluffy.
+162. Bob: We used them for our small, calm dog and were happy. Is yours comfortable with strangers?
+
+163. Alice: Usually, but the dryer noise worries her.
+164. Bob: Tell them before booking. My experience would not tell you how they handle a nervous dog.
+
+165. Alice: Would you take a large anxious dog there?
+166. Bob: I would ask for a separate consultation first. I would not recommend that based on our easy visit.
+
+167. Alice: Where is the salon?
+168. Bob: Garden Street. It is the small doorway beside the pet-food shop.
+
+169. Alice: Do you stay during the appointment?
+170. Bob: I stayed for the first few minutes, then waited nearby. Their arrangements may depend on the dog.
+
+171. Alice: How long did it take?
+172. Bob: About an hour for ours. They told me the time after seeing his coat.
+
+173. Alice: I think you mentioned forty-five dollars.
+174. Bob: Yes, for our dog that day. Matting or a different coat could change the price.
+
+175. Alice: I will send them a photo and ask rather than assume.
+176. Bob: Bring her familiar brush too. They used ours briefly to help her settle.
+
+177. Alice: Maybe I should book after the picnic, not squeeze it into Saturday morning.
+178. Bob: Definitely. You already have the nursery before the picnic, and I need the salad-making window.
+
+179. Alice: You are right. I am turning Saturday into an obstacle course.
+180. Bob: Keep one errand for another day. The puppy will not mind waiting until Tuesday.
+
+181. Alice: If the bike is still at the workshop, can I take the number 8 to Meadow Park?
+182. Bob: It gets you to Birch Station. From there the park is about a ten-minute walk.
+
+183. Alice: Is it the same stop we used for the library?
+184. Bob: No, we got off earlier for the library. Stay on until Birch Station for the park.
+
+185. Alice: Which exit at the station?
+186. Bob: The north exit points towards the west gate of the park. The south exit adds a detour.
+
+187. Alice: Does the bus run on Sundays too?
+188. Bob: Yes, but I had a long wait on a Sunday evening. I prefer it for weekday trips.
+
+189. Alice: For Saturday, should I trust the weekday timetable?
+190. Bob: No, check the Saturday timetable. My weekday commute is not proof of the weekend schedule.
+
+191. Alice: What do you normally pay?
+192. Bob: Three dollars for my single ride. I do not know whether the child fare is different.
+
+193. Alice: I will check the fare and timetable together. Could we share a ride if it is awkward?
+194. Bob: I can offer a lift from Birch Station, but I only have one spare seat.
+
+195. Alice: There would be two of us, so that will not work unless one walks.
+196. Bob: Then let us not plan around my car. The walk is manageable if the weather is decent.
+
+197. Alice: I will allow extra time and bring the stroller.
+198. Bob: Good. I will meet you at the west gate at one with the salad and the recovered backpack.
+
+199. Alice: Perfect. Plants dropped at home, backpack found, plates covered, and no imaginary library rain plan.
+200. Bob: That sounds like an actual plan now. If Friday's forecast is bad, we postpone rather than improvise.

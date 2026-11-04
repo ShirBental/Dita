@@ -1,0 +1,81 @@
+# Java / Maven output (all modules)
+target/
+/build/
+*.class
+
+# Local credentials; keep templates that contain placeholders only
+.env
+.env.*
+!.env.example
+!.env.*.example
+!.env.sample
+!.env.template
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+
+# Runtime data and disposable logs; retain explicitly referenced acceptance evidence
+data/
+*.log
+!/eval/TASK-051/*.log
+*.pid
+hs_err_pid*
+replay_pid*
+:memory:*
+
+# Downloaded model weights; retain model manifests and hashes
+*.onnx
+*.onnx_data
+*.safetensors
+/eval/TASK-046/nli/cross-encoder-nli-deberta-v3-xsmall/
+
+# Python and test caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# OS/editor debris and machine-specific tool configuration
+.DS_Store
+._*
+*.swp
+*.swo
+*~
+/.idea/
+*.iml
+/.vscode/settings.json
+/.claude/settings.local.json
+/.codex/config.toml
+**/.cc-writes/
+
+# Local team/product records, delivery bundles and sealed evaluation material.
+# Preserved on disk; excluded from ordinary git add. Source implementations stay visible.
+/.avengers/
+/.peter-parker/
+/outputs/
+/eval/**/sealed/
+
+# Local shell environment and disposable databases (schema/migrations remain visible)
+.envrc
+.envrc.*
+!.envrc.example
+*.sqlite
+*.sqlite3
+*.sqlite-wal
+*.sqlite-shm
+*.db-wal
+*.db-shm
+
+# Additional Python tooling caches
+.mypy_cache/
+.ruff_cache/
+.tox/
+.coverage
+htmlcov/
+
+# Personal Telegram routing; safe fictional template stays tracked
+/config/telegram.local.env

@@ -1,0 +1,56 @@
+[
+  {
+    "id": "m1",
+    "author": "Avery",
+    "text": "Decision: the workshop venue is the library.",
+    "minute": 0
+  },
+  {
+    "id": "m2",
+    "author": "Avery",
+    "text": "Final decision: the workshop venue is now the greenhouse instead of the library.",
+    "minute": 1
+  },
+  {
+    "id": "m3",
+    "author": "Blair",
+    "text": "I will bring lemonade and orange juice for everyone.",
+    "minute": 2
+  },
+  {
+    "id": "m4",
+    "author": "Casey",
+    "text": "I will drive the volunteers from the station to the greenhouse.",
+    "minute": 3
+  },
+  {
+    "id": "m5",
+    "author": "Drew",
+    "text": "Wheelchair users can enter through the eastern ramp.",
+    "minute": 4
+  },
+  {
+    "id": "m6",
+    "author": "Elliot",
+    "text": "Decision: admission is free and there is no entry charge.",
+    "minute": 5
+  },
+  {
+    "id": "m7",
+    "author": "Frankie",
+    "text": "I will collect the rubbish and sweep the floor afterwards.",
+    "minute": 6
+  },
+  {
+    "id": "m8",
+    "author": "Gray",
+    "text": "Who will arrange liability insurance?",
+    "minute": 7
+  },
+  {
+    "id": "m9",
+    "author": "Harper",
+    "text": "Heavy rain is forecast for Saturday afternoon.",
+    "minute": 8
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "mode" : "PREVIEW",
+  "backend" : "IN_MEMORY",
+  "group" : "lab-287ae061",
+  "batch" : "xb-c3b781271b65751cbb04",
+  "status" : "FAILED",
+  "error" : "MuseException",
+  "accepted" : 0,
+  "duplicates" : 0,
+  "relations" : 0,
+  "superseded" : 0,
+  "model_calls" : 1,
+  "request_chars" : 9695,
+  "dataset" : "lab",
+  "knowledge_retriever" : "lexical-bm25",
+  "rejections" : [ ],
+  "items" : [ ],
+  "relation_list" : [ ]
+}

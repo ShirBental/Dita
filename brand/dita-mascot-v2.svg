@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <title>Dita mascot v2: head silhouette reads as a lowercase "d"</title>
+  <!-- Exactly two colors: #2D1B4E (ink plum) and #FFF1DC (warm cream) -->
+  <defs><clipPath id="bob"><rect x="0" y="0" width="512" height="352"/></clipPath></defs>
+  <rect width="512" height="512" fill="#FFF1DC"/>
+  <g transform="translate(12 6)">
+    <!-- Hair: rounded bob (the bowl of the "d") -->
+    <circle cx="236" cy="282" r="128" fill="#2D1B4E" clip-path="url(#bob)"/>
+    <!-- Face -->
+    <circle cx="236" cy="296" r="98" fill="#FFF1DC" stroke="#2D1B4E" stroke-width="14"/>
+    <!-- Side-swept fringe -->
+    <path d="M330 290 C342 200 280 172 226 176 C166 180 136 230 140 296 C164 240 214 222 262 236 C292 246 316 266 330 290 Z" fill="#2D1B4E"/>
+    <!-- One long lock = the stem of the "d", ending in the signature curl -->
+    <path d="M356 404 V180 C356 96 286 70 252 104 C226 130 248 170 282 160" fill="none" stroke="#2D1B4E" stroke-width="52" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Dot eyes -->
+    <circle cx="206" cy="316" r="11" fill="#2D1B4E"/>
+    <circle cx="272" cy="316" r="11" fill="#2D1B4E"/>
+    <!-- Tiny knowing smile (right corner lifted) -->
+    <path d="M220 356 Q240 370 262 350" fill="none" stroke="#2D1B4E" stroke-width="9" stroke-linecap="round"/>
+  </g>
+</svg>

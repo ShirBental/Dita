@@ -1,0 +1,63 @@
+{
+  "id": "S3",
+  "theme": "Apartment residents' shared move-out clean-up: offers, commitments, cancellations and handovers",
+  "names": {
+    "u-greta": "Greta Halloway",
+    "u-sami": "Sami Rendell",
+    "u-ola": "Ola Brightwater",
+    "u-fenn": "Fenn Castellan",
+    "u-nadia": "Nadia Prow",
+    "u-luca": "Luca Ferrand"
+  },
+  "messages": [
+    {"id": "s3m01", "author": "u-greta", "minute": 0, "replyTo": null, "text": "Hi neighbours, shared clean-up of the stairwell and bike room before move-out: Sunday 8 June, 2pm. Who can help?"},
+    {"id": "s3m02", "author": "u-sami", "minute": 4, "replyTo": "s3m01", "text": "I'll bring the vacuum and an extension cord."},
+    {"id": "s3m03", "author": "u-ola", "minute": 7, "replyTo": "s3m01", "text": "I can do the bike room sweep."},
+    {"id": "s3m04", "author": "u-fenn", "minute": 11, "replyTo": "s3m01", "text": "I'll bring bin bags and gloves for everyone."},
+    {"id": "s3m05", "author": "u-nadia", "minute": 15, "replyTo": null, "text": "I could probably bring a ladder for the light fittings, not 100% sure yet."},
+    {"id": "s3m06", "author": "u-luca", "minute": 19, "replyTo": null, "text": "I'll book the bulky-waste pickup with the council for Monday 9 June."},
+    {"id": "s3m07", "author": "u-greta", "minute": 24, "replyTo": "s3m06", "text": "Perfect, thanks Luca."},
+    {"id": "s3m08", "author": "u-sami", "minute": 30, "replyTo": "s3m02", "text": "Sorry, cancelling the vacuum offer, mine just broke."},
+    {"id": "s3m09", "author": "u-ola", "minute": 33, "replyTo": "s3m08", "text": "I'll bring my vacuum then. Sami, can you take the bins out instead?"},
+    {"id": "s3m10", "author": "u-sami", "minute": 36, "replyTo": "s3m09", "text": "Deal, I'll take the bins out after."},
+    {"id": "s3m11", "author": "u-fenn", "minute": 42, "replyTo": null, "text": "Who has the key to the bike room?"},
+    {"id": "s3m12", "author": "u-nadia", "minute": 46, "replyTo": "s3m05", "text": "Confirmed: I'm bringing the ladder."},
+    {"id": "s3m13", "author": "u-luca", "minute": 51, "replyTo": "s3m06", "text": "Update: the council moved the bulky-waste pickup to Tuesday 10 June."},
+    {"id": "s3m14", "author": "u-greta", "minute": 55, "replyTo": null, "text": "Ola, since you're on vacuum now, can someone else take the bike room?"},
+    {"id": "s3m15", "author": "u-fenn", "minute": 58, "replyTo": "s3m14", "text": "I'll sweep the bike room. Handing over the bin bags and gloves to Nadia, she has spares from her own move."},
+    {"id": "s3m16", "author": "u-nadia", "minute": 61, "replyTo": "s3m15", "text": "Yes, I'll bring bags and gloves."},
+    {"id": "s3m17", "author": "u-luca", "minute": 66, "replyTo": "s3m11", "text": "Caretaker has the bike room key, I'll pick it up Saturday."},
+    {"id": "s3m18", "author": "u-greta", "minute": 72, "replyTo": "s3m01", "text": "Time change: we'll start at 3pm because of the building's water shutoff. Date stays the same."},
+    {"id": "s3m19", "author": "u-ola", "minute": 77, "replyTo": null, "text": "Stairwell windows, anyone?"},
+    {"id": "s3m20", "author": "u-sami", "minute": 80, "replyTo": "s3m19", "text": "I can do them if I'm back from my parents in time, otherwise no."},
+    {"id": "s3m21", "author": "u-fenn", "minute": 85, "replyTo": null, "text": "Instead of buying cleaning spray, I've got a big bottle left over, I'll bring that."},
+    {"id": "s3m22", "author": "u-luca", "minute": 90, "replyTo": "s3m17", "text": "Bad news, I'm away that weekend after all. Can someone pick up the bike room key Saturday instead of me?"},
+    {"id": "s3m23", "author": "u-greta", "minute": 94, "replyTo": "s3m22", "text": "I'll get the key from the caretaker Saturday."},
+    {"id": "s3m24", "author": "u-nadia", "minute": 99, "replyTo": null, "text": "Who is doing what again? Losing track."},
+    {"id": "s3m25", "author": "u-greta", "minute": 104, "replyTo": "s3m24", "text": "Vacuum Ola, bins Sami, bike room Fenn, bags/gloves and ladder Nadia, key me. Luca booked the bulky-waste pickup."},
+    {"id": "s3m26", "author": "u-ola", "minute": 110, "replyTo": null, "text": "Should we tell the landlord about the clean-up?"},
+    {"id": "s3m27", "author": "u-sami", "minute": 115, "replyTo": null, "text": "See you Sunday at 3."}
+  ],
+  "state": [
+    {"topic": "clean-up start time", "current": ["s3m18"], "superseded": ["s3m01"], "expectedSupersedes": [["s3m18", "s3m01"]], "note": "One-detail correction: only the time changes (2pm -> 3pm). The date Sunday 8 June still comes from s3m01, so s3m01 is superseded for time only."},
+    {"topic": "vacuum", "current": ["s3m09"], "superseded": ["s3m02"], "expectedSupersedes": [["s3m08", "s3m02"]], "note": "Sami cancels (s3m08), Ola takes over (s3m09). The takeover is an ownership handover, not a separate pair."},
+    {"topic": "bike room sweep", "current": ["s3m15"], "superseded": ["s3m03"], "expectedSupersedes": [["s3m15", "s3m03"]], "note": "Ola moved to vacuum (s3m14 request), Fenn takes the bike room."},
+    {"topic": "bin bags and gloves", "current": ["s3m15", "s3m16"], "superseded": ["s3m04"], "expectedSupersedes": [["s3m15", "s3m04"]], "note": "Fenn hands over to Nadia; s3m16 is Nadia accepting."},
+    {"topic": "ladder", "current": ["s3m12"], "superseded": ["s3m05"], "expectedSupersedes": [["s3m12", "s3m05"]], "note": "Tentative offer ('probably, not 100% sure') replaced by a firm commitment."},
+    {"topic": "bulky-waste pickup date", "current": ["s3m13"], "superseded": ["s3m06"], "expectedSupersedes": [["s3m13", "s3m06"]], "note": "Here 'Update' IS a correction (Monday 9 -> Tuesday 10 June). Luca remains the booker."},
+    {"topic": "bike room key pickup", "current": ["s3m23"], "superseded": ["s3m17"], "expectedSupersedes": [["s3m22", "s3m17"]], "note": "Luca withdraws (s3m22), Greta takes over (s3m23, handover). Bins (s3m10) and cleaning spray (s3m21, non-correcting 'Instead') are additive. s3m20 is a conditional that is never confirmed."}
+  ],
+  "questions": [
+    {"qid": "S3-Q1", "question": "Who is bringing the vacuum?", "kind": "ownership", "polarity": "positive", "goldAnswer": "Ola. Sami cancelled because his vacuum broke.", "expectUnknown": false, "mustCite": ["s3m09"], "allowCite": ["s3m08", "s3m25"], "mustNotCite": ["s3m02"], "textMust": ["I'll bring my vacuum"], "textMustNot": ["extension cord"], "note": "Offer cancelled and taken over."},
+    {"qid": "S3-Q2", "question": "Is Sami still bringing the vacuum?", "kind": "superseded-check", "polarity": "negative", "goldAnswer": "No. He cancelled because it broke; Ola is bringing hers and Sami takes the bins out instead.", "expectUnknown": false, "mustCite": ["s3m08"], "allowCite": ["s3m09", "s3m10", "s3m25"], "mustNotCite": ["s3m02"], "textMust": ["cancelling the vacuum offer"], "textMustNot": ["extension cord"], "note": "Retracted offer."},
+    {"qid": "S3-Q3", "question": "Who is sweeping the bike room?", "kind": "ownership", "polarity": "positive", "goldAnswer": "Fenn took it over after Ola switched to bringing the vacuum.", "expectUnknown": false, "mustCite": ["s3m15"], "allowCite": ["s3m14", "s3m25"], "mustNotCite": ["s3m03"], "textMust": ["I'll sweep the bike room"], "textMustNot": [], "note": "Ownership change."},
+    {"qid": "S3-Q4", "question": "Does the clean-up still start at 2pm?", "kind": "superseded-check", "polarity": "negative", "goldAnswer": "No. Greta moved the start to 3pm because of the water shutoff; the date stays the same.", "expectUnknown": false, "mustCite": ["s3m18"], "allowCite": ["s3m27"], "mustNotCite": ["s3m01"], "textMust": ["3pm"], "textMustNot": [], "note": "One-detail correction. textMustNot left empty because a correct answer may echo the question's '2pm'."},
+    {"qid": "S3-Q5", "question": "When is the bulky-waste pickup?", "kind": "current-state", "polarity": "positive", "goldAnswer": "Tuesday 10 June, booked with the council by Luca.", "expectUnknown": false, "mustCite": ["s3m13"], "allowCite": ["s3m25"], "mustNotCite": ["s3m06"], "textMust": ["Tuesday 10 June"], "textMustNot": ["Monday 9 June"], "note": "Council moved the date."},
+    {"qid": "S3-Q6", "question": "Who is picking up the bike room key?", "kind": "ownership", "polarity": "positive", "goldAnswer": "Greta, from the caretaker on Saturday. Luca withdrew because he is away that weekend.", "expectUnknown": false, "mustCite": ["s3m23"], "allowCite": ["s3m22", "s3m25"], "mustNotCite": ["s3m17"], "textMust": ["from the caretaker"], "textMustNot": ["I'll pick it up"], "note": "Delayed answer later withdrawn and taken over."},
+    {"qid": "S3-Q7", "question": "Is Sami definitely doing the stairwell windows?", "kind": "qualified", "polarity": "negative", "goldAnswer": "No. Only if he is back from his parents in time, and that was never confirmed.", "expectUnknown": false, "mustCite": ["s3m20"], "allowCite": ["s3m19"], "mustNotCite": [], "textMust": ["if I'm back"], "textMustNot": [], "note": "Conditional commitment, condition never confirmed."},
+    {"qid": "S3-Q8", "question": "Who is bringing bin bags and gloves?", "kind": "ownership", "polarity": "positive", "goldAnswer": "Nadia; Fenn handed that over to her.", "expectUnknown": false, "mustCite": ["s3m16"], "allowCite": ["s3m15", "s3m25"], "mustNotCite": ["s3m04"], "textMust": ["bags and gloves"], "textMustNot": ["for everyone"], "note": "Handover."},
+    {"qid": "S3-Q9", "question": "Has anyone told the landlord about the clean-up?", "kind": "unknown", "polarity": "negative", "goldAnswer": "Unknown. Ola asked whether to tell the landlord, but nobody replied.", "expectUnknown": true, "mustCite": [], "allowCite": ["s3m26"], "mustNotCite": [], "textMust": [], "textMustNot": [], "note": "Unanswered question."},
+    {"qid": "S3-Q10", "question": "Who is mopping the lobby floor?", "kind": "unknown", "polarity": "positive", "goldAnswer": "Unknown. Mopping the lobby was never discussed; the clean-up covers the stairwell and bike room.", "expectUnknown": true, "mustCite": [], "allowCite": ["s3m01", "s3m25"], "mustNotCite": [], "textMust": [], "textMustNot": [], "note": "Not discussed."}
+  ],
+  "deletionProbe": {"delete": "s3m23", "question": "Who is picking up the bike room key?", "mustNotCite": ["s3m23"], "textMustNot": ["from the caretaker"]}
+}

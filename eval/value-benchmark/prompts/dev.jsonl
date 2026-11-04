@@ -1,0 +1,35 @@
+{"qid": "B01", "corpus_id": "parents-b", "as_of": "2026-09-05T00:00:00Z", "question": "What do parents say about Dr. Quillby?"}
+{"qid": "B02", "corpus_id": "parents-b", "as_of": "2026-09-05T00:00:00Z", "question": "איזה רופא שיניים עושה סתימות?"}
+{"qid": "B03", "corpus_id": "parents-b", "as_of": "2026-09-05T00:00:00Z", "question": "Does Dr. Quillby accept Tumbleweed Health?"}
+{"qid": "B04", "corpus_id": "parents-b", "as_of": "2026-09-05T00:00:00Z", "question": "Who is driving the swimming carpool this Tuesday?"}
+{"qid": "B05", "corpus_id": "parents-b", "as_of": "2026-09-05T00:00:00Z", "question": "כמה משלמים לכל ילד על המתנה למורה מיכל?"}
+{"qid": "B06", "corpus_id": "parents-b", "as_of": "2026-09-05T00:00:00Z", "question": "How many kids still haven't paid for Michal's gift?"}
+{"qid": "B07", "corpus_id": "parents-b", "as_of": "2026-09-05T00:00:00Z", "question": "Was Ella's blue jacket found?"}
+{"qid": "B08", "corpus_id": "parents-b", "as_of": "2026-09-05T00:00:00Z", "question": "Is the pool open during Hanukkah?"}
+{"qid": "B09", "corpus_id": "parents-b", "as_of": "2026-09-05T00:00:00Z", "question": "Did Dr. Quillby close her clinic?"}
+{"qid": "B10", "corpus_id": "parents-b", "as_of": "2026-09-05T00:00:00Z", "question": "How did Noam's dentist visit go?"}
+{"qid": "B11", "corpus_id": "parents-b", "as_of": "2026-09-05T00:00:00Z", "question": "Can she cover Tuesday?"}
+{"qid": "B12", "corpus_id": "parents-b", "as_of": "2026-09-05T00:00:00Z", "question": "מאיפה האיסוף לשחייה ביום שלישי?"}
+{"qid": "H01", "corpus_id": "building-he", "as_of": "2026-09-06T00:00:00Z", "question": "את מי ממליצים בקבוצה לתיקון נזילה?"}
+{"qid": "H02", "corpus_id": "building-he", "as_of": "2026-09-06T00:00:00Z", "question": "כמה דמי הוועד לחודש?"}
+{"qid": "H03", "corpus_id": "building-he", "as_of": "2026-08-20T00:00:00Z", "question": "כמה דמי הוועד לחודש?"}
+{"qid": "H04", "corpus_id": "building-he", "as_of": "2026-09-06T00:00:00Z", "question": "איפה תתקיים אסיפת הדיירים?"}
+{"qid": "H05", "corpus_id": "building-he", "as_of": "2026-09-06T00:00:00Z", "question": "מתי מגיע הטכנאי של המעלית?"}
+{"qid": "H06", "corpus_id": "building-he", "as_of": "2026-09-06T00:00:00Z", "question": "מה הקוד של הדלת הראשית?"}
+{"qid": "H07", "corpus_id": "building-he", "as_of": "2026-09-06T00:00:00Z", "question": "למי צריך לפנות כדי לקבל את המפתח לגג?"}
+{"qid": "H08", "corpus_id": "building-he", "as_of": "2026-09-06T00:00:00Z", "question": "באיזה יום ובאיזו שעה מגיעה חברת הניקיון?"}
+{"qid": "H09", "corpus_id": "building-he", "as_of": "2026-09-06T00:00:00Z", "question": "האם יש חניה לאורחים בבניין?"}
+{"qid": "F01", "corpus_id": "family-en", "as_of": "2026-08-10T00:00:00Z", "question": "Which restaurant would work for Grandma, who uses a wheelchair?"}
+{"qid": "F02", "corpus_id": "family-en", "as_of": "2026-08-10T00:00:00Z", "question": "Who is bringing the cake to the anniversary dinner?"}
+{"qid": "F03", "corpus_id": "family-en", "as_of": "2026-08-10T00:00:00Z", "question": "What date is the anniversary dinner?"}
+{"qid": "F04", "corpus_id": "family-en", "as_of": "2026-08-10T00:00:00Z", "question": "Who originally said Sugarplum Hollow bakery is closing, and is it more than one independent source?"}
+{"qid": "F05", "corpus_id": "family-en", "as_of": "2026-08-10T00:00:00Z", "question": "What is Jonah's new address?"}
+{"qid": "F06", "corpus_id": "family-en", "as_of": "2026-08-10T00:00:00Z", "question": "What time is pickup from Ari's summer camp?"}
+{"qid": "F07", "corpus_id": "family-en", "as_of": "2026-08-10T00:00:00Z", "question": "Has anyone booked a photographer for the dinner?"}
+{"qid": "M01", "corpus_id": "club-mixed", "as_of": "2026-11-03T00:00:00Z", "question": "איזו ערכת הלחמה ממליצים בקבוצה?"}
+{"qid": "M02", "corpus_id": "club-mixed", "as_of": "2026-11-03T00:00:00Z", "question": "Which day is robotics practice?"}
+{"qid": "M03", "corpus_id": "club-mixed", "as_of": "2026-11-03T00:00:00Z", "question": "כמה עולה ההרשמה לטורניר?"}
+{"qid": "M04", "corpus_id": "club-mixed", "as_of": "2026-11-03T00:00:00Z", "question": "Who brings the robot on tournament day?"}
+{"qid": "M05", "corpus_id": "club-mixed", "as_of": "2026-11-03T00:00:00Z", "question": "Where is the robotics tournament?"}
+{"qid": "M06", "corpus_id": "club-mixed", "as_of": "2026-11-03T00:00:00Z", "question": "What time does robotics practice end?"}
+{"qid": "M07", "corpus_id": "club-mixed", "as_of": "2026-11-03T00:00:00Z", "question": "Is there a bus to the tournament?"}

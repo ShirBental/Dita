@@ -1,0 +1,27 @@
+# SYNTHETIC FIXTURE. Not real platform messages. Fictional names. Scenario B (parents-b). Author: Bruce Banner (benchmark v0).
+# id|author|minutesFromStart|replyToId|text
+b01|tamar|0||Can anyone recommend a pediatric dentist? Noam has a cavity
+b02|gil|2||Who's driving the swimming carpool on Tuesday?
+b03|shira|4||ד"ר כץ ברחוב ויצמן מעולה, הילדים לא מפחדים ממנה
+b04|oren|5|b02|I'll drive Tuesday, I have room for 3 kids
+b05|lior|7||Dr. Katz is great for checkups but for fillings go to Dr. Peretz, Katz doesn't do sedation
+b06|noga|8||Did someone find a blue jacket after the class party? Ella lost hers
+b07|tamar|10||thanks! does she take Maccabi insurance?
+b08|gil|11||Is it the one with the zipper hood? I saw one in the lobby
+b09|eitan|13||Don't go to Dr. Katz, she was rough with my daughter and we left in tears
+b10|noga|14||yes that's it! where in the lobby?
+b11|ruth|20||Reminder: class gift for teacher Michal, collecting 50 NIS per child by Sunday
+b12|shira|22|b07|כן, היא עובדת עם מכבי
+b13|ruth|25||Correction: it's 40 NIS per child, not 50. The PTA covers the rest
+b14|oren|30||Gil, I can't drive Tuesday after all, work meeting. Can someone swap?
+b15|shira|33|b14|אני יכולה לקחת את שלישי, אבל רק עד 3 ילדים
+b16|gil|35||Great, so Shira drives Tuesday and Oren takes Thursday?
+b17|oren|36|b16|Yes, Thursday works for me
+b18|lior|40||Tuesday pickup is from the main gate, not the side gate
+b19|eitan|45||מישהו יודע אם הבריכה פתוחה בחנוכה?
+b20|tamar|4320||Back to the dentist question - we went to Dr. Katz yesterday, she was wonderful with Noam
+b21|lior|4325|b20|Glad to hear! Did she do the filling herself?
+b22|tamar|4330|b21|No, she referred us to Dr. Peretz for the filling, like Lior said
+b23|ruth|4400||עדכון לגבי המתנה למיכל: אספנו כבר מ-22 ילדים מתוך 30, חסרים עוד 8
+b24|shira|4410||Tuesday carpool: I've got a fever this week, Gil can you cover just this Tuesday?
+b25|gil|4415|b24|Sure, I'll drive this Tuesday only, Shira back next week

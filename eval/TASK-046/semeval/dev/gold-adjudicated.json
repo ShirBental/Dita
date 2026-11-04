@@ -1,0 +1,3805 @@
+{
+ "DEV-001": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "yes",
+    "evidence": "Make it 8:40"
+   }
+  ],
+  "status": {
+   "m1": "CONFIRMED_COMMITMENT",
+   "m2": "QUESTION",
+   "m3": "CONFIRMED_COMMITMENT"
+  },
+  "current": [
+   "m3"
+  ],
+  "notCurrent": [
+   "m1",
+   "m2"
+  ],
+  "answer": {
+   "mustState": [
+    "8:40"
+   ],
+   "mustNotStateAsCurrent": [
+    "8:15"
+   ],
+   "mustNotLabel": [
+    "decided on"
+   ]
+  }
+ },
+ "DEV-002": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "yes",
+    "evidence": "Let's say book club on the 21st"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "ATTRIBUTED_STATEMENT",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [
+   "m1"
+  ],
+  "answer": {
+   "mustState": [
+    "21st"
+   ],
+   "mustNotStateAsCurrent": [
+    "14th"
+   ],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-003": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "yes",
+    "evidence": "swap to a big couscous thing instead"
+   }
+  ],
+  "status": {
+   "m1": "CONFIRMED_COMMITMENT",
+   "m2": "CONFIRMED_COMMITMENT",
+   "m3": "CONFIRMED_COMMITMENT"
+  },
+  "current": [
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [
+   "m1"
+  ],
+  "answer": {
+   "mustState": [
+    "couscous"
+   ],
+   "mustNotStateAsCurrent": [
+    "lasagna"
+   ],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-004": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "yes",
+    "evidence": "We're booking the museum"
+   }
+  ],
+  "status": {
+   "m1": "QUESTION",
+   "m2": "ATTRIBUTED_STATEMENT",
+   "m3": "DECISION"
+  },
+  "current": [
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [
+   "m1"
+  ],
+  "answer": {
+   "mustState": [
+    "science museum"
+   ],
+   "mustNotStateAsCurrent": [
+    "aquarium"
+   ],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-005": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "yes",
+    "evidence": "I've reserved the taco place"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "REPORTED_CLAIM",
+   "m3": "DECISION"
+  },
+  "current": [
+   "m3"
+  ],
+  "notCurrent": [
+   "m1",
+   "m2"
+  ],
+  "answer": {
+   "mustState": [
+    "taco place"
+   ],
+   "mustNotStateAsCurrent": [
+    "ramen bar"
+   ],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-006": {
+  "pairs": [
+   {
+    "later": "m4",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "yes",
+    "evidence": "Done, they're in the trunk already."
+   }
+  ],
+  "status": {
+   "m1": "OFFER",
+   "m2": "OFFER",
+   "m3": "ATTRIBUTED_STATEMENT",
+   "m4": "CONFIRMED_COMMITMENT"
+  },
+  "current": [
+   "m2",
+   "m3",
+   "m4"
+  ],
+  "notCurrent": [
+   "m1"
+  ],
+  "answer": {
+   "mustState": [
+    "Nico",
+    "folding tables"
+   ],
+   "mustNotStateAsCurrent": [],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-007": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "yes",
+    "evidence": "Van's yours 8 to noon"
+   }
+  ],
+  "status": {
+   "m1": "OFFER",
+   "m2": "OFFER",
+   "m3": "CONFIRMED_COMMITMENT"
+  },
+  "current": [
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [
+   "m1"
+  ],
+  "answer": {
+   "mustState": [
+    "8 to noon"
+   ],
+   "mustNotStateAsCurrent": [],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-008": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "yes",
+    "evidence": "Honestly the best pick"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "ATTRIBUTED_STATEMENT",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [
+   "m1"
+  ],
+  "answer": {
+   "mustState": [
+    "best pick for little legs"
+   ],
+   "mustNotStateAsCurrent": [
+    "avoid the lake trail"
+   ],
+   "mustNotLabel": [
+    "decided on the ridge route"
+   ]
+  }
+ },
+ "DEV-009": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "yes",
+    "evidence": "someone else will need to take the snacks"
+   }
+  ],
+  "status": {
+   "m1": "CONFIRMED_COMMITMENT",
+   "m2": "QUESTION",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m3"
+  ],
+  "notCurrent": [
+   "m1",
+   "m2"
+  ],
+  "answer": {
+   "mustState": [
+    "someone else"
+   ],
+   "mustNotStateAsCurrent": [
+    "Vera is running the snack table"
+   ],
+   "mustNotLabel": [
+    "committed to"
+   ]
+  }
+ },
+ "DEV-010": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "no",
+    "evidence": "practice is on the east field this week, 5:30"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "QUESTION",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m3"
+  ],
+  "notCurrent": [
+   "m2"
+  ],
+  "answer": {
+   "mustState": [
+    "east field",
+    "5:30"
+   ],
+   "mustNotStateAsCurrent": [],
+   "mustNotLabel": [
+    "decided on"
+   ]
+  }
+ },
+ "DEV-011": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "no",
+    "evidence": "definitely 7:10, main gate"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m3": "REPORTED_CLAIM"
+  },
+  "current": [
+   "m1",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "7:10",
+    "main gate"
+   ],
+   "mustNotStateAsCurrent": [],
+   "mustNotLabel": [
+    "decided"
+   ]
+  }
+ },
+ "DEV-012": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "no",
+    "evidence": "same 6 o'clock start"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "ATTRIBUTED_STATEMENT",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "6"
+   ],
+   "mustNotStateAsCurrent": [],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-013": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "no",
+    "evidence": "also grab ice"
+   }
+  ],
+  "status": {
+   "m1": "CONFIRMED_COMMITMENT",
+   "m3": "OFFER"
+  },
+  "current": [
+   "m1",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "charcoal"
+   ],
+   "mustNotStateAsCurrent": [],
+   "mustNotLabel": [
+    "committed to bring ice"
+   ]
+  }
+ },
+ "DEV-014": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "no",
+    "evidence": "as well"
+   }
+  ],
+  "status": {
+   "m1": "OFFER",
+   "m3": "OFFER"
+  },
+  "current": [
+   "m1",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "Jun's two",
+    "Kemi's daughter"
+   ],
+   "mustNotStateAsCurrent": [],
+   "mustNotLabel": [
+    "committed to"
+   ]
+  }
+ },
+ "DEV-015": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "no",
+    "evidence": "In the event of rain"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m3": "OFFER"
+  },
+  "current": [
+   "m1",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "back lawn"
+   ],
+   "mustNotStateAsCurrent": [
+    "gym"
+   ],
+   "mustNotLabel": [
+    "committed to book the gym"
+   ]
+  }
+ },
+ "DEV-016": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "no",
+    "evidence": "only if Marco's oven is down again"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "QUESTION",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m3"
+  ],
+  "notCurrent": [
+   "m2"
+  ],
+  "answer": {
+   "mustState": [
+    "Marco's"
+   ],
+   "mustNotStateAsCurrent": [
+    "sub shop"
+   ],
+   "mustNotLabel": [
+    "decided on"
+   ]
+  }
+ },
+ "DEV-017": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "no",
+    "evidence": "If Lindell's sells out before I get there"
+   }
+  ],
+  "status": {
+   "m1": "CONFIRMED_COMMITMENT",
+   "m2": "ATTRIBUTED_STATEMENT",
+   "m3": "OFFER"
+  },
+  "current": [
+   "m1",
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "cake from Lindell's"
+   ],
+   "mustNotStateAsCurrent": [
+    "cupcakes"
+   ],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-018": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "no",
+    "evidence": "for the adults"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "REPORTED_CLAIM",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "pizza"
+   ],
+   "mustNotStateAsCurrent": [
+    "curry"
+   ],
+   "mustNotLabel": [
+    "committed to"
+   ]
+  }
+ },
+ "DEV-019": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "no",
+    "evidence": "for the older group"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "OFFER",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "4"
+   ],
+   "mustNotStateAsCurrent": [
+    "5:15"
+   ],
+   "mustNotLabel": [
+    "committed to"
+   ]
+  }
+ },
+ "DEV-020": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "no",
+    "replaces": "no",
+    "evidence": "about $20 each"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "QUESTION",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m3"
+  ],
+  "notCurrent": [
+   "m2"
+  ],
+  "answer": {
+   "mustState": [
+    "7"
+   ],
+   "mustNotStateAsCurrent": [],
+   "mustNotLabel": [
+    "decided on the restaurant"
+   ]
+  }
+ },
+ "DEV-021": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "no",
+    "replaces": "no",
+    "evidence": "Setup for the party is from 5:30"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "OFFER",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "7"
+   ],
+   "mustNotStateAsCurrent": [
+    "5:30"
+   ],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-022": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "no",
+    "replaces": "no",
+    "evidence": "pick is The Lantern Keeper"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "REPORTED_CLAIM",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "Eli's place",
+    "Sunday 3pm"
+   ],
+   "mustNotStateAsCurrent": [],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-023": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "no",
+    "replaces": "no",
+    "evidence": "Sale itself opens at 9"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "ATTRIBUTED_STATEMENT",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "9"
+   ],
+   "mustNotStateAsCurrent": [
+    "opens at 8"
+   ],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-024": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "no",
+    "replaces": "no",
+    "evidence": "away-game bus"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "QUESTION",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m3"
+  ],
+  "notCurrent": [
+   "m2"
+  ],
+  "answer": {
+   "mustState": [
+    "8:00"
+   ],
+   "mustNotStateAsCurrent": [
+    "10:30"
+   ],
+   "mustNotLabel": [
+    "decided on the bus"
+   ]
+  }
+ },
+ "DEV-025": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "no",
+    "replaces": "no",
+    "evidence": "for Grandpa Sol's 80th"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "OFFER",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "chocolate"
+   ],
+   "mustNotStateAsCurrent": [
+    "lemon"
+   ],
+   "mustNotLabel": [
+    "committed to"
+   ]
+  }
+ },
+ "DEV-026": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "no",
+    "replaces": "no",
+    "evidence": "the fair tent"
+   }
+  ],
+  "status": {
+   "m1": "CONFIRMED_COMMITMENT",
+   "m2": "ATTRIBUTED_STATEMENT",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "6-person dome"
+   ],
+   "mustNotStateAsCurrent": [
+    "blue gazebo"
+   ],
+   "mustNotLabel": [
+    "decided on the food tent"
+   ]
+  }
+ },
+ "DEV-027": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "no",
+    "replaces": "no",
+    "evidence": "We're taking the cabins"
+   }
+  ],
+  "status": {
+   "m1": "CONFIRMED_COMMITMENT",
+   "m2": "QUESTION",
+   "m3": "DECISION"
+  },
+  "current": [
+   "m1",
+   "m3"
+  ],
+  "notCurrent": [
+   "m2"
+  ],
+  "answer": {
+   "mustState": [
+    "cabins"
+   ],
+   "mustNotStateAsCurrent": [
+    "lake house"
+   ],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-028": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m2",
+    "sameProperty": "yes",
+    "replaces": "no",
+    "evidence": "And I'll stay till the last box is up"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "CONFIRMED_COMMITMENT",
+   "m3": "CONFIRMED_COMMITMENT"
+  },
+  "current": [
+   "m1",
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "9",
+    "trailer",
+    "till the last box is up"
+   ],
+   "mustNotStateAsCurrent": [],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-029": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "no",
+    "replaces": "no",
+    "evidence": "I'm happy to bring Ella to practice with me"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m3": "OFFER"
+  },
+  "current": [
+   "m1",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "bring Ella to practice"
+   ],
+   "mustNotStateAsCurrent": [],
+   "mustNotLabel": [
+    "committed to"
+   ]
+  }
+ },
+ "DEV-030": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "no",
+    "replaces": "no",
+    "evidence": "the theme is grandparents' dishes"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "QUESTION",
+   "m3": "DECISION"
+  },
+  "current": [
+   "m1",
+   "m3"
+  ],
+  "notCurrent": [
+   "m2"
+  ],
+  "answer": {
+   "mustState": [
+    "grandparents' dishes"
+   ],
+   "mustNotStateAsCurrent": [],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-031": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "yes",
+    "evidence": "the book swap goes to the café on Elm"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "OFFER",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [
+   "m1"
+  ],
+  "answer": {
+   "mustState": [
+    "café on Elm"
+   ],
+   "mustNotStateAsCurrent": [
+    "living room"
+   ],
+   "mustNotLabel": [
+    "committed to"
+   ]
+  }
+ },
+ "DEV-032": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "yes",
+    "evidence": "Ordered the plant"
+   }
+  ],
+  "status": {
+   "m1": "QUESTION",
+   "m2": "ATTRIBUTED_STATEMENT",
+   "m3": "DECISION"
+  },
+  "current": [
+   "m3"
+  ],
+  "notCurrent": [
+   "m1",
+   "m2"
+  ],
+  "answer": {
+   "mustState": [
+    "plant"
+   ],
+   "mustNotStateAsCurrent": [
+    "voucher"
+   ],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-033": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "yes",
+    "evidence": "Trampoline park it is"
+   }
+  ],
+  "status": {
+   "m1": "QUESTION",
+   "m2": "ATTRIBUTED_STATEMENT",
+   "m3": "DECISION"
+  },
+  "current": [
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [
+   "m1"
+  ],
+  "answer": {
+   "mustState": [
+    "trampoline park"
+   ],
+   "mustNotStateAsCurrent": [
+    "bowling"
+   ],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-034": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "yes",
+    "evidence": "the minutes are mine"
+   }
+  ],
+  "status": {
+   "m1": "OFFER",
+   "m2": "REPORTED_CLAIM",
+   "m3": "CONFIRMED_COMMITMENT"
+  },
+  "current": [
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [
+   "m1"
+  ],
+  "answer": {
+   "mustState": [
+    "Kemi"
+   ],
+   "mustNotStateAsCurrent": [],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-035": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "yes",
+    "evidence": "Scratch packing lunches"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "OFFER",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [
+   "m1"
+  ],
+  "answer": {
+   "mustState": [
+    "Buying there"
+   ],
+   "mustNotStateAsCurrent": [
+    "pack lunches"
+   ],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-036": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "yes",
+    "evidence": "I'd grab that one after all"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m3"
+  ],
+  "notCurrent": [
+   "m1"
+  ],
+  "answer": {
+   "mustState": [
+    "6am ferry"
+   ],
+   "mustNotStateAsCurrent": [
+    "Don't bother"
+   ],
+   "mustNotLabel": [
+    "decided on"
+   ]
+  }
+ },
+ "DEV-037": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "yes",
+    "evidence": "I'm out as host"
+   }
+  ],
+  "status": {
+   "m1": "CONFIRMED_COMMITMENT",
+   "m2": "ATTRIBUTED_STATEMENT",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [
+   "m1"
+  ],
+  "answer": {
+   "mustState": [
+    "out as host"
+   ],
+   "mustNotStateAsCurrent": [
+    "Rosa is hosting"
+   ],
+   "mustNotLabel": [
+    "committed to"
+   ]
+  }
+ },
+ "DEV-038": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "no",
+    "evidence": "Nothing's changed."
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "OFFER",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "22nd",
+    "10 to 2"
+   ],
+   "mustNotStateAsCurrent": [],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-039": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "no",
+    "evidence": "like always"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "OFFER",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "6:15"
+   ],
+   "mustNotStateAsCurrent": [],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-040": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "no",
+    "evidence": "Also putting myself down"
+   }
+  ],
+  "status": {
+   "m1": "CONFIRMED_COMMITMENT",
+   "m2": "QUESTION",
+   "m3": "CONFIRMED_COMMITMENT"
+  },
+  "current": [
+   "m1",
+   "m3"
+  ],
+  "notCurrent": [
+   "m2"
+  ],
+  "answer": {
+   "mustState": [
+    "watermelon",
+    "oranges"
+   ],
+   "mustNotStateAsCurrent": [],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-041": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "no",
+    "evidence": "Plus a stack of moving blankets"
+   }
+  ],
+  "status": {
+   "m1": "CONFIRMED_COMMITMENT",
+   "m2": "REPORTED_CLAIM",
+   "m3": "CONFIRMED_COMMITMENT"
+  },
+  "current": [
+   "m1",
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "drill",
+    "dolly",
+    "moving blankets"
+   ],
+   "mustNotStateAsCurrent": [],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-042": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "no",
+    "evidence": "alongside the Orchard one"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "QUESTION",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m3"
+  ],
+  "notCurrent": [
+   "m2"
+  ],
+  "answer": {
+   "mustState": [
+    "The Quiet Orchard",
+    "Salt and Cedar"
+   ],
+   "mustNotStateAsCurrent": [],
+   "mustNotLabel": [
+    "decided on"
+   ]
+  }
+ },
+ "DEV-043": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "no",
+    "evidence": "In the event of a heat warning"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "11"
+   ],
+   "mustNotStateAsCurrent": [
+    "9"
+   ],
+   "mustNotLabel": [
+    "decided on"
+   ]
+  }
+ },
+ "DEV-044": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "no",
+    "evidence": "If the bus is late back"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "ATTRIBUTED_STATEMENT",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "side entrance"
+   ],
+   "mustNotStateAsCurrent": [
+    "front office"
+   ],
+   "mustNotLabel": [
+    "committed to"
+   ]
+  }
+ },
+ "DEV-045": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "no",
+    "evidence": "For the chaperones"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "QUESTION",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m3"
+  ],
+  "notCurrent": [
+   "m2"
+  ],
+  "answer": {
+   "mustState": [
+    "9"
+   ],
+   "mustNotStateAsCurrent": [
+    "11"
+   ],
+   "mustNotLabel": [
+    "decided on"
+   ]
+  }
+ },
+ "DEV-046": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "no",
+    "evidence": "Grown-ups pay $8"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "REPORTED_CLAIM",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "$5"
+   ],
+   "mustNotStateAsCurrent": [
+    "$8"
+   ],
+   "mustNotLabel": [
+    "committed to"
+   ]
+  }
+ },
+ "DEV-047": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "no",
+    "evidence": "Intermediate lesson"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "ATTRIBUTED_STATEMENT",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "9",
+    "bunny slope"
+   ],
+   "mustNotStateAsCurrent": [
+    "10:30",
+    "chairlift"
+   ],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-048": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "no",
+    "replaces": "no",
+    "evidence": "packed up by 1"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "QUESTION",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m3"
+  ],
+  "notCurrent": [
+   "m2"
+  ],
+  "answer": {
+   "mustState": [
+    "8"
+   ],
+   "mustNotStateAsCurrent": [
+    "starting at 1",
+    "by 1"
+   ],
+   "mustNotLabel": [
+    "decided on"
+   ]
+  }
+ },
+ "DEV-049": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "no",
+    "replaces": "no",
+    "evidence": "off the campsite by 11 on Sunday"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "OFFER",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "$60"
+   ],
+   "mustNotStateAsCurrent": [],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-050": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "no",
+    "replaces": "no",
+    "evidence": "closed-toe shoes"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "OFFER",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "2 to 5"
+   ],
+   "mustNotStateAsCurrent": [],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-051": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "no",
+    "replaces": "no",
+    "evidence": "Judging is 10:30"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "QUESTION",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m3"
+  ],
+  "notCurrent": [
+   "m2"
+  ],
+  "answer": {
+   "mustState": [
+    "7:30"
+   ],
+   "mustNotStateAsCurrent": [
+    "10:30"
+   ],
+   "mustNotLabel": [
+    "decided on"
+   ]
+  }
+ },
+ "DEV-052": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "no",
+    "replaces": "no",
+    "evidence": "the team cooler"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "REPORTED_CLAIM",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "blue cooler"
+   ],
+   "mustNotStateAsCurrent": [
+    "red one"
+   ],
+   "mustNotLabel": [
+    "committed to"
+   ]
+  }
+ },
+ "DEV-053": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "no",
+    "replaces": "no",
+    "evidence": "Choir practice"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "OFFER",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "Wednesday"
+   ],
+   "mustNotStateAsCurrent": [
+    "Tuesday"
+   ],
+   "mustNotLabel": [
+    "committed to"
+   ]
+  }
+ },
+ "DEV-054": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "no",
+    "replaces": "no",
+    "evidence": "the church van"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "ATTRIBUTED_STATEMENT",
+   "m3": "OFFER"
+  },
+  "current": [
+   "m1",
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "8"
+   ],
+   "mustNotStateAsCurrent": [
+    "Friday"
+   ],
+   "mustNotLabel": [
+    "committed to"
+   ]
+  }
+ },
+ "DEV-055": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "no",
+    "replaces": "no",
+    "evidence": "The kids' reading group at the library"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "OFFER",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "The Glass Ferry"
+   ],
+   "mustNotStateAsCurrent": [
+    "Pip and the Paper Moon"
+   ],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-056": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "no",
+    "evidence": "I'll also take the return leg Sunday"
+   }
+  ],
+  "status": {
+   "m1": "CONFIRMED_COMMITMENT",
+   "m2": "QUESTION",
+   "m3": "CONFIRMED_COMMITMENT"
+  },
+  "current": [
+   "m1",
+   "m3"
+  ],
+  "notCurrent": [
+   "m2"
+  ],
+  "answer": {
+   "mustState": [
+    "Kemi",
+    "first leg",
+    "return leg"
+   ],
+   "mustNotStateAsCurrent": [],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-057": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "no",
+    "replaces": "no",
+    "evidence": "the top prize is the weekend cabin stay"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m3": "DECISION"
+  },
+  "current": [
+   "m1",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "weekend cabin stay"
+   ],
+   "mustNotStateAsCurrent": [],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-058": {
+  "pairs": [
+   {
+    "later": "m4",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "no",
+    "evidence": "Saturday from 10 it is"
+   }
+  ],
+  "status": {
+   "m1": "CONFIRMED_COMMITMENT",
+   "m3": "CONFIRMED_COMMITMENT",
+   "m4": "CONFIRMED_COMMITMENT"
+  },
+  "current": [
+   "m1",
+   "m3",
+   "m4"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "Saturday",
+    "10"
+   ],
+   "mustNotStateAsCurrent": [],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-059": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "no",
+    "replaces": "no",
+    "evidence": "I can step in as the extra chaperone"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "ATTRIBUTED_STATEMENT",
+   "m3": "OFFER"
+  },
+  "current": [
+   "m1",
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "Sami offered"
+   ],
+   "mustNotStateAsCurrent": [],
+   "mustNotLabel": [
+    "committed to"
+   ]
+  }
+ },
+ "DEV-060": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m2",
+    "sameProperty": "no",
+    "replaces": "no",
+    "evidence": "the park pavilion"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "ATTRIBUTED_STATEMENT",
+   "m3": "DECISION"
+  },
+  "current": [
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [
+   "m1"
+  ],
+  "answer": {
+   "mustState": [
+    "park pavilion"
+   ],
+   "mustNotStateAsCurrent": [
+    "bowling alley"
+   ],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-061": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "yes",
+    "evidence": "Picnic's at Willow Green instead"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "REPORTED_CLAIM",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [
+   "m1"
+  ],
+  "answer": {
+   "mustState": [
+    "Willow Green"
+   ],
+   "mustNotStateAsCurrent": [
+    "Cedar Park"
+   ],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-062": {
+  "pairs": [
+   {
+    "later": "m4",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "yes",
+    "evidence": "Carpool leaves Friday night then"
+   }
+  ],
+  "status": {
+   "m1": "QUESTION",
+   "m4": "DECISION"
+  },
+  "current": [
+   "m4"
+  ],
+  "notCurrent": [
+   "m1"
+  ],
+  "answer": {
+   "mustState": [
+    "Friday night",
+    "7"
+   ],
+   "mustNotStateAsCurrent": [
+    "Saturday at dawn"
+   ],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-063": {
+  "pairs": [
+   {
+    "later": "m4",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "yes",
+    "evidence": "put me down for face painting"
+   }
+  ],
+  "status": {
+   "m1": "OFFER",
+   "m2": "ATTRIBUTED_STATEMENT",
+   "m4": "CONFIRMED_COMMITMENT"
+  },
+  "current": [
+   "m2",
+   "m4"
+  ],
+  "notCurrent": [
+   "m1"
+  ],
+  "answer": {
+   "mustState": [
+    "Dev",
+    "10 till 1"
+   ],
+   "mustNotStateAsCurrent": [],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-064": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "yes",
+    "evidence": "yes, I'm driving"
+   }
+  ],
+  "status": {
+   "m1": "OFFER",
+   "m2": "QUESTION",
+   "m3": "CONFIRMED_COMMITMENT"
+  },
+  "current": [
+   "m3"
+  ],
+  "notCurrent": [
+   "m1",
+   "m2"
+  ],
+  "answer": {
+   "mustState": [
+    "I'm driving"
+   ],
+   "mustNotStateAsCurrent": [],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-065": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "yes",
+    "evidence": "I'd steer clear of it now"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m3"
+  ],
+  "notCurrent": [
+   "m1"
+  ],
+  "answer": {
+   "mustState": [
+    "steer clear"
+   ],
+   "mustNotStateAsCurrent": [
+    "doing the pottery class"
+   ],
+   "mustNotLabel": [
+    "decided on the pottery class"
+   ]
+  }
+ },
+ "DEV-066": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "yes",
+    "evidence": "Won't make the cleanup"
+   }
+  ],
+  "status": {
+   "m1": "CONFIRMED_COMMITMENT",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m3"
+  ],
+  "notCurrent": [
+   "m1"
+  ],
+  "answer": {
+   "mustState": [
+    "Won't make the cleanup"
+   ],
+   "mustNotStateAsCurrent": [
+    "I'll bring the litter pickers"
+   ],
+   "mustNotLabel": [
+    "committed to"
+   ]
+  }
+ },
+ "DEV-067": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "yes",
+    "evidence": "up for grabs again"
+   }
+  ],
+  "status": {
+   "m1": "CONFIRMED_COMMITMENT",
+   "m2": "OFFER",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [
+   "m1"
+  ],
+  "answer": {
+   "mustState": [
+    "up for grabs"
+   ],
+   "mustNotStateAsCurrent": [
+    "Mara is making the playlist"
+   ],
+   "mustNotLabel": [
+    "committed to"
+   ]
+  }
+ },
+ "DEV-068": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "no",
+    "evidence": "same as I said"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "QUESTION",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m3"
+  ],
+  "notCurrent": [
+   "m2"
+  ],
+  "answer": {
+   "mustState": [
+    "rec center gym",
+    "6"
+   ],
+   "mustNotStateAsCurrent": [
+    "outdoor court"
+   ],
+   "mustNotLabel": [
+    "decided on"
+   ]
+  }
+ },
+ "DEV-069": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "no",
+    "evidence": "For anyone just catching up"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "ATTRIBUTED_STATEMENT",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "3pm"
+   ],
+   "mustNotStateAsCurrent": [
+    "3:30"
+   ],
+   "mustNotLabel": [
+    "committed to"
+   ]
+  }
+ },
+ "DEV-070": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "no",
+    "evidence": "as booked"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "QUESTION",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m3"
+  ],
+  "notCurrent": [
+   "m2"
+  ],
+  "answer": {
+   "mustState": [
+    "library annex"
+   ],
+   "mustNotStateAsCurrent": [
+    "café"
+   ],
+   "mustNotLabel": [
+    "decided on"
+   ]
+  }
+ },
+ "DEV-071": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "no",
+    "evidence": "cups too"
+   }
+  ],
+  "status": {
+   "m1": "CONFIRMED_COMMITMENT",
+   "m3": "OFFER"
+  },
+  "current": [
+   "m1",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "paper plates"
+   ],
+   "mustNotStateAsCurrent": [],
+   "mustNotLabel": [
+    "committed to bring cups"
+   ]
+  }
+ },
+ "DEV-072": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "no",
+    "evidence": "Add a rain jacket"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "REPORTED_CLAIM",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "water bottle",
+    "packed lunch",
+    "rain jacket"
+   ],
+   "mustNotStateAsCurrent": [],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-073": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "no",
+    "evidence": "In the event practice runs past 7"
+   }
+  ],
+  "status": {
+   "m1": "CONFIRMED_COMMITMENT",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "Ben"
+   ],
+   "mustNotStateAsCurrent": [
+    "Ben's partner is driving"
+   ],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-074": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "no",
+    "evidence": "Should it pour"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "QUESTION",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m3"
+  ],
+  "notCurrent": [
+   "m2"
+  ],
+  "answer": {
+   "mustState": [
+    "river meadow"
+   ],
+   "mustNotStateAsCurrent": [
+    "garage"
+   ],
+   "mustNotLabel": [
+    "decided on"
+   ]
+  }
+ },
+ "DEV-075": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "no",
+    "evidence": "Parents doing it"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "OFFER",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "2k loop"
+   ],
+   "mustNotStateAsCurrent": [
+    "5k"
+   ],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-076": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "no",
+    "evidence": "Coaches and parents"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "ATTRIBUTED_STATEMENT",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "mac and cheese"
+   ],
+   "mustNotStateAsCurrent": [
+    "chili"
+   ],
+   "mustNotLabel": [
+    "decided on dessert"
+   ]
+  }
+ },
+ "DEV-077": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "no",
+    "evidence": "For the grown-ups"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "OFFER",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "free"
+   ],
+   "mustNotStateAsCurrent": [
+    "$12"
+   ],
+   "mustNotLabel": [
+    "committed to"
+   ]
+  }
+ },
+ "DEV-078": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "no",
+    "replaces": "no",
+    "evidence": "cost works out to $18 each"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "REPORTED_CLAIM",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "north dock",
+    "10"
+   ],
+   "mustNotStateAsCurrent": [],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-079": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "no",
+    "replaces": "no",
+    "evidence": "The grill gets lit around 4:30"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "QUESTION",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m3"
+  ],
+  "notCurrent": [
+   "m2"
+  ],
+  "answer": {
+   "mustState": [
+    "4"
+   ],
+   "mustNotStateAsCurrent": [
+    "starts at 4:30"
+   ],
+   "mustNotLabel": [
+    "decided on"
+   ]
+  }
+ },
+ "DEV-080": {
+  "pairs": [
+   {
+    "later": "m4",
+    "earlier": "m1",
+    "sameProperty": "no",
+    "replaces": "no",
+    "evidence": "my sister's garden"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "QUESTION",
+   "m4": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m4"
+  ],
+  "notCurrent": [
+   "m2"
+  ],
+  "answer": {
+   "mustState": [
+    "Sunday the 8th"
+   ],
+   "mustNotStateAsCurrent": [],
+   "mustNotLabel": [
+    "decided on"
+   ]
+  }
+ },
+ "DEV-081": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "no",
+    "replaces": "no",
+    "evidence": "Max's class party"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "OFFER",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "2"
+   ],
+   "mustNotStateAsCurrent": [
+    "11"
+   ],
+   "mustNotLabel": [
+    "committed to"
+   ]
+  }
+ },
+ "DEV-082": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "no",
+    "replaces": "no",
+    "evidence": "the swim club slips"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "OFFER",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "Friday"
+   ],
+   "mustNotStateAsCurrent": [
+    "Monday"
+   ],
+   "mustNotLabel": [
+    "committed to"
+   ]
+  }
+ },
+ "DEV-083": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "no",
+    "replaces": "no",
+    "evidence": "The school's grill for the fundraiser"
+   }
+  ],
+  "status": {
+   "m1": "CONFIRMED_COMMITMENT",
+   "m2": "ATTRIBUTED_STATEMENT",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "big gas one"
+   ],
+   "mustNotStateAsCurrent": [
+    "charcoal grill"
+   ],
+   "mustNotLabel": [
+    "Yara offered"
+   ]
+  }
+ },
+ "DEV-084": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "no",
+    "replaces": "no",
+    "evidence": "wedding rehearsal"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "REPORTED_CLAIM",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "Thursday at 4"
+   ],
+   "mustNotStateAsCurrent": [
+    "Friday at 6",
+    "cancelled"
+   ],
+   "mustNotLabel": [
+    "decided on"
+   ]
+  }
+ },
+ "DEV-085": {
+  "pairs": [
+   {
+    "later": "m4",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "no",
+    "evidence": "I'll do Fridays as well"
+   }
+  ],
+  "status": {
+   "m1": "CONFIRMED_COMMITMENT",
+   "m2": "QUESTION",
+   "m3": "CONFIRMED_COMMITMENT",
+   "m4": "CONFIRMED_COMMITMENT"
+  },
+  "current": [
+   "m1",
+   "m3",
+   "m4"
+  ],
+  "notCurrent": [
+   "m2"
+  ],
+  "answer": {
+   "mustState": [
+    "Ben: Mondays and Fridays",
+    "Dev: Wednesdays"
+   ],
+   "mustNotStateAsCurrent": [],
+   "mustNotLabel": [
+    "decided on"
+   ]
+  }
+ },
+ "DEV-086": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "no",
+    "replaces": "no",
+    "evidence": "we meet by the fountain"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m3": "DECISION"
+  },
+  "current": [
+   "m1",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "fountain"
+   ],
+   "mustNotStateAsCurrent": [],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-087": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m2",
+    "sameProperty": "yes",
+    "replaces": "no",
+    "evidence": "I'm bringing the prize ribbons"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "CONFIRMED_COMMITMENT",
+   "m3": "CONFIRMED_COMMITMENT"
+  },
+  "current": [
+   "m1",
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "prize ribbons",
+    "judge"
+   ],
+   "mustNotStateAsCurrent": [],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-088": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "no",
+    "replaces": "no",
+    "evidence": "I don't mind running the door"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m3": "OFFER"
+  },
+  "current": [
+   "m1",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "Ivo offered"
+   ],
+   "mustNotStateAsCurrent": [],
+   "mustNotLabel": [
+    "committed to"
+   ]
+  }
+ },
+ "DEV-089": {
+  "pairs": [
+   {
+    "later": "m4",
+    "earlier": "m1",
+    "sameProperty": "no",
+    "replaces": "no",
+    "evidence": "next month is a mystery"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m4": "DECISION"
+  },
+  "current": [
+   "m1",
+   "m4"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "The Lighthouse Ledger"
+   ],
+   "mustNotStateAsCurrent": [],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-090": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "no",
+    "evidence": "I'll be at yours at 10"
+   }
+  ],
+  "status": {
+   "m1": "CONFIRMED_COMMITMENT",
+   "m3": "CONFIRMED_COMMITMENT"
+  },
+  "current": [
+   "m1",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "truck",
+    "Sunday",
+    "10"
+   ],
+   "mustNotStateAsCurrent": [],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-091": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "yes",
+    "evidence": "the collection is $7 each"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "OFFER",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [
+   "m1"
+  ],
+  "answer": {
+   "mustState": [
+    "$7"
+   ],
+   "mustNotStateAsCurrent": [
+    "$10"
+   ],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-092": {
+  "pairs": [
+   {
+    "later": "m4",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "yes",
+    "evidence": "snack theme is savoury"
+   }
+  ],
+  "status": {
+   "m1": "QUESTION",
+   "m4": "DECISION"
+  },
+  "current": [
+   "m4"
+  ],
+  "notCurrent": [
+   "m1"
+  ],
+  "answer": {
+   "mustState": [
+    "savoury"
+   ],
+   "mustNotStateAsCurrent": [
+    "sweet"
+   ],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-093": {
+  "pairs": [
+   {
+    "later": "m4",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "yes",
+    "evidence": "Then I'm your coach Saturday"
+   }
+  ],
+  "status": {
+   "m1": "OFFER",
+   "m2": "QUESTION",
+   "m4": "CONFIRMED_COMMITMENT"
+  },
+  "current": [
+   "m4"
+  ],
+  "notCurrent": [
+   "m1",
+   "m2"
+  ],
+  "answer": {
+   "mustState": [
+    "Uri"
+   ],
+   "mustNotStateAsCurrent": [],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-094": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "yes",
+    "evidence": "Motorway's your best bet now"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "REPORTED_CLAIM",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [
+   "m1"
+  ],
+  "answer": {
+   "mustState": [
+    "motorway"
+   ],
+   "mustNotStateAsCurrent": [
+    "take the scenic route"
+   ],
+   "mustNotLabel": [
+    "decided on"
+   ]
+  }
+ },
+ "DEV-095": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "yes",
+    "evidence": "Worth getting."
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "ATTRIBUTED_STATEMENT",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [
+   "m1"
+  ],
+  "answer": {
+   "mustState": [
+    "worth getting"
+   ],
+   "mustNotStateAsCurrent": [
+    "don't buy the big pinata"
+   ],
+   "mustNotLabel": [
+    "committed to"
+   ]
+  }
+ },
+ "DEV-096": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "yes",
+    "evidence": "count that out"
+   }
+  ],
+  "status": {
+   "m1": "OFFER",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m3"
+  ],
+  "notCurrent": [
+   "m1"
+  ],
+  "answer": {
+   "mustState": [
+    "sold the bouncy castle"
+   ],
+   "mustNotStateAsCurrent": [
+    "I'll bring the bouncy castle"
+   ],
+   "mustNotLabel": [
+    "committed to"
+   ]
+  }
+ },
+ "DEV-097": {
+  "pairs": [
+   {
+    "later": "m4",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "yes",
+    "evidence": "I can't drive for the science center trip after all"
+   }
+  ],
+  "status": {
+   "m1": "CONFIRMED_COMMITMENT",
+   "m3": "OFFER",
+   "m4": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m3",
+   "m4"
+  ],
+  "notCurrent": [
+   "m1"
+  ],
+  "answer": {
+   "mustState": [
+    "can't drive"
+   ],
+   "mustNotStateAsCurrent": [
+    "drive two kids"
+   ],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-098": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "no",
+    "evidence": "Home kit, Wednesday, 5."
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "QUESTION",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m3"
+  ],
+  "notCurrent": [
+   "m2"
+  ],
+  "answer": {
+   "mustState": [
+    "Wednesday at 5",
+    "home kit"
+   ],
+   "mustNotStateAsCurrent": [
+    "away kit",
+    "away one"
+   ],
+   "mustNotLabel": [
+    "decided on"
+   ]
+  }
+ },
+ "DEV-099": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "no",
+    "evidence": "can still happen at the old flat on Friday, 7pm"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m3": "REPORTED_CLAIM"
+  },
+  "current": [
+   "m1",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "old flat",
+    "Friday 7pm"
+   ],
+   "mustNotStateAsCurrent": [],
+   "mustNotLabel": [
+    "decided on"
+   ]
+  }
+ },
+ "DEV-100": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "no",
+    "evidence": "on top of that"
+   }
+  ],
+  "status": {
+   "m1": "CONFIRMED_COMMITMENT",
+   "m2": "ATTRIBUTED_STATEMENT",
+   "m3": "CONFIRMED_COMMITMENT"
+  },
+  "current": [
+   "m1",
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "lemon bars",
+    "flapjacks"
+   ],
+   "mustNotStateAsCurrent": [],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-101": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "no",
+    "evidence": "Ava too"
+   }
+  ],
+  "status": {
+   "m1": "CONFIRMED_COMMITMENT",
+   "m3": "OFFER"
+  },
+  "current": [
+   "m1",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "Mia",
+    "Josh",
+    "Ava"
+   ],
+   "mustNotStateAsCurrent": [],
+   "mustNotLabel": [
+    "committed to pick up Ava"
+   ]
+  }
+ },
+ "DEV-102": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "no",
+    "evidence": "Should I also bring"
+   }
+  ],
+  "status": {
+   "m1": "CONFIRMED_COMMITMENT",
+   "m3": "QUESTION"
+  },
+  "current": [
+   "m1"
+  ],
+  "notCurrent": [
+   "m3"
+  ],
+  "answer": {
+   "mustState": [
+    "big blanket",
+    "speaker"
+   ],
+   "mustNotStateAsCurrent": [
+    "folding chairs"
+   ],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-103": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "no",
+    "evidence": "in the event the café is shut"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "café at the visitor center"
+   ],
+   "mustNotStateAsCurrent": [
+    "picnic tables by the lake"
+   ],
+   "mustNotLabel": [
+    "decided on the picnic tables"
+   ]
+  }
+ },
+ "DEV-104": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "no",
+    "evidence": "If court 3 is iced over"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "QUESTION",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m3"
+  ],
+  "notCurrent": [
+   "m2"
+  ],
+  "answer": {
+   "mustState": [
+    "court 3"
+   ],
+   "mustNotStateAsCurrent": [
+    "indoor hall"
+   ],
+   "mustNotLabel": [
+    "decided on"
+   ]
+  }
+ },
+ "DEV-105": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "no",
+    "evidence": "only if Luigi's loses the booking"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "REPORTED_CLAIM",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "Luigi's"
+   ],
+   "mustNotStateAsCurrent": [
+    "Thai place"
+   ],
+   "mustNotLabel": [
+    "decided on"
+   ]
+  }
+ },
+ "DEV-106": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "no",
+    "evidence": "The older kids' drop-off"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "QUESTION",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m3"
+  ],
+  "notCurrent": [
+   "m2"
+  ],
+  "answer": {
+   "mustState": [
+    "8:30",
+    "front gate"
+   ],
+   "mustNotStateAsCurrent": [
+    "sports hall"
+   ],
+   "mustNotLabel": [
+    "decided on"
+   ]
+  }
+ },
+ "DEV-107": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "yes",
+    "replaces": "no",
+    "evidence": "The kids' dinner is earlier"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "OFFER",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "barbecue",
+    "7"
+   ],
+   "mustNotStateAsCurrent": [
+    "pizza at 5:30"
+   ],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-108": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "no",
+    "replaces": "no",
+    "evidence": "The walk itself is on the 19th"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "ATTRIBUTED_STATEMENT",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "12th"
+   ],
+   "mustNotStateAsCurrent": [
+    "19th"
+   ],
+   "mustNotLabel": [
+    "decided on"
+   ]
+  }
+ },
+ "DEV-109": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "no",
+    "replaces": "no",
+    "evidence": "Meetup's at 8:15"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "OFFER",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "trailhead car park"
+   ],
+   "mustNotStateAsCurrent": [],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-110": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "no",
+    "replaces": "no",
+    "evidence": "by the 15th"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "QUESTION",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m3"
+  ],
+  "notCurrent": [
+   "m2"
+  ],
+  "answer": {
+   "mustState": [
+    "$15"
+   ],
+   "mustNotStateAsCurrent": [],
+   "mustNotLabel": [
+    "decided on"
+   ]
+  }
+ },
+ "DEV-111": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "no",
+    "replaces": "no",
+    "evidence": "Gates open for sellers at 6:30"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "QUESTION",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m3"
+  ],
+  "notCurrent": [
+   "m2"
+  ],
+  "answer": {
+   "mustState": [
+    "$10"
+   ],
+   "mustNotStateAsCurrent": [],
+   "mustNotLabel": [
+    "decided on"
+   ]
+  }
+ },
+ "DEV-112": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "no",
+    "replaces": "no",
+    "evidence": "the scout leaders' meeting"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "REPORTED_CLAIM",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "Tuesday at 6"
+   ],
+   "mustNotStateAsCurrent": [
+    "Thursday"
+   ],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-113": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "no",
+    "replaces": "no",
+    "evidence": "The babysitter"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "OFFER",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "Priya"
+   ],
+   "mustNotStateAsCurrent": [
+    "Sami is the dog-sitter"
+   ],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-114": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "no",
+    "replaces": "no",
+    "evidence": "The spelling bee prize"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "OFFER",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "family pass to the zoo"
+   ],
+   "mustNotStateAsCurrent": [
+    "book token"
+   ],
+   "mustNotLabel": [
+    "committed to"
+   ]
+  }
+ },
+ "DEV-115": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "no",
+    "replaces": "no",
+    "evidence": "The trip to the coast"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "ATTRIBUTED_STATEMENT",
+   "m3": "ATTRIBUTED_STATEMENT"
+  },
+  "current": [
+   "m1",
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "6th"
+   ],
+   "mustNotStateAsCurrent": [
+    "20th"
+   ],
+   "mustNotLabel": [
+    "decided on"
+   ]
+  }
+ },
+ "DEV-116": {
+  "pairs": [
+   {
+    "later": "m4",
+    "earlier": "m1",
+    "sameProperty": "no",
+    "replaces": "no",
+    "evidence": "I've signed the contract"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "QUESTION",
+   "m4": "DECISION"
+  },
+  "current": [
+   "m1",
+   "m4"
+  ],
+  "notCurrent": [
+   "m2"
+  ],
+  "answer": {
+   "mustState": [
+    "food truck",
+    "Taco Wheels"
+   ],
+   "mustNotStateAsCurrent": [
+    "buffet"
+   ],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-117": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "no",
+    "replaces": "no",
+    "evidence": "I can lend you two sleeping bags"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m3": "OFFER"
+  },
+  "current": [
+   "m1",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "Ben offered",
+    "two sleeping bags"
+   ],
+   "mustNotStateAsCurrent": [],
+   "mustNotLabel": [
+    "committed to"
+   ]
+  }
+ },
+ "DEV-118": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m2",
+    "sameProperty": "no",
+    "replaces": "no",
+    "evidence": "I'll also bring the buzzers"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m2": "CONFIRMED_COMMITMENT",
+   "m3": "CONFIRMED_COMMITMENT"
+  },
+  "current": [
+   "m1",
+   "m2",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "Dev"
+   ],
+   "mustNotStateAsCurrent": [],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-119": {
+  "pairs": [
+   {
+    "later": "m4",
+    "earlier": "m1",
+    "sameProperty": "no",
+    "replaces": "no",
+    "evidence": "the challenge target is 50k"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m4": "DECISION"
+  },
+  "current": [
+   "m1",
+   "m4"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "50k"
+   ],
+   "mustNotStateAsCurrent": [],
+   "mustNotLabel": []
+  }
+ },
+ "DEV-120": {
+  "pairs": [
+   {
+    "later": "m3",
+    "earlier": "m1",
+    "sameProperty": "no",
+    "replaces": "no",
+    "evidence": "I'll collect the trophies"
+   }
+  ],
+  "status": {
+   "m1": "ATTRIBUTED_STATEMENT",
+   "m3": "CONFIRMED_COMMITMENT"
+  },
+  "current": [
+   "m1",
+   "m3"
+  ],
+  "notCurrent": [],
+  "answer": {
+   "mustState": [
+    "Ivo",
+    "Thursday"
+   ],
+   "mustNotStateAsCurrent": [],
+   "mustNotLabel": []
+  }
+ }
+}

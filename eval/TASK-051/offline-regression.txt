@@ -1,0 +1,77 @@
+[INFO] Reactor Build Order:
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.034 s -- in app.dita.core.GroupDirectoryTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 s -- in app.dita.core.answer.InjectionGuardTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s -- in app.dita.core.answer.FallbackRelevanceTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s -- in app.dita.core.CoordinationTest
+[INFO] Tests run: 24, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.107 s -- in app.dita.core.DeletionPolicyTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.492 s -- in app.dita.core.EventDispatcherConcurrencyTest
+[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.059 s -- in app.dita.core.knowledge.Task046ReproTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.176 s -- in app.dita.core.knowledge.TrustworthyStateSuiteTest
+[INFO] Tests run: 23, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.031 s -- in app.dita.core.knowledge.Task046ReviewFindingsTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s -- in app.dita.core.knowledge.Task046ProvenanceTest
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s -- in app.dita.core.knowledge.Task046CodexFindingsTest
+[WARNING] Tests run: 18, Failures: 0, Errors: 0, Skipped: 6, Time elapsed: 0.016 s -- in app.dita.core.knowledge.Task048AnswerSelectionTest
+[INFO] Tests run: 28, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.031 s -- in app.dita.core.knowledge.StructuredMemoryRulesTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s -- in app.dita.core.knowledge.ExtractionServiceTest
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s -- in app.dita.core.knowledge.Task046RegressionTest
+[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.033 s -- in app.dita.core.knowledge.TrustSuiteGateTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.780 s -- in app.dita.core.knowledge.FinalAnswerIsolationTest
+[WARNING] Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.001 s -- in app.dita.core.knowledge.StressConversationSuiteTest
+[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.038 s -- in app.dita.core.knowledge.DeletedCorrectionPolicyTest
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s -- in app.dita.core.knowledge.Task047CodexReviewTest
+[INFO] Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.032 s -- in app.dita.core.SliceOneTest
+[INFO] Tests run: 240, Failures: 0, Errors: 0, Skipped: 7
+[WARNING] Tests run: 5, Failures: 0, Errors: 0, Skipped: 5, Time elapsed: 0.030 s -- in app.dita.store.postgres.PostgresExtractionQueueContractTest
+[WARNING] Tests run: 6, Failures: 0, Errors: 0, Skipped: 6, Time elapsed: 0.005 s -- in app.dita.store.postgres.AdvisoryLockSafetyTest
+[WARNING] Tests run: 8, Failures: 0, Errors: 0, Skipped: 8, Time elapsed: 0.006 s -- in app.dita.store.postgres.PostgresTask047BlockersTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.072 s -- in app.dita.store.postgres.PostgresEventPublisherTest
+[INFO] Tests run: 29, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.044 s -- in app.dita.store.postgres.InMemoryMessageStoreContractTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in app.dita.store.postgres.InMemoryExtractionQueueContractTest
+[WARNING] Tests run: 33, Failures: 0, Errors: 0, Skipped: 33, Time elapsed: 0.016 s -- in app.dita.store.postgres.PostgresMessageStoreContractTest
+[WARNING] Tests run: 4, Failures: 0, Errors: 0, Skipped: 4, Time elapsed: 0.001 s -- in app.dita.store.postgres.PostgresTask047Test
+[WARNING] Tests run: 2, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 0.001 s -- in app.dita.store.postgres.PostgresRlsIsolationTest
+[WARNING] Tests run: 9, Failures: 0, Errors: 0, Skipped: 9, Time elapsed: 0.005 s -- in app.dita.store.postgres.OutboxOrderingTest
+[INFO] Tests run: 104, Failures: 0, Errors: 0, Skipped: 67
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.087 s -- in app.dita.projections.VespaResponseTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.053 s -- in app.dita.projections.ValidityProjectionConsistencyTest
+[WARNING] Tests run: 2, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 0.007 s -- in app.dita.projections.Neo4jKnowledgeProjectionTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s -- in app.dita.projections.KnowledgeDocumentTest
+[INFO] Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in app.dita.projections.EndToEndSliceTest
+[WARNING] Tests run: 2, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 0.003 s -- in app.dita.projections.VespaKnowledgeProjectionTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in app.dita.projections.HttpReasonTest
+[INFO] Tests run: 23, Failures: 0, Errors: 0, Skipped: 4
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.126 s -- in app.dita.muse.MuseKnowledgeExtractorTest
+[INFO] Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.025 s -- in app.dita.muse.MuseClientTest
+[WARNING] Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.004 s -- in app.dita.muse.MuseConnectivityLiveTest
+[WARNING] Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.001 s -- in app.dita.muse.MuseExtractionLiveTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in app.dita.muse.RecordedMuseTransportTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in app.dita.muse.MuseExtractionRequestPreviewTest
+[INFO] Tests run: 27, Failures: 0, Errors: 0, Skipped: 2
+[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.262 s -- in app.dita.telegram.TelegramAdapterTest
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s -- in app.dita.telegram.AuthorAllowListTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.783 s -- in app.dita.telegram.SyntheticReplayAdapterTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s -- in app.dita.telegram.TransientFailureRetryTest
+[INFO] Tests run: 38, Failures: 0, Errors: 0, Skipped: 0
+[WARNING] Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.028 s -- in app.dita.app.CapabilityPostgresRunTest
+[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.592 s -- in app.dita.app.ConfigurationLoadingTest
+[WARNING] Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.001 s -- in app.dita.app.SyntheticLabReplayTest
+[INFO] Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in app.dita.app.PostgresRuntimeIntegrationTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.227 s -- in app.dita.app.ReplayConfigurationTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.079 s -- in app.dita.app.TelegramReplayInMemoryWiringTest
+[WARNING] Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.003 s -- in app.dita.app.KnowledgeSlicePostgresTest
+[WARNING] Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.002 s -- in app.dita.app.SyntheticLabKnowledgeTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.081 s -- in app.dita.app.ApplicationStartupTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.482 s -- in app.dita.app.KnowledgeSliceInMemoryTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.135 s -- in app.dita.app.TelegramLiveRunConfigurationTest
+[WARNING] Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 s -- in app.dita.app.TelegramReplayPostgresAcceptanceTest
+[INFO] Tests run: 30, Failures: 0, Errors: 0, Skipped: 5
+[INFO] Reactor Summary for dita-parent 0.1.0-SNAPSHOT:
+[INFO] dita-parent ........................................ SUCCESS [  0.001 s]
+[INFO] dita-core .......................................... SUCCESS [  4.017 s]
+[INFO] dita-store-postgres ................................ SUCCESS [  0.777 s]
+[INFO] dita-projections ................................... SUCCESS [  0.563 s]
+[INFO] dita-muse .......................................... SUCCESS [  0.525 s]
+[INFO] dita-telegram ...................................... SUCCESS [  2.823 s]
+[INFO] dita-eval .......................................... SUCCESS [  0.507 s]
+[INFO] dita-app ........................................... SUCCESS [  4.857 s]
+[INFO] BUILD SUCCESS

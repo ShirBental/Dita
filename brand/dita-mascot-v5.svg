@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <title>Dita: bouffant cloud hair, kiss curl, crescent-moon glint, side-eye, raised brow, smirk</title>
+  <!-- Exactly two colors: #561C4E (plum) and #FCC196 (peach). Flat fills only. -->
+  <defs><clipPath id="h"><circle cx="256" cy="150" r="214"/></clipPath></defs>
+  <rect width="512" height="512" fill="#FCC196"/>
+  <g transform="translate(256 290) scale(1.12) translate(-256 -262)">
+    <!-- Bouffant cloud hair -->
+    <g clip-path="url(#h)"><circle cx="256" cy="226" r="122" fill="#561C4E"/><circle cx="159" cy="282" r="50" fill="#561C4E"/><circle cx="144" cy="226" r="50" fill="#561C4E"/><circle cx="159" cy="170" r="50" fill="#561C4E"/><circle cx="200" cy="129" r="50" fill="#561C4E"/><circle cx="256" cy="114" r="50" fill="#561C4E"/><circle cx="312" cy="129" r="50" fill="#561C4E"/><circle cx="353" cy="170" r="50" fill="#561C4E"/><circle cx="368" cy="226" r="50" fill="#561C4E"/><circle cx="353" cy="282" r="50" fill="#561C4E"/></g>
+    <!-- Crescent moon hidden in the hair (negative space) -->
+    <circle cx="168" cy="150" r="24" fill="#FCC196"/>
+    <circle cx="180" cy="140" r="21" fill="#561C4E"/>
+    <!-- Face, chin lifted -->
+    <ellipse cx="262" cy="296" rx="96" ry="104" fill="#FCC196"/>
+    <!-- Fringe rolling over the forehead -->
+    <path d="M162 300 C152 222 196 186 262 186 C316 186 352 218 360 268 C338 236 300 222 262 226 C230 228 206 244 192 270 Z" fill="#561C4E"/>
+    <!-- Kiss curl -->
+    <path d="M230 222 C216 244 222 266 242 264 C258 262 258 244 244 242" fill="none" stroke="#561C4E" stroke-width="12" stroke-linecap="round"/>
+    <!-- Side-eye: heavy lids over pupils glancing right -->
+    <circle cx="248" cy="300" r="11" fill="#561C4E"/>
+    <circle cx="318" cy="300" r="11" fill="#561C4E"/>
+    <path d="M226 291 H262" stroke="#561C4E" stroke-width="10" stroke-linecap="round" fill="none"/>
+    <path d="M296 291 H332" stroke="#561C4E" stroke-width="10" stroke-linecap="round" fill="none"/>
+    <!-- One raised brow -->
+    <path d="M298 260 Q316 244 336 256" fill="none" stroke="#561C4E" stroke-width="9" stroke-linecap="round"/>
+    <!-- Smirk -->
+    <path d="M262 352 Q286 360 308 338" fill="none" stroke="#561C4E" stroke-width="11" stroke-linecap="round"/>
+  </g>
+</svg>

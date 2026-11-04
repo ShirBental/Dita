@@ -1,0 +1,158 @@
+{
+  "proposalVersion": "task049-frozen-recorded-v1",
+  "items": [
+    {
+      "status": "DECISION",
+      "certainty": "ASSERTED",
+      "subjectId": "venue",
+      "subject": "venue",
+      "predicate": "decides",
+      "polarity": 0,
+      "attributedTo": null,
+      "evidence": [
+        {
+          "messageId": "m1",
+          "quote": "Decision: the workshop venue is the library."
+        }
+      ],
+      "qualifiers": [],
+      "entities": []
+    },
+    {
+      "status": "DECISION",
+      "certainty": "ASSERTED",
+      "subjectId": "venue",
+      "subject": "venue",
+      "predicate": "decides",
+      "polarity": 0,
+      "attributedTo": null,
+      "evidence": [
+        {
+          "messageId": "m2",
+          "quote": "Final decision: the workshop venue is now the greenhouse instead of the library."
+        }
+      ],
+      "qualifiers": [],
+      "entities": []
+    },
+    {
+      "status": "CONFIRMED_COMMITMENT",
+      "certainty": "ASSERTED",
+      "subjectId": "drinks",
+      "subject": "I",
+      "predicate": "commits",
+      "polarity": 0,
+      "attributedTo": null,
+      "evidence": [
+        {
+          "messageId": "m3",
+          "quote": "I will bring lemonade and orange juice for everyone."
+        }
+      ],
+      "qualifiers": [],
+      "entities": []
+    },
+    {
+      "status": "CONFIRMED_COMMITMENT",
+      "certainty": "ASSERTED",
+      "subjectId": "transport",
+      "subject": "I",
+      "predicate": "commits",
+      "polarity": 0,
+      "attributedTo": null,
+      "evidence": [
+        {
+          "messageId": "m4",
+          "quote": "I will drive the volunteers from the station to the greenhouse."
+        }
+      ],
+      "qualifiers": [],
+      "entities": []
+    },
+    {
+      "status": "ATTRIBUTED_STATEMENT",
+      "certainty": "ASSERTED",
+      "subjectId": "access",
+      "subject": "Wheelchair",
+      "predicate": "states",
+      "polarity": 0,
+      "attributedTo": null,
+      "evidence": [
+        {
+          "messageId": "m5",
+          "quote": "Wheelchair users can enter through the eastern ramp."
+        }
+      ],
+      "qualifiers": [],
+      "entities": []
+    },
+    {
+      "status": "DECISION",
+      "certainty": "ASSERTED",
+      "subjectId": "budget",
+      "subject": "Decision:",
+      "predicate": "decides",
+      "polarity": 0,
+      "attributedTo": null,
+      "evidence": [
+        {
+          "messageId": "m6",
+          "quote": "Decision: admission is free and there is no entry charge."
+        }
+      ],
+      "qualifiers": [],
+      "entities": []
+    },
+    {
+      "status": "CONFIRMED_COMMITMENT",
+      "certainty": "ASSERTED",
+      "subjectId": "cleanup",
+      "subject": "I",
+      "predicate": "commits",
+      "polarity": 0,
+      "attributedTo": null,
+      "evidence": [
+        {
+          "messageId": "m7",
+          "quote": "I will collect the rubbish and sweep the floor afterwards."
+        }
+      ],
+      "qualifiers": [],
+      "entities": []
+    },
+    {
+      "status": "QUESTION",
+      "certainty": "ASSERTED",
+      "subjectId": "insurance",
+      "subject": "insurance",
+      "predicate": "asks",
+      "polarity": 0,
+      "attributedTo": null,
+      "evidence": [
+        {
+          "messageId": "m8",
+          "quote": "Who will arrange liability insurance?"
+        }
+      ],
+      "qualifiers": [],
+      "entities": []
+    },
+    {
+      "status": "ATTRIBUTED_STATEMENT",
+      "certainty": "ASSERTED",
+      "subjectId": "weather",
+      "subject": "Heavy",
+      "predicate": "states",
+      "polarity": 0,
+      "attributedTo": null,
+      "evidence": [
+        {
+          "messageId": "m9",
+          "quote": "Heavy rain is forecast for Saturday afternoon."
+        }
+      ],
+      "qualifiers": [],
+      "entities": []
+    }
+  ]
+}

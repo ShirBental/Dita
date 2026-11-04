@@ -1,0 +1,102 @@
+# Dita system-administrator configuration (dita.* namespace).
+# Read once at startup: changes take effect after restart. Unknown keys fail startup.
+# Credentials are NEVER placed here: only the names of environment variables that hold them.
+# Semantics, ranges and the non-configurable security invariants: docs/configuration.md
+spring:
+  application:
+    name: dita
+  main:
+    web-application-type: none
+
+dita:
+  storage:                                 # ADR-001 / DEC-020. Loopback 5xxxx endpoints only; passwords via env-var NAMES only
+    backend: IN_MEMORY                     # IN_MEMORY (offline, not durable) | POSTGRES (truth + outbox + relay worker + Neo4j/Vespa)
+    postgres:
+      url: jdbc:postgresql://127.0.0.1:55432/dita
+      app-user: dita_app                   # non-owner role, RLS-bound per transaction
+      app-password-env-var: DITA_APP_PASSWORD
+      relay-user: dita_relay               # separate relay role (N-27)
+      relay-password-env-var: DITA_RELAY_PASSWORD
+      max-pool-size: 5
+    neo4j:
+      url: http://127.0.0.1:57474
+      user: neo4j
+      password-env-var: DITA_NEO4J_PASSWORD
+    vespa:
+      url: http://127.0.0.1:58080
+  deletion:
+    early-window: 5m                       # [5m, 24h]; exactly 5:00 is early; measured from the original send time
+    early-behavior: REMOVE_CONTRIBUTION_AND_RECALCULATE
+    late-derived-knowledge: PRESERVE_WITH_DELETED_SOURCE_PROVENANCE   # or REMOVE_CONTRIBUTION_AND_RECALCULATE
+    repeated-wording: REDACT_WORDING       # or REMOVE_ITEM; derived wording repeating deleted text is never kept verbatim
+    group-removal-retention: 21d           # [1d, 21d]; each removal starts a new window; rejoin within it restores memory
+    admins-may-forget-others: false        # if true, platform-verified admins may /forget others' messages
+    dita-replies: KEEP                     # KEEP | REPORT_AFFECTED; Dita never deletes its published replies automatically
+  memory:
+    history-access: FULL_GROUP_HISTORY     # or SINCE_REQUESTER_JOINED (fails closed when join time is unknown)
+    answers:
+      max-quote-chars: 200                 # [40, 1000]; keep quotation minimal
+      synthesis:                           # TASK-053: Muse answer synthesis after the deterministic answer
+        enabled: false                     # OFF until validated; needs dita.muse.enabled. Invalid drafts fall back to the deterministic answer
+        allow-live: false                  # must be set explicitly for the HTTP transport: every /ask is then a live Muse call
+        prompt: V2                         # TASK-054 instruction version (V1 only to reproduce earlier recorded trials)
+    context:
+      link-window-messages: 50             # earlier messages considered when inferring links
+      temporal-half-life: 30m
+    linking:
+      candidate-threshold: 0.35            # inferred links below this are not stored; never promoted to facts
+      ambiguity-margin: 0.05               # runner-up kept when within this margin of the best candidate
+    clarification:
+      enabled: false
+      min-candidate-score: 0.35
+      max-score-gap: 0.05
+      max-per-group: 2
+      rate-window: 1h
+  processing:
+    escalation:
+      adjudication-low: 0.30               # inferred-link scores in [low, high] are marked needs_adjudication
+      adjudication-high: 0.55
+    tiers:                                 # tier 0 = deterministic rules (always on, not configurable)
+      t1: { provider: NONE, model: "" }    # META_MODEL_API requires dita.muse.enabled=true
+      t2: { provider: NONE, model: "" }
+    dispatch:
+      batch-size: 100
+      worker-threads: 2
+      max-attempts: 5                      # non-deletion events are dead-lettered after this; deletions never are
+      initial-backoff: 1s
+      max-backoff: 1m
+      poll-interval: 500ms
+  retrieval:
+    sparse: { enabled: true, bm25-k1: 1.2, bm25-b: 0.75 }
+    dense: { enabled: false, min-cosine: 0.60 } # TASK-049 candidate; requires a verified hybrid Vespa package
+    graph: { enabled: true, depth: 2, explicit-edge-weight: 0.8, candidate-edge-weight: 0.5 }
+    fusion: { rrf-k: 60, candidate-multiplier: 3, sparse-weight: 1.0, graph-weight: 1.0 }
+    default-k: 8
+    max-k: 50
+  coordination:
+    enabled: true
+    approval:
+      allowed-acts: [BUTTON, COMMAND]      # explicit acts only; preferences never count
+    tasks:
+      max-per-plan: 50
+  telegram:
+    enabled: false                         # live polling NOT approved (TASK-040): keep false until the user approves
+    bot-username: ExampleDitaBot
+    poll-timeout: 30s
+    poll-limit: 100
+    token-env-var: TELEGRAM_BOT_TOKEN
+    callback-secret-env-var: DITA_CALLBACK_SECRET
+    allowed-chat-ids: [-1001000000054]        # synthetic demo groups only (OPEN-6, C-1). TASK-040: SyntheticDemoGroup demo group
+    allowed-author-ids: [1001]       # TASK-040 / E-3: the ONLY accepted sender (from.id); all others ignored
+  muse:                                    # Meta Muse via the Meta Model API; SYNTHETIC data only (not configurable)
+    enabled: false
+    chat-completions-url: https://api.meta.ai/v1/chat/completions   # user-verified docs; the key is only ever sent to api.meta.ai
+    model: muse-spark-1.3                  # user-verified docs (dev.meta.ai/docs/cookbook/quickstart-chat-completions)
+    api-key-env-var: MODEL_API_KEY         # the key itself is never a property (export it from .env.local)
+    timeout: 30s                           # never retried (a timed-out call may be billed)
+    max-output-tokens: 1024
+    max-input-chars: 20000
+    max-calls-per-process: 20              # budget guard
+    response-format: PROMPT_ONLY           # schema in the prompt + strict Dita validation; response_format support not confirmed
+    reasoning-effort: LOW                  # MINIMAL | LOW | MEDIUM | HIGH | XHIGH ("none" unsupported); always sent explicitly.
+                                           # Reasoning tokens count toward max-output-tokens and are billed as output.

@@ -1,0 +1,23 @@
+{"items": [
+  {"status": "ATTRIBUTED_STATEMENT", "certainty": "ASSERTED", "subject_id": "dr-levi", "subject": "Dr. Levi", "predicate": "recommends",
+   "attributed_to": "", "evidence": [{"message_id": "${m1}", "quote": "Dr. Levi on Herzl St. is excellent for babies"}],
+   "qualifiers": [{"kind": "POPULATION", "message_id": "${m1}", "quote": "for babies"}],
+   "entities": [{"id": "herzl-st", "surface": "Herzl St."}]},
+  {"status": "ATTRIBUTED_STATEMENT", "certainty": "ASSERTED", "subject_id": "dr-levi", "subject": "Dr. Levi", "predicate": "advises_against",
+   "attributed_to": "", "evidence": [{"message_id": "${m2}", "quote": "avoid him for teenagers, he was dismissive with my son"}],
+   "qualifiers": [{"kind": "POPULATION", "message_id": "${m2}", "quote": "for teenagers"}],
+   "entities": []},
+  {"status": "ATTRIBUTED_STATEMENT", "certainty": "ASSERTED", "subject_id": "dr-levi", "subject": "Dr. Levi", "predicate": "recommends",
+   "attributed_to": "", "evidence": [{"message_id": "${m1}", "quote": "Dr. Levi is the best pediatrician in the whole city"}],
+   "qualifiers": [], "entities": []},
+  {"status": "ATTRIBUTED_STATEMENT", "certainty": "ASSERTED", "subject_id": "dr-levi", "subject": "Dr. Levi", "predicate": "recommends",
+   "attributed_to": "", "evidence": [{"message_id": "${otherGroupMessage}", "quote": "Dr. Levi on Herzl St. is excellent"}],
+   "qualifiers": [], "entities": []},
+  {"status": "ATTRIBUTED_STATEMENT", "certainty": "ASSERTED", "subject_id": "dr-levi", "subject": "Dr. Levi", "predicate": "recommends",
+   "attributed_to": "", "evidence": [{"message_id": "${m1}", "quote": "Dr. Levi on Herzl St. is excellent for babies"},
+                                     {"message_id": "${m2}", "quote": "Dr. Levi is fine for babies"}],
+   "qualifiers": [], "entities": []},
+  {"status": "ATTRIBUTED_STATEMENT", "certainty": "ASSERTED", "subject_id": "dr-levi", "subject": "Dr. Levi", "predicate": "recommends",
+   "attributed_to": "", "evidence": [{"message_id": "${m2}", "quote": "avoid him for teenagers, he was dismissive with my son"}],
+   "qualifiers": [], "entities": []}
+]}

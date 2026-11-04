@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>app.dita</groupId>
+    <artifactId>dita-parent</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>dita-eval</artifactId>
+  <description>Offline value-benchmark harness (TASK-034 Stage 0). Package app.dita.eval; never app.dita.muse. No live model path.</description>
+  <dependencies>
+    <dependency><groupId>app.dita</groupId><artifactId>dita-core</artifactId></dependency>
+    <dependency><groupId>com.fasterxml.jackson.core</groupId><artifactId>jackson-databind</artifactId></dependency>
+    <dependency><groupId>org.junit.jupiter</groupId><artifactId>junit-jupiter</artifactId><scope>test</scope></dependency>
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <configuration>
+          <!-- @TempDir trees stay inside this module's target/ (the system temp dir may be unwritable in sandboxes). -->
+          <argLine>-Djava.io.tmpdir=${project.build.directory}</argLine>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

@@ -1,0 +1,12 @@
+{
+  "arm" : "A6",
+  "set" : "dev",
+  "promptVersion" : "semeval-a6-v1",
+  "cases" : 120,
+  "batches" : 12,
+  "requestsSha256" : "2704934d98fbddbc8ea0e89b89daa29798e481479072a04ba03a062c173bb289",
+  "maxCompletionTokens" : 16000,
+  "worstCaseUsdPerCall" : 0.071185,
+  "worstCaseUsdTotal" : 0.85422,
+  "totalRequestBytes" : 87885
+}

@@ -1,0 +1,7 @@
+started 2026-11-02T20:57:56Z
+## 1. Read-only identity and migration check (V2–V5 must already be applied)
+=== PASS: services and V5 present (see build/e2e-replay-verify/check.log)
+## 2. Acceptance test on the real services
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.054 s -- in app.dita.app.TelegramReplayPostgresAcceptanceTest
+[INFO] BUILD SUCCESS
+=== RESULT: PASS (executed on the real stack, 0 skipped). Muse reply was RECORDED, not live.

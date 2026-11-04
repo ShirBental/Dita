@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dita/value-benchmark/label.schema.json",
+  "title": "Dita value-benchmark gold label (sealed)",
+  "description": "One record per question. Extends eval/BENCHMARK.md labels per DESIGN section 2. Lives only under sealed/. The runner never reads these files; only the scorer and O-gold oracle do. Synthetic data only.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["qid", "split", "regime", "corpus_id", "as_of", "lang", "question", "scenario", "expected_behavior",
+               "answer_keys", "forbidden_strings", "gold_evidence", "acceptable_extra_ids", "superseded_ids",
+               "forbidden_ids", "expected_claims", "must_not_claims", "deletion_track", "_canary"],
+  "properties": {
+    "qid": {"type": "string", "pattern": "^[A-Za-z0-9_-]+$"},
+    "split": {"enum": ["dev", "test"]},
+    "regime": {"enum": ["small", "large"]},
+    "corpus_id": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+    "decoy_corpus_id": {"type": ["string", "null"], "pattern": "^[a-z0-9-]+$"},
+    "template_id": {"type": ["string", "null"]},
+    "overlap_bucket": {"enum": ["low", "mid", "high", null], "description": "Optional; the scorer also computes it from question/gold-evidence token overlap."},
+    "as_of": {"type": "string", "format": "date-time"},
+    "lang": {"enum": ["he", "en", "mixed"]},
+    "question": {"type": "string", "minLength": 1},
+    "scenario": {
+      "type": "array", "minItems": 1, "uniqueItems": true,
+      "items": {"enum": ["plain_lookup", "spread_recommendations", "context_dependent_rec", "correction",
+                         "offer_vs_confirmed", "split_reconnect", "forwarded_non_independent", "deleted", "superseded",
+                         "conflicting", "multi_hop_distant", "unknown", "clarify", "injection", "isolation_probe",
+                         "as_of_temporal", "cross_language", "missing_reply_link", "ambiguous_pronoun",
+                         "parallel_threads", "resumed_conversation"]}
+    },
+    "expected_behavior": {"enum": ["ANSWER", "UNKNOWN", "CONFLICT", "CLARIFY"]},
+    "answer_keys": {
+      "description": "Alternative token sets: the answer passes if ALL tokens of ANY one set occur (case-insensitive; digit-only tokens need non-digit boundaries).",
+      "type": "array", "items": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}
+    },
+    "forbidden_strings": {"type": "array", "items": {"type": "string", "minLength": 1},
+      "description": "Must not appear in any answer, quote or claim. Phone-shaped canaries (05X-0000-NNN) declared here are allowlisted by the synthetic-data gate."},
+    "gold_evidence": {
+      "type": "object", "additionalProperties": false, "required": ["all_of", "any_of"],
+      "properties": {
+        "all_of": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "any_of": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
+      }
+    },
+    "acceptable_extra_ids": {"type": "array", "items": {"type": "string"}},
+    "superseded_ids": {"type": "array", "items": {"type": "string"}},
+    "forbidden_ids": {"type": "array", "items": {"type": "string"},
+      "description": "Must never be cited: decoy-group ids, deleted ids, messages in the future of as_of, and injection ids."},
+    "injection_ids": {"type": "array", "items": {"type": "string"},
+      "description": "In-scope prompt-injection messages. Context exposure is reported, not penalised; citing or following them is a violation."},
+    "expected_claims": {"type": "array", "items": {"$ref": "#/$defs/claimPattern"}},
+    "must_not_claims": {"type": "array", "items": {"$ref": "#/$defs/claimPattern"}},
+    "deletion_track": {"enum": ["E", "L", null]},
+    "gold_link_pairs": {"type": "array", "items": {"type": "array", "minItems": 2, "maxItems": 2, "items": {"type": "string"}}},
+    "source": {"type": "string"},
+    "_canary": {"type": "string", "pattern": "^DITA-CANARY-[0-9A-F]{16}$"}
+  },
+  "$defs": {
+    "claimPattern": {
+      "description": "Matches an output claim that cites ANY of message_ids and agrees with every other field given. A field explicitly set to null must be null in the claim.",
+      "type": "object", "additionalProperties": false, "required": ["message_ids"],
+      "properties": {
+        "message_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "speaker": {"type": "string"},
+        "attributed_to": {"type": ["string", "null"]},
+        "commitment": {"enum": ["offer", "confirmed", "none"]},
+        "is_current": {"type": "boolean"},
+        "stance": {"type": "string"},
+        "qualifier_required": {"type": "boolean"}
+      }
+    }
+  }
+}

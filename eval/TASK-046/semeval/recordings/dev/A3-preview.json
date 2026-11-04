@@ -1,0 +1,12 @@
+{
+  "arm" : "A3",
+  "set" : "dev",
+  "promptVersion" : "semeval-a3-v1",
+  "cases" : 120,
+  "batches" : 12,
+  "requestsSha256" : "cfdcac9fbc4e649218a81c6de54af1d690bb8d552547f69be5cd65e545f80020",
+  "maxCompletionTokens" : 8000,
+  "worstCaseUsdPerCall" : 0.036367,
+  "worstCaseUsdTotal" : 0.436405,
+  "totalRequestBytes" : 64872
+}

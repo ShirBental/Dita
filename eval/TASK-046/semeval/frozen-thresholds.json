@@ -1,0 +1,4 @@
+{
+  "note": "Thresholds are selected on DEV ONLY (SemEvalTuneTest) and frozen before any sealed run. Placeholder values until dev tuning runs.",
+  "A4": {"tRep": 0.90, "tSame": 0.90, "tDiff": 0.90, "tStatus": 0.50, "selectedOn": null}
+}

@@ -1,0 +1,33 @@
+{
+  "scope": "English-only development acceptance; synthetic; no sealed data; recorded proposals, not Muse extraction",
+  "approval": "user English-only TASK-049 scope correction authorizes model selection and artifact preparation",
+  "arms": {
+    "A": "Vespa BM25 knowledge retrieval",
+    "B": "Vespa dense knowledge retrieval above development-calibrated 0.60 gate",
+    "C": "production Vespa BM25+dense weighted RRF knowledge retrieval"
+  },
+  "threshold": 0.6,
+  "rrfK": 60,
+  "sparseWeight": 1.0,
+  "denseWeight": 0.5,
+  "k": 10,
+  "metrics": [
+    "retrieval recall@10",
+    "MRR@10",
+    "exact expected-source answer rate",
+    "negative abstention",
+    "citation precision",
+    "latency ms"
+  ],
+  "files": {
+    "conversation.json": "a18e08c6235935bb6ef978c10c182bbfc0c338e7b37bbf25431b9008734e3947",
+    "proposals.json": "3193bdedfb634d0941f163d1dc6f7df41268f170fcc7d079d30e6104dcfe8abc",
+    "questions.json": "e93df9efa86ad7844d0027d02cfc4f63f3cae0400479a515767fef3a65f67758"
+  },
+  "composition_control": "All A/B/C arms share current-state composer with message fallback disabled; separate production QueryService smoke retains configured Neo4j/message expansion.",
+  "model_manifest_sha256": "a503f4e2425909c29addf07227eccedbf31ee7631c3374d9cdc851d6b4602eea",
+  "parentFreezeSha256": "8af9459d1b64eb375d79bc52a391676be48c77bf87f6173dd4b5fc6f05c41a21",
+  "semanticControlQuestion": "How can disabled attendees get inside?",
+  "semanticControlSource": "m5",
+  "developmentIteration": "v2: threshold and smoke selection changed after observing v1 development scores; no claim of independent test performance"
+}

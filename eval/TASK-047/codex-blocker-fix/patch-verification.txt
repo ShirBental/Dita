@@ -1,0 +1,1 @@
+Patch applies cleanly to the verified frozen 289-file baseline and reproduces all 291 source-manifest entries and all seven changed-file hashes.

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <title>Dita mascot v4: open face, crescent fringe, gravity-defying wisp ponytail</title>
+  <!-- Exactly two colors: #561C4E (plum) and #FCC196 (peach), sampled by eye from the reference -->
+  <defs><clipPath id="cap"><rect x="0" y="0" width="512" height="350"/></clipPath></defs>
+  <rect width="512" height="512" fill="#FCC196"/>
+  <g transform="translate(-28 24) rotate(-6 236 300)">
+    <!-- Magic wisp ponytail: rises and spirals upward, tapering like genie smoke -->
+    <path d="M282 172 C298 112 348 84 392 96" fill="none" stroke="#561C4E" stroke-width="46" stroke-linecap="round"/>
+    <path d="M392 96 C432 108 442 160 408 172" fill="none" stroke="#561C4E" stroke-width="30" stroke-linecap="round"/>
+    <path d="M408 172 C384 178 374 152 394 144" fill="none" stroke="#561C4E" stroke-width="16" stroke-linecap="round"/>
+    <!-- Hair cap with tapered side locks -->
+    <circle cx="236" cy="272" r="122" fill="#561C4E" clip-path="url(#cap)"/>
+    <!-- Open face (same color as background, defined only by the hair) -->
+    <circle cx="236" cy="300" r="94" fill="#FCC196"/>
+    <!-- Crescent-moon fringe -->
+    <path d="M146 300 C150 220 210 190 280 200 C315 206 334 230 336 262 C300 226 240 222 200 246 C176 260 158 280 146 300 Z" fill="#561C4E"/>
+    <!-- Wink + dot eye -->
+    <path d="M190 314 Q204 298 218 314" fill="none" stroke="#561C4E" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="272" cy="308" r="12" fill="#561C4E"/>
+    <!-- Knowing smirk -->
+    <path d="M218 350 Q242 364 268 338" fill="none" stroke="#561C4E" stroke-width="10" stroke-linecap="round"/>
+  </g>
+</svg>

@@ -1,0 +1,9 @@
+{"replay":"synthetic-fixture"}
+{"update_id":51001,"message":{"message_id":1,"date_offset_s":0,"chat":{"id":-1001000000052,"type":"supergroup","title":"Synthetic parents (replay)"},"from":{"id":1001,"is_bot":false,"first_name":"Synthetic1001"},"text":"Dr. Levi on Herzl St. is excellent for babies, we've been going since our daughter was born"}}
+{"update_id":51002,"message":{"message_id":2,"date_offset_s":30,"chat":{"id":-1001000000052,"type":"supergroup","title":"Synthetic parents (replay)"},"from":{"id":1003,"is_bot":false,"first_name":"Synthetic1003"},"text":"Dr. Levi is fine for babies but avoid him for teenagers, he was dismissive with my son"}}
+{"update_id":51003,"message":{"message_id":3,"date_offset_s":60,"chat":{"id":-1001000000052,"type":"supergroup","title":"Synthetic parents (replay)"},"from":{"id":1002,"is_bot":false,"first_name":"Synthetic1002"},"text":"Who is bringing snacks for Friday's trip?"}}
+{"update_id":51004,"message":{"message_id":4,"date_offset_s":90,"chat":{"id":-1001000000052,"type":"supergroup","title":"Synthetic parents (replay)"},"from":{"id":1002,"is_bot":false,"first_name":"Synthetic1002"},"text":"/extract"}}
+{"update_id":51005,"message":{"message_id":5,"date_offset_s":95,"chat":{"id":-1001000000052,"type":"supergroup","title":"Synthetic parents (replay)"},"from":{"id":1009,"is_bot":false,"first_name":"Synthetic1009"},"text":"/extract"}}
+{"replay":"await-idle"}
+{"update_id":51006,"message":{"message_id":6,"date_offset_s":120,"chat":{"id":-1001000000052,"type":"supergroup","title":"Synthetic parents (replay)"},"from":{"id":1002,"is_bot":false,"first_name":"Synthetic1002"},"text":"/ask Is Dr. Levi recommended?"}}
+{"update_id":51007,"message":{"message_id":7,"date_offset_s":130,"chat":{"id":-1001000000052,"type":"supergroup","title":"Synthetic parents (replay)"},"from":{"id":1002,"is_bot":false,"first_name":"Synthetic1002"},"text":"/ask Which doctor is good for infants?"}}

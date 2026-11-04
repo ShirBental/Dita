@@ -1,0 +1,533 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] dita-parent                                                        [pom]
+[INFO] dita-core                                                          [jar]
+[INFO] dita-store-postgres                                                [jar]
+[INFO] dita-projections                                                   [jar]
+[INFO] dita-muse                                                          [jar]
+[INFO] dita-telegram                                                      [jar]
+[INFO] dita-eval                                                          [jar]
+[INFO] dita-app                                                           [jar]
+[INFO] 
+[INFO] ------------------------< app.dita:dita-parent >------------------------
+[INFO] Building dita-parent 0.1.0-SNAPSHOT                                [1/8]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ dita-parent ---
+[INFO] 
+[INFO] -------------------------< app.dita:dita-core >-------------------------
+[INFO] Building dita-core 0.1.0-SNAPSHOT                                  [2/8]
+[INFO]   from dita-core/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ dita-core ---
+[INFO] Deleting /path/to/Dita/dita-core/target
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ dita-core ---
+[INFO] skip non existing resourceDirectory /path/to/Dita/dita-core/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ dita-core ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 73 source files with javac [debug release 21] to target/classes
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ dita-core ---
+[INFO] Copying 8 resources from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ dita-core ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 20 source files with javac [debug release 21] to target/test-classes
+[INFO] /path/to/Dita/dita-core/src/test/java/app/dita/core/knowledge/StressConversationSuiteTest.java: Some input files use or override a deprecated API.
+[INFO] /path/to/Dita/dita-core/src/test/java/app/dita/core/knowledge/StressConversationSuiteTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ dita-core ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running app.dita.core.GroupDirectoryTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.034 s -- in app.dita.core.GroupDirectoryTest
+[INFO] Running app.dita.core.answer.InjectionGuardTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 s -- in app.dita.core.answer.InjectionGuardTest
+[INFO] Running app.dita.core.answer.FallbackRelevanceTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.010 s -- in app.dita.core.answer.FallbackRelevanceTest
+[INFO] Running app.dita.core.CoordinationTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s -- in app.dita.core.CoordinationTest
+[INFO] Running app.dita.core.DeletionPolicyTest
+[INFO] Tests run: 24, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.116 s -- in app.dita.core.DeletionPolicyTest
+[INFO] Running app.dita.core.EventDispatcherConcurrencyTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.649 s -- in app.dita.core.EventDispatcherConcurrencyTest
+[INFO] Running app.dita.core.knowledge.Task046ReproTest
+[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.068 s -- in app.dita.core.knowledge.Task046ReproTest
+[INFO] Running app.dita.core.knowledge.TrustworthyStateSuiteTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.205 s -- in app.dita.core.knowledge.TrustworthyStateSuiteTest
+[INFO] Running app.dita.core.knowledge.Task046ReviewFindingsTest
+[INFO] Tests run: 23, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.029 s -- in app.dita.core.knowledge.Task046ReviewFindingsTest
+[INFO] Running app.dita.core.knowledge.Task046ProvenanceTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s -- in app.dita.core.knowledge.Task046ProvenanceTest
+[INFO] Running app.dita.core.knowledge.Task046CodexFindingsTest
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s -- in app.dita.core.knowledge.Task046CodexFindingsTest
+[INFO] Running app.dita.core.knowledge.StructuredMemoryRulesTest
+[INFO] Tests run: 28, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.031 s -- in app.dita.core.knowledge.StructuredMemoryRulesTest
+[INFO] Running app.dita.core.knowledge.ExtractionServiceTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s -- in app.dita.core.knowledge.ExtractionServiceTest
+[INFO] Running app.dita.core.knowledge.Task046RegressionTest
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 s -- in app.dita.core.knowledge.Task046RegressionTest
+[INFO] Running app.dita.core.knowledge.TrustSuiteGateTest
+[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.030 s -- in app.dita.core.knowledge.TrustSuiteGateTest
+[INFO] Running app.dita.core.knowledge.FinalAnswerIsolationTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.796 s -- in app.dita.core.knowledge.FinalAnswerIsolationTest
+[INFO] Running app.dita.core.knowledge.StressConversationSuiteTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.155 s -- in app.dita.core.knowledge.StressConversationSuiteTest
+[INFO] Running app.dita.core.knowledge.DeletedCorrectionPolicyTest
+[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.028 s -- in app.dita.core.knowledge.DeletedCorrectionPolicyTest
+[INFO] Running app.dita.core.knowledge.Task047CodexReviewTest
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s -- in app.dita.core.knowledge.Task047CodexReviewTest
+[INFO] Running app.dita.core.SliceOneTest
+[INFO] Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 s -- in app.dita.core.SliceOneTest
+[WARNING] ForkStarter IOException: java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator. See the dump file /path/to/Dita/dita-core/target/surefire-reports/2026-11-01T16-43-04_521-jvmRun1.dumpstream
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 222, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --------------------< app.dita:dita-store-postgres >--------------------
+[INFO] Building dita-store-postgres 0.1.0-SNAPSHOT                        [3/8]
+[INFO]   from dita-store-postgres/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ dita-store-postgres ---
+[INFO] Deleting /path/to/Dita/dita-store-postgres/target
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ dita-store-postgres ---
+[INFO] skip non existing resourceDirectory /path/to/Dita/dita-store-postgres/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ dita-store-postgres ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 6 source files with javac [debug release 21] to target/classes
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ dita-store-postgres ---
+[INFO] skip non existing resourceDirectory /path/to/Dita/dita-store-postgres/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ dita-store-postgres ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 14 source files with javac [debug release 21] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ dita-store-postgres ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running app.dita.store.postgres.PostgresExtractionQueueContractTest
+[WARNING] Tests run: 5, Failures: 0, Errors: 0, Skipped: 5, Time elapsed: 0.034 s -- in app.dita.store.postgres.PostgresExtractionQueueContractTest
+[INFO] Running app.dita.store.postgres.AdvisoryLockSafetyTest
+[WARNING] Tests run: 6, Failures: 0, Errors: 0, Skipped: 6, Time elapsed: 0.005 s -- in app.dita.store.postgres.AdvisoryLockSafetyTest
+[INFO] Running app.dita.store.postgres.PostgresTask047BlockersTest
+[WARNING] Tests run: 8, Failures: 0, Errors: 0, Skipped: 8, Time elapsed: 0.009 s -- in app.dita.store.postgres.PostgresTask047BlockersTest
+[INFO] Running app.dita.store.postgres.PostgresEventPublisherTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.078 s -- in app.dita.store.postgres.PostgresEventPublisherTest
+[INFO] Running app.dita.store.postgres.InMemoryMessageStoreContractTest
+[INFO] Tests run: 29, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.038 s -- in app.dita.store.postgres.InMemoryMessageStoreContractTest
+[INFO] Running app.dita.store.postgres.InMemoryExtractionQueueContractTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in app.dita.store.postgres.InMemoryExtractionQueueContractTest
+[INFO] Running app.dita.store.postgres.PostgresMessageStoreContractTest
+[WARNING] Tests run: 33, Failures: 0, Errors: 0, Skipped: 33, Time elapsed: 0.020 s -- in app.dita.store.postgres.PostgresMessageStoreContractTest
+[INFO] Running app.dita.store.postgres.PostgresTask047Test
+[WARNING] Tests run: 4, Failures: 0, Errors: 0, Skipped: 4, Time elapsed: 0.003 s -- in app.dita.store.postgres.PostgresTask047Test
+[INFO] Running app.dita.store.postgres.PostgresRlsIsolationTest
+[WARNING] Tests run: 2, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 0.001 s -- in app.dita.store.postgres.PostgresRlsIsolationTest
+[INFO] Running app.dita.store.postgres.OutboxOrderingTest
+[WARNING] Tests run: 9, Failures: 0, Errors: 0, Skipped: 9, Time elapsed: 0.004 s -- in app.dita.store.postgres.OutboxOrderingTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 104, Failures: 0, Errors: 0, Skipped: 67
+[INFO] 
+[INFO] 
+[INFO] ---------------------< app.dita:dita-projections >----------------------
+[INFO] Building dita-projections 0.1.0-SNAPSHOT                           [4/8]
+[INFO]   from dita-projections/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ dita-projections ---
+[INFO] Deleting /path/to/Dita/dita-projections/target
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ dita-projections ---
+[INFO] skip non existing resourceDirectory /path/to/Dita/dita-projections/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ dita-projections ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 5 source files with javac [debug release 21] to target/classes
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ dita-projections ---
+[INFO] Copying 3 resources from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ dita-projections ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 8 source files with javac [debug release 21] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ dita-projections ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running app.dita.projections.VespaResponseTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.097 s -- in app.dita.projections.VespaResponseTest
+[INFO] Running app.dita.projections.ValidityProjectionConsistencyTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.062 s -- in app.dita.projections.ValidityProjectionConsistencyTest
+[INFO] Running app.dita.projections.Neo4jKnowledgeProjectionTest
+[WARNING] Tests run: 2, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 0.007 s -- in app.dita.projections.Neo4jKnowledgeProjectionTest
+[INFO] Running app.dita.projections.KnowledgeDocumentTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s -- in app.dita.projections.KnowledgeDocumentTest
+[INFO] Running app.dita.projections.EndToEndSliceTest
+[INFO] Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in app.dita.projections.EndToEndSliceTest
+[INFO] Running app.dita.projections.VespaKnowledgeProjectionTest
+[WARNING] Tests run: 2, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 0.001 s -- in app.dita.projections.VespaKnowledgeProjectionTest
+[INFO] Running app.dita.projections.HttpReasonTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in app.dita.projections.HttpReasonTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 23, Failures: 0, Errors: 0, Skipped: 4
+[INFO] 
+[INFO] 
+[INFO] -------------------------< app.dita:dita-muse >-------------------------
+[INFO] Building dita-muse 0.1.0-SNAPSHOT                                  [5/8]
+[INFO]   from dita-muse/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ dita-muse ---
+[INFO] Deleting /path/to/Dita/dita-muse/target
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ dita-muse ---
+[INFO] skip non existing resourceDirectory /path/to/Dita/dita-muse/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ dita-muse ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 6 source files with javac [debug release 21] to target/classes
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ dita-muse ---
+[INFO] skip non existing resourceDirectory /path/to/Dita/dita-muse/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ dita-muse ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 8 source files with javac [debug release 21] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ dita-muse ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running app.dita.muse.MuseKnowledgeExtractorTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.126 s -- in app.dita.muse.MuseKnowledgeExtractorTest
+[INFO] Running app.dita.muse.MuseClientTest
+[INFO] Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.028 s -- in app.dita.muse.MuseClientTest
+[INFO] Running app.dita.muse.MuseConnectivityLiveTest
+[WARNING] Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.004 s -- in app.dita.muse.MuseConnectivityLiveTest
+[INFO] Running app.dita.muse.MuseExtractionLiveTest
+[WARNING] Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.001 s -- in app.dita.muse.MuseExtractionLiveTest
+[INFO] Running app.dita.muse.MuseExtractionRequestPreviewTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in app.dita.muse.MuseExtractionRequestPreviewTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 26, Failures: 0, Errors: 0, Skipped: 2
+[INFO] 
+[INFO] 
+[INFO] -----------------------< app.dita:dita-telegram >-----------------------
+[INFO] Building dita-telegram 0.1.0-SNAPSHOT                              [6/8]
+[INFO]   from dita-telegram/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ dita-telegram ---
+[INFO] Deleting /path/to/Dita/dita-telegram/target
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ dita-telegram ---
+[INFO] skip non existing resourceDirectory /path/to/Dita/dita-telegram/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ dita-telegram ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 7 source files with javac [debug release 21] to target/classes
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ dita-telegram ---
+[INFO] Copying 0 resource from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ dita-telegram ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 3 source files with javac [debug release 21] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ dita-telegram ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running app.dita.telegram.TelegramAdapterTest
+[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.282 s -- in app.dita.telegram.TelegramAdapterTest
+[INFO] Running app.dita.telegram.AuthorAllowListTest
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s -- in app.dita.telegram.AuthorAllowListTest
+[INFO] Running app.dita.telegram.TransientFailureRetryTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s -- in app.dita.telegram.TransientFailureRetryTest
+[WARNING] ForkStarter IOException: java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator. See the dump file /path/to/Dita/dita-telegram/target/surefire-reports/2026-11-01T16-43-04_521-jvmRun1.dumpstream
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 33, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] -------------------------< app.dita:dita-eval >-------------------------
+[INFO] Building dita-eval 0.1.0-SNAPSHOT                                  [7/8]
+[INFO]   from dita-eval/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ dita-eval ---
+[INFO] Deleting /path/to/Dita/dita-eval/target
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ dita-eval ---
+[INFO] skip non existing resourceDirectory /path/to/Dita/dita-eval/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ dita-eval ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 50 source files with javac [debug release 21] to target/classes
+[INFO] /path/to/Dita/dita-eval/src/main/java/app/dita/eval/answer/OutputParser.java: Some input files use or override a deprecated API.
+[INFO] /path/to/Dita/dita-eval/src/main/java/app/dita/eval/answer/OutputParser.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ dita-eval ---
+[INFO] skip non existing resourceDirectory /path/to/Dita/dita-eval/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ dita-eval ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 18 source files with javac [debug release 21] to target/test-classes
+[INFO] /path/to/Dita/dita-eval/src/test/java/app/dita/eval/cost/CostOutputsTest.java: /path/to/Dita/dita-eval/src/test/java/app/dita/eval/cost/CostOutputsTest.java uses or overrides a deprecated API.
+[INFO] /path/to/Dita/dita-eval/src/test/java/app/dita/eval/cost/CostOutputsTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ dita-eval ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running app.dita.eval.answer.AnswerPromptGuardTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.135 s -- in app.dita.eval.answer.AnswerPromptGuardTest
+[INFO] Running app.dita.eval.context.ContextBuilderTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s -- in app.dita.eval.context.ContextBuilderTest
+[INFO] Running app.dita.eval.runner.LeakageTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.059 s -- in app.dita.eval.runner.LeakageTest
+[INFO] Running app.dita.eval.capability.CapabilityRunTest
+[WARNING] Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.005 s -- in app.dita.eval.capability.CapabilityRunTest
+[INFO] Running app.dita.eval.cost.CostOutputsTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.245 s -- in app.dita.eval.cost.CostOutputsTest
+[INFO] Running app.dita.eval.cost.TokenEstimatorTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in app.dita.eval.cost.TokenEstimatorTest
+[INFO] Running app.dita.eval.cost.RecordedUsageAnswererTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s -- in app.dita.eval.cost.RecordedUsageAnswererTest
+[INFO] Running app.dita.eval.cost.CostLedgerTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.246 s -- in app.dita.eval.cost.CostLedgerTest
+[INFO] Running app.dita.eval.cost.PriceTableAndUsageTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.010 s -- in app.dita.eval.cost.PriceTableAndUsageTest
+[INFO] Running app.dita.eval.cost.BreakEvenCalculatorTest
+[INFO] Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 s -- in app.dita.eval.cost.BreakEvenCalculatorTest
+[INFO] Running app.dita.eval.scorer.ScorerMetricsTest
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 s -- in app.dita.eval.scorer.ScorerMetricsTest
+[INFO] Running app.dita.eval.scorer.GoldDatasetTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s -- in app.dita.eval.scorer.GoldDatasetTest
+[INFO] Running app.dita.eval.EndToEndMockTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.296 s -- in app.dita.eval.EndToEndMockTest
+[INFO] Running app.dita.eval.gate.SyntheticDataGateTest
+[INFO] Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.167 s -- in app.dita.eval.gate.SyntheticDataGateTest
+[INFO] Running app.dita.eval.guard.BudgetGuardTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in app.dita.eval.guard.BudgetGuardTest
+[INFO] Running app.dita.eval.arms.ArmsTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.274 s -- in app.dita.eval.arms.ArmsTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 128, Failures: 0, Errors: 0, Skipped: 1
+[INFO] 
+[INFO] 
+[INFO] -------------------------< app.dita:dita-app >--------------------------
+[INFO] Building dita-app 0.1.0-SNAPSHOT                                   [8/8]
+[INFO]   from dita-app/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ dita-app ---
+[INFO] Deleting /path/to/Dita/dita-app/target
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ dita-app ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ dita-app ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 16 source files with javac [debug release 21] to target/classes
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ dita-app ---
+[INFO] Copying 1 resource from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ dita-app ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 10 source files with javac [debug release 21] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ dita-app ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running app.dita.app.CapabilityPostgresRunTest
+[WARNING] Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.022 s -- in app.dita.app.CapabilityPostgresRunTest
+[INFO] Running app.dita.app.ConfigurationLoadingTest
+[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.678 s -- in app.dita.app.ConfigurationLoadingTest
+[INFO] Running app.dita.app.SyntheticLabReplayTest
+[WARNING] Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.001 s -- in app.dita.app.SyntheticLabReplayTest
+[INFO] Running app.dita.app.PostgresRuntimeIntegrationTest
+[INFO] Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in app.dita.app.PostgresRuntimeIntegrationTest
+[INFO] Running app.dita.app.KnowledgeSlicePostgresTest
+[WARNING] Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.001 s -- in app.dita.app.KnowledgeSlicePostgresTest
+[INFO] Running app.dita.app.SyntheticLabKnowledgeTest
+[WARNING] Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 s -- in app.dita.app.SyntheticLabKnowledgeTest
+[INFO] Running app.dita.app.ApplicationStartupTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.246 s -- in app.dita.app.ApplicationStartupTest
+[INFO] Running app.dita.app.KnowledgeSliceInMemoryTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.524 s -- in app.dita.app.KnowledgeSliceInMemoryTest
+[INFO] Running app.dita.app.TelegramLiveRunConfigurationTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.122 s -- in app.dita.app.TelegramLiveRunConfigurationTest
+[WARNING] ForkStarter IOException: java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator
+java.io.IOException: Unable to create temporary directory /var/tmp/surefire-operator. See the dump file /path/to/Dita/dita-app/target/surefire-reports/2026-11-01T16-43-04_521-jvmRun1.dumpstream
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 21, Failures: 0, Errors: 0, Skipped: 4
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for dita-parent 0.1.0-SNAPSHOT:
+[INFO] 
+[INFO] dita-parent ........................................ SUCCESS [  0.046 s]
+[INFO] dita-core .......................................... SUCCESS [  4.329 s]
+[INFO] dita-store-postgres ................................ SUCCESS [  0.836 s]
+[INFO] dita-projections ................................... SUCCESS [  0.633 s]
+[INFO] dita-muse .......................................... SUCCESS [  0.564 s]
+[INFO] dita-telegram ...................................... SUCCESS [  1.014 s]
+[INFO] dita-eval .......................................... SUCCESS [  4.246 s]
+[INFO] dita-app ........................................... SUCCESS [  3.640 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.443 s
+[INFO] Finished at: 2026-11-01T16:43:18-05:00
+[INFO] ------------------------------------------------------------------------
+/var/tmp/jansi-2.4.3-c5867e6c58b3ab27-libjansi.jnilib.lck (Operation not permitted)

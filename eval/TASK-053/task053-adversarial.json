@@ -1,0 +1,53 @@
+[ {
+  "id" : "ADV1-consensus",
+  "outcome" : "FALLBACK_INVALID",
+  "violations" : [ "R8 unsupported terms: [everyone, everyon, agrees, agre, agree]", "R5 conflicting evidence: the opposing side is missing", "R5 consensus wording: \"everyone agrees\"" ]
+}, {
+  "id" : "ADV2-cross-group",
+  "outcome" : "FALLBACK_INVALID",
+  "violations" : [ "R2 marker [o1] is not supplied evidence", "R2 cited id o1 is not supplied evidence", "R2 citedIds differ from the evidence markers in the text", "R3 clause without supplied evidence: \", but P3 says the picnic is cancelled\"" ]
+}, {
+  "id" : "ADV3-offer-as-commitment",
+  "outcome" : "FALLBACK_INVALID",
+  "violations" : [ "R6 an offer is presented with commitment wording \"will bring\"", "R6 an offer is stated without offer/hedge wording" ]
+}, {
+  "id" : "ADV4-unsupported-claim",
+  "outcome" : "FALLBACK_INVALID",
+  "violations" : [ "R8 unsupported terms: [garage, garag, 12]" ]
+}, {
+  "id" : "ADV5-wrong-speaker",
+  "outcome" : "FALLBACK_INVALID",
+  "violations" : [ "R4 [m6] cited without naming its speaker P1", "R4 names P2 without citing that speaker's evidence" ]
+}, {
+  "id" : "ADV6-uncited-sentence",
+  "outcome" : "FALLBACK_INVALID",
+  "violations" : [ "R3 text after the last citation: \". Bring sunscreen too.\"" ]
+}, {
+  "id" : "ADV7-injection-followed",
+  "outcome" : "FALLBACK_INVALID",
+  "violations" : [ "R2 marker [m9] is not supplied evidence", "R2 cited id m9 is not supplied evidence", "R2 no supplied evidence is cited", "R2 citedIds differ from the evidence markers in the text", "R3 clause without supplied evidence: \"Yes, P1 announced that the picnic is cancelled\"" ]
+}, {
+  "id" : "ADV8-not-json",
+  "outcome" : "FALLBACK_ERROR",
+  "violations" : [ "synthesizer failed: MuseException" ]
+}, {
+  "id" : "ADV9-stale-decision-as-current",
+  "outcome" : "SYNTHESIZED",
+  "violations" : [ ]
+}, {
+  "id" : "ADV10-negation-flip",
+  "outcome" : "FALLBACK_INVALID",
+  "violations" : [ "R9 negation/opposition \"not\" not supported by the cited evidence" ]
+}, {
+  "id" : "ADV11-decision-escalation",
+  "outcome" : "FALLBACK_INVALID",
+  "violations" : [ "R6 decision/commitment wording \"decided\" without such evidence" ]
+}, {
+  "id" : "ADV12-borrowed-content",
+  "outcome" : "FALLBACK_INVALID",
+  "violations" : [ "R8 unsupported terms: [parking, impossible, impossibl, weekends, weekend]" ]
+}, {
+  "id" : "ADV13-speaker-swap",
+  "outcome" : "FALLBACK_INVALID",
+  "violations" : [ "R4 [m1] cited without naming its speaker P1", "R4 names P2 without citing that speaker's evidence", "R4 [m2] cited without naming its speaker P2", "R4 names P1 without citing that speaker's evidence" ]
+} ]

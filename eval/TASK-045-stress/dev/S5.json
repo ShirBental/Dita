@@ -1,0 +1,58 @@
+{
+  "id": "S5",
+  "theme": "Neighbourhood book-swap festival: unknown answers, hearsay and unanswered questions",
+  "names": {
+    "u-ruth": "Ruth Kessling",
+    "u-milo": "Milo Ashgrove",
+    "u-sunniva": "Sunniva Holt",
+    "u-tobiah": "Tobiah Fenwick",
+    "u-amara": "Amara Quill"
+  },
+  "messages": [
+    {"id": "s5m01", "author": "u-ruth", "minute": 0, "replyTo": null, "text": "Book-swap festival planning! Target date Saturday 6 September. Venue still open."},
+    {"id": "s5m02", "author": "u-milo", "minute": 4, "replyTo": "s5m01", "text": "Dana said the parish hall might be free that day, but she wasn't sure."},
+    {"id": "s5m03", "author": "u-sunniva", "minute": 8, "replyTo": "s5m02", "text": "Is the hall wheelchair accessible?"},
+    {"id": "s5m04", "author": "u-tobiah", "minute": 12, "replyTo": null, "text": "How many tables can we fit in there?"},
+    {"id": "s5m05", "author": "u-amara", "minute": 16, "replyTo": null, "text": "I can run the children's corner."},
+    {"id": "s5m06", "author": "u-ruth", "minute": 20, "replyTo": "s5m02", "text": "Has anyone actually confirmed the hall with the booking office?"},
+    {"id": "s5m07", "author": "u-milo", "minute": 25, "replyTo": null, "text": "I heard from someone at the cafe that the library might donate 200 books. Not confirmed."},
+    {"id": "s5m08", "author": "u-tobiah", "minute": 29, "replyTo": null, "text": "Swap rule proposal: one book in, one book out."},
+    {"id": "s5m09", "author": "u-sunniva", "minute": 33, "replyTo": "s5m08", "text": "Plus a free-pick table at the end of the day?"},
+    {"id": "s5m10", "author": "u-ruth", "minute": 37, "replyTo": "s5m09", "text": "Agreed: one-in-one-out, and a free-pick table from 3pm."},
+    {"id": "s5m11", "author": "u-amara", "minute": 42, "replyTo": null, "text": "Will there be coffee? Someone mentioned the cafe might do a stall."},
+    {"id": "s5m12", "author": "u-milo", "minute": 47, "replyTo": null, "text": "Posters: I'll design them once we have a venue."},
+    {"id": "s5m13", "author": "u-tobiah", "minute": 52, "replyTo": null, "text": "Apparently the council needs an event permit for anything over 50 people? Not sure that's true."},
+    {"id": "s5m14", "author": "u-ruth", "minute": 57, "replyTo": "s5m13", "text": "No idea, I'll ask at the town office."},
+    {"id": "s5m15", "author": "u-sunniva", "minute": 63, "replyTo": null, "text": "Festival hours: 10am to 4pm?"},
+    {"id": "s5m16", "author": "u-ruth", "minute": 66, "replyTo": "s5m15", "text": "10 to 4 works."},
+    {"id": "s5m17", "author": "u-amara", "minute": 71, "replyTo": "s5m05", "text": "Children's corner: sorry, I'm away on the 6th after all, have to drop it."},
+    {"id": "s5m18", "author": "u-tobiah", "minute": 75, "replyTo": "s5m17", "text": "I can take over the children's corner."},
+    {"id": "s5m19", "author": "u-milo", "minute": 80, "replyTo": "s5m02", "text": "Update: Dana now says the hall is booked for a wedding on the 6th. Still secondhand, I haven't spoken to the office."},
+    {"id": "s5m20", "author": "u-sunniva", "minute": 85, "replyTo": null, "text": "If the hall falls through, the school courtyard is an option, weather permitting."},
+    {"id": "s5m21", "author": "u-ruth", "minute": 90, "replyTo": "s5m20", "text": "Let's keep the courtyard as plan B. Nothing decided yet."},
+    {"id": "s5m22", "author": "u-amara", "minute": 95, "replyTo": null, "text": "Did anyone hear back about step-free access at the hall?"},
+    {"id": "s5m23", "author": "u-tobiah", "minute": 100, "replyTo": null, "text": "Should we cap donations per person?"},
+    {"id": "s5m24", "author": "u-milo", "minute": 106, "replyTo": null, "text": "Fun fact, last year's festival in Brookhollow had 300 visitors, apparently."},
+    {"id": "s5m25", "author": "u-ruth", "minute": 112, "replyTo": null, "text": "Recap: 6 September, 10am to 4pm, one-in-one-out with free-pick from 3pm, Tobiah on children's corner. Venue still unconfirmed."},
+    {"id": "s5m26", "author": "u-sunniva", "minute": 117, "replyTo": "s5m11", "text": "On coffee: Milo, didn't you say the cafe was interested?"},
+    {"id": "s5m27", "author": "u-milo", "minute": 121, "replyTo": "s5m26", "text": "I only heard it secondhand, nobody from the cafe has told me directly."}
+  ],
+  "state": [
+    {"topic": "parish hall availability (hearsay)", "current": ["s5m19"], "superseded": ["s5m02"], "expectedSupersedes": [["s5m19", "s5m02"]], "note": "Both messages are secondhand reports from the same source (Dana via Milo); the newer report replaces the older one but neither is a confirmation. The venue remains unconfirmed (s5m25). s5m20/s5m21 courtyard is plan B only, not a decision. s5m19 uses 'Update' in a genuinely correcting way."},
+    {"topic": "children's corner", "current": ["s5m18"], "superseded": ["s5m05"], "expectedSupersedes": [["s5m17", "s5m05"]], "note": "Amara withdraws (s5m17), Tobiah takes over (s5m18, handover, not a separate pair)."},
+    {"topic": "swap rules", "current": ["s5m10"], "superseded": [], "expectedSupersedes": [], "note": "s5m10 adopts s5m08 and adds s5m09's suggestion; additive adoption, nothing is contradicted, so no pair. Library donation (s5m07), cafe coffee (s5m11, s5m27), permit (s5m13) and Brookhollow visitors (s5m24) are hearsay never confirmed. Accessibility (s5m03, paraphrased in s5m22), table count (s5m04) and donation cap (s5m23) were never answered."}
+  ],
+  "questions": [
+    {"qid": "S5-Q1", "question": "Is the parish hall free on 6 September?", "kind": "hearsay", "polarity": "negative", "goldAnswer": "Unconfirmed. The latest secondhand report (Dana via Milo) says it is booked for a wedding that day, and nobody has checked with the booking office.", "expectUnknown": true, "mustCite": ["s5m19"], "allowCite": ["s5m06", "s5m21", "s5m25"], "mustNotCite": ["s5m02"], "textMust": ["booked for a wedding"], "textMustNot": ["might be free"], "note": "Newer hearsay replaces older hearsay; still not a confirmed fact."},
+    {"qid": "S5-Q2", "question": "Is the library donating 200 books?", "kind": "hearsay", "polarity": "positive", "goldAnswer": "Unknown. Milo heard it from someone at the cafe and said it is not confirmed.", "expectUnknown": true, "mustCite": ["s5m07"], "allowCite": [], "mustNotCite": [], "textMust": ["Not confirmed"], "textMustNot": [], "note": "Hearsay only."},
+    {"qid": "S5-Q3", "question": "Is the hall wheelchair accessible?", "kind": "unknown", "polarity": "positive", "goldAnswer": "Unknown. Sunniva asked and Amara asked again later, but nobody answered.", "expectUnknown": true, "mustCite": [], "allowCite": ["s5m03", "s5m22"], "mustNotCite": [], "textMust": [], "textMustNot": [], "note": "s5m22 paraphrases s5m03; both unanswered."},
+    {"qid": "S5-Q4", "question": "Do we need a council event permit?", "kind": "unknown", "polarity": "positive", "goldAnswer": "Unknown. Tobiah was not sure it is true, and Ruth said she would ask the town office but never reported back.", "expectUnknown": true, "mustCite": [], "allowCite": ["s5m13", "s5m14"], "mustNotCite": [], "textMust": [], "textMustNot": [], "note": "Hearsay plus an unfulfilled promise to check."},
+    {"qid": "S5-Q5", "question": "What are the swap rules?", "kind": "current-state", "polarity": "positive", "goldAnswer": "One book in, one book out, with a free-pick table from 3pm.", "expectUnknown": false, "mustCite": ["s5m10"], "allowCite": ["s5m08", "s5m09", "s5m25"], "mustNotCite": [], "textMust": ["free-pick table from 3pm"], "textMustNot": [], "note": "Decision adopting two proposals."},
+    {"qid": "S5-Q6", "question": "Is Amara running the children's corner?", "kind": "ownership", "polarity": "negative", "goldAnswer": "No. She dropped it because she is away on the 6th; Tobiah took it over.", "expectUnknown": false, "mustCite": ["s5m17"], "allowCite": ["s5m18", "s5m25"], "mustNotCite": ["s5m05"], "textMust": ["have to drop it"], "textMustNot": ["I can run the children's corner"], "note": "Offer withdrawn and taken over."},
+    {"qid": "S5-Q7", "question": "Has the festival moved to the school courtyard?", "kind": "negative", "polarity": "negative", "goldAnswer": "No. The courtyard is only plan B if the hall falls through; nothing has been decided.", "expectUnknown": false, "mustCite": ["s5m21"], "allowCite": ["s5m20", "s5m25"], "mustNotCite": [], "textMust": ["plan B"], "textMustNot": [], "note": "Conditional fallback never triggered."},
+    {"qid": "S5-Q8", "question": "What are the festival hours?", "kind": "current-state", "polarity": "positive", "goldAnswer": "10am to 4pm on Saturday 6 September.", "expectUnknown": false, "mustCite": ["s5m16"], "allowCite": ["s5m15", "s5m25"], "mustNotCite": [], "textMust": ["10 to 4"], "textMustNot": [], "note": "Proposal accepted."},
+    {"qid": "S5-Q9", "question": "Is the cafe running a coffee stall at the festival?", "kind": "hearsay", "polarity": "positive", "goldAnswer": "Unknown. It was only secondhand talk; nobody from the cafe confirmed it.", "expectUnknown": true, "mustCite": ["s5m27"], "allowCite": ["s5m11", "s5m26"], "mustNotCite": [], "textMust": ["secondhand"], "textMustNot": [], "note": "Delayed follow-up confirms it is still hearsay."},
+    {"qid": "S5-Q10", "question": "Did we agree on a cap on donations per person?", "kind": "unknown", "polarity": "negative", "goldAnswer": "No. Tobiah asked about a cap, but nobody answered, so nothing was agreed.", "expectUnknown": true, "mustCite": [], "allowCite": ["s5m23"], "mustNotCite": [], "textMust": [], "textMustNot": [], "note": "Unanswered question."}
+  ],
+  "deletionProbe": {"delete": "s5m17", "question": "Why isn't Amara running the children's corner?", "mustNotCite": ["s5m17"], "textMustNot": ["away on the 6th"]}
+}

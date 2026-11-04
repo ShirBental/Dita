@@ -1,0 +1,1 @@
+{"root":{"id":"toplevel","relevance":1.0,"fields":{"totalCount":0},"errors":[{"code":4,"summary":"Invalid query parameter","message":"Could not create query from YQL: query:L1:78 mismatched input 'nearestNeighbor' expecting {<EOF>, 'select', ';'}"}]}}

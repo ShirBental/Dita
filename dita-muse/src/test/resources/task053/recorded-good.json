@@ -1,0 +1,22 @@
+{
+  "_note": "TASK-053 arm B. Q1/Q2/Q6 reworded 2026-11-03 after Natasha F1-F4 (per-clause validator): no causal or decision wording the cited quote does not carry. HAND-AUTHORED stand-ins for Muse replies (no live call was made). They model a well-behaved generator, so arm B measures the synthesis PIPELINE and validator, not Muse's real quality. Speaker pseudonyms follow citation order of each baseline answer.",
+  "recordings": [
+    {"requires": ["Should we have the picnic at Pine Hill park?"],
+     "content": {"abstain": false, "citations": ["m1", "m2"],
+                 "answer": "P1 recommends Pine Hill park for the picnic, it has shade and picnic tables [m1], while P2 advises against it: the parking there is impossible on weekends [m2]."}},
+    {"requires": ["When is the picnic?"],
+     "content": {"abstain": false, "citations": ["m3", "m4", "m1", "m2"],
+                 "answer": "P3 first decided the picnic will be on Saturday June 12 [m3], then P3 said they moved the picnic to Sunday June 13 because of the rain forecast [m4]. Separately, P1 recommends Pine Hill park [m1] while P2 advises against it [m2]."}},
+    {"requires": ["Who is bringing the grill?"],
+     "content": {"abstain": false, "citations": ["m5"],
+                 "answer": "P1 offered to bring the grill, but only if nobody else does, and it is not confirmed [m5]."}},
+    {"requires": ["Who is bringing the folding chairs?"],
+     "content": {"abstain": false, "citations": ["m6"],
+                 "answer": "P1 confirmed they will bring the folding chairs [m6]."}},
+    {"requires": ["What time does the picnic start?"],
+     "content": {"abstain": false, "citations": ["m8"],
+                 "answer": "P1 only said maybe they start around noon or maybe later, and is not sure [m8]."}},
+    {"requires": ["Is the picnic cancelled?"],
+     "content": {"abstain": true, "answer": "", "citations": []}}
+  ]
+}

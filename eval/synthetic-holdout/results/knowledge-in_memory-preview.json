@@ -1,0 +1,18 @@
+{
+  "mode" : "PREVIEW",
+  "backend" : "IN_MEMORY",
+  "group" : "lab-7203a67a",
+  "batch" : "xb-5196bb7a134d5b490dbe",
+  "status" : "FAILED",
+  "error" : "MuseException",
+  "accepted" : 0,
+  "duplicates" : 0,
+  "relations" : 0,
+  "superseded" : 0,
+  "model_calls" : 1,
+  "request_chars" : 10300,
+  "dataset" : "holdout",
+  "rejections" : [ ],
+  "items" : [ ],
+  "relation_list" : [ ]
+}
