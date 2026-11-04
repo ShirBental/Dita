@@ -249,31 +249,3 @@ need publication review for local paths and account identifiers. Personal Telegr
 At the initial cleanup this directory had no `.git` metadata. A subsequent Git review found an initialized
 `main` branch with no commits, staged files or remotes. See [Git readiness review](docs/git-readiness.md)
 for publication risks and the scope of the checks.
-
-## Commit and upload to GitHub
-
-Keep `.env.local` and `config/telegram.local.env` local. Team records, sealed evaluations, delivery bundles,
-build output and models are also ignored. Configure these local files after cloning; they are not uploaded.
-
-```bash
-git config --local user.name "Dita contributors"
-git config --local user.email "maintainers@example.invalid"
-git status --short
-git add --dry-run .                 # inspect the candidate list first
-git add .
-git diff --cached --stat
-git diff --cached                   # inspect staged content for personal ids, paths or secrets
-git commit -m "Describe your change"
-git remote -v
-```
-
-For a new checkout without a remote, use the URL of your own empty GitHub repository:
-
-```bash
-git remote add origin https://github.com/YOUR_ACCOUNT/YOUR_REPOSITORY.git
-git push -u origin main
-```
-
-If `origin` already exists, verify its destination rather than adding it again. Do not force-push to overwrite
-someone else's work. Review commit author/email too: ignore rules only cover files, not Git metadata or old
-commits. Previously committed identifiers must be removed from publishable history before the first push.
