@@ -184,3 +184,7 @@ htmlcov/
 /eval/value-benchmark/results/stage0-runner-meta-dev.json
 /prototypes/
 /scripts/task052-preflight.sh
+
+# Superseded mascot drafts, kept locally
+/brand/dita-mascot-v5-640.png
+/brand/dita-mascot-v5.svg

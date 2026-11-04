@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="brand/dita-mascot-v5-640.png" alt="Dita logo" width="160">
+  <img src="brand/dita.png" alt="Dita logo" width="200">
 </p>
 
 # Dita
