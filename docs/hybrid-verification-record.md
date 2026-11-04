@@ -33,4 +33,4 @@ were inspected, without publishing their complete contents:
 | `stage2-mvn.log` | `8fbdb9ba8315f60ab1a978d5da3bb4d6296f1a39b48e14e0c2a315a10d9a28ed` |
 | `stage3-mvn.log` | `e981811e08fe181a6cbc63e59606b0a57e98d146907d01c7698ebe2bc82d5ab8` |
 
-Current overview: [README](../README.md); capability register: [capability-status.md](capability-status.md).
+Current overview: [README](../README.md); capability register: capability-status.md (archived locally).

@@ -1,2 +1,0 @@
-PASS publication failure rolls back V6 constraint, validity conversion and outbox events together
-PASS retry succeeds: V6 present, legacy withdrawal UNRESOLVED, source wording unchanged=true

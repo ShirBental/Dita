@@ -1,5 +1,0 @@
-[ERROR] Tests run: 4, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.151 s <<< FAILURE! -- in app.dita.core.knowledge.Task047ArmBaselineTest
-[ERROR]   Task047ArmBaselineTest.f4_aRejectingArmAfterAFalseProductionEdgeLeavesBothClaimsCurrent:78 expected: <ACTIVE> but was: <UNRESOLVED>
-[ERROR]   Task047ArmBaselineTest.f4_control_withdrawalHistoryIsRefusedNotErased:100 Expected java.lang.IllegalStateException to be thrown, but nothing was thrown.
-[ERROR]   Task047ArmBaselineTest.f4_theActualScorerPassesTheRejectingArmOnTheComplementaryCase:112 {"case":"independent047-complementary","arm":"independent-reject-all","atRisk":true,"e1Fail":true,"lure":false,"e2Fail":false,"replacesTarget
-[ERROR]   mvn <args> -rf :dita-semeval

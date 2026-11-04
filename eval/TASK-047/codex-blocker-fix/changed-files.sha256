@@ -1,7 +1,0 @@
-c8bcea57dd798629ff6e5750a79875eaef8bc9bfb4b8acb383c06690ea7aa64d  db/migration/V6__validity_unresolved.sql
-25f5f691d2bb9ba38087874ad3368652c7df66c453beaafbcb46efe2d34a5071  dita-core/src/main/java/app/dita/core/QueryService.java
-451697b63cacb1bfd066dcd8c1d96c9db801c315f8261a6de917260d93c0bf77  dita-core/src/main/java/app/dita/core/store/MessageStore.java
-c88bb7920332f3c38a16283eb3bea8110a688688dc411a83cc9a01e488c85e63  dita-core/src/test/java/app/dita/core/knowledge/FinalAnswerIsolationTest.java
-72c86f3cb08c18cacb1330a5973cd8f8c26e6a8660de23717c859e913fe21f67  dita-store-postgres/src/main/java/app/dita/store/postgres/PostgresMessageStore.java
-d4d03b94bcf0d452e70902d6f41954c1d8bfaa17bd857d21ccfce53b38b9cb87  dita-store-postgres/src/test/java/app/dita/store/postgres/PostgresTask047BlockersTest.java
-d16349ab039a3d3ecbd85c5480289967672e5c48603018591c1d4f1defb0444e  docs/TASK-046-deleted-correction-policy.md

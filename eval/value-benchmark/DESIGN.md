@@ -212,7 +212,7 @@ One table per regime; cells are mean [95% CI].
 
 The report also includes a scenario × arm grid of composite scores and C−A / C−B deltas with Holm-adjusted p.
 
-**Stage 0 (executed 2026-10-29, offline, retrieval-only, dev n=35, in-memory):** see [results/stage0-retrieval-dev.md](results/stage0-retrieval-dev.md).
+**Stage 0 (executed 2026-10-29, offline, retrieval-only, dev n=35, in-memory):** see results/stage0-retrieval-dev.md (archived locally).
 - Context recall: A-budget 0.556, B-weak control 0.833, C-today 0.664, C − graph 0.608.
 - With equal ±2 windows: B-weak 0.833 vs C-today 0.759. With no windows: 0.639 vs 0.664.
 - This is **not** a value result:
