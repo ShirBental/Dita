@@ -236,16 +236,3 @@ Cleanup verification and evidence limits: [docs/cleanup-validation.md](docs/clea
 
 All fixtures are synthetic (fictional people). Never load real chats. Model requests leave the machine; send only
 synthetic content. Credentials live only in `.env.local`, which is git-ignored.
-
-## Local files and publication
-
-`.gitignore` excludes credentials, generated builds, local model weights and machine-specific settings.
-Example environment templates, source, synthetic fixtures, manifests and the referenced TASK-051 logs remain
-trackable. Local team/product records (`.avengers/`, `.peter-parker/`), delivery bundles (`outputs/`) and
-`eval/**/sealed/` are excluded from ordinary Git additions and preserved on disk. Local evidence references
-to these paths will not resolve in a fresh checkout. Other evaluation reports remain eligible and still
-need publication review for local paths and account identifiers. Personal Telegram routing remains only in ignored local configuration. Ignore rules do not remove files already tracked by Git.
-
-At the initial cleanup this directory had no `.git` metadata. A subsequent Git review found an initialized
-`main` branch with no commits, staged files or remotes. See [Git readiness review](docs/git-readiness.md)
-for publication risks and the scope of the checks.
