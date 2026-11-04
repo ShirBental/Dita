@@ -4,11 +4,13 @@
 
 # Dita
 
-Dita is a Telegram group-memory prototype built for the Meta Global AI Developer Hackathon. It retrieves
-relevant messages locally and uses Meta's Muse model to turn them into a short answer.
+Dita helps people find the details that matter in busy group chats. Plans change, topics overlap, and useful answers get buried in the scroll. Instead of asking people to search and piece the conversation together, users ask Dita in Telegram.
 
-The current demo supports English synthetic conversations. For example, after a group discusses a picnic
-and changes its time, a member can ask `/ask When and where is the picnic?`.
+Dita stores original messages in PostgreSQL. Vespa retrieves relevant messages with keyword search and a small embedding model running locally. Neo4j connects replies and related messages, helping Dita follow the conversation and account for corrections. Dita sends the question and a compact selection of messages to Muse Spark through the Meta Model API. Muse writes the answer, and Dita returns it to the chat.
+
+In our demo, the A team exchanges 100 messages across ten topics. Their picnic plan changes from noon to 1 PM at Meadow Park, near the west gate. Rain means postponing unless they find another place. Asked for the latest plan, Dita selects 11 relevant messages for one Muse call and brings the correction and rain plan together. That is 89% fewer messages sent as context in this example, not 89% lower token use or cost.
+
+Dita uses local search to narrow a busy conversation into the context Muse needs to answer the question.
 
 ## How it works
 
